@@ -227,6 +227,10 @@ body {
 .tier-reach { background: #ede9fe; color: var(--reach); }
 .tier-match { background: #e0f2fe; color: var(--match); }
 .tier-safety { background: #dcfce7; color: var(--safety); }
+.tier-dream {
+  background: linear-gradient(135deg, #fdf2f8, #fce7f3);
+  color: #9d174d; border: 1px solid #fbcfe8;
+}
 
 .status-badge {
   font-size: 11px;
@@ -841,6 +845,130 @@ body {
 }
 .rp-done .rp-check { background: var(--teal); border-color: var(--teal); color: white; }
 
+/* ── GAME PLAN ── */
+.gp-hero {
+  background: linear-gradient(135deg, #0f2744 0%, #7c3aed 100%);
+  border-radius: 14px; padding: 28px 32px; color: white;
+  margin-bottom: 20px;
+}
+.gp-hero h2 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 6px; }
+.gp-hero p { font-size: 14px; color: #ddd6fe; line-height: 1.6; margin-bottom: 16px; }
+.gp-countdown-row { display: flex; gap: 12px; }
+.gp-count-tile {
+  background: rgba(255,255,255,0.12); border-radius: 10px;
+  padding: 14px 18px; text-align: center; min-width: 90px;
+}
+.gp-count-num { font-family: 'DM Serif Display', serif; font-size: 30px; color: white; line-height: 1; }
+.gp-count-label { font-size: 10px; color: #ddd6fe; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.gp-pillars {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 12px; margin-bottom: 20px;
+}
+.gp-pillar {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; text-align: center;
+}
+.gp-pillar-icon { font-size: 28px; margin-bottom: 8px; }
+.gp-pillar-title { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.gp-pillar-status { font-size: 11px; color: var(--muted); }
+.gp-pillar-bar-wrap { height: 4px; background: var(--border); border-radius: 99px; margin-top: 10px; overflow: hidden; }
+.gp-pillar-bar { height: 4px; border-radius: 99px; transition: width 0.5s ease; }
+
+.month-block { margin-bottom: 24px; }
+.month-label {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 12px;
+}
+.month-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px; color: var(--navy);
+}
+.month-badge {
+  font-size: 10px; font-weight: 700; padding: 3px 10px;
+  border-radius: 99px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.badge-now    { background: #fef3c7; color: #92400e; }
+.badge-next   { background: #dbeafe; color: #1d4ed8; }
+.badge-crunch { background: #fee2e2; color: #991b1b; }
+.badge-done   { background: #dcfce7; color: #166534; }
+
+.week-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; margin-bottom: 8px; overflow: hidden;
+}
+.week-header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.week-dates {
+  font-size: 12px; font-weight: 700; color: var(--navy);
+  width: 100px; flex-shrink: 0;
+}
+.week-focus {
+  font-size: 13px; font-weight: 600; color: var(--navy); flex: 1;
+}
+.week-pct {
+  font-size: 11px; color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+}
+.week-tasks { padding: 10px 16px; }
+.task-row {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 6px 0; border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.task-row:last-child { border-bottom: none; }
+.task-check {
+  width: 16px; height: 16px; border-radius: 4px;
+  border: 2px solid var(--border); flex-shrink: 0; margin-top: 1px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  font-size: 10px; transition: all 0.15s; background: white;
+}
+.task-check.checked { background: var(--teal); border-color: var(--teal); color: white; }
+.task-label { flex: 1; color: var(--text); line-height: 1.5; }
+.task-label.done { text-decoration: line-through; color: var(--muted); }
+.task-cat {
+  font-size: 10px; font-weight: 600; padding: 2px 7px;
+  border-radius: 99px; flex-shrink: 0; margin-top: 1px;
+}
+.cat-cna     { background: #e0f2fe; color: #0369a1; }
+.cat-sat     { background: #fef3c7; color: #92400e; }
+.cat-gmu     { background: #ede9fe; color: #5b21b6; }
+.cat-clinical{ background: #dcfce7; color: #166534; }
+.cat-essay   { background: #fff1f2; color: #9f1239; }
+.cat-apps    { background: #f0fdf4; color: #166534; }
+.cat-research{ background: #f5f3ff; color: #4c1d95; }
+
+.accomplishment-checklist {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden; margin-bottom: 20px;
+}
+.acc-check-header {
+  padding: 14px 20px; background: linear-gradient(135deg, #0f2744, #7c3aed);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.acc-check-title { font-size: 14px; font-weight: 600; color: white; }
+.acc-check-pct { font-size: 13px; color: #ddd6fe; font-weight: 600; }
+.acc-check-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 20px; border-bottom: 1px solid var(--border);
+  font-size: 13.5px;
+}
+.acc-check-row:last-child { border-bottom: none; }
+.acc-check-icon { font-size: 18px; flex-shrink: 0; }
+.acc-check-text { flex: 1; color: var(--text); }
+.acc-check-text.done { text-decoration: line-through; color: var(--muted); }
+.acc-check-status {
+  font-size: 11px; font-weight: 700; padding: 3px 10px;
+  border-radius: 99px; flex-shrink: 0;
+}
+.st-done       { background: #dcfce7; color: #166534; }
+.st-inprogress { background: #fef3c7; color: #92400e; }
+.st-pending    { background: #f1f5f9; color: var(--muted); }
+.st-applied    { background: #dbeafe; color: #1d4ed8; }
+
 @media (max-width: 768px) {
   .sidebar { width: 0; overflow: hidden; }
   .main { margin-left: 0; padding: 20px 16px; }
@@ -856,6 +984,8 @@ body {
   .research-hero { flex-direction: column; }
   .track-grid { grid-template-columns: 1fr; }
   .research-phase-grid { grid-template-columns: 1fr 1fr; }
+  .gp-pillars { grid-template-columns: 1fr 1fr; }
+  .gp-countdown-row { flex-wrap: wrap; }
 }
 </style>
 </head>
@@ -904,6 +1034,9 @@ body {
     <div class="nav-item" onclick="showTab('research')">
       <span class="nav-icon">🔬</span> Research
     </div>
+    <div class="nav-item" onclick="showTab('gameplan')">
+      <span class="nav-icon">🎯</span> Game Plan
+    </div>
   </div>
   <div class="sidebar-footer">
     <div class="days-left" id="daysLeft">—</div>
@@ -921,7 +1054,12 @@ body {
     <p>Here's where things stand. Your first BS/MD deadline is coming up fast.</p>
   </div>
 
-  <div class="stats-row">
+  <div class="stats-row" style="grid-template-columns:repeat(5,1fr)">
+    <div class="stat-card">
+      <div class="stat-value" style="color:#9d174d">5</div>
+      <div class="stat-label">Dream Reaches</div>
+      <div class="stat-sub">Brown, Drexel, Rochester, FAU, Caldwell</div>
+    </div>
     <div class="stat-card">
       <div class="stat-value" style="color:var(--reach)">3</div>
       <div class="stat-label">Reach Schools</div>
@@ -1092,10 +1230,59 @@ body {
           <td class="deadline-cell">Nov 1</td>
           <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(10)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
+
+        <!-- DREAM REACH SEPARATOR -->
+        <tr>
+          <td colspan="5" style="padding:0;">
+            <div style="background:linear-gradient(135deg,#fdf2f8,#fce7f3);padding:10px 16px;display:flex;align-items:center;gap:10px;border-top:2px solid #fbcfe8;border-bottom:2px solid #fbcfe8;">
+              <span style="font-size:16px;">🌟</span>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#9d174d;text-transform:uppercase;letter-spacing:0.5px;">Dream Reach Tier</div>
+                <div style="font-size:11px;color:#be185d;margin-top:1px;">Apply with ambition. With CNA + 100hrs + research + SAT 1500+, these become realistic shots. GPA is the gap — the next 2 months close it with what you accomplish, not GPA points.</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><div class="school-name">Brown University PLME</div><div class="school-program">8-yr Program in Liberal Medical Education</div></td>
+          <td><span class="tier-badge tier-dream">🌟 Dream</span></td>
+          <td class="sat-score">1520+ avg</td>
+          <td class="deadline-cell deadline-soon">Nov 1</td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(11)" style="cursor:pointer" title="Click to update">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">Drexel University BA/BS+MD</div><div class="school-program">7–8yr Early Assurance Program · CASPer required</div></td>
+          <td><span class="tier-badge tier-dream">🌟 Dream</span></td>
+          <td class="sat-score">1420 min · 1538 avg</td>
+          <td class="deadline-cell deadline-soon">Nov 1</td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(12)" style="cursor:pointer" title="Click to update">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">University of Rochester</div><div class="school-program">Early Medical Scholars Program</div></td>
+          <td><span class="tier-badge tier-dream">🌟 Dream</span></td>
+          <td class="sat-score">1500+ avg</td>
+          <td class="deadline-cell deadline-soon">Nov 1</td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(13)" style="cursor:pointer" title="Click to update">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">Florida Atlantic University</div><div class="school-program">Honors College BS/MD · Holistic Review</div></td>
+          <td><span class="tier-badge tier-dream">🌟 Dream</span></td>
+          <td class="sat-score">1450+</td>
+          <td class="deadline-cell">Nov 1</td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(14)" style="cursor:pointer" title="Click to update">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">Caldwell University / Rutgers NJMS</div><div class="school-program">BS/MD Partnership Program</div></td>
+          <td><span class="tier-badge tier-dream">🌟 Dream</span></td>
+          <td class="sat-score">1400+</td>
+          <td class="deadline-cell">Dec 1</td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(15)" style="cursor:pointer" title="Click to update">Not Started</span></td>
+        </tr>
       </tbody>
     </table>
   </div>
-  <p style="font-size:12px; color:var(--muted); margin-top:10px; padding-left:4px;">💡 Click any status badge to update it. Deadlines marked in red are within 90 days.</p>
+  <p style="font-size:12px; color:var(--muted); margin-top:10px; padding-left:4px;">💡 Click any status badge to update it. Deadlines in red are within 90 days. 🌟 Dream Reach schools require CNA + research + 100+ clinical hrs + SAT 1500+ to be competitive.</p>
 </div>
 
 <!-- ══════════ CLINICAL HOURS ══════════ -->
@@ -2042,6 +2229,357 @@ body {
   </div>
 </div>
 
+<!-- ══════════ GAME PLAN ══════════ -->
+<div class="tab-section" id="tab-gameplan">
+  <div class="page-header">
+    <h1>Game Plan — October 13</h1>
+    <p>Every accomplishment in place before Penn State's deadline. Work backward, execute forward.</p>
+  </div>
+
+  <!-- Hero countdown -->
+  <div class="gp-hero">
+    <h2>🎯 121 Days to October 13</h2>
+    <p>Rishi has already applied to CNA and the GMU AI program — the hardest step (starting) is done. Now it's execution. This plan maps every week between now and October 13 so nothing falls through the cracks.</p>
+    <div class="gp-countdown-row">
+      <div class="gp-count-tile">
+        <div class="gp-count-num" id="gpDays">—</div>
+        <div class="gp-count-label">Days Left</div>
+      </div>
+      <div class="gp-count-tile">
+        <div class="gp-count-num" id="gpWeeks">—</div>
+        <div class="gp-count-label">Weeks Left</div>
+      </div>
+      <div class="gp-count-tile">
+        <div class="gp-count-num" id="gpTasksDone">0</div>
+        <div class="gp-count-label">Tasks Done</div>
+      </div>
+      <div class="gp-count-tile">
+        <div class="gp-count-num" id="gpTasksLeft">—</div>
+        <div class="gp-count-label">Tasks Left</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 Pillars -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">🏛️ The 4 Pillars — By October 13</div>
+  <div class="gp-pillars" id="gpPillars">
+    <div class="gp-pillar">
+      <div class="gp-pillar-icon">🏅</div>
+      <div class="gp-pillar-title">CNA Certified</div>
+      <div class="gp-pillar-status" id="pillar0status">Applied ✓ — In Progress</div>
+      <div class="gp-pillar-bar-wrap"><div class="gp-pillar-bar" id="pillar0bar" style="width:20%;background:var(--teal)"></div></div>
+    </div>
+    <div class="gp-pillar">
+      <div class="gp-pillar-icon">📊</div>
+      <div class="gp-pillar-title">SAT 1500+</div>
+      <div class="gp-pillar-status" id="pillar1status">Results Pending</div>
+      <div class="gp-pillar-bar-wrap"><div class="gp-pillar-bar" id="pillar1bar" style="width:10%;background:var(--amber)"></div></div>
+    </div>
+    <div class="gp-pillar">
+      <div class="gp-pillar-icon">🩺</div>
+      <div class="gp-pillar-title">100+ Clinical Hours</div>
+      <div class="gp-pillar-status" id="pillar2status">Building Now</div>
+      <div class="gp-pillar-bar-wrap"><div class="gp-pillar-bar" id="pillar2bar" style="width:5%;background:var(--blue)"></div></div>
+    </div>
+    <div class="gp-pillar">
+      <div class="gp-pillar-icon">🔬</div>
+      <div class="gp-pillar-title">Research Published</div>
+      <div class="gp-pillar-status" id="pillar3status">GMU Applied ✓</div>
+      <div class="gp-pillar-bar-wrap"><div class="gp-pillar-bar" id="pillar3bar" style="width:15%;background:var(--reach))"></div></div>
+    </div>
+  </div>
+
+  <!-- Accomplishments checklist -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">✅ Accomplishments Checklist — Where Things Stand Today</div>
+  <div class="accomplishment-checklist">
+    <div class="acc-check-header">
+      <div class="acc-check-title">Everything Rishi Will Have by October 13</div>
+      <div class="acc-check-pct" id="accPct">0 of 10 complete</div>
+    </div>
+    <div class="acc-check-row">
+      <div class="acc-check-icon">🏅</div>
+      <div class="acc-check-text" id="acc0text">CNA Program — Applied</div>
+      <span class="acc-check-status st-applied">Applied ✓</span>
+    </div>
+    <div class="acc-check-row">
+      <div class="acc-check-icon">🏅</div>
+      <div class="acc-check-text" id="acc1text">CNA Certification — Exam Passed</div>
+      <span class="acc-check-status st-inprogress" id="acc1status">In Progress</span>
+    </div>
+    <div class="acc-check-row">
+      <div class="acc-check-icon">🏫</div>
+      <div class="acc-check-text" id="acc2text">GMU AI & Medical Informatics — Applied</div>
+      <span class="acc-check-status st-applied">Applied ✓</span>
+    </div>
+    <div class="acc-check-row">
+      <div class="acc-check-icon">🏫</div>
+      <div class="acc-check-text" id="acc3text">GMU Conference Presentation — July 17</div>
+      <span class="acc-check-status st-pending" id="acc3status">Upcoming</span>
+    </div>
+    <div class="acc-check-row">
+      <div class="acc-check-icon">🏫</div>
+      <div class="acc-check-text" id="acc4text">GMU Research Paper Published — Young Scholars Journal</div>
+      <span class="acc-check-status st-pending" id="acc4status">By Jul 24</span>
+    </div>
+    <div class="acc-check-row">
+      <div class="acc-check-icon">📊</div>
+      <div class="acc-check-text" id="acc5text">SAT Score — Results Pending</div>
+      <span class="acc-check-status st-inprogress" id="acc5status">Awaiting</span>
+    </div>
+    <div class="acc-check-row">
+      <div class="acc-check-icon">📊</div>
+      <div class="acc-check-text" id="acc6text">SAT 1500+ Achieved (current or retake)</div>
+      <span class="acc-check-status st-pending" id="acc6status">Pending</span>
+    </div>
+    <div class="acc-check-row">
+      <div class="acc-check-icon">🩺</div>
+      <div class="acc-check-text" id="acc7text">Clinical Hours — 100+ logged</div>
+      <span class="acc-check-status st-inprogress" id="acc7status">Building</span>
+    </div>
+    <div class="acc-check-row">
+      <div class="acc-check-icon">🔬</div>
+      <div class="acc-check-text" id="acc8text">Independent Research Paper — submitted to journal</div>
+      <span class="acc-check-status st-pending" id="acc8status">By Sep 1</span>
+    </div>
+    <div class="acc-check-row">
+      <div class="acc-check-icon">✍️</div>
+      <div class="acc-check-text" id="acc9text">All BS/MD Essays — drafted and finalized</div>
+      <span class="acc-check-status st-pending" id="acc9status">By Oct 1</span>
+    </div>
+  </div>
+
+  <!-- Week by week plan -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">📅 Week-by-Week Execution Plan</div>
+
+  <!-- JUNE -->
+  <div class="month-block">
+    <div class="month-label">
+      <div class="month-name">June</div>
+      <span class="month-badge badge-now">Now</span>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Jun 13–21</div>
+        <div class="week-focus">🚀 Launch Week — Everything Starts Now</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Confirm CNA enrollment at Moon River — get start date & schedule</div><span class="task-cat cat-cna">CNA</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Confirm GMU AI program enrollment — pay fee, get welcome email</div><span class="task-cat cat-gmu">GMU</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Gather all immunization records for CNA (TDAP, MMR, Varicella, Hep B, TB test)</div><span class="task-cat cat-cna">CNA</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Call Stone Ridge Family Medicine (703-421-1700) for shadowing</div><span class="task-cat cat-clinical">Clinical</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Call remaining 6 doctor offices using outreach script</div><span class="task-cat cat-clinical">Clinical</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Pick research topic from portal and begin PubMed literature search</div><span class="task-cat cat-research">Research</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Register for Inova Fall volunteer session — opens Jul 9 at 8 AM sharp</div><span class="task-cat cat-clinical">Clinical</span></div>
+      </div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Jun 22–28</div>
+        <div class="week-focus">📚 CNA Theory + GMU Week 1</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Begin CNA online theory modules (self-paced, ~3 hrs/day)</div><span class="task-cat cat-cna">CNA</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">GMU Session 1 — Monday Jun 22, 9–11 AM. Complete first research assignment</div><span class="task-cat cat-gmu">GMU</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">First shadowing session — log hours in portal Clinical Hours page</div><span class="task-cat cat-clinical">Clinical</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Read 8–10 research papers on chosen topic — take notes</div><span class="task-cat cat-research">Research</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Check current SAT score results — log in SAT Tracker page</div><span class="task-cat cat-sat">SAT</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JULY -->
+  <div class="month-block">
+    <div class="month-label">
+      <div class="month-name">July</div>
+      <span class="month-badge badge-next">Core Month</span>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Jun 29 – Jul 5</div>
+        <div class="week-focus">🏥 CNA Theory Continues + GMU Week 2</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Complete 50% of CNA online theory modules</div><span class="task-cat cat-cna">CNA</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">GMU Session 2 — Monday Jun 29, 9–11 AM. Submit assignment.</div><span class="task-cat cat-gmu">GMU</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Shadow at least 2 sessions this week — log all hours</div><span class="task-cat cat-clinical">Clinical</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">If SAT below 1500 — register for August SAT retake immediately</div><span class="task-cat cat-sat">SAT</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Begin research paper outline — intro and literature review sections</div><span class="task-cat cat-research">Research</span></div>
+      </div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Jul 6–12</div>
+        <div class="week-focus">🔬 CNA Skills Lab Begins + GMU Week 3</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">CNA Skills Lab starts at Moon River — attend all sessions</div><span class="task-cat cat-cna">CNA</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">GMU Session 3 — Monday Jul 7, 9–11 AM. Draft conference presentation.</div><span class="task-cat cat-gmu">GMU</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">⚡ Register for Inova Fall volunteer session — Jul 9 at 8 AM SHARP</div><span class="task-cat cat-clinical">Clinical</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Shadow sessions continue — target 30 total hours by end of July</div><span class="task-cat cat-clinical">Clinical</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">SAT prep — 1 hour daily if retaking in August</div><span class="task-cat cat-sat">SAT</span></div>
+      </div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Jul 13–19</div>
+        <div class="week-focus">🌟 GMU Conference Week + CNA Clinicals</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">GMU Session 4 — Monday Jul 14, 9–11 AM. Finalize presentation.</div><span class="task-cat cat-gmu">GMU</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">🌟 GMU Conference — Jul 17, GMU Arlington campus. Present research!</div><span class="task-cat cat-gmu">GMU</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">CNA clinicals begin at long-term care facility (no clinicals Jul 17)</div><span class="task-cat cat-cna">CNA</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Write research paper methods + results sections</div><span class="task-cat cat-research">Research</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Begin Common App Personal Statement first draft</div><span class="task-cat cat-essay">Essay</span></div>
+      </div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Jul 20–26</div>
+        <div class="week-focus">📄 GMU Paper Due + Clinicals Continue</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">GMU final research paper due — Jul 24. Submit on time!</div><span class="task-cat cat-gmu">GMU</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">CNA clinicals continue — complete 48 hrs total</div><span class="task-cat cat-cna">CNA</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Finish independent research paper first draft</div><span class="task-cat cat-research">Research</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Personal Statement — complete paragraph 1 and 2</div><span class="task-cat cat-essay">Essay</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Ask MATA teacher to review research paper draft</div><span class="task-cat cat-research">Research</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUGUST -->
+  <div class="month-block">
+    <div class="month-label">
+      <div class="month-name">August</div>
+      <span class="month-badge badge-crunch">Crunch Month</span>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Jul 27 – Aug 9</div>
+        <div class="week-focus">🏅 CNA Board Exam + SAT Retake</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Complete all 48 CNA clinical hours — cleared for Board Exam</div><span class="task-cat cat-cna">CNA</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Take VA Board of Nursing Exam — written + skills evaluation</div><span class="task-cat cat-cna">CNA</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">SAT retake (if needed) — August test date</div><span class="task-cat cat-sat">SAT</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Submit independent research paper to RARS for preprint DOI</div><span class="task-cat cat-research">Research</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Submit research paper to JEI or JSR for peer review</div><span class="task-cat cat-research">Research</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Inova Fall volunteer orientation (if accepted) — Aug 20, 9 AM</div><span class="task-cat cat-clinical">Clinical</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Clinical hours target — 60+ hours logged by end of August</div><span class="task-cat cat-clinical">Clinical</span></div>
+      </div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Aug 10–23</div>
+        <div class="week-focus">✍️ Applications Open — Essays First</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">CNA certification confirmed — list on all applications immediately</div><span class="task-cat cat-cna">CNA</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Common App opens — create account, fill out profile section</div><span class="task-cat cat-apps">Apps</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Personal Statement — complete full draft, share with parent for feedback</div><span class="task-cat cat-essay">Essay</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Request recommendation letters — MATA teacher, science teacher, counselor</div><span class="task-cat cat-apps">Apps</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Begin BS/MD specific supplements — BU, Case Western, GWU</div><span class="task-cat cat-essay">Essay</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Log SAT retake score — update portal SAT tracker</div><span class="task-cat cat-sat">SAT</span></div>
+      </div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Aug 24–31</div>
+        <div class="week-focus">📝 Essay Refinement + Activities Section</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Personal Statement — final version, polished and proofread</div><span class="task-cat cat-essay">Essay</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Complete Common App activities section — all 10 slots, strong descriptions</div><span class="task-cat cat-apps">Apps</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Why Medicine essay — first full draft complete</div><span class="task-cat cat-essay">Essay</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Clinical hours — Inova shifts starting, continue logging</div><span class="task-cat cat-clinical">Clinical</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Interview prep — start researching each program's format</div><span class="task-cat cat-apps">Apps</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEPTEMBER -->
+  <div class="month-block">
+    <div class="month-label">
+      <div class="month-name">September</div>
+      <span class="month-badge badge-crunch">Final Push</span>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Sep 1–13</div>
+        <div class="week-focus">🏛️ Applications Take Shape</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">U of Illinois BS/MD application — due Oct 1, submit by Sep 25</div><span class="task-cat cat-apps">Apps</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">All BS/MD supplement essays — drafted for all 11 schools</div><span class="task-cat cat-essay">Essay</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Confirm recommendation letters submitted by all recommenders</div><span class="task-cat cat-apps">Apps</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Clinical hours — target 100 total by end of September</div><span class="task-cat cat-clinical">Clinical</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Research paper — confirm submission receipt from JEI/JSR</div><span class="task-cat cat-research">Research</span></div>
+      </div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Sep 14–30</div>
+        <div class="week-focus">🔍 Review, Refine, Submit Early Schools</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Submit U of Illinois BS/MD application — deadline Oct 1</div><span class="task-cat cat-apps">Apps</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">All essays reviewed by parent and a trusted reader</div><span class="task-cat cat-essay">Essay</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">USF Morsani + MCG Augusta applications ready — due Oct 15</div><span class="task-cat cat-apps">Apps</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Mock interview practice — answer "Why medicine at 17?" out loud 5 times</div><span class="task-cat cat-apps">Apps</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">October SAT retake — if still below 1500 and registered</div><span class="task-cat cat-sat">SAT</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OCTOBER -->
+  <div class="month-block">
+    <div class="month-label">
+      <div class="month-name">October 1–13</div>
+      <span class="month-badge badge-crunch">🏁 Finish Line</span>
+    </div>
+
+    <div class="week-card">
+      <div class="week-header">
+        <div class="week-dates">Oct 1–12</div>
+        <div class="week-focus">🏁 Penn State Deadline — Everything Must Be In</div>
+      </div>
+      <div class="week-tasks">
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Penn State / Sidney Kimmel application — final review, submit by Oct 12</div><span class="task-cat cat-apps">Apps</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Verify SAT score (1500+) is on file and sent to Penn State</div><span class="task-cat cat-sat">SAT</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Confirm CNA certification listed prominently in all applications</div><span class="task-cat cat-cna">CNA</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Confirm GMU program + research paper listed in activities section</div><span class="task-cat cat-research">Research</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">Confirm 100+ clinical hours documented and ready to discuss</div><span class="task-cat cat-clinical">Clinical</span></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-label">✅ OCTOBER 13 — PENN STATE DEADLINE. Everything submitted.</div><span class="task-cat cat-apps">Apps</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What Rishi will have -->
+  <div class="card" style="background:linear-gradient(135deg,#0f2744,#7c3aed);border:none;">
+    <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#ddd6fe;margin-bottom:16px;">🏆 What Rishi Walks Into Every BS/MD Interview With</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px 14px;font-size:13px;color:white;">🏅 <strong>CNA Certified</strong><br><span style="color:#ddd6fe;font-size:12px;">State credential — hands-on patient care. Very rare at 17.</span></div>
+      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px 14px;font-size:13px;color:white;">📊 <strong>SAT 1500+</strong><br><span style="color:#ddd6fe;font-size:12px;">Unlocks reach schools and Penn State's hard cutoff.</span></div>
+      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px 14px;font-size:13px;color:white;">🩺 <strong>100+ Clinical Hours</strong><br><span style="color:#ddd6fe;font-size:12px;">Shadowing + Inova volunteering + CNA clinicals.</span></div>
+      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px 14px;font-size:13px;color:white;">🔬 <strong>Research Published</strong><br><span style="color:#ddd6fe;font-size:12px;">GMU conference presenter + independent paper under review.</span></div>
+      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px 14px;font-size:13px;color:white;">🏊 <strong>Lifeguard + States Swimmer</strong><br><span style="color:#ddd6fe;font-size:12px;">Discipline, service, saving lives — essay gold.</span></div>
+      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px 14px;font-size:13px;color:white;">⚕️ <strong>MATA + HOSA + Robotics</strong><br><span style="color:#ddd6fe;font-size:12px;">Two years biomedical science + health leadership + tech.</span></div>
+    </div>
+  </div>
+
+</div>
+
 </main>
 </div>
 
@@ -2148,6 +2686,7 @@ function showTab(id) {
   if (id === 'calling') renderCallingPage();
   if (id === 'cna') initCNAPage();
   if (id === 'research') initResearchPage();
+  if (id === 'gameplan') initGamePlan();
 }
 
 // ── DAYS LEFT ──
@@ -2346,7 +2885,7 @@ const collegeStatusClasses = {
   'interview': 'status-interview'
 };
 
-let collegeStatuses = JSON.parse(localStorage.getItem('rishiCollegeStatuses') || 'null') || Array(11).fill('not-started');
+let collegeStatuses = JSON.parse(localStorage.getItem('rishiCollegeStatuses') || 'null') || Array(16).fill('not-started');
 
 function cycleCollegeStatus(idx) {
   const cur = collegeStatusCycles.indexOf(collegeStatuses[idx]);
@@ -2609,6 +3148,48 @@ function saveResearchNotes() {
     const saved = document.getElementById('resSavedAt');
     if (saved) saved.textContent = 'Saved ' + new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
   }, 800);
+}
+
+// ── GAME PLAN ──
+let gpTasks = JSON.parse(localStorage.getItem('rishiGPTasks') || '{}');
+
+function initGamePlan() {
+  // countdown
+  const deadline = new Date('2026-10-13T23:59:00-04:00');
+  const now = new Date();
+  const days = Math.max(0, Math.ceil((deadline - now) / (1000*60*60*24)));
+  const weeks = Math.floor(days / 7);
+  document.getElementById('gpDays').textContent = days;
+  document.getElementById('gpWeeks').textContent = weeks;
+
+  // restore task checks
+  const checks = document.querySelectorAll('#tab-gameplan .task-check');
+  let done = 0;
+  checks.forEach((ch, i) => {
+    const saved = gpTasks['t' + i];
+    if (saved) {
+      ch.classList.add('checked'); ch.textContent = '✓';
+      ch.nextElementSibling.classList.add('done');
+      done++;
+    }
+  });
+  document.getElementById('gpTasksDone').textContent = done;
+  document.getElementById('gpTasksLeft').textContent = checks.length - done;
+}
+
+function toggleTask(el) {
+  const isChecked = el.classList.toggle('checked');
+  el.textContent = isChecked ? '✓' : '';
+  el.nextElementSibling.classList.toggle('done', isChecked);
+  // save by index
+  const checks = document.querySelectorAll('#tab-gameplan .task-check');
+  checks.forEach((ch, i) => { gpTasks['t' + i] = ch.classList.contains('checked'); });
+  localStorage.setItem('rishiGPTasks', JSON.stringify(gpTasks));
+  // update counter
+  const done = Object.values(gpTasks).filter(Boolean).length;
+  document.getElementById('gpTasksDone').textContent = done;
+  document.getElementById('gpTasksLeft').textContent = checks.length - done;
+  showToast(isChecked ? '✓ Task complete!' : 'Task marked incomplete');
 }
 
 // ── UTILS ──
