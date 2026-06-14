@@ -474,12 +474,148 @@ body {
 }
 .toast.show { transform: translateY(0); opacity: 1; }
 
+/* ── CALLING PAGE ── */
+.practice-call-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.15s;
+}
+.practice-call-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+.practice-call-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+.call-rank-badge {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.call-rank-badge.top-pick { background: var(--teal); }
+.call-practice-info { flex: 1; }
+.call-practice-name { font-size: 15px; font-weight: 600; color: var(--navy); }
+.call-practice-phone {
+  font-size: 13px; color: var(--blue); font-weight: 600; margin-top: 2px;
+}
+.call-status-pill {
+  font-size: 11px; font-weight: 700;
+  padding: 4px 12px; border-radius: 99px;
+  text-transform: uppercase; letter-spacing: 0.4px;
+  cursor: pointer; border: none; font-family: 'DM Sans', sans-serif;
+  transition: all 0.15s;
+}
+.call-pill-pending   { background: #f1f5f9; color: var(--muted); }
+.call-pill-called    { background: #fef3c7; color: #92400e; }
+.call-pill-voicemail { background: #dbeafe; color: #1d4ed8; }
+.call-pill-yes       { background: #dcfce7; color: #166534; }
+.call-pill-no        { background: #fee2e2; color: #dc2626; }
+.call-pill-followup  { background: #ede9fe; color: #6d28d9; }
+
+.practice-call-body {
+  border-top: 1px solid var(--border);
+  background: #f8fafc;
+  padding: 16px 20px;
+}
+.script-section { margin-bottom: 16px; }
+.script-label {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--muted); margin-bottom: 6px;
+}
+.script-text {
+  font-size: 13.5px; color: var(--text);
+  line-height: 1.7; font-style: italic;
+  background: white; border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 14px;
+}
+.script-tip {
+  font-size: 12px; color: var(--teal); margin-top: 6px;
+  font-weight: 500;
+}
+.call-notes-area {
+  width: 100%; padding: 10px 12px;
+  font-size: 13px; font-family: 'DM Sans', sans-serif;
+  border: 1px solid var(--border); border-radius: 8px;
+  color: var(--text); resize: vertical; min-height: 64px;
+  outline: none; transition: border-color 0.15s;
+  background: white;
+}
+.call-notes-area:focus { border-color: var(--blue); }
+.call-action-row {
+  display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;
+}
+.call-action-btn {
+  font-size: 12px; font-weight: 600; padding: 6px 14px;
+  border-radius: 99px; border: 1.5px solid; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: all 0.15s;
+  background: white;
+}
+.btn-called    { border-color: #d97706; color: #d97706; }
+.btn-called:hover { background: #fef3c7; }
+.btn-voicemail { border-color: #2563eb; color: #2563eb; }
+.btn-voicemail:hover { background: #dbeafe; }
+.btn-yes       { border-color: var(--green); color: var(--green); }
+.btn-yes:hover { background: #dcfce7; }
+.btn-no        { border-color: var(--red); color: var(--red); }
+.btn-no:hover  { background: #fee2e2; }
+.btn-followup  { border-color: var(--reach); color: var(--reach); }
+.btn-followup:hover { background: #ede9fe; }
+
+.call-summary-row {
+  display: grid; grid-template-columns: repeat(5,1fr); gap: 10px;
+  margin-bottom: 20px;
+}
+.call-summary-tile {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 16px; text-align: center;
+}
+.call-summary-num {
+  font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--navy);
+}
+.call-summary-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+.script-panel {
+  background: linear-gradient(135deg, #0f2744, #1a3a5c);
+  border-radius: 12px; padding: 22px 24px; margin-bottom: 20px; color: white;
+}
+.script-panel h3 {
+  font-family: 'DM Serif Display', serif; font-size: 18px;
+  margin-bottom: 4px; color: white;
+}
+.script-panel .sp-sub { font-size: 12px; color: #7dd3fc; margin-bottom: 16px; }
+.sp-block { margin-bottom: 14px; }
+.sp-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: #90cdf4; margin-bottom: 6px;
+}
+.sp-text {
+  font-size: 13.5px; color: #e2f0fb; line-height: 1.7;
+  font-style: italic; border-left: 2px solid #3b82f6;
+  padding-left: 12px;
+}
+.sp-tip {
+  font-size: 12px; color: #7dd3fc; margin-top: 5px; font-style: normal;
+}
+
 @media (max-width: 768px) {
   .sidebar { width: 0; overflow: hidden; }
   .main { margin-left: 0; padding: 20px 16px; }
   .stats-row { grid-template-columns: 1fr 1fr; }
   .essay-grid { grid-template-columns: 1fr; }
   .sat-hero { flex-direction: column; }
+  .call-summary-row { grid-template-columns: repeat(3,1fr); }
 }
 </style>
 </head>
@@ -518,6 +654,9 @@ body {
     </div>
     <div class="nav-item" onclick="showTab('sat')">
       <span class="nav-icon">📊</span> SAT Tracker
+    </div>
+    <div class="nav-item" onclick="showTab('calling')">
+      <span class="nav-icon">📞</span> Doctor Outreach
     </div>
   </div>
   <div class="sidebar-footer">
@@ -629,83 +768,83 @@ body {
           <th>Status</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="collegeTableBody">
         <tr>
           <td><div class="school-name">Boston University</div><div class="school-program">7-yr MMEDIC Program</div></td>
           <td><span class="tier-badge tier-reach">Reach</span></td>
           <td class="sat-score">1500+</td>
           <td class="deadline-cell deadline-soon">Nov 1</td>
-          <td><span class="status-badge status-not-started">Not Started</span></td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(0)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
         <tr>
           <td><div class="school-name">Case Western Reserve</div><div class="school-program">Pre-Professional Scholars Program</div></td>
           <td><span class="tier-badge tier-reach">Reach</span></td>
           <td class="sat-score">1500+</td>
           <td class="deadline-cell deadline-soon">Nov 1</td>
-          <td><span class="status-badge status-not-started">Not Started</span></td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(1)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
         <tr>
           <td><div class="school-name">George Washington University</div><div class="school-program">7-yr BA/MD Program</div></td>
           <td><span class="tier-badge tier-reach">Reach</span></td>
           <td class="sat-score">1450+</td>
           <td class="deadline-cell deadline-soon">Nov 1</td>
-          <td><span class="status-badge status-not-started">Not Started</span></td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(2)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
         <tr>
           <td><div class="school-name">RPI / Albany Medical College</div><div class="school-program">7-yr Physician-Scientist Program</div></td>
           <td><span class="tier-badge tier-match">Match</span></td>
           <td class="sat-score">1400+</td>
           <td class="deadline-cell">Nov 1</td>
-          <td><span class="status-badge status-not-started">Not Started</span></td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(3)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
         <tr>
           <td><div class="school-name">NJIT / Rutgers NJ Medical School</div><div class="school-program">7-yr Accelerated BS/MD</div></td>
           <td><span class="tier-badge tier-match">Match</span></td>
           <td class="sat-score">1400+</td>
           <td class="deadline-cell">Nov 1</td>
-          <td><span class="status-badge status-not-started">Not Started</span></td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(4)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
         <tr>
           <td><div class="school-name">University of South Florida</div><div class="school-program">7-yr Morsani BS/MD</div></td>
           <td><span class="tier-badge tier-match">Match</span></td>
           <td class="sat-score">1360+</td>
           <td class="deadline-cell">Oct 15</td>
-          <td><span class="status-badge status-not-started">Not Started</span></td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(5)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
         <tr>
           <td><div class="school-name">University of Illinois</div><div class="school-program">7-yr College of Medicine</div></td>
           <td><span class="tier-badge tier-match">Match</span></td>
           <td class="sat-score">1360+</td>
           <td class="deadline-cell">Oct 1</td>
-          <td><span class="status-badge status-not-started">Not Started</span></td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(6)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
         <tr>
           <td><div class="school-name">Medical College of Georgia</div><div class="school-program">7-yr Augusta University BS/MD</div></td>
           <td><span class="tier-badge tier-match">Match</span></td>
           <td class="sat-score">1360+</td>
           <td class="deadline-cell">Oct 15</td>
-          <td><span class="status-badge status-not-started">Not Started</span></td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(7)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
         <tr>
           <td><div class="school-name">Penn State / Sidney Kimmel</div><div class="school-program">Accelerated Premedical-Medical</div></td>
           <td><span class="tier-badge tier-match">Match</span></td>
           <td class="sat-score">1510+</td>
           <td class="deadline-cell deadline-soon">Oct 13</td>
-          <td><span class="status-badge status-not-started">Not Started</span></td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(8)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
         <tr>
           <td><div class="school-name">UAB Heersink</div><div class="school-program">Early Medical School Acceptance</div></td>
           <td><span class="tier-badge tier-safety">Safety</span></td>
           <td class="sat-score">1360+</td>
           <td class="deadline-cell">Dec 1</td>
-          <td><span class="status-badge status-not-started">Not Started</span></td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(9)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
         <tr>
           <td><div class="school-name">VCU School of Medicine</div><div class="school-program">8-yr Guaranteed Admission</div></td>
           <td><span class="tier-badge tier-safety">Safety</span></td>
           <td class="sat-score">1360+</td>
           <td class="deadline-cell">Nov 1</td>
-          <td><span class="status-badge status-not-started">Not Started</span></td>
+          <td><span class="status-badge status-not-started" onclick="cycleCollegeStatus(10)" style="cursor:pointer" title="Click to update">Not Started</span></td>
         </tr>
       </tbody>
     </table>
@@ -1017,6 +1156,65 @@ body {
   </div>
 </div>
 
+<!-- ══════════ DOCTOR OUTREACH ══════════ -->
+<div class="tab-section" id="tab-calling">
+  <div class="page-header">
+    <h1>Doctor Outreach Tracker</h1>
+    <p>7 practices · Sterling VA area · Call Tuesday–Thursday, 9–11 AM for best results</p>
+  </div>
+
+  <!-- Summary tiles -->
+  <div class="call-summary-row" id="callSummaryRow">
+    <div class="call-summary-tile">
+      <div class="call-summary-num" id="cSum-total">7</div>
+      <div class="call-summary-label">To Contact</div>
+    </div>
+    <div class="call-summary-tile">
+      <div class="call-summary-num" id="cSum-called" style="color:var(--amber)">0</div>
+      <div class="call-summary-label">Called</div>
+    </div>
+    <div class="call-summary-tile">
+      <div class="call-summary-num" id="cSum-yes" style="color:var(--green)">0</div>
+      <div class="call-summary-label">Said Yes ✓</div>
+    </div>
+    <div class="call-summary-tile">
+      <div class="call-summary-num" id="cSum-voicemail" style="color:var(--blue)">0</div>
+      <div class="call-summary-label">Voicemail</div>
+    </div>
+    <div class="call-summary-tile">
+      <div class="call-summary-num" id="cSum-followup" style="color:var(--reach)">0</div>
+      <div class="call-summary-label">Follow Up</div>
+    </div>
+  </div>
+
+  <!-- Master script panel -->
+  <div class="script-panel">
+    <h3>📞 Master Phone Script</h3>
+    <p class="sp-sub">Read this word-for-word until it feels natural. Keep each call under 60 seconds.</p>
+    <div class="sp-block">
+      <div class="sp-label">When someone answers</div>
+      <div class="sp-text">"Hi, my name is Rishi [Last Name]. I'm a rising senior in high school and I'm planning to apply to BS/MD pre-medical programs this fall. I'm looking to gain some clinical experience this summer through physician shadowing or volunteering. Is there someone I could speak with about whether your practice might be open to that?"</div>
+    </div>
+    <div class="sp-block">
+      <div class="sp-label">When connected to the office manager or physician</div>
+      <div class="sp-text">"Hi, I'm Rishi. I'm a high school senior applying to combined BS/MD medical programs, and I have two years of biomedical coursework from my school's health sciences academy. I'm very motivated and genuinely passionate about medicine. I was hoping to shadow a physician for a few hours a week this summer — even 4–6 hours weekly would be incredibly valuable for me. I'd be respectful of your schedule and happy to help the team in any way. Would that be something you might consider?"</div>
+    </div>
+    <div class="sp-block">
+      <div class="sp-label">If they say YES</div>
+      <div class="sp-text">"Thank you so much — I really appreciate it. Could I get your email so I can send a brief note with my background? I want to make it as easy as possible for you."</div>
+      <div class="sp-tip">→ Send follow-up email the same day. Mark this card as "Yes" below.</div>
+    </div>
+    <div class="sp-block" style="margin-bottom:0">
+      <div class="sp-label">If they say NO or are unsure</div>
+      <div class="sp-text">"I completely understand. Would it be okay if I sent a short email with my background, just in case anything opens up? I'm very flexible on timing."</div>
+      <div class="sp-tip">→ Always leave the door open. A no today can become a yes in 2 weeks.</div>
+    </div>
+  </div>
+
+  <!-- Practice cards -->
+  <div id="practiceCallCards"></div>
+</div>
+
 </main>
 </div>
 
@@ -1120,6 +1318,7 @@ function showTab(id) {
   if (id === 'clinical') renderHours();
   if (id === 'essays') renderEssays();
   if (id === 'dashboard') renderDashboard();
+  if (id === 'calling') renderCallingPage();
 }
 
 // ── DAYS LEFT ──
@@ -1303,6 +1502,155 @@ function renderDashboard() {
   }
 }
 
+// ── COLLEGE STATUS ──
+const collegeStatusCycles = ['not-started','in-progress','submitted','interview'];
+const collegeStatusLabels = {
+  'not-started': 'Not Started',
+  'in-progress': 'In Progress',
+  'submitted': 'Submitted ✓',
+  'interview': 'Interview 🎉'
+};
+const collegeStatusClasses = {
+  'not-started': 'status-not-started',
+  'in-progress': 'status-in-progress',
+  'submitted': 'status-submitted',
+  'interview': 'status-interview'
+};
+
+let collegeStatuses = JSON.parse(localStorage.getItem('rishiCollegeStatuses') || 'null') || Array(11).fill('not-started');
+
+function cycleCollegeStatus(idx) {
+  const cur = collegeStatusCycles.indexOf(collegeStatuses[idx]);
+  collegeStatuses[idx] = collegeStatusCycles[(cur + 1) % collegeStatusCycles.length];
+  localStorage.setItem('rishiCollegeStatuses', JSON.stringify(collegeStatuses));
+  const badges = document.querySelectorAll('#collegeTableBody .status-badge');
+  if (badges[idx]) {
+    const s = collegeStatuses[idx];
+    badges[idx].className = 'status-badge ' + collegeStatusClasses[s];
+    badges[idx].textContent = collegeStatusLabels[s];
+  }
+  showToast('Status updated: ' + collegeStatusLabels[collegeStatuses[idx]]);
+}
+
+function initCollegeStatuses() {
+  const badges = document.querySelectorAll('#collegeTableBody .status-badge');
+  badges.forEach((badge, idx) => {
+    const s = collegeStatuses[idx] || 'not-started';
+    badge.className = 'status-badge ' + collegeStatusClasses[s];
+    badge.textContent = collegeStatusLabels[s];
+  });
+}
+
+// ── CALLING PAGE ──
+const practices = [
+  { rank: '⭐1', name: 'Stone Ridge Family Medicine', phone: '703-421-1700', address: '46090 Lake Center Plaza STE 104, Sterling VA', tip: 'Reviews mention they welcome students in the room — best first call.', topPick: true },
+  { rank: '2', name: 'Ashburn Sterling Internal Medicine & Pediatrics', phone: '703-729-9220', address: '19415 Deerfield Ave STE 213, Lansdowne VA', tip: 'Internal medicine + pediatrics — broad clinical exposure.', topPick: false },
+  { rank: '3', name: 'Dr. Arvinder Chawla, MD', phone: '571-313-1980', address: '21495 Ridgetop Cir #102, Sterling VA', tip: 'Small independent practice — easier to get a direct yes from the physician.', topPick: false },
+  { rank: '4', name: 'Leesburg Sterling Family Practice – Lansdowne', phone: '703-724-7530', address: '44084 Riverside Pkwy #300, Leesburg VA', tip: 'Highest rated location (4.7 stars). Established multi-location practice.', topPick: false },
+  { rank: '5', name: 'Leesburg Sterling Family Practice – Broadlands', phone: '571-252-7353', address: '43300 Southern Walk Plaza, Broadlands VA', tip: 'Same group as above — call both locations to double your chances.', topPick: false },
+  { rank: '6', name: 'Patient First Primary & Urgent Care', phone: '703-880-1403', address: '47100 Community Plaza STE 100, Sterling VA', tip: 'High patient volume — sees a wide variety of cases.', topPick: false },
+  { rank: '7', name: 'CareNow Urgent Care – Sterling at Cascades', phone: '571-313-5087', address: '46200 Potomac Run Plaza, Sterling VA', tip: 'Open weekends — flexible scheduling. Good backup option.', topPick: false },
+];
+
+const callStatuses = ['pending','called','voicemail','yes','no','followup'];
+const callStatusLabels = { pending:'Not Called', called:'Called', voicemail:'Voicemail', yes:'Said YES ✓', no:'Said No', followup:'Follow Up' };
+const callPillClasses = { pending:'call-pill-pending', called:'call-pill-called', voicemail:'call-pill-voicemail', yes:'call-pill-yes', no:'call-pill-no', followup:'call-pill-followup' };
+
+let callState = JSON.parse(localStorage.getItem('rishiCallState') || 'null') || practices.map(() => ({ status: 'pending', notes: '', date: '', contact: '' }));
+
+function renderCallingPage() {
+  const container = document.getElementById('practiceCallCards');
+  if (!container) return;
+  container.innerHTML = practices.map((p, i) => {
+    const cs = callState[i];
+    return `
+    <div class="practice-call-card" id="callCard-${i}">
+      <div class="practice-call-header" onclick="toggleCallCard(${i})">
+        <div class="call-rank-badge ${p.topPick ? 'top-pick' : ''}">${p.rank}</div>
+        <div class="call-practice-info">
+          <div class="call-practice-name">${p.name}</div>
+          <div class="call-practice-phone">📞 ${p.phone} &nbsp;·&nbsp; <span style="font-size:12px;color:var(--muted);font-weight:400">${p.address}</span></div>
+        </div>
+        <button class="call-status-pill ${callPillClasses[cs.status]}" onclick="event.stopPropagation(); cycleCallStatus(${i})">
+          ${callStatusLabels[cs.status]}
+        </button>
+      </div>
+      <div class="practice-call-body" id="callBody-${i}" style="display:${cs.status !== 'pending' || i === 0 ? 'block' : 'none'}">
+        <div class="script-section">
+          <div class="script-label">💡 Why this practice</div>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:12px;padding:8px 12px;background:white;border-radius:8px;border:1px solid var(--border)">${p.tip}</div>
+        </div>
+        <div class="script-section">
+          <div class="script-label">Opening line when they answer</div>
+          <div class="script-text">"Hi, my name is Rishi. I'm a rising senior applying to BS/MD pre-medical programs. I'm looking for physician shadowing experience this summer. Is there someone I could speak with about that?"</div>
+        </div>
+        <div class="script-section">
+          <div class="script-label">📝 Call Notes</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+            <div>
+              <div style="font-size:11px;color:var(--muted);margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:0.3px">Date Called</div>
+              <input type="date" value="${cs.date}" onchange="updateCallField(${i},'date',this.value)"
+                style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none">
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--muted);margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:0.3px">Spoke With</div>
+              <input type="text" value="${cs.contact}" placeholder="e.g. Sarah (office mgr)" onchange="updateCallField(${i},'contact',this.value)"
+                style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:8px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none">
+            </div>
+          </div>
+          <textarea class="call-notes-area" placeholder="What happened? What did they say? Any next steps?" onchange="updateCallField(${i},'notes',this.value)">${cs.notes}</textarea>
+        </div>
+        <div class="call-action-row">
+          <button class="call-action-btn btn-called" onclick="setCallStatus(${i},'called')">📞 Called</button>
+          <button class="call-action-btn btn-voicemail" onclick="setCallStatus(${i},'voicemail')">📬 Left Voicemail</button>
+          <button class="call-action-btn btn-yes" onclick="setCallStatus(${i},'yes')">✅ Said YES</button>
+          <button class="call-action-btn btn-no" onclick="setCallStatus(${i},'no')">❌ Said No</button>
+          <button class="call-action-btn btn-followup" onclick="setCallStatus(${i},'followup')">🔁 Follow Up</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  updateCallSummary();
+}
+
+function toggleCallCard(i) {
+  const body = document.getElementById('callBody-' + i);
+  if (body) body.style.display = body.style.display === 'none' ? 'block' : 'none';
+}
+
+function cycleCallStatus(i) {
+  const cur = callStatuses.indexOf(callState[i].status);
+  callState[i].status = callStatuses[(cur + 1) % callStatuses.length];
+  saveCallState();
+  renderCallingPage();
+  showToast('Status updated: ' + callStatusLabels[callState[i].status]);
+}
+
+function setCallStatus(i, status) {
+  callState[i].status = status;
+  if (!callState[i].date) callState[i].date = new Date().toISOString().split('T')[0];
+  saveCallState();
+  renderCallingPage();
+  const msg = status === 'yes' ? '🎉 Excellent! Send the follow-up email today!' : 'Status updated: ' + callStatusLabels[status];
+  showToast(msg);
+}
+
+function updateCallField(i, field, value) {
+  callState[i][field] = value;
+  saveCallState();
+}
+
+function saveCallState() { localStorage.setItem('rishiCallState', JSON.stringify(callState)); }
+
+function updateCallSummary() {
+  const counts = { called:0, voicemail:0, yes:0, no:0, followup:0 };
+  callState.forEach(c => { if (counts[c.status] !== undefined) counts[c.status]++; });
+  document.getElementById('cSum-called').textContent = counts.called + counts.yes + counts.no + counts.voicemail + counts.followup;
+  document.getElementById('cSum-yes').textContent = counts.yes;
+  document.getElementById('cSum-voicemail').textContent = counts.voicemail;
+  document.getElementById('cSum-followup').textContent = counts.followup;
+}
+
 // ── UTILS ──
 function saveState() { localStorage.setItem('rishiPortal', JSON.stringify(state)); }
 function showToast(msg) {
@@ -1320,6 +1668,7 @@ document.querySelectorAll('.modal-backdrop').forEach(m => {
 updateDaysLeft();
 renderDashboard();
 renderSAT();
+initCollegeStatuses();
 </script>
 </body>
 </html>
