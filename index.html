@@ -969,6 +969,247 @@ body {
 .st-pending    { background: #f1f5f9; color: var(--muted); }
 .st-applied    { background: #dbeafe; color: #1d4ed8; }
 
+/* ── ESSAY FRAMEWORK ── */
+.ef-theme-card {
+  background: var(--navy);
+  border-radius: 14px; padding: 28px 32px;
+  margin-bottom: 20px; position: relative; overflow: hidden;
+}
+.ef-theme-card::before {
+  content: '"'; font-family: 'DM Serif Display', serif;
+  font-size: 160px; color: rgba(255,255,255,0.04);
+  position: absolute; top: -20px; left: 10px; line-height: 1;
+}
+.ef-theme-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 2px; color: #fbbf24; margin-bottom: 10px;
+}
+.ef-theme-sentence {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px; font-style: italic;
+  color: white; line-height: 1.5;
+  position: relative; z-index: 1;
+}
+.ef-theme-explain {
+  margin-top: 12px; font-size: 13px; color: #94a3b8;
+  line-height: 1.7; position: relative; z-index: 1;
+}
+
+.ef-acc-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 10px; margin-bottom: 20px;
+}
+.ef-acc-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 16px;
+  display: flex; gap: 12px;
+}
+.ef-acc-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.ef-acc-title { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+.ef-acc-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.ef-acc-use {
+  margin-top: 6px; font-size: 11px; color: var(--teal);
+  font-weight: 600; background: var(--teal-lt);
+  border-radius: 4px; padding: 2px 7px; display: inline-block;
+}
+
+.ef-struct-block {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; margin-bottom: 10px; overflow: hidden;
+}
+.ef-sb-header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.ef-sb-num {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--navy); color: white;
+  font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.ef-sb-title { font-size: 14px; font-weight: 600; color: var(--navy); flex: 1; }
+.ef-sb-words {
+  font-size: 11px; color: var(--muted);
+  background: var(--border); border-radius: 6px; padding: 2px 8px;
+}
+.ef-sb-body { padding: 14px 16px; }
+.ef-sb-purpose {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--amber); margin-bottom: 5px;
+}
+.ef-sb-desc { font-size: 13px; color: var(--text); line-height: 1.6; margin-bottom: 10px; }
+.ef-sb-prompt {
+  background: #fef9ee; border-left: 3px solid var(--amber);
+  border-radius: 0 6px 6px 0; padding: 9px 12px;
+  font-size: 12.5px; color: var(--text); font-style: italic;
+  line-height: 1.6; margin-bottom: 8px;
+}
+.ef-sb-note {
+  background: var(--surface); border-radius: 6px; padding: 8px 12px;
+  font-size: 12px; color: var(--muted); line-height: 1.5;
+}
+
+.ef-opener-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 18px; margin-bottom: 8px;
+  display: flex; gap: 12px; cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.ef-opener-card:hover { border-color: var(--amber); }
+.ef-opener-card.ef-picked { border-color: var(--amber); background: #fef9ee; }
+.ef-opener-letter {
+  font-size: 11px; font-weight: 700; color: var(--amber);
+  width: 18px; flex-shrink: 0; margin-top: 3px;
+}
+.ef-opener-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 14px; font-style: italic;
+  color: var(--navy); line-height: 1.6; flex: 1;
+}
+.ef-opener-note { font-size: 11.5px; color: var(--muted); margin-top: 4px; font-style: normal; }
+
+.ef-do-dont { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+.ef-do { background: var(--teal-lt); border: 1px solid #a7d7d3; border-radius: 10px; padding: 16px; }
+.ef-dont { background: #fef2f2; border: 1px solid #fca5a5; border-radius: 10px; padding: 16px; }
+.ef-do-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--teal); margin-bottom: 8px; }
+.ef-dont-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--red); margin-bottom: 8px; }
+.ef-do-item, .ef-dont-item {
+  display: flex; gap: 7px; font-size: 12.5px;
+  color: var(--text); margin-bottom: 7px; line-height: 1.5;
+}
+.ef-do-item:last-child, .ef-dont-item:last-child { margin-bottom: 0; }
+
+.ef-draft-wrap {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden; margin-bottom: 16px;
+}
+.ef-draft-header {
+  background: var(--navy); padding: 12px 18px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.ef-draft-header-title { font-size: 13px; font-weight: 600; color: white; }
+.ef-wc { font-size: 12px; color: #fbbf24; font-weight: 600; }
+.ef-para-block { border-bottom: 1px solid var(--border); }
+.ef-para-block:last-child { border-bottom: none; }
+.ef-para-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--muted);
+  padding: 9px 18px 0;
+}
+.ef-para-block textarea {
+  width: 100%; padding: 6px 18px 12px;
+  font-size: 14px; font-family: 'DM Sans', sans-serif;
+  border: none; outline: none; resize: none;
+  color: var(--text); line-height: 1.75; min-height: 80px;
+  background: transparent;
+}
+.ef-para-block textarea:focus { background: #f8fbff; }
+.ef-para-block textarea::placeholder { color: #d1d5db; }
+.ef-save-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 18px; background: var(--surface);
+  border-top: 1px solid var(--border); font-size: 12px; color: var(--muted);
+}
+.ef-save-btn {
+  font-size: 12px; font-weight: 600; padding: 6px 14px;
+  border-radius: 8px; border: none; background: var(--navy);
+  color: white; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  transition: background 0.15s;
+}
+.ef-save-btn:hover { background: var(--blue); }
+
+/* ── NAV SECTION LABEL ── */
+.nav-section-label {
+  font-size: 9px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 2px; color: #334155;
+  padding: 14px 20px 4px; margin-top: 4px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ── RESOURCES ── */
+.res-hero {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #4338ca 100%);
+  border-radius: 14px; padding: 28px 32px; color: white; margin-bottom: 24px;
+}
+.res-hero h2 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 6px; }
+.res-hero p { font-size: 14px; color: #c7d2fe; line-height: 1.6; }
+.res-hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.res-hero-tag {
+  font-size: 11px; font-weight: 600; padding: 3px 10px;
+  border-radius: 99px; border: 1px solid rgba(255,255,255,0.2);
+  color: #c7d2fe;
+}
+
+.res-category { margin-bottom: 28px; }
+.res-cat-header {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 12px; padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+.res-cat-icon { font-size: 18px; }
+.res-cat-title { font-size: 16px; font-weight: 700; color: var(--navy); flex: 1; }
+.res-cat-count { font-size: 11px; color: var(--muted); background: var(--surface); padding: 2px 8px; border-radius: 99px; }
+
+.res-book-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px 18px; margin-bottom: 10px;
+  display: flex; gap: 16px; align-items: flex-start;
+}
+.res-book-spine {
+  width: 42px; flex-shrink: 0; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; padding: 10px 0; align-self: stretch;
+}
+.res-book-content { flex: 1; }
+.res-book-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+.res-book-author { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.res-book-why { font-size: 13px; color: var(--text); line-height: 1.6; margin-bottom: 8px; }
+.res-book-rishi {
+  font-size: 12px; color: #5b21b6; background: #f5f3ff;
+  border-radius: 5px; padding: 5px 9px; line-height: 1.5;
+  border-left: 2px solid #6366f1;
+}
+.res-book-meta {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; align-items: center;
+}
+.res-badge {
+  font-size: 10px; font-weight: 700; padding: 2px 8px;
+  border-radius: 99px; text-transform: uppercase; letter-spacing: 0.3px;
+}
+.res-badge-free { background: #dcfce7; color: #166534; }
+.res-badge-book { background: #dbeafe; color: #1d4ed8; }
+.res-badge-online { background: #fef3c7; color: #92400e; }
+.res-badge-video { background: #fce7f3; color: #9d174d; }
+.res-badge-urgent { background: #fee2e2; color: #991b1b; }
+.res-read-check {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; color: var(--muted); cursor: pointer;
+  margin-left: auto; flex-shrink: 0;
+}
+.res-read-check input { accent-color: var(--teal); width: 14px; height: 14px; }
+
+.res-priority-banner {
+  background: linear-gradient(135deg, #fef9ee, #fdf3e3);
+  border: 1px solid #fcd34d; border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 20px;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.res-priority-icon { font-size: 20px; flex-shrink: 0; }
+.res-priority-title { font-size: 13px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+.res-priority-body { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+.res-progress-bar-wrap {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px 20px; margin-bottom: 20px;
+}
+.res-progress-title { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+.res-prog-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 12.5px; }
+.res-prog-label { width: 130px; color: var(--text); flex-shrink: 0; }
+.res-prog-track { flex: 1; height: 6px; background: var(--border); border-radius: 99px; overflow: hidden; }
+.res-prog-fill { height: 6px; border-radius: 99px; background: var(--blue); transition: width 0.4s ease; }
+.res-prog-count { font-size: 11px; color: var(--muted); width: 40px; text-align: right; }
+
 @media (max-width: 768px) {
   .sidebar { width: 0; overflow: hidden; }
   .main { margin-left: 0; padding: 20px 16px; }
@@ -986,6 +1227,8 @@ body {
   .research-phase-grid { grid-template-columns: 1fr 1fr; }
   .gp-pillars { grid-template-columns: 1fr 1fr; }
   .gp-countdown-row { flex-wrap: wrap; }
+  .ef-acc-grid { grid-template-columns: 1fr; }
+  .ef-do-dont { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -1036,6 +1279,13 @@ body {
     </div>
     <div class="nav-item" onclick="showTab('gameplan')">
       <span class="nav-icon">🎯</span> Game Plan
+    </div>
+    <div class="nav-item" onclick="showTab('essayfw')">
+      <span class="nav-icon">📝</span> Essay Framework
+    </div>
+    <div class="nav-section-label">Resources</div>
+    <div class="nav-item" onclick="showTab('res-essay')">
+      <span class="nav-icon">📚</span> Essay Reading List
     </div>
   </div>
   <div class="sidebar-footer">
@@ -2580,6 +2830,631 @@ body {
 
 </div>
 
+<!-- ══════════ ESSAY FRAMEWORK ══════════ -->
+<div class="tab-section" id="tab-essayfw">
+  <div class="page-header">
+    <h1>Essay Framework</h1>
+    <p>Common App Personal Statement · 650 words · built around Rishi's real story</p>
+  </div>
+
+  <!-- Core Theme -->
+  <div class="ef-theme-card">
+    <div class="ef-theme-label">The one sentence that holds the whole essay together</div>
+    <div class="ef-theme-sentence">"I've spent my life learning how to keep people safe — now I want to learn how to heal them."</div>
+    <div class="ef-theme-explain">Everything Rishi has done connects to this. Lifeguarding is literally about keeping people alive. Boy Scouts is about preparedness and service. Swimming to States is about discipline under pressure. Robotics is applying technology to solve problems. MATA and HOSA are the science behind those lives. The essay's job is to show how all of these are chapters of the same story — not a list of achievements, but a journey toward medicine.</div>
+  </div>
+
+  <!-- Accomplishments -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">🏅 Accomplishments — How Each One Fits</div>
+  <div class="ef-acc-grid">
+    <div class="ef-acc-card">
+      <div class="ef-acc-icon">🛟</div>
+      <div>
+        <div class="ef-acc-title">Certified Lifeguard — Dulles Rec Center, 3 Years</div>
+        <div class="ef-acc-desc">Real responsibility for real lives every shift. Trained in emergency response, CPR, and crisis decision-making.</div>
+        <span class="ef-acc-use">→ The anchor. Open the essay here.</span>
+      </div>
+    </div>
+    <div class="ef-acc-card">
+      <div class="ef-acc-icon">⚕️</div>
+      <div>
+        <div class="ef-acc-title">MATA Biomedical Program — 2 Years</div>
+        <div class="ef-acc-desc">Anatomy, physiology, and clinical science. Where lifeguarding meets medicine — he started asking "why" not just "what."</div>
+        <span class="ef-acc-use">→ The turning point paragraph.</span>
+      </div>
+    </div>
+    <div class="ef-acc-card">
+      <div class="ef-acc-icon">🏕️</div>
+      <div>
+        <div class="ef-acc-title">Boy Scouts — 3 Years</div>
+        <div class="ef-acc-desc">Service, leadership, preparedness, first aid. Commitment to a community beyond himself.</div>
+        <span class="ef-acc-use">→ Shows character early in the story.</span>
+      </div>
+    </div>
+    <div class="ef-acc-card">
+      <div class="ef-acc-icon">🏊</div>
+      <div>
+        <div class="ef-acc-title">Competitive Swimmer — States</div>
+        <div class="ef-acc-desc">Discipline, resilience, years of commitment. Made it to States — shows elite-level dedication.</div>
+        <span class="ef-acc-use">→ Sets up the discipline theme. One sentence.</span>
+      </div>
+    </div>
+    <div class="ef-acc-card">
+      <div class="ef-acc-icon">🤖</div>
+      <div>
+        <div class="ef-acc-title">Robotics — States (Middle School)</div>
+        <div class="ef-acc-desc">Early passion for applying technology to solve real problems. Precursor to biomedical technology interest.</div>
+        <span class="ef-acc-use">→ One sentence. Shows curiosity started early.</span>
+      </div>
+    </div>
+    <div class="ef-acc-card">
+      <div class="ef-acc-icon">🩺</div>
+      <div>
+        <div class="ef-acc-title">HOSA Member</div>
+        <div class="ef-acc-desc">Health Occupations Students of America — connects classroom learning to real healthcare community.</div>
+        <span class="ef-acc-use">→ Weave in naturally alongside MATA.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Structure -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">📐 Paragraph-by-Paragraph Structure</div>
+
+  <div class="ef-struct-block">
+    <div class="ef-sb-header">
+      <div class="ef-sb-num">1</div>
+      <div class="ef-sb-title">The Hook — Open on the Pool Deck</div>
+      <div class="ef-sb-words">~80 words</div>
+    </div>
+    <div class="ef-sb-body">
+      <div class="ef-sb-purpose">What it does</div>
+      <div class="ef-sb-desc">Drop the reader into a specific moment on the pool deck. Don't explain it yet — just put them there. The best essays open in the middle of a scene, not with "I have always wanted to be a doctor."</div>
+      <div class="ef-sb-prompt">Write about one specific moment as a lifeguard — a moment of tension, a close call, or a quiet moment where the weight of responsibility hit you. What did you see? What were you thinking? What did you do?</div>
+      <div class="ef-sb-note">Sensory, present tense, specific. The reader should feel the heat, hear the noise, see what Rishi sees when he scans the water.</div>
+    </div>
+  </div>
+
+  <div class="ef-struct-block">
+    <div class="ef-sb-header">
+      <div class="ef-sb-num">2</div>
+      <div class="ef-sb-title">Zoom Out — The Bigger Pattern</div>
+      <div class="ef-sb-words">~100 words</div>
+    </div>
+    <div class="ef-sb-body">
+      <div class="ef-sb-purpose">What it does</div>
+      <div class="ef-sb-desc">Step back and show the pattern started before the pool deck. Boy Scouts, swimming, the lifeguard certification — same instinct, different chapters.</div>
+      <div class="ef-sb-prompt">Touch briefly on Boy Scouts and swimming — not as achievements but as earlier chapters of the same story. What did they teach you? What do they share with lifeguarding?</div>
+      <div class="ef-sb-note">Don't list. Connect. One or two sentences each, then land back on the pool deck.</div>
+    </div>
+  </div>
+
+  <div class="ef-struct-block">
+    <div class="ef-sb-header">
+      <div class="ef-sb-num">3</div>
+      <div class="ef-sb-title">The Turn — From Safe to Healed</div>
+      <div class="ef-sb-words">~120 words</div>
+    </div>
+    <div class="ef-sb-body">
+      <div class="ef-sb-purpose">The most important paragraph</div>
+      <div class="ef-sb-desc">This is the pivot. Something changed the question from "how do I keep this person safe?" to "how do I understand what's happening inside them?" This is where lifeguarding meets medicine.</div>
+      <div class="ef-sb-prompt">Was there a moment where you wished you knew more — what was happening inside someone's body, not just what to do on the outside? Or a MATA moment that clicked with something from the pool? That intersection is the heart of this essay.</div>
+      <div class="ef-sb-note">This should feel like a light turning on. The shift from "I keep people safe" to "I want to understand why bodies fail and how to fix them" is the emotional core of the whole piece.</div>
+    </div>
+  </div>
+
+  <div class="ef-struct-block">
+    <div class="ef-sb-header">
+      <div class="ef-sb-num">4</div>
+      <div class="ef-sb-title">MATA & HOSA — Where Safety Became Science</div>
+      <div class="ef-sb-words">~120 words</div>
+    </div>
+    <div class="ef-sb-body">
+      <div class="ef-sb-purpose">What it does</div>
+      <div class="ef-sb-desc">Bring in the biomedical program — not as a résumé item but as the place where the curiosity sparked by lifeguarding found a home. What specific thing from MATA changed how he sees things?</div>
+      <div class="ef-sb-prompt">Pick one specific thing from MATA — a concept, a lab, a topic — that excited you and connect it back to your lifeguard experience. "When I studied cardiac physiology in MATA, I thought about the time..." is more powerful than "I have learned a lot about the human body."</div>
+      <div class="ef-sb-note">Specific always beats general. Name an actual topic. Mention HOSA briefly as the community that connected learning to a larger healthcare world.</div>
+    </div>
+  </div>
+
+  <div class="ef-struct-block">
+    <div class="ef-sb-header">
+      <div class="ef-sb-num">5</div>
+      <div class="ef-sb-title">The Close — What He's Ready For</div>
+      <div class="ef-sb-words">~80 words</div>
+    </div>
+    <div class="ef-sb-body">
+      <div class="ef-sb-purpose">What it does</div>
+      <div class="ef-sb-desc">End with forward momentum, not a summary. The reader already knows who Rishi is. Close with where he's going and why it feels inevitable — not chosen.</div>
+      <div class="ef-sb-prompt">What does medicine mean to you now — after all of this? What kind of doctor do you want to be, and why does your path make that feel inevitable? Circle back to the opening image if you can.</div>
+      <div class="ef-sb-note">Don't say "I want to be a doctor to help people." Say something specific. The kid who scanned that pool every shift is the same person walking into medical school.</div>
+    </div>
+  </div>
+
+  <!-- Opening lines -->
+  <div class="card-title" style="margin-bottom:10px;margin-top:20px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">✨ Possible Opening Lines — Click to Select</div>
+  <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Starting points only. Rewrite in your own voice.</p>
+
+  <div class="ef-opener-card" id="efOpener0" onclick="pickEfOpener(0)">
+    <div class="ef-opener-letter">A</div>
+    <div>
+      <div class="ef-opener-text">"Every few seconds, I scan. Left to right, shallow end to deep. Three years of shifts, and the habit is so deep I don't even think about it anymore — I just watch."</div>
+      <div class="ef-opener-note">Best for a reflective, disciplined opening. Sets up the vigilance theme early.</div>
+    </div>
+  </div>
+  <div class="ef-opener-card" id="efOpener1" onclick="pickEfOpener(1)">
+    <div class="ef-opener-letter">B</div>
+    <div>
+      <div class="ef-opener-text">"The training says you have thirty seconds. Thirty seconds to spot someone in trouble before it becomes something you can't fix. I've thought about those thirty seconds every shift for three years."</div>
+      <div class="ef-opener-note">Best for a dramatic, responsibility-heavy opening. Connects naturally to medicine's stakes.</div>
+    </div>
+  </div>
+  <div class="ef-opener-card" id="efOpener2" onclick="pickEfOpener(2)">
+    <div class="ef-opener-letter">C</div>
+    <div>
+      <div class="ef-opener-text">"I learned what a body looks like when something goes wrong long before I ever opened a textbook about it."</div>
+      <div class="ef-opener-note">Best for leading quickly into MATA. Clean, bold, and immediately interesting.</div>
+    </div>
+  </div>
+  <div class="ef-opener-card" id="efOpener3" onclick="pickEfOpener(3)">
+    <div class="ef-opener-letter">D</div>
+    <div>
+      <div class="ef-opener-text">"My job is to make sure nothing happens. But standing at the edge of the pool one afternoon, I realized I didn't actually know what was happening inside the person I was watching."</div>
+      <div class="ef-opener-note">Directly sets up the pivot from safety to medicine. The essay's core tension in two sentences.</div>
+    </div>
+  </div>
+
+  <!-- Do / Don't -->
+  <div class="card-title" style="margin-bottom:10px;margin-top:20px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">✅ Do's and Don'ts</div>
+  <div class="ef-do-dont">
+    <div class="ef-do">
+      <div class="ef-do-label">✓ Do</div>
+      <div class="ef-do-item"><span style="color:var(--teal)">→</span><span>Open with a specific scene, not a general statement about medicine</span></div>
+      <div class="ef-do-item"><span style="color:var(--teal)">→</span><span>Name real things — an actual MATA topic, a real pool moment, a specific Scout experience</span></div>
+      <div class="ef-do-item"><span style="color:var(--teal)">→</span><span>Let accomplishments show up through the story, not as a list</span></div>
+      <div class="ef-do-item"><span style="color:var(--teal)">→</span><span>Sound like a thoughtful 17-year-old — not a brochure</span></div>
+      <div class="ef-do-item"><span style="color:var(--teal)">→</span><span>Circle back to the opening image in the closing paragraph</span></div>
+      <div class="ef-do-item"><span style="color:var(--teal)">→</span><span>Write the first draft badly — just get it out, then refine</span></div>
+    </div>
+    <div class="ef-dont">
+      <div class="ef-dont-label">✗ Don't</div>
+      <div class="ef-dont-item"><span style="color:var(--red)">→</span><span>Start with "I have always wanted to be a doctor" or "Ever since I was young..."</span></div>
+      <div class="ef-dont-item"><span style="color:var(--red)">→</span><span>List accomplishments — it reads like a résumé</span></div>
+      <div class="ef-dont-item"><span style="color:var(--red)">→</span><span>Use "passion," "journey," "unique," "driven," or "make a difference"</span></div>
+      <div class="ef-dont-item"><span style="color:var(--red)">→</span><span>Explain everything — trust the reader to make connections</span></div>
+      <div class="ef-dont-item"><span style="color:var(--red)">→</span><span>Write a conclusion that summarizes what the reader just read</span></div>
+      <div class="ef-dont-item"><span style="color:var(--red)">→</span><span>Try to be impressive — try to be honest</span></div>
+    </div>
+  </div>
+
+  <!-- Draft Workspace -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">✍️ Draft Workspace — Type and Save</div>
+  <div class="ef-draft-wrap">
+    <div class="ef-draft-header">
+      <div class="ef-draft-header-title">Common App Personal Statement</div>
+      <div class="ef-wc" id="efWordCount">0 / 650 words</div>
+    </div>
+    <div class="ef-para-block">
+      <div class="ef-para-label">Para 1 — The Hook (~80 words)</div>
+      <textarea id="efP1" placeholder="Open on the pool deck. Put the reader there. One specific moment, one specific shift..." oninput="efUpdateCount()" rows="4"></textarea>
+    </div>
+    <div class="ef-para-block">
+      <div class="ef-para-label">Para 2 — Zoom Out: Boy Scouts + Swimming (~100 words)</div>
+      <textarea id="efP2" placeholder="Connect the thread back further. Boy Scouts, swimming — same instinct, earlier chapters..." oninput="efUpdateCount()" rows="4"></textarea>
+    </div>
+    <div class="ef-para-block">
+      <div class="ef-para-label">Para 3 — The Turn: From Safe to Healed (~120 words)</div>
+      <textarea id="efP3" placeholder="The pivot moment — where lifeguarding meets medicine. The question that changed everything..." oninput="efUpdateCount()" rows="5"></textarea>
+    </div>
+    <div class="ef-para-block">
+      <div class="ef-para-label">Para 4 — MATA & HOSA (~120 words)</div>
+      <textarea id="efP4" placeholder="One specific thing from MATA that clicked with your lifeguard experience. Name it. Be specific..." oninput="efUpdateCount()" rows="5"></textarea>
+    </div>
+    <div class="ef-para-block">
+      <div class="ef-para-label">Para 5 — The Close (~80 words)</div>
+      <textarea id="efP5" placeholder="Where is all of this going? What kind of doctor? Circle back to the opening image..." oninput="efUpdateCount()" rows="4"></textarea>
+    </div>
+    <div class="ef-save-row">
+      <span id="efSaveStatus">Start writing — auto-saves as you type</span>
+      <button class="ef-save-btn" onclick="efSaveDraft()">💾 Save Draft</button>
+    </div>
+  </div>
+
+  <!-- Tip -->
+  <div class="card" style="background:var(--navy);border:none;">
+    <div style="display:flex;gap:14px;align-items:flex-start;">
+      <div style="font-size:22px;flex-shrink:0;">💡</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.7;">
+        <strong style="color:white;">The most important thing:</strong> Admissions readers can tell immediately when someone is writing what they think sounds good versus writing something true. Rishi's story — lifeguard who wants to become a doctor, built through swimming, scouts, two years of biomedical science, and CNA certification — is genuinely interesting. The essay's only job is to get out of the way and let that story breathe.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ RESOURCES: ESSAY READING LIST ══════════ -->
+<div class="tab-section" id="tab-res-essay">
+  <div class="page-header">
+    <h1>📚 Resources</h1>
+    <p>Essay Writing — How to Write a Great College Essay</p>
+  </div>
+
+  <!-- Hero -->
+  <div class="res-hero">
+    <h2>📖 How to Write a Great College Essay</h2>
+    <p>The best essays aren't written — they're read first. Every book and resource here teaches Rishi something specific that will make his Common App personal statement and BS/MD essays stronger, more specific, and more honest. Read in priority order.</p>
+    <div class="res-hero-tags">
+      <span class="res-hero-tag">15 Resources</span>
+      <span class="res-hero-tag">4 Categories</span>
+      <span class="res-hero-tag">6 Free / Online</span>
+      <span class="res-hero-tag">Read before Aug applications open</span>
+    </div>
+  </div>
+
+  <!-- Progress -->
+  <div class="res-progress-bar-wrap">
+    <div class="res-progress-title">📊 Reading Progress</div>
+    <div class="res-prog-row">
+      <div class="res-prog-label">Essay Examples</div>
+      <div class="res-prog-track"><div class="res-prog-fill" id="resProg0" style="width:0%"></div></div>
+      <div class="res-prog-count" id="resProgCount0">0/3</div>
+    </div>
+    <div class="res-prog-row">
+      <div class="res-prog-label">Writing Craft</div>
+      <div class="res-prog-track"><div class="res-prog-fill" id="resProg1" style="width:0%"></div></div>
+      <div class="res-prog-count" id="resProgCount1">0/4</div>
+    </div>
+    <div class="res-prog-row">
+      <div class="res-prog-label">Medicine & Patients</div>
+      <div class="res-prog-track"><div class="res-prog-fill" id="resProg2" style="width:0%"></div></div>
+      <div class="res-prog-count" id="resProgCount2">0/3</div>
+    </div>
+    <div class="res-prog-row">
+      <div class="res-prog-label">Short Reads</div>
+      <div class="res-prog-track"><div class="res-prog-fill" id="resProg3" style="width:0%"></div></div>
+      <div class="res-prog-count" id="resProgCount3">0/5</div>
+    </div>
+  </div>
+
+  <!-- Priority banner -->
+  <div class="res-priority-banner">
+    <div class="res-priority-icon">⚡</div>
+    <div>
+      <div class="res-priority-title">Start This Week — Before the First Draft</div>
+      <div class="res-priority-body">Read the Johns Hopkins "Essays That Worked" (free, online, 30 min) + Orwell's 6 rules (free, 20 min). Those two alone will change how Rishi approaches his first draft. Everything else builds from there.</div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 1: Essay Examples -->
+  <div class="res-category">
+    <div class="res-cat-header">
+      <div class="res-cat-icon">🎓</div>
+      <div class="res-cat-title">Category 1 — See What Great Essays Look Like</div>
+      <div class="res-cat-count">3 resources</div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#dbeafe;">📄</div>
+      <div class="res-book-content">
+        <div class="res-book-title">Johns Hopkins "Essays That Worked"</div>
+        <div class="res-book-author">Johns Hopkins Admissions · Free Online</div>
+        <div class="res-book-why">Real essays from admitted Hopkins students, several pre-med. The fastest way to calibrate what "good" looks like — read 8–10 and notice how they open, how specific they are, and how they never summarize at the end.</div>
+        <div class="res-book-rishi">💡 For Rishi: Pick 3 essays from science/pre-med students and reverse-engineer the structure. How do they open? When do they mention accomplishments? What's their last sentence?</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-free">Free</span>
+          <span class="res-badge res-badge-online">Online</span>
+          <span class="res-badge res-badge-urgent">🔥 This Week</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook0" onchange="updateResProgress()">
+            <label for="resBook0">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#ede9fe;">🎓</div>
+      <div class="res-book-content">
+        <div class="res-book-title">MIT Admissions Blog — Student Essays & Commentary</div>
+        <div class="res-book-author">MIT Admissions · mitadmissions.org · Free</div>
+        <div class="res-book-why">MIT publishes real essays with admissions officer commentary. Exceptionally useful for understanding what "authentic" means in practice — and what admissions readers are actually thinking as they read.</div>
+        <div class="res-book-rishi">💡 For Rishi: Read the officers' comments as carefully as the essays themselves. Their language reveals what they value — specificity, honesty, self-awareness over achievement-listing.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-free">Free</span>
+          <span class="res-badge res-badge-online">Online</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook1" onchange="updateResProgress()">
+            <label for="resBook1">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#f0fdf9;">📗</div>
+      <div class="res-book-content">
+        <div class="res-book-title">College Essays That Made a Difference</div>
+        <div class="res-book-author">Princeton Review · ~$15 on Amazon or free at library</div>
+        <div class="res-book-why">Real essays from admitted students at top schools, annotated by admissions officers. Read 10–15 medical or science-themed essays and notice the patterns — how they open, what they reveal, how they avoid clichés.</div>
+        <div class="res-book-rishi">💡 For Rishi: Focus on any essay where the student discusses service, healthcare, or science. Notice how specific details (a patient's name, a lab smell, a coach's exact words) make essays unforgettable.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-book">Book</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook2" onchange="updateResProgress()">
+            <label for="resBook2">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 2: Writing Craft -->
+  <div class="res-category">
+    <div class="res-cat-header">
+      <div class="res-cat-icon">✍️</div>
+      <div class="res-cat-title">Category 2 — Writing Craft</div>
+      <div class="res-cat-count">4 resources</div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#fef9ee;">📒</div>
+      <div class="res-book-content">
+        <div class="res-book-title">On Writing Well</div>
+        <div class="res-book-author">William Zinsser · Book · ~$12</div>
+        <div class="res-book-why">The single best book on clear, honest nonfiction writing. Chapter 7 covers science writing specifically. Read chapters 1–5 before starting the first draft — Zinsser's core ideas about clarity and cutting clutter will immediately improve Rishi's sentences.</div>
+        <div class="res-book-rishi">💡 For Rishi: After reading, go back to any draft paragraph and cut every word that isn't doing work. Zinsser says the first draft is always too long. The second draft is the real one.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-book">Book</span>
+          <span class="res-badge res-badge-urgent">Read before first draft</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook3" onchange="updateResProgress()">
+            <label for="resBook3">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#fce7f3;">📕</div>
+      <div class="res-book-content">
+        <div class="res-book-title">Bird by Bird</div>
+        <div class="res-book-author">Anne Lamott · Book · ~$14</div>
+        <div class="res-book-why">Famous for the concept of the "shitty first draft" — giving permission to write badly at first and fix it later. Directly addresses the paralysis most students feel staring at a blank page. Read chapters 1 and 2 before Rishi's first draft session.</div>
+        <div class="res-book-rishi">💡 For Rishi: The lesson is simple — just start writing. The first draft isn't supposed to be good. It's supposed to exist. Once it exists, it can be fixed. A blank page cannot.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-book">Book</span>
+          <span class="res-badge res-badge-urgent">Read Ch 1–2 first</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook4" onchange="updateResProgress()">
+            <label for="resBook4">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#f0fdf9;">📘</div>
+      <div class="res-book-content">
+        <div class="res-book-title">The Elements of Style</div>
+        <div class="res-book-author">Strunk & White · Free online · Also ~$8 as book</div>
+        <div class="res-book-why">Tiny book, enormous impact. Read it in one sitting. The rules — omit needless words, use active voice, prefer the specific over the general — are exactly what makes college essays work.</div>
+        <div class="res-book-rishi">💡 For Rishi: Keep the "Elementary Principles of Composition" page open while revising. Run every sentence through rule 13: "Omit needless words." Most first drafts are 20% longer than they need to be.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-free">Free Online</span>
+          <span class="res-badge res-badge-book">Also Book</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook5" onchange="updateResProgress()">
+            <label for="resBook5">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#fef3c7;">📙</div>
+      <div class="res-book-content">
+        <div class="res-book-title">Politics and the English Language</div>
+        <div class="res-book-author">George Orwell · Free Online · 20-minute read</div>
+        <div class="res-book-why">Six rules for writing clearly that directly apply to college essays. Written in 1946 but every rule holds. Especially rule 1: never use a long word where a short one will do. Most college essays fail because they try to sound impressive instead of clear.</div>
+        <div class="res-book-rishi">💡 For Rishi: Print out the six rules and keep them next to his laptop while writing. Rule 6 is the most important: "Break any of these rules sooner than say anything outright barbarous." It's permission to trust your instincts.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-free">Free</span>
+          <span class="res-badge res-badge-online">Online</span>
+          <span class="res-badge res-badge-urgent">🔥 This Week</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook6" onchange="updateResProgress()">
+            <label for="resBook6">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 3: Medicine & Patients -->
+  <div class="res-category">
+    <div class="res-cat-header">
+      <div class="res-cat-icon">🩺</div>
+      <div class="res-cat-title">Category 3 — Medicine & Patient Experience</div>
+      <div class="res-cat-count">3 resources</div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">These give Rishi real material to think about — the kind of specific, human observations that make a "Why Medicine" essay compelling. They help him find language for what he's already felt but hasn't yet articulated.</p>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#f0fdf9;">💚</div>
+      <div class="res-book-content">
+        <div class="res-book-title">When Breath Becomes Air</div>
+        <div class="res-book-author">Paul Kalanithi · Book · ~$14</div>
+        <div class="res-book-why">A neurosurgeon writing about life, death, and why medicine matters. Beautifully written, deeply honest. Rishi will find language and ideas here that help him articulate his own pull toward medicine in ways he hasn't found the words for yet.</div>
+        <div class="res-book-rishi">💡 For Rishi: Read the prologue and first chapter before drafting paragraph 3 (The Turn). Kalanithi describes the exact moment medicine stopped being abstract and became urgent. That's the same moment Rishi's essay needs to capture.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-book">Book</span>
+          <span class="res-badge res-badge-urgent">Read before Para 3</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook7" onchange="updateResProgress()">
+            <label for="resBook7">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#fef2f2;">❤️</div>
+      <div class="res-book-content">
+        <div class="res-book-title">Do No Harm</div>
+        <div class="res-book-author">Henry Marsh · Book · ~$14</div>
+        <div class="res-book-why">A British neurosurgeon's honest account of what medicine actually is — the doubt, the weight of decisions, the reality behind the calling. Reading something this honest makes essays more compelling, not less. It prevents generic "I want to help people" language.</div>
+        <div class="res-book-rishi">💡 For Rishi: Read chapters 1–2. Notice how Marsh writes about uncertainty and the weight of responsibility — the same weight Rishi feels every shift as a lifeguard. That emotional parallel is essay gold.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-book">Book</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook8" onchange="updateResProgress()">
+            <label for="resBook8">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#ede9fe;">💜</div>
+      <div class="res-book-content">
+        <div class="res-book-title">The Spirit Catches You and You Fall Down</div>
+        <div class="res-book-author">Anne Fadiman · Book · ~$14</div>
+        <div class="res-book-why">About a Hmong child with epilepsy and the collision between her family and the American medical system. Expands how Rishi thinks about what good medicine means — beyond technical skill, into culture, communication, and humanity.</div>
+        <div class="res-book-rishi">💡 For Rishi: This is a longer read — don't save it for during applications. But reading it over the summer broadens his "Why Medicine" thinking well beyond "I want to help people" into something genuinely thoughtful.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-book">Book</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook9" onchange="updateResProgress()">
+            <label for="resBook9">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 4: Short Reads -->
+  <div class="res-category">
+    <div class="res-cat-header">
+      <div class="res-cat-icon">⚡</div>
+      <div class="res-cat-title">Category 4 — Short Reads (30–60 min each)</div>
+      <div class="res-cat-count">5 resources</div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">All free, all immediately useful. Rishi can knock out the whole category in a single afternoon.</p>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#fef3c7;">🎥</div>
+      <div class="res-book-content">
+        <div class="res-book-title">"The Danger of a Single Story" — TED Talk</div>
+        <div class="res-book-author">Chimamanda Ngozi Adichie · YouTube · 18 minutes · Free</div>
+        <div class="res-book-why">About the power of nuanced, specific storytelling versus generic narrative. Directly relevant to avoiding the "I want to help people" cliché — the single story every admissions reader has heard a thousand times.</div>
+        <div class="res-book-rishi">💡 For Rishi: Watch this before writing any draft. The lesson is: your story about medicine is not the story of "a student who wants to be a doctor." It's the specific story of a kid who scanned a pool every shift for three years and started asking different questions.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-free">Free</span>
+          <span class="res-badge res-badge-video">Video</span>
+          <span class="res-badge res-badge-urgent">🔥 Watch First</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook10" onchange="updateResProgress()">
+            <label for="resBook10">Watched</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#dcfce7;">🌐</div>
+      <div class="res-book-content">
+        <div class="res-book-title">Common App Essay Prompts — Official Page</div>
+        <div class="res-book-author">commonapp.org · Free · 10 minutes</div>
+        <div class="res-book-why">Read all 7 prompts, even if only using Prompt 1. Understanding why the prompts exist helps clarify what admissions officers are looking for — they're not looking for the answer to the question, they're looking for insight into who you are.</div>
+        <div class="res-book-rishi">💡 For Rishi: Read each prompt and ask "which of my stories fits here?" The lifeguard pivot naturally fits Prompt 1 (background/identity) but could also work for Prompt 5 (accomplishment or event). Choosing the right prompt matters.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-free">Free</span>
+          <span class="res-badge res-badge-online">Online</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook11" onchange="updateResProgress()">
+            <label for="resBook11">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#ede9fe;">✏️</div>
+      <div class="res-book-content">
+        <div class="res-book-title">"How to Write a Personal Statement" — Khan Academy</div>
+        <div class="res-book-author">khanacademy.org · Free · ~45 minutes of videos</div>
+        <div class="res-book-why">Practical, well-structured video series walking through every part of the Common App essay. Good for understanding the mechanics — what to write in each paragraph, common mistakes, how admissions readers approach essays.</div>
+        <div class="res-book-rishi">💡 For Rishi: Watch the "brainstorming" and "revision" videos most carefully. The brainstorming session will help surface specific moments from his lifeguard and MATA experiences he hasn't thought of yet.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-free">Free</span>
+          <span class="res-badge res-badge-video">Video</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook12" onchange="updateResProgress()">
+            <label for="resBook12">Watched</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#fce7f3;">🩺</div>
+      <div class="res-book-content">
+        <div class="res-book-title">AAMC "Why I Want to Be a Doctor" Essay Examples</div>
+        <div class="res-book-author">aamc.org · Free · 30 minutes</div>
+        <div class="res-book-why">The AAMC publishes examples of strong "Why Medicine" statements from medical school applicants. These are further along than Rishi's stage, but reading them shows what a fully developed, mature "Why Medicine" narrative looks like — and what he's working toward.</div>
+        <div class="res-book-rishi">💡 For Rishi: Notice how the strongest examples always start with a specific patient, moment, or observation — never an abstract statement. That pattern holds from high school applications all the way to medical school.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-free">Free</span>
+          <span class="res-badge res-badge-online">Online</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook13" onchange="updateResProgress()">
+            <label for="resBook13">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-book-card">
+      <div class="res-book-spine" style="background:#dbeafe;">📋</div>
+      <div class="res-book-content">
+        <div class="res-book-title">PrepScholar — "How to Write the Common App Essay"</div>
+        <div class="res-book-author">blog.prepscholar.com · Free · 20 minutes</div>
+        <div class="res-book-why">Practical breakdown of what makes each Common App essay prompt work, with annotated examples of strong and weak responses. Good for a quick tactical overview before diving into writing.</div>
+        <div class="res-book-rishi">💡 For Rishi: Read the section on "what NOT to write" carefully. It lists the most overused essay topics — illness, sports, mission trips. His lifeguard story is not on that list. That's an advantage.</div>
+        <div class="res-book-meta">
+          <span class="res-badge res-badge-free">Free</span>
+          <span class="res-badge res-badge-online">Online</span>
+          <div class="res-read-check">
+            <input type="checkbox" id="resBook14" onchange="updateResProgress()">
+            <label for="resBook14">Read</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reading Order Summary -->
+  <div class="card" style="background:var(--navy);border:none;">
+    <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#475569;margin-bottom:14px;">📅 Recommended Reading Order</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13px;">
+      <div style="background:rgba(255,255,255,0.07);border-radius:8px;padding:12px 14px;">
+        <div style="color:#fbbf24;font-weight:700;margin-bottom:6px;">This Week</div>
+        <div style="color:#94a3b8;line-height:1.7;">• Orwell's 6 rules<br>• JHU Essays That Worked<br>• Adichie TED Talk<br>• Common App prompts page</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border-radius:8px;padding:12px 14px;">
+        <div style="color:#fbbf24;font-weight:700;margin-bottom:6px;">Before First Draft</div>
+        <div style="color:#94a3b8;line-height:1.7;">• Bird by Bird Ch 1–2<br>• On Writing Well Ch 1–5<br>• When Breath Becomes Air (prologue)</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border-radius:8px;padding:12px 14px;">
+        <div style="color:#fbbf24;font-weight:700;margin-bottom:6px;">While Drafting</div>
+        <div style="color:#94a3b8;line-height:1.7;">• MIT Admissions Blog<br>• Do No Harm Ch 1–2<br>• Khan Academy essay videos</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border-radius:8px;padding:12px 14px;">
+        <div style="color:#fbbf24;font-weight:700;margin-bottom:6px;">Before Final Polish</div>
+        <div style="color:#94a3b8;line-height:1.7;">• Elements of Style<br>• College Essays That Made a Difference<br>• The Spirit Catches You (summer read)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </main>
 </div>
 
@@ -2687,6 +3562,8 @@ function showTab(id) {
   if (id === 'cna') initCNAPage();
   if (id === 'research') initResearchPage();
   if (id === 'gameplan') initGamePlan();
+  if (id === 'essayfw') initEssayFW();
+  if (id === 'res-essay') initResEssay();
 }
 
 // ── DAYS LEFT ──
@@ -3190,6 +4067,113 @@ function toggleTask(el) {
   document.getElementById('gpTasksDone').textContent = done;
   document.getElementById('gpTasksLeft').textContent = checks.length - done;
   showToast(isChecked ? '✓ Task complete!' : 'Task marked incomplete');
+}
+
+// ── ESSAY FRAMEWORK ──
+let efOpenerPicked = localStorage.getItem('rishiEfOpener') || null;
+let efAutoSaveTimer;
+
+function initEssayFW() {
+  // restore drafts
+  const saved = JSON.parse(localStorage.getItem('rishiEfDraft') || '{}');
+  ['efP1','efP2','efP3','efP4','efP5'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && saved[id]) { el.value = saved[id]; autoResize(el); }
+  });
+  // restore opener pick
+  if (efOpenerPicked !== null) {
+    const card = document.getElementById('efOpener' + efOpenerPicked);
+    if (card) card.classList.add('ef-picked');
+  }
+  efUpdateCount();
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = el.scrollHeight + 'px';
+}
+
+function efUpdateCount() {
+  const text = ['efP1','efP2','efP3','efP4','efP5']
+    .map(id => document.getElementById(id)?.value || '').join(' ');
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const el = document.getElementById('efWordCount');
+  if (el) {
+    el.textContent = words + ' / 650 words';
+    el.style.color = words > 650 ? '#f87171' : words > 580 ? '#fbbf24' : '#fbbf24';
+  }
+  // auto-resize each textarea
+  ['efP1','efP2','efP3','efP4','efP5'].forEach(id => {
+    const ta = document.getElementById(id);
+    if (ta) autoResize(ta);
+  });
+  // autosave after 1.5s idle
+  clearTimeout(efAutoSaveTimer);
+  efAutoSaveTimer = setTimeout(() => {
+    efSaveDraft(true);
+  }, 1500);
+}
+
+function efSaveDraft(auto = false) {
+  const data = {};
+  ['efP1','efP2','efP3','efP4','efP5'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) data[id] = el.value;
+  });
+  localStorage.setItem('rishiEfDraft', JSON.stringify(data));
+  const status = document.getElementById('efSaveStatus');
+  if (status) {
+    const now = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit' });
+    status.textContent = (auto ? 'Auto-saved' : 'Saved') + ' at ' + now + ' ET';
+  }
+  if (!auto) showToast('✓ Essay draft saved');
+}
+
+function pickEfOpener(i) {
+  document.querySelectorAll('.ef-opener-card').forEach(c => c.classList.remove('ef-picked'));
+  const card = document.getElementById('efOpener' + i);
+  if (card) card.classList.add('ef-picked');
+  efOpenerPicked = i;
+  localStorage.setItem('rishiEfOpener', i);
+  const labels = ['A — Quiet scan opening','B — 30-second tension opening','C — Body & textbook opening','D — Pool deck pivot opening'];
+  showToast('Opening line selected: ' + labels[i]);
+}
+
+// ── RESOURCES: ESSAY READING LIST ──
+const resCategories = [
+  { ids: ['resBook0','resBook1','resBook2'], total: 3 },
+  { ids: ['resBook3','resBook4','resBook5','resBook6'], total: 4 },
+  { ids: ['resBook7','resBook8','resBook9'], total: 3 },
+  { ids: ['resBook10','resBook11','resBook12','resBook13','resBook14'], total: 5 },
+];
+let resChecked = JSON.parse(localStorage.getItem('rishiResBooks') || '{}');
+
+function initResEssay() {
+  // restore checkboxes
+  Object.keys(resChecked).forEach(id => {
+    const cb = document.getElementById(id);
+    if (cb) cb.checked = resChecked[id];
+  });
+  updateResProgress();
+}
+
+function updateResProgress() {
+  // save state
+  for (let i = 0; i <= 14; i++) {
+    const cb = document.getElementById('resBook' + i);
+    if (cb) resChecked['resBook' + i] = cb.checked;
+  }
+  localStorage.setItem('rishiResBooks', JSON.stringify(resChecked));
+
+  // update bars
+  resCategories.forEach((cat, ci) => {
+    const done = cat.ids.filter(id => resChecked[id]).length;
+    const pct = Math.round((done / cat.total) * 100);
+    const bar = document.getElementById('resProg' + ci);
+    const count = document.getElementById('resProgCount' + ci);
+    if (bar) bar.style.width = pct + '%';
+    if (count) count.textContent = done + '/' + cat.total;
+  });
 }
 
 // ── UTILS ──
