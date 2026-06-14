@@ -917,7 +917,7 @@ body {
 <!-- ══════════ DASHBOARD ══════════ -->
 <div class="tab-section active" id="tab-dashboard">
   <div class="page-header">
-    <h1>Good morning, Rishi 👋</h1>
+    <h1 id="dashGreeting">Hello, Rishi 👋</h1>
     <p>Here's where things stand. Your first BS/MD deadline is coming up fast.</p>
   </div>
 
@@ -2626,6 +2626,18 @@ document.querySelectorAll('.modal-backdrop').forEach(m => {
 
 // ── INIT ──
 updateDaysLeft();
+
+// Time-aware greeting in Eastern Time
+(function() {
+  const etHour = new Date().toLocaleString('en-US', { timeZone: 'America/New_York', hour: 'numeric', hour12: false });
+  const h = parseInt(etHour);
+  const greeting = h >= 5 && h < 12 ? 'Good morning' :
+                   h >= 12 && h < 17 ? 'Good afternoon' :
+                   h >= 17 && h < 21 ? 'Good evening' : 'Good night';
+  const el = document.getElementById('dashGreeting');
+  if (el) el.textContent = greeting + ', Rishi 👋';
+})();
+
 renderDashboard();
 renderSAT();
 initCollegeStatuses();
