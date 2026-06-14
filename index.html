@@ -609,6 +609,133 @@ body {
   font-size: 12px; color: #7dd3fc; margin-top: 5px; font-style: normal;
 }
 
+/* ── CNA PAGE ── */
+.cna-hero {
+  background: linear-gradient(135deg, #0f2744 0%, #0d9488 100%);
+  border-radius: 14px;
+  padding: 28px 32px;
+  color: white;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+.cna-hero-text { flex: 1; }
+.cna-hero h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+.cna-hero p { font-size: 14px; color: #b2f5ea; line-height: 1.6; }
+.cna-status-big {
+  text-align: center;
+  background: rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 18px 24px;
+  min-width: 160px;
+}
+.cna-status-icon { font-size: 36px; margin-bottom: 6px; }
+.cna-status-label { font-size: 12px; color: #b2f5ea; margin-bottom: 4px; }
+.cna-status-value { font-size: 15px; font-weight: 700; color: white; }
+
+.cna-step-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.cna-step {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  position: relative;
+}
+.cna-step.done { border-color: var(--teal); background: #f0fdf9; }
+.cna-step.active { border-color: var(--blue); background: #eff6ff; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+.cna-step-num {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--muted); margin-bottom: 6px;
+}
+.cna-step-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.cna-step-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.cna-step-check {
+  position: absolute; top: 12px; right: 12px;
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  transition: all 0.15s;
+  background: white;
+}
+.cna-step.done .cna-step-check { background: var(--teal); border-color: var(--teal); color: white; }
+.cna-step.active .cna-step-check { border-color: var(--blue); }
+
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+.info-block {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+.info-block h4 {
+  font-size: 13px; font-weight: 600; color: var(--navy);
+  margin-bottom: 12px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.info-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 6px 0; border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.info-row:last-child { border-bottom: none; }
+.info-label { color: var(--muted); flex-shrink: 0; margin-right: 12px; }
+.info-value { color: var(--text); font-weight: 500; text-align: right; }
+.info-value.highlight { color: var(--teal); font-weight: 700; }
+.info-value.urgent { color: var(--red); font-weight: 700; }
+
+.checklist-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 8px 0; border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.checklist-item:last-child { border-bottom: none; }
+.checklist-item input[type=checkbox] { accent-color: var(--teal); width: 15px; height: 15px; margin-top: 1px; flex-shrink: 0; }
+.checklist-item label { color: var(--text); cursor: pointer; line-height: 1.5; }
+.checklist-item label.done-label { text-decoration: line-through; color: var(--muted); }
+
+.timeline-row {
+  display: flex; gap: 0; margin-bottom: 20px; overflow: hidden; border-radius: 10px;
+}
+.tl-item {
+  flex: 1; padding: 14px 12px; text-align: center;
+  background: var(--card); border: 1px solid var(--border);
+  border-right: none; position: relative;
+}
+.tl-item:last-child { border-right: 1px solid var(--border); }
+.tl-item.tl-now { background: #eff6ff; border-color: var(--blue); }
+.tl-item.tl-done { background: #f0fdf9; border-color: var(--teal); }
+.tl-week { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); }
+.tl-date { font-size: 13px; font-weight: 700; color: var(--navy); margin: 3px 0; }
+.tl-desc { font-size: 11px; color: var(--muted); line-height: 1.4; }
+.tl-item.tl-now .tl-date { color: var(--blue); }
+
+.contact-card {
+  background: linear-gradient(135deg, #f0fdf9, #eff6ff);
+  border: 1px solid #a7f3d0;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+.contact-card h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
+.contact-detail {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13.5px; color: var(--text); margin-bottom: 8px;
+}
+.contact-detail:last-child { margin-bottom: 0; }
+
 @media (max-width: 768px) {
   .sidebar { width: 0; overflow: hidden; }
   .main { margin-left: 0; padding: 20px 16px; }
@@ -616,6 +743,11 @@ body {
   .essay-grid { grid-template-columns: 1fr; }
   .sat-hero { flex-direction: column; }
   .call-summary-row { grid-template-columns: repeat(3,1fr); }
+  .cna-hero { flex-direction: column; }
+  .cna-step-grid { grid-template-columns: 1fr 1fr; }
+  .info-grid { grid-template-columns: 1fr; }
+  .timeline-row { flex-direction: column; }
+  .tl-item { border-right: 1px solid var(--border); border-bottom: none; }
 }
 </style>
 </head>
@@ -657,6 +789,9 @@ body {
     </div>
     <div class="nav-item" onclick="showTab('calling')">
       <span class="nav-icon">📞</span> Doctor Outreach
+    </div>
+    <div class="nav-item" onclick="showTab('cna')">
+      <span class="nav-icon">🏅</span> CNA Certification
     </div>
   </div>
   <div class="sidebar-footer">
@@ -1215,6 +1350,180 @@ body {
   <div id="practiceCallCards"></div>
 </div>
 
+<!-- ══════════ CNA CERTIFICATION ══════════ -->
+<div class="tab-section" id="tab-cna">
+  <div class="page-header">
+    <h1>CNA Certification</h1>
+    <p>Certified Nursing Assistant · Moon River Nursing Careers, Ashburn VA · Summer 2026</p>
+  </div>
+
+  <!-- Hero status card -->
+  <div class="cna-hero">
+    <div class="cna-hero-text">
+      <h2>🏅 Become a Certified Nursing Assistant This Summer</h2>
+      <p>CNA certification is one of the most powerful differentiators on a BS/MD application. While most applicants have shadowing hours, very few have an actual state credential. With school out, Rishi can complete the full 140-hour program in 5 weeks and be certified before the first BS/MD application deadline in August.</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-shrink:0;">
+      <div class="cna-status-big">
+        <div class="cna-status-icon" id="cnaStatusIcon">📋</div>
+        <div class="cna-status-label">Current Status</div>
+        <div class="cna-status-value" id="cnaStatusValue">Not Started</div>
+      </div>
+      <div class="cna-status-big">
+        <div class="cna-status-icon">⏱️</div>
+        <div class="cna-status-label">Time to Complete</div>
+        <div class="cna-status-value">5 Weeks</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="card-title" style="margin-bottom:10px; color:var(--muted); font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">🗓️ Ideal Summer Timeline</div>
+  <div class="timeline-row">
+    <div class="tl-item tl-now">
+      <div class="tl-week">Now · Jun 13</div>
+      <div class="tl-date">This Week</div>
+      <div class="tl-desc">Call Moon River, attend info session, register</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-week">Week 1–2 · Late Jun</div>
+      <div class="tl-date">Online Theory</div>
+      <div class="tl-desc">40 hrs online + 20 hrs dementia/end-of-life training from home</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-week">Week 3–4 · Jul</div>
+      <div class="tl-date">Skills Lab</div>
+      <div class="tl-desc">32 hrs hands-on lab in Ashburn — vitals, patient care, transfers</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-week">Week 4–5 · Jul</div>
+      <div class="tl-date">Clinicals</div>
+      <div class="tl-desc">48 hrs supervised patient care at a long-term care facility</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-week">Early Aug</div>
+      <div class="tl-date">Board Exam</div>
+      <div class="tl-desc">Virginia Board of Nursing written + skills exam</div>
+    </div>
+    <div class="tl-item" style="background:linear-gradient(135deg,#f0fdf9,#eff6ff);border-color:var(--teal)">
+      <div class="tl-week">Mid Aug</div>
+      <div class="tl-date" style="color:var(--teal)">✅ Certified!</div>
+      <div class="tl-desc">CNA credential on every application before deadlines open</div>
+    </div>
+  </div>
+
+  <!-- 4-step progress -->
+  <div class="card-title" style="margin-bottom:10px; color:var(--muted); font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">📍 Track Your Progress</div>
+  <div class="cna-step-grid" id="cnaStepGrid">
+    <div class="cna-step active" id="cnaStep0">
+      <div class="cna-step-num">Step 1</div>
+      <div class="cna-step-title">Register at Moon River</div>
+      <div class="cna-step-desc">Call (703) 801-1180, attend info session, pay deposit, get immunization paperwork</div>
+      <div class="cna-step-check" onclick="toggleCNAStep(0)"></div>
+    </div>
+    <div class="cna-step" id="cnaStep1">
+      <div class="cna-step-num">Step 2</div>
+      <div class="cna-step-title">Complete Online Theory</div>
+      <div class="cna-step-desc">60 hrs online: American Red Cross curriculum + dementia & end-of-life care modules</div>
+      <div class="cna-step-check" onclick="toggleCNAStep(1)"></div>
+    </div>
+    <div class="cna-step" id="cnaStep2">
+      <div class="cna-step-num">Step 3</div>
+      <div class="cna-step-title">Skills Lab + Clinicals</div>
+      <div class="cna-step-desc">32 hrs skills lab in Ashburn + 48 hrs supervised patient care at clinical site</div>
+      <div class="cna-step-check" onclick="toggleCNAStep(2)"></div>
+    </div>
+    <div class="cna-step" id="cnaStep3">
+      <div class="cna-step-num">Step 4</div>
+      <div class="cna-step-title">Pass VA Board Exam</div>
+      <div class="cna-step-desc">Written + hands-on skills evaluation. Pass → appear on VA Nurse Aide Registry → officially a CNA</div>
+      <div class="cna-step-check" onclick="toggleCNAStep(3)"></div>
+    </div>
+  </div>
+
+  <!-- Info + requirements -->
+  <div class="info-grid">
+    <div class="info-block">
+      <h4>📋 Program Details — Moon River Nursing Careers</h4>
+      <div class="info-row"><span class="info-label">Location</span><span class="info-value">44927 George Washington Blvd #240, Ashburn VA</span></div>
+      <div class="info-row"><span class="info-label">Phone</span><span class="info-value highlight">📞 (703) 801-1180</span></div>
+      <div class="info-row"><span class="info-label">Email</span><span class="info-value">enroll@moonrivernursingcareers.com</span></div>
+      <div class="info-row"><span class="info-label">Duration</span><span class="info-value highlight">5 weeks · 140 hours total</span></div>
+      <div class="info-row"><span class="info-label">Schedule</span><span class="info-value">Weekday OR evening/weekend options</span></div>
+      <div class="info-row"><span class="info-label">New Classes</span><span class="info-value highlight urgent">Every month — summer slots filling now</span></div>
+      <div class="info-row"><span class="info-label">Min. Age</span><span class="info-value highlight">16 years ✓ Rishi qualifies</span></div>
+      <div class="info-row"><span class="info-label">Approved by</span><span class="info-value">Virginia Board of Nursing</span></div>
+    </div>
+
+    <div class="info-block">
+      <h4>💉 Required Before Starting — Get These Now</h4>
+      <div class="checklist-item">
+        <input type="checkbox" id="req0" onchange="saveCNAReqs()">
+        <label for="req0">TDAP vaccine within last 10 years</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="req1" onchange="saveCNAReqs()">
+        <label for="req1">2x MMR or proof of immunity</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="req2" onchange="saveCNAReqs()">
+        <label for="req2">2x Varicella or proof of immunity</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="req3" onchange="saveCNAReqs()">
+        <label for="req3">Hepatitis B (3 doses) or sign waiver</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="req4" onchange="saveCNAReqs()">
+        <label for="req4">Negative TB test (PPD) within past 12 months</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="req5" onchange="saveCNAReqs()">
+        <label for="req5">Government-issued photo ID</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="req6" onchange="saveCNAReqs()">
+        <label for="req6">Criminal background check (no convictions)</label>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="req7" onchange="saveCNAReqs()">
+        <label for="req7">Registration deposit paid to Moon River</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- What Rishi will learn -->
+  <div class="card">
+    <div class="card-title">🎓 What Rishi Will Learn — Why It's Powerful for BS/MD Apps</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;font-size:13px;">
+      <div style="background:#f8fafc;border-radius:8px;padding:14px;">
+        <div style="font-weight:600;color:var(--navy);margin-bottom:6px;">🩺 Clinical Skills</div>
+        <div style="color:var(--muted);line-height:1.6;">Taking vital signs, patient transfers, personal hygiene assistance, infection control, fall prevention, basic first aid</div>
+      </div>
+      <div style="background:#f8fafc;border-radius:8px;padding:14px;">
+        <div style="font-weight:600;color:var(--navy);margin-bottom:6px;">🧠 Medical Knowledge</div>
+        <div style="color:var(--muted);line-height:1.6;">Basic anatomy, dementia & end-of-life care, patients' rights, legal aspects of care, culturally sensitive practice</div>
+      </div>
+      <div style="background:#f8fafc;border-radius:8px;padding:14px;">
+        <div style="font-weight:600;color:var(--navy);margin-bottom:6px;">💬 Soft Skills</div>
+        <div style="color:var(--muted);line-height:1.6;">Patient communication, teamwork with nurses, observing & reporting, empathy in high-stress situations, professional conduct</div>
+      </div>
+    </div>
+    <div style="margin-top:14px;padding:12px 16px;background:#eff6ff;border-radius:8px;border-left:3px solid var(--blue);font-size:13px;color:var(--navy);">
+      💡 <strong>Application angle:</strong> In interviews, Rishi can say "I earned my CNA certification at 17 and worked directly with patients" — that answer is rare at the high school level and signals exactly the maturity and commitment BS/MD programs want to see.
+    </div>
+  </div>
+
+  <!-- Immediate next step -->
+  <div class="contact-card">
+    <h4>🚀 Call Moon River This Week — Spots Are Filling for Summer</h4>
+    <div class="contact-detail">📞 <strong>(703) 801-1180</strong> — call or text to schedule a free info session</div>
+    <div class="contact-detail">📧 <strong>enroll@moonrivernursingcareers.com</strong> — email to ask about the next available class date</div>
+    <div class="contact-detail">📍 <strong>44927 George Washington Blvd, Suite 240–245, Ashburn, VA 20147</strong></div>
+    <div style="margin-top:12px;font-size:13px;color:var(--muted);">Ask specifically: "When does your next accelerated summer class start, and do you have spots available for a 17-year-old high school student?"</div>
+  </div>
+</div>
+
 </main>
 </div>
 
@@ -1319,6 +1628,7 @@ function showTab(id) {
   if (id === 'essays') renderEssays();
   if (id === 'dashboard') renderDashboard();
   if (id === 'calling') renderCallingPage();
+  if (id === 'cna') initCNAPage();
 }
 
 // ── DAYS LEFT ──
@@ -1649,6 +1959,60 @@ function updateCallSummary() {
   document.getElementById('cSum-yes').textContent = counts.yes;
   document.getElementById('cSum-voicemail').textContent = counts.voicemail;
   document.getElementById('cSum-followup').textContent = counts.followup;
+}
+
+// ── CNA ──
+let cnaSteps = JSON.parse(localStorage.getItem('rishiCNASteps') || '[false,false,false,false]');
+let cnaReqs  = JSON.parse(localStorage.getItem('rishiCNAReqs')  || '[false,false,false,false,false,false,false,false]');
+
+function initCNAPage() {
+  // steps
+  cnaSteps.forEach((done, i) => {
+    const el = document.getElementById('cnaStep' + i);
+    const check = el && el.querySelector('.cna-step-check');
+    if (done) {
+      el.classList.remove('active'); el.classList.add('done');
+      if (check) check.textContent = '✓';
+    } else {
+      el.classList.remove('done');
+      if (check) check.textContent = '';
+    }
+  });
+  // set active = first undone step
+  const firstUndone = cnaSteps.indexOf(false);
+  if (firstUndone >= 0) {
+    const el = document.getElementById('cnaStep' + firstUndone);
+    if (el && !el.classList.contains('done')) el.classList.add('active');
+  }
+  // update hero status
+  const done = cnaSteps.filter(Boolean).length;
+  const icons = ['📋','📚','🏥','📝'];
+  const labels = ['Not Started','Theory In Progress','Labs & Clinicals','Board Exam'];
+  const si = document.getElementById('cnaStatusIcon');
+  const sv = document.getElementById('cnaStatusValue');
+  if (si) si.textContent = done === 4 ? '🏅' : icons[done];
+  if (sv) sv.textContent = done === 4 ? 'CERTIFIED! 🎉' : labels[done];
+  // reqs checkboxes
+  cnaReqs.forEach((checked, i) => {
+    const cb = document.getElementById('req' + i);
+    if (cb) cb.checked = checked;
+  });
+}
+
+function toggleCNAStep(i) {
+  cnaSteps[i] = !cnaSteps[i];
+  localStorage.setItem('rishiCNASteps', JSON.stringify(cnaSteps));
+  initCNAPage();
+  const stepNames = ['Registered at Moon River','Online theory complete','Labs & clinicals complete','Board exam passed — CNA Certified! 🎉'];
+  showToast(cnaSteps[i] ? '✓ ' + stepNames[i] : 'Step marked incomplete');
+}
+
+function saveCNAReqs() {
+  cnaReqs = Array.from({length:8}, (_, i) => {
+    const cb = document.getElementById('req' + i);
+    return cb ? cb.checked : false;
+  });
+  localStorage.setItem('rishiCNAReqs', JSON.stringify(cnaReqs));
 }
 
 // ── UTILS ──
