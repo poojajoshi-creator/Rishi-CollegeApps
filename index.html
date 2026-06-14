@@ -736,6 +736,111 @@ body {
 }
 .contact-detail:last-child { margin-bottom: 0; }
 
+/* ── RESEARCH PAGE ── */
+.research-hero {
+  background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%);
+  border-radius: 14px; padding: 28px 32px; color: white;
+  margin-bottom: 20px; display: flex; gap: 28px; align-items: center;
+}
+.research-hero h2 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 6px; }
+.research-hero p { font-size: 14px; color: #c7d2fe; line-height: 1.6; }
+.research-stat-pill {
+  background: rgba(255,255,255,0.12); border-radius: 12px;
+  padding: 16px 22px; text-align: center; min-width: 130px; flex-shrink: 0;
+}
+.research-stat-num { font-family: 'DM Serif Display', serif; font-size: 28px; color: white; line-height: 1; }
+.research-stat-label { font-size: 11px; color: #c7d2fe; margin-top: 4px; }
+
+.track-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+
+.track-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+}
+.track-card-header {
+  padding: 14px 18px; display: flex; align-items: center; gap: 10px;
+}
+.track-card-icon { font-size: 22px; }
+.track-card-title { font-size: 15px; font-weight: 600; color: var(--navy); }
+.track-card-sub { font-size: 12px; color: var(--muted); margin-top: 1px; }
+.track-card-body { padding: 0 18px 16px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+.track-tag {
+  display: inline-block; font-size: 10px; font-weight: 700;
+  padding: 2px 8px; border-radius: 99px; text-transform: uppercase;
+  letter-spacing: 0.4px; margin-bottom: 8px;
+}
+.tag-open   { background: #dcfce7; color: #166534; }
+.tag-closed { background: #fee2e2; color: #991b1b; }
+.tag-apply  { background: #fef3c7; color: #92400e; }
+.tag-independent { background: #ede9fe; color: #5b21b6; }
+.track-detail-row {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 5px 0; border-bottom: 1px solid var(--border);
+  font-size: 12.5px;
+}
+.track-detail-row:last-child { border-bottom: none; }
+.track-detail-label { color: var(--muted); width: 80px; flex-shrink: 0; }
+.track-detail-value { color: var(--text); font-weight: 500; }
+
+.topic-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px 18px; margin-bottom: 10px;
+  display: flex; gap: 14px; align-items: flex-start;
+  cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s;
+}
+.topic-card:hover { border-color: #818cf8; box-shadow: 0 2px 8px rgba(99,102,241,0.1); }
+.topic-card.selected { border-color: #6366f1; background: #f5f3ff; box-shadow: 0 0 0 3px rgba(99,102,241,0.12); }
+.topic-radio {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid var(--border); flex-shrink: 0; margin-top: 2px;
+  transition: all 0.15s; background: white;
+}
+.topic-card.selected .topic-radio { background: #6366f1; border-color: #6366f1; }
+.topic-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 3px; }
+.topic-desc { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 6px; }
+.topic-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.topic-pill {
+  font-size: 10px; font-weight: 600; padding: 2px 8px;
+  border-radius: 99px; background: #ede9fe; color: #5b21b6;
+}
+.topic-pill.green { background: #dcfce7; color: #166534; }
+.topic-pill.blue  { background: #dbeafe; color: #1d4ed8; }
+.topic-pill.amber { background: #fef3c7; color: #92400e; }
+
+.journal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.journal-table th {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--muted);
+  padding: 9px 12px; border-bottom: 2px solid var(--border); text-align: left;
+}
+.journal-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.journal-table tr:last-child td { border-bottom: none; }
+.journal-table tr:hover td { background: #f8fafc; }
+.prestige-dot {
+  display: inline-block; width: 8px; height: 8px;
+  border-radius: 50%; margin-right: 4px;
+}
+
+.research-phase-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 0; margin-bottom: 20px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+.research-phase {
+  padding: 14px 10px; text-align: center;
+  border-right: 1px solid var(--border); background: var(--card);
+}
+.research-phase:last-child { border-right: none; }
+.research-phase.rp-active { background: #f5f3ff; }
+.research-phase.rp-done { background: #f0fdf9; }
+.rp-num { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 4px; }
+.rp-icon { font-size: 20px; margin-bottom: 4px; }
+.rp-title { font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+.rp-dates { font-size: 11px; color: var(--muted); }
+.rp-check {
+  width: 20px; height: 20px; border-radius: 50%;
+  border: 2px solid var(--border); cursor: pointer;
+  margin: 6px auto 0; display: flex; align-items: center; justify-content: center;
+  font-size: 11px; background: white; transition: all 0.15s;
+}
+.rp-done .rp-check { background: var(--teal); border-color: var(--teal); color: white; }
+
 @media (max-width: 768px) {
   .sidebar { width: 0; overflow: hidden; }
   .main { margin-left: 0; padding: 20px 16px; }
@@ -748,6 +853,9 @@ body {
   .info-grid { grid-template-columns: 1fr; }
   .timeline-row { flex-direction: column; }
   .tl-item { border-right: 1px solid var(--border); border-bottom: none; }
+  .research-hero { flex-direction: column; }
+  .track-grid { grid-template-columns: 1fr; }
+  .research-phase-grid { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
@@ -792,6 +900,9 @@ body {
     </div>
     <div class="nav-item" onclick="showTab('cna')">
       <span class="nav-icon">🏅</span> CNA Certification
+    </div>
+    <div class="nav-item" onclick="showTab('research')">
+      <span class="nav-icon">🔬</span> Research
     </div>
   </div>
   <div class="sidebar-footer">
@@ -1524,6 +1635,413 @@ body {
   </div>
 </div>
 
+<!-- ══════════ RESEARCH ══════════ -->
+<div class="tab-section" id="tab-research">
+  <div class="page-header">
+    <h1>Research Tracker</h1>
+    <p>Summer 2026 · Independent project + formal program · target: published or in-review before applications</p>
+  </div>
+
+  <!-- Hero -->
+  <div class="research-hero">
+    <div style="flex:1">
+      <h2>🔬 Research Sets Rishi Apart</h2>
+      <p>Most BS/MD applicants have shadowing hours. Very few have conducted original research or have a paper under review. Even a submission in progress on an application reads as "this student operates at a college level." The goal this summer: pick a topic, produce a manuscript, submit to a journal by September.</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-shrink:0;">
+      <div class="research-stat-pill">
+        <div class="research-stat-num" id="resPhaseNum">0/5</div>
+        <div class="research-stat-label">Phases Done</div>
+      </div>
+      <div class="research-stat-pill">
+        <div class="research-stat-num" id="resTopicCount">—</div>
+        <div class="research-stat-label">Topic Selected</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase tracker -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">📍 Research Phases — Click to Mark Complete</div>
+  <div class="research-phase-grid" id="resPhaseGrid">
+    <div class="research-phase" id="resPhase0">
+      <div class="rp-num">Phase 1</div>
+      <div class="rp-icon">🎯</div>
+      <div class="rp-title">Pick Topic</div>
+      <div class="rp-dates">Jun 13–20</div>
+      <div class="rp-check" onclick="toggleResPhase(0)"></div>
+    </div>
+    <div class="research-phase" id="resPhase1">
+      <div class="rp-num">Phase 2</div>
+      <div class="rp-icon">📚</div>
+      <div class="rp-title">Literature Review</div>
+      <div class="rp-dates">Jun 20 – Jul 10</div>
+      <div class="rp-check" onclick="toggleResPhase(1)"></div>
+    </div>
+    <div class="research-phase" id="resPhase2">
+      <div class="rp-num">Phase 3</div>
+      <div class="rp-icon">🧪</div>
+      <div class="rp-title">Data / Analysis</div>
+      <div class="rp-dates">Jul 10 – Aug 1</div>
+      <div class="rp-check" onclick="toggleResPhase(2)"></div>
+    </div>
+    <div class="research-phase" id="resPhase3">
+      <div class="rp-num">Phase 4</div>
+      <div class="rp-icon">✍️</div>
+      <div class="rp-title">Write Paper</div>
+      <div class="rp-dates">Aug 1–25</div>
+      <div class="rp-check" onclick="toggleResPhase(3)"></div>
+    </div>
+    <div class="research-phase" id="resPhase4">
+      <div class="rp-num">Phase 5</div>
+      <div class="rp-icon">📬</div>
+      <div class="rp-title">Submit to Journal</div>
+      <div class="rp-dates">By Sep 1</div>
+      <div class="rp-check" onclick="toggleResPhase(4)"></div>
+    </div>
+  </div>
+
+  <!-- Two tracks -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">🗂️ Two Parallel Tracks This Summer</div>
+  <div class="track-grid">
+    <div class="track-card">
+      <div class="track-card-header" style="background:linear-gradient(135deg,#f5f3ff,#ede9fe)">
+        <div class="track-card-icon">🏫</div>
+        <div>
+          <div class="track-card-title">GMU AI & Medical Informatics Program</div>
+          <div class="track-card-sub">Formal program · George Mason University · Jun 22 – Jul 24</div>
+        </div>
+      </div>
+      <div class="track-card-body">
+        <span class="track-tag tag-open">🟢 Open — Apply Now</span>
+
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin:10px 0 6px;">Program Details</div>
+        <div class="track-detail-row"><span class="track-detail-label">Sessions</span><span class="track-detail-value">Mondays 9–11 AM online (Jun 22 – Jul 13) — only 4 sessions!</span></div>
+        <div class="track-detail-row"><span class="track-detail-label">Assignments</span><span class="track-detail-value">Weekly research tasks, done on your own schedule</span></div>
+        <div class="track-detail-row"><span class="track-detail-label">Conference</span><span class="track-detail-value">🗓️ <strong>Jul 17, 2026</strong> — present at GMU Arlington (in-person)</span></div>
+        <div class="track-detail-row"><span class="track-detail-label">Paper due</span><span class="track-detail-value">July 24, 2026</span></div>
+        <div class="track-detail-row"><span class="track-detail-label">Output</span><span class="track-detail-value">Published in Schar School Young Scholars Journal + conference award</span></div>
+        <div class="track-detail-row"><span class="track-detail-label">Cohort</span><span class="track-detail-value">Limited to 10–25 students — apply ASAP</span></div>
+        <div class="track-detail-row"><span class="track-detail-label">Cost</span><span class="track-detail-value">Email for fee — need-based scholarships available</span></div>
+
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin:12px 0 6px;">📋 How to Apply — Step by Step</div>
+        <div style="background:#f5f3ff;border-radius:8px;padding:12px 14px;">
+          <div style="display:flex;gap:10px;margin-bottom:10px;font-size:13px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:#6366f1;color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">1</div>
+            <div><strong style="color:var(--navy)">Email the program director</strong><br><span style="color:var(--muted)">Send to: <span style="color:#6366f1;font-weight:600">cbsp@gmu.edu</span><br>Subject: "Application — AI & Medical Informatics Summer 2026"</span></div>
+          </div>
+          <div style="display:flex;gap:10px;margin-bottom:10px;font-size:13px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:#6366f1;color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">2</div>
+            <div><strong style="color:var(--navy)">Include in your email:</strong><br><span style="color:var(--muted)">Your name, grade, school, a brief statement of interest (2–3 sentences on why biomedical AI interests you and your MATA background), and ask about the application form and fee</span></div>
+          </div>
+          <div style="display:flex;gap:10px;margin-bottom:10px;font-size:13px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:#6366f1;color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">3</div>
+            <div><strong style="color:var(--navy)">Complete the formal application</strong><br><span style="color:var(--muted)">They'll send back an application form. Fill it out promptly — cohort is limited to 10–25 students and spots fill fast</span></div>
+          </div>
+          <div style="display:flex;gap:10px;font-size:13px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:#6366f1;color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">4</div>
+            <div><strong style="color:var(--navy)">Pay registration fee + confirm</strong><br><span style="color:var(--muted)">Ask about the scholarship if needed. Program starts June 22 — apply this week</span></div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+          <div style="font-size:12px;color:#5b21b6;background:#f5f3ff;padding:7px 10px;border-radius:6px;border:1px solid #ddd6fe;flex:1;">
+            💡 <strong>Compatible with CNA:</strong> Only 4 Monday mornings (9–11 AM) + self-paced work. Easily fits around Moon River's schedule.
+          </div>
+        </div>
+
+        <div style="margin-top:10px;">
+          <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;background:white;padding:8px 10px;border-radius:6px;border:1px solid var(--border);">
+            <input type="checkbox" id="gmuApplied" style="accent-color:#6366f1;width:15px;height:15px;" onchange="saveResearchChecks()">
+            <span>✅ Application email sent to cbsp@gmu.edu</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="track-card">
+      <div class="track-card-header" style="background:linear-gradient(135deg,#f0fdf9,#dcfce7)">
+        <div class="track-card-icon">🔬</div>
+        <div>
+          <div class="track-card-title">Independent Research Project</div>
+          <div class="track-card-sub">Self-directed · publishable · highest upside</div>
+        </div>
+      </div>
+      <div class="track-card-body">
+        <span class="track-tag tag-independent">✦ No Application Needed</span>
+        <div class="track-detail-row"><span class="track-detail-label">Format</span><span class="track-detail-value">Fully self-directed — work from home</span></div>
+        <div class="track-detail-row"><span class="track-detail-label">Mentor</span><span class="track-detail-value">MATA teacher, or cold-email a GMU/GWU professor</span></div>
+        <div class="track-detail-row"><span class="track-detail-label">Output</span><span class="track-detail-value">Research paper submitted to JEI, JSR, or STEM Fellowship</span></div>
+        <div class="track-detail-row"><span class="track-detail-label">Time</span><span class="track-detail-value">~10 hrs/week over 10–12 weeks</span></div>
+        <div class="track-detail-row"><span class="track-detail-label">Tools</span><span class="track-detail-value">PubMed, Python/R, Google Scholar, free public datasets</span></div>
+
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin:12px 0 6px;">📋 How to Get Started</div>
+        <div style="background:#f0fdf9;border-radius:8px;padding:12px 14px;">
+          <div style="display:flex;gap:10px;margin-bottom:10px;font-size:13px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:var(--teal);color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">1</div>
+            <div><strong style="color:var(--navy)">Pick a topic from the list below</strong><br><span style="color:var(--muted)">Choose one that excites you — authenticity comes through in writing</span></div>
+          </div>
+          <div style="display:flex;gap:10px;margin-bottom:10px;font-size:13px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:var(--teal);color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">2</div>
+            <div><strong style="color:var(--navy)">Email your MATA biomedical teacher</strong><br><span style="color:var(--muted)">Ask if they'd serve as a faculty mentor — this strengthens the paper and gives you guidance</span></div>
+          </div>
+          <div style="display:flex;gap:10px;margin-bottom:10px;font-size:13px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:var(--teal);color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">3</div>
+            <div><strong style="color:var(--navy)">Read 15–20 papers on PubMed</strong><br><span style="color:var(--muted)">pubmed.ncbi.nlm.nih.gov — free, 40M+ biomedical citations</span></div>
+          </div>
+          <div style="display:flex;gap:10px;font-size:13px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:var(--teal);color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">4</div>
+            <div><strong style="color:var(--navy)">Write, submit to RARS first, then JEI</strong><br><span style="color:var(--muted)">RARS gives an instant preprint DOI for applications; JEI gives peer-reviewed credibility</span></div>
+          </div>
+        </div>
+        <div style="margin-top:10px;font-size:12px;color:#166534;background:#f0fdf9;padding:8px 10px;border-radius:6px;border:1px solid #bbf7d0;">
+          💡 "Paper under review at JEI" on a BS/MD application is powerful — even before acceptance
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMBINED SUMMER CALENDAR -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">🗓️ Combined Summer Calendar — CNA + GMU + Research</div>
+  <div class="card" style="padding:0;overflow:hidden;margin-bottom:20px;">
+    <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+      <thead>
+        <tr style="background:var(--navy);">
+          <th style="padding:10px 14px;color:white;font-weight:600;text-align:left;font-size:11px;letter-spacing:0.5px;width:120px;">Week</th>
+          <th style="padding:10px 14px;color:#7dd3fc;font-weight:600;text-align:left;font-size:11px;letter-spacing:0.5px;">🏅 CNA (Moon River)</th>
+          <th style="padding:10px 14px;color:#c7d2fe;font-weight:600;text-align:left;font-size:11px;letter-spacing:0.5px;">🏫 GMU Program</th>
+          <th style="padding:10px 14px;color:#a7f3d0;font-weight:600;text-align:left;font-size:11px;letter-spacing:0.5px;">🔬 Research / Other</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fffbeb;">
+          <td style="padding:10px 14px;font-weight:700;color:var(--amber);border-bottom:1px solid var(--border);">Jun 13–21<br><span style="font-size:10px;color:var(--muted);font-weight:400">THIS WEEK</span></td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">📞 Call Moon River, attend info session, register, gather immunization docs</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">📧 Email cbsp@gmu.edu to apply for summer program</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">Pick research topic from portal list below</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--border);">Jun 22–28</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">🖥️ CNA online theory begins (self-paced, at home)</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">🎓 <strong>GMU Session 1</strong> — Mon Jun 22, 9–11 AM online. First research assignment.</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">Begin PubMed literature search</td>
+        </tr>
+        <tr style="background:#f8fafc;">
+          <td style="padding:10px 14px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--border);">Jun 29 – Jul 5</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">🖥️ CNA online theory continues (40 hrs total, flexible)</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">🎓 <strong>GMU Session 2</strong> — Mon Jun 29, 9–11 AM. Research assignment + optional office hours.</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">Read 10–15 papers, build literature notes</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--border);">Jul 6–12</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">🏥 Skills lab begins at Moon River (Tue–Fri, 4-hr sessions)</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">🎓 <strong>GMU Session 3</strong> — Mon Jul 7, 9–11 AM. Draft conference presentation.</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">Begin writing paper outline</td>
+        </tr>
+        <tr style="background:#f5f3ff;">
+          <td style="padding:10px 14px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--border);">Jul 13–19</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">🏥 Skills lab continues (no CNA on Jul 17 — conference day)</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">🎓 <strong>GMU Session 4</strong> — Mon Jul 14, 9–11 AM.<br>🌟 <strong style="color:#6366f1;">Jul 17 — Conference Day at GMU Arlington!</strong></td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">Draft intro + methods section of paper</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--border);">Jul 20–26</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">🏥 Clinicals begin at long-term care facility (48 hrs total)</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">📄 <strong>GMU final paper due Jul 24</strong> — program complete ✅</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">Write results + discussion sections</td>
+        </tr>
+        <tr style="background:#f8fafc;">
+          <td style="padding:10px 14px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--border);">Jul 27 – Aug 9</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">🏥 Clinicals continue → complete 48 hrs by end of week</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">✅ GMU program done — certificate + publication</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">Finalize paper, submit to RARS for preprint DOI</td>
+        </tr>
+        <tr style="background:#f0fdf9;">
+          <td style="padding:10px 14px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--border);">Aug 10–20</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">📝 <strong style="color:var(--teal)">VA Board of Nursing Exam</strong> — written + skills</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">✅ Done</td>
+          <td style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);">Submit to JEI or JSR for peer review</td>
+        </tr>
+        <tr style="background:linear-gradient(135deg,#f0fdf9,#f5f3ff);">
+          <td style="padding:10px 14px;font-weight:700;color:var(--navy);">Late Aug →</td>
+          <td style="padding:10px 14px;color:var(--teal);font-weight:700;">🏅 CNA Certified!</td>
+          <td style="padding:10px 14px;color:#6366f1;font-weight:700;">🏆 Published + Conference Presenter</td>
+          <td style="padding:10px 14px;color:var(--green);font-weight:700;">📬 Paper under review — list on applications</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- GMU ASSIP 2027 note -->
+  <div class="card" style="background:linear-gradient(135deg,#eff6ff,#f5f3ff);border-color:#bfdbfe;margin-bottom:20px;">
+    <div style="display:flex;gap:14px;align-items:flex-start;">
+      <div style="font-size:28px;flex-shrink:0;">📌</div>
+      <div>
+        <div style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px;">ASSIP 2027 — Apply in December 2026</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.6;">The GMU Aspiring Scientists Summer Internship Program (ASSIP) is the premier local research program — 8 weeks full-time, free, includes 3 GMU college credits, and past participants have published in peer-reviewed journals. The 2026 cycle is closed, but the 2027 application opens December 2026. Set a reminder now. Rishi's summer 2026 research experience will make his ASSIP application much stronger.</div>
+        <div style="margin-top:8px;">
+          <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;">
+            <input type="checkbox" id="assip2027" style="accent-color:#6366f1;width:15px;height:15px;" onchange="saveResearchChecks()">
+            <span>Reminder set: Apply to ASSIP when applications open December 2026</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Topic picker -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">🎯 Choose a Research Topic — Click to Select</div>
+  <div id="topicList">
+    <div class="topic-card" id="topic0" onclick="selectTopic(0)">
+      <div class="topic-radio" id="topicRadio0"></div>
+      <div style="flex:1">
+        <div class="topic-title">Biomedical Education & BS/MD Program Outcomes</div>
+        <div class="topic-desc">A systematic literature review analyzing outcomes of accelerated BS/MD programs — graduation rates, physician quality, specialty distribution, and satisfaction. Directly tied to Rishi's path and uses publicly available data.</div>
+        <div class="topic-tags">
+          <span class="topic-pill green">No Lab Needed</span>
+          <span class="topic-pill blue">Literature Review</span>
+          <span class="topic-pill">Highly Relevant</span>
+          <span class="topic-pill amber">JSR / JEI</span>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card" id="topic1" onclick="selectTopic(1)">
+      <div class="topic-radio" id="topicRadio1"></div>
+      <div style="flex:1">
+        <div class="topic-title">Healthcare Access & Disparities in Loudoun County</div>
+        <div class="topic-desc">A community health survey examining healthcare access, insurance coverage, and preventive care utilization among teen and young adult populations in Loudoun County. Data collected through survey design — no lab required.</div>
+        <div class="topic-tags">
+          <span class="topic-pill green">No Lab Needed</span>
+          <span class="topic-pill blue">Survey / Public Health</span>
+          <span class="topic-pill">Local Impact</span>
+          <span class="topic-pill amber">JSR / Cureus</span>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card" id="topic2" onclick="selectTopic(2)">
+      <div class="topic-radio" id="topicRadio2"></div>
+      <div style="flex:1">
+        <div class="topic-title">Gene Expression Analysis in Cancer — Bioinformatics</div>
+        <div class="topic-desc">Analyze public genomic datasets (TCGA, GEO) using Python/R to identify differential gene expression patterns in a specific cancer type. Original data analysis using free public databases — a legitimate research project.</div>
+        <div class="topic-tags">
+          <span class="topic-pill green">Free Data</span>
+          <span class="topic-pill blue">Bioinformatics</span>
+          <span class="topic-pill">Python / R</span>
+          <span class="topic-pill amber">JEI</span>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card" id="topic3" onclick="selectTopic(3)">
+      <div class="topic-radio" id="topicRadio3"></div>
+      <div style="flex:1">
+        <div class="topic-title">Impact of Early Clinical Exposure on Medical Career Choice</div>
+        <div class="topic-desc">Survey-based study examining how early clinical volunteering and shadowing experiences (like Rishi's own) influence high school students' commitment to medicine. Survey peers, analyze data, draw conclusions.</div>
+        <div class="topic-tags">
+          <span class="topic-pill green">No Lab Needed</span>
+          <span class="topic-pill blue">Survey Study</span>
+          <span class="topic-pill">Personal Angle</span>
+          <span class="topic-pill amber">JSR</span>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card" id="topic4" onclick="selectTopic(4)">
+      <div class="topic-radio" id="topicRadio4"></div>
+      <div style="flex:1">
+        <div class="topic-title">AI in Medical Diagnostics — Literature Review</div>
+        <div class="topic-desc">A structured review of current AI applications in early disease diagnosis (imaging, pathology, genomics). Highly relevant, publishable, and directly connected to the GMU AI & Medical Informatics program.</div>
+        <div class="topic-tags">
+          <span class="topic-pill green">No Lab Needed</span>
+          <span class="topic-pill blue">Literature Review</span>
+          <span class="topic-pill">AI + Medicine</span>
+          <span class="topic-pill amber">STEM Fellowship</span>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card" id="topic5" onclick="selectTopic(5)">
+      <div class="topic-radio" id="topicRadio5"></div>
+      <div style="flex:1">
+        <div class="topic-title">Custom Topic (Add Your Own)</div>
+        <div class="topic-desc">Working with a MATA teacher or mentor on a specific project? Log it here. A mentored project with a real researcher carries more weight than any independent study.</div>
+        <div class="topic-tags">
+          <span class="topic-pill">Custom</span>
+          <span class="topic-pill green">Mentor-Led</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Publication targets -->
+  <div class="card" style="margin-top:4px;">
+    <div class="card-title">📰 Publication Targets — Where to Submit</div>
+    <table class="journal-table">
+      <thead>
+        <tr>
+          <th>Journal</th>
+          <th>Focus</th>
+          <th>Cost</th>
+          <th>Timeline</th>
+          <th>Best For</th>
+          <th>Prestige</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:600;color:var(--navy)">Journal of Emerging Investigators (JEI)</td>
+          <td style="color:var(--muted)">Life sciences, public health</td>
+          <td style="color:var(--green);font-weight:600">Free</td>
+          <td>3–6 months</td>
+          <td>Topics 1, 2, 3</td>
+          <td><span class="prestige-dot" style="background:#16a34a"></span><span class="prestige-dot" style="background:#16a34a"></span><span class="prestige-dot" style="background:#16a34a"></span> Highest</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--navy)">Journal of Student Research (JSR)</td>
+          <td style="color:var(--muted)">All STEM, multidisciplinary</td>
+          <td style="color:var(--green);font-weight:600">Free</td>
+          <td>2–4 months</td>
+          <td>Any topic</td>
+          <td><span class="prestige-dot" style="background:#16a34a"></span><span class="prestige-dot" style="background:#16a34a"></span><span class="prestige-dot" style="background:#e2e8f0"></span> Strong</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--navy)">STEM Fellowship Journal</td>
+          <td style="color:var(--muted)">STEM broadly</td>
+          <td style="color:var(--green);font-weight:600">Free</td>
+          <td>6–12 months</td>
+          <td>Topics 4, 5</td>
+          <td><span class="prestige-dot" style="background:#16a34a"></span><span class="prestige-dot" style="background:#16a34a"></span><span class="prestige-dot" style="background:#e2e8f0"></span> Strong</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--navy)">Cureus Journal of Medical Science</td>
+          <td style="color:var(--muted)">Clinical, public health</td>
+          <td style="color:var(--green);font-weight:600">Free</td>
+          <td>1–2 months</td>
+          <td>Topics 2, 4</td>
+          <td><span class="prestige-dot" style="background:#16a34a"></span><span class="prestige-dot" style="background:#e2e8f0"></span><span class="prestige-dot" style="background:#e2e8f0"></span> Good</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--navy)">RARS (Polygence Preprint Archive)</td>
+          <td style="color:var(--muted)">All STEM — preprint</td>
+          <td style="color:var(--green);font-weight:600">Free</td>
+          <td>Days</td>
+          <td>Any — first step</td>
+          <td><span class="prestige-dot" style="background:#d97706"></span><span class="prestige-dot" style="background:#e2e8f0"></span><span class="prestige-dot" style="background:#e2e8f0"></span> Starter</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:12px;padding:10px 14px;background:#f8fafc;border-radius:8px;font-size:12.5px;color:var(--muted);">
+      💡 <strong>Application tip:</strong> Submit to RARS immediately for a preprint DOI you can list on applications, then simultaneously submit to JEI or JSR for peer review. You can list both — "preprint available; manuscript under review at JEI" is a strong application line.
+    </div>
+  </div>
+
+  <!-- Research notes -->
+  <div class="card">
+    <div class="card-title">📝 Research Notes & Progress Log</div>
+    <textarea id="researchNotes" style="width:100%;min-height:120px;padding:12px;font-size:13px;font-family:'DM Sans',sans-serif;border:1px solid var(--border);border-radius:8px;color:var(--text);resize:vertical;outline:none;line-height:1.6;" placeholder="Log your progress here — topic ideas, mentor contacts, paper outlines, data sources found, key papers read..." oninput="saveResearchNotes()"></textarea>
+    <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:var(--muted);">
+      <span>Auto-saves as you type</span>
+      <span id="resSavedAt"></span>
+    </div>
+  </div>
+</div>
+
 </main>
 </div>
 
@@ -1629,6 +2147,7 @@ function showTab(id) {
   if (id === 'dashboard') renderDashboard();
   if (id === 'calling') renderCallingPage();
   if (id === 'cna') initCNAPage();
+  if (id === 'research') initResearchPage();
 }
 
 // ── DAYS LEFT ──
@@ -2013,6 +2532,83 @@ function saveCNAReqs() {
     return cb ? cb.checked : false;
   });
   localStorage.setItem('rishiCNAReqs', JSON.stringify(cnaReqs));
+}
+
+// ── RESEARCH ──
+let resPhases      = JSON.parse(localStorage.getItem('rishiResPhases')  || '[false,false,false,false,false]');
+let resTopicSel    = JSON.parse(localStorage.getItem('rishiResTopic')   || 'null');
+let resChecks      = JSON.parse(localStorage.getItem('rishiResChecks')  || '{"assip2027":false}');
+
+function initResearchPage() {
+  // phases
+  resPhases.forEach((done, i) => {
+    const el = document.getElementById('resPhase' + i);
+    const ch = el && el.querySelector('.rp-check');
+    if (done) { el.classList.add('rp-done'); if (ch) ch.textContent = '✓'; }
+    else       { el.classList.remove('rp-done'); if (ch) ch.textContent = ''; }
+    el.classList.remove('rp-active');
+  });
+  const firstUndone = resPhases.indexOf(false);
+  if (firstUndone >= 0) document.getElementById('resPhase' + firstUndone).classList.add('rp-active');
+  const doneCount = resPhases.filter(Boolean).length;
+  const pn = document.getElementById('resPhaseNum');
+  if (pn) pn.textContent = doneCount + '/5';
+
+  // topic
+  for (let i = 0; i < 6; i++) {
+    const c = document.getElementById('topic' + i);
+    const r = document.getElementById('topicRadio' + i);
+    if (c && r) {
+      if (resTopicSel === i) { c.classList.add('selected'); r.innerHTML = '✓'; r.style.color = 'white'; }
+      else { c.classList.remove('selected'); r.innerHTML = ''; }
+    }
+  }
+  const tc = document.getElementById('resTopicCount');
+  if (tc) tc.textContent = resTopicSel !== null ? 'Yes ✓' : 'No';
+
+  // checks
+  const assipCb = document.getElementById('assip2027');
+  if (assipCb) assipCb.checked = resChecks.assip2027 || false;
+  const gmuCb = document.getElementById('gmuApplied');
+  if (gmuCb) gmuCb.checked = resChecks.gmuApplied || false;
+
+  // notes
+  const notes = localStorage.getItem('rishiResearchNotes') || '';
+  const ta = document.getElementById('researchNotes');
+  if (ta && ta.value !== notes) ta.value = notes;
+}
+
+function toggleResPhase(i) {
+  resPhases[i] = !resPhases[i];
+  localStorage.setItem('rishiResPhases', JSON.stringify(resPhases));
+  initResearchPage();
+  const names = ['Topic selected','Literature review complete','Data & analysis complete','Paper written','Submitted to journal 🎉'];
+  showToast(resPhases[i] ? '✓ ' + names[i] : 'Phase marked incomplete');
+}
+
+function selectTopic(i) {
+  resTopicSel = resTopicSel === i ? null : i;
+  localStorage.setItem('rishiResTopic', JSON.stringify(resTopicSel));
+  initResearchPage();
+  const names = ['Biomedical Education & BS/MD Outcomes','Healthcare Access in Loudoun County','Gene Expression / Bioinformatics','Early Clinical Exposure Study','AI in Medical Diagnostics','Custom Topic'];
+  if (resTopicSel !== null) showToast('Topic selected: ' + names[i]);
+}
+
+function saveResearchChecks() {
+  resChecks.assip2027 = document.getElementById('assip2027')?.checked || false;
+  resChecks.gmuApplied = document.getElementById('gmuApplied')?.checked || false;
+  localStorage.setItem('rishiResChecks', JSON.stringify(resChecks));
+}
+
+let resNotesTimer;
+function saveResearchNotes() {
+  clearTimeout(resNotesTimer);
+  resNotesTimer = setTimeout(() => {
+    const val = document.getElementById('researchNotes')?.value || '';
+    localStorage.setItem('rishiResearchNotes', val);
+    const saved = document.getElementById('resSavedAt');
+    if (saved) saved.textContent = 'Saved ' + new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+  }, 800);
 }
 
 // ── UTILS ──
