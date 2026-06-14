@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishi's BS/MD Portal</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+  --navy: #0f2744;
+  --navy-mid: #1a3a5c;
+  --blue: #2563eb;
+  --blue-light: #3b82f6;
+  --teal: #0d9488;
+  --teal-light: #14b8a6;
+  --amber: #d97706;
+  --red: #dc2626;
+  --green: #16a34a;
+  --surface: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --muted: #64748b;
+  --light: #94a3b8;
+  --reach: #7c3aed;
+  --match: #0284c7;
+  --safety: #059669;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--surface);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ── SIDEBAR ── */
+.layout { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 220px;
+  background: var(--navy);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 100;
+}
+
+.sidebar-brand {
+  padding: 28px 20px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.sidebar-brand .name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  color: white;
+  line-height: 1.2;
+}
+.sidebar-brand .subtitle {
+  font-size: 11px;
+  color: #7dd3fc;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.sidebar-progress {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.progress-label {
+  font-size: 10px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.progress-bar-wrap {
+  background: rgba(255,255,255,0.1);
+  border-radius: 99px;
+  height: 6px;
+  margin-bottom: 4px;
+}
+.progress-bar-fill {
+  background: linear-gradient(90deg, #0d9488, #3b82f6);
+  height: 6px;
+  border-radius: 99px;
+  width: 22%;
+  transition: width 0.5s ease;
+}
+.progress-pct {
+  font-size: 11px;
+  color: #7dd3fc;
+}
+
+.sidebar-nav { padding: 12px 0; flex: 1; }
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 13.5px;
+  color: #94a3b8;
+  transition: all 0.15s;
+  border-left: 3px solid transparent;
+}
+.nav-item:hover { color: white; background: rgba(255,255,255,0.05); }
+.nav-item.active {
+  color: white;
+  background: rgba(59,130,246,0.15);
+  border-left-color: var(--blue-light);
+}
+.nav-icon { font-size: 16px; width: 20px; text-align: center; }
+
+.sidebar-footer {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 11px;
+  color: #475569;
+}
+.days-left { font-size: 18px; font-weight: 600; color: #fbbf24; }
+
+/* ── MAIN ── */
+.main {
+  margin-left: 220px;
+  flex: 1;
+  padding: 32px 36px;
+  max-width: calc(100vw - 220px);
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+.page-header h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px;
+  color: var(--navy);
+  line-height: 1.2;
+}
+.page-header p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ── TAB SECTIONS ── */
+.tab-section { display: none; }
+.tab-section.active { display: block; }
+
+/* ── CARDS ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+.card-title {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── STATS ROW ── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+.stat-value {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  color: var(--navy);
+  line-height: 1;
+}
+.stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.stat-sub { font-size: 11px; color: var(--light); margin-top: 2px; }
+
+/* ── COLLEGE TABLE ── */
+.college-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.college-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-bottom: 2px solid var(--border);
+}
+.college-table td {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.college-table tr:last-child td { border-bottom: none; }
+.college-table tr:hover td { background: #f8fafc; }
+
+.tier-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.tier-reach { background: #ede9fe; color: var(--reach); }
+.tier-match { background: #e0f2fe; color: var(--match); }
+.tier-safety { background: #dcfce7; color: var(--safety); }
+
+.status-badge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+.status-not-started { background: #f1f5f9; color: var(--muted); }
+.status-in-progress { background: #fef3c7; color: #92400e; }
+.status-submitted { background: #dcfce7; color: #166534; }
+.status-interview { background: #ede9fe; color: #5b21b6; }
+
+.sat-score { font-weight: 600; color: var(--navy); font-size: 13px; }
+.school-name { font-weight: 500; color: var(--text); }
+.school-program { font-size: 12px; color: var(--muted); }
+.deadline-cell { font-size: 12px; color: var(--muted); }
+.deadline-soon { color: #dc2626; font-weight: 600; }
+
+/* ── CLINICAL HOURS ── */
+.hours-hero {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 20px;
+}
+.hours-circle {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+}
+.hours-circle svg { transform: rotate(-90deg); }
+.hours-circle-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hours-big { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--navy); line-height: 1; }
+.hours-small { font-size: 10px; color: var(--muted); }
+
+.hours-breakdown { flex: 1; }
+.hours-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.hours-bar-label { width: 120px; color: var(--text); flex-shrink: 0; }
+.hours-bar-track {
+  flex: 1;
+  height: 8px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.hours-bar-fill {
+  height: 8px;
+  border-radius: 99px;
+  background: var(--teal);
+}
+.hours-bar-count { width: 60px; text-align: right; color: var(--muted); font-size: 12px; }
+
+.log-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.log-table th {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--muted);
+  padding: 8px 12px; border-bottom: 2px solid var(--border); text-align: left;
+}
+.log-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text); }
+.log-table tr:last-child td { border-bottom: none; }
+.add-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--teal); color: white;
+  border: none; border-radius: 8px;
+  padding: 8px 16px; font-size: 13px; font-family: 'DM Sans', sans-serif;
+  cursor: pointer; font-weight: 500; margin-top: 12px;
+  transition: background 0.15s;
+}
+.add-btn:hover { background: var(--teal-light); }
+
+/* ── ESSAYS ── */
+.essay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.essay-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+.essay-school { font-weight: 600; color: var(--navy); font-size: 14px; margin-bottom: 4px; }
+.essay-prompt { font-size: 12px; color: var(--muted); margin-bottom: 12px; line-height: 1.5; }
+.essay-progress-wrap {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+}
+.essay-bar-track {
+  flex: 1; height: 6px; background: var(--border); border-radius: 99px; overflow: hidden;
+}
+.essay-bar-fill { height: 6px; border-radius: 99px; background: var(--blue); }
+.essay-pct { font-size: 12px; color: var(--muted); width: 32px; text-align: right; }
+.essay-meta { display: flex; justify-content: space-between; font-size: 11px; color: var(--light); }
+.essay-status-chip {
+  font-size: 10px; font-weight: 600; padding: 2px 8px;
+  border-radius: 99px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.chip-not-started { background: #f1f5f9; color: var(--muted); }
+.chip-outline { background: #fef3c7; color: #92400e; }
+.chip-drafting { background: #dbeafe; color: #1d4ed8; }
+.chip-revising { background: #ede9fe; color: #6d28d9; }
+.chip-done { background: #dcfce7; color: #166534; }
+
+/* ── DEADLINES ── */
+.deadline-list { display: flex; flex-direction: column; gap: 0; }
+.deadline-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+}
+.deadline-item:last-child { border-bottom: none; }
+.deadline-date-block {
+  width: 52px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.deadline-month { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.deadline-day { font-family: 'DM Serif Display', serif; font-size: 26px; line-height: 1; }
+.deadline-urgent .deadline-month { color: #dc2626; }
+.deadline-urgent .deadline-day { color: #dc2626; }
+.deadline-soon-item .deadline-month { color: var(--amber); }
+.deadline-soon-item .deadline-day { color: var(--amber); }
+.deadline-normal .deadline-month { color: var(--muted); }
+.deadline-normal .deadline-day { color: var(--navy); }
+.deadline-content { flex: 1; }
+.deadline-title { font-size: 14px; font-weight: 500; color: var(--text); }
+.deadline-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.deadline-tag {
+  font-size: 10px; font-weight: 600; padding: 3px 9px;
+  border-radius: 99px; text-transform: uppercase; letter-spacing: 0.3px; flex-shrink: 0;
+}
+.tag-urgent { background: #fee2e2; color: #dc2626; }
+.tag-soon { background: #fef3c7; color: #92400e; }
+.tag-upcoming { background: #f1f5f9; color: var(--muted); }
+.tag-inova { background: #ede9fe; color: #6d28d9; }
+
+/* ── SAT ── */
+.sat-hero {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.sat-score-card {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  text-align: center;
+}
+.sat-score-card .score-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 48px;
+  color: var(--navy);
+  line-height: 1;
+}
+.sat-score-card .score-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.sat-score-card .score-status {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 11px; font-weight: 600;
+  padding: 3px 12px; border-radius: 99px;
+}
+.score-pending { background: #fef3c7; color: #92400e; }
+.score-achieved { background: #dcfce7; color: #166534; }
+
+.sat-benchmarks { flex: 2; }
+.benchmark-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px;
+}
+.benchmark-row:last-child { border-bottom: none; }
+.benchmark-school { flex: 1; color: var(--text); }
+.benchmark-score { font-weight: 600; color: var(--navy); width: 60px; text-align: right; }
+.benchmark-bar-wrap { width: 100px; }
+.benchmark-bar {
+  height: 6px; border-radius: 99px; background: var(--border); overflow: hidden;
+}
+.benchmark-bar-fill { height: 6px; border-radius: 99px; }
+.bar-reach { background: var(--reach); }
+.bar-match { background: var(--match); }
+.bar-safety { background: var(--safety); }
+.benchmark-tier { width: 50px; }
+
+.history-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.history-table th {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--muted);
+  padding: 8px 12px; border-bottom: 2px solid var(--border); text-align: left;
+}
+.history-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.history-table tr:last-child td { border-bottom: none; }
+
+/* ── MODAL ── */
+.modal-backdrop {
+  display: none; position: fixed; inset: 0;
+  background: rgba(15,39,68,0.5); z-index: 200;
+  align-items: center; justify-content: center;
+}
+.modal-backdrop.open { display: flex; }
+.modal {
+  background: white; border-radius: 14px;
+  padding: 28px 32px; width: 440px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.modal h3 { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--navy); margin-bottom: 18px; }
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.3px; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 9px 12px; font-size: 14px; font-family: 'DM Sans', sans-serif;
+  border: 1px solid var(--border); border-radius: 8px; color: var(--text);
+  outline: none; transition: border-color 0.15s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.btn-cancel {
+  padding: 8px 18px; border: 1px solid var(--border); border-radius: 8px;
+  background: white; color: var(--muted); font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif;
+}
+.btn-save {
+  padding: 8px 18px; border: none; border-radius: 8px;
+  background: var(--blue); color: white; font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
+
+/* ── TOAST ── */
+.toast {
+  position: fixed; bottom: 24px; right: 24px;
+  background: var(--navy); color: white;
+  padding: 12px 20px; border-radius: 10px;
+  font-size: 13px; font-weight: 500;
+  transform: translateY(80px); opacity: 0;
+  transition: all 0.3s ease; z-index: 300;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+@media (max-width: 768px) {
+  .sidebar { width: 0; overflow: hidden; }
+  .main { margin-left: 0; padding: 20px 16px; }
+  .stats-row { grid-template-columns: 1fr 1fr; }
+  .essay-grid { grid-template-columns: 1fr; }
+  .sat-hero { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-brand">
+    <div class="name">Rishi's<br>BS/MD Portal</div>
+    <div class="subtitle">Class of 2027 · Pre-Med</div>
+  </div>
+  <div class="sidebar-progress">
+    <div class="progress-label">Application Progress</div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="overallBar"></div>
+    </div>
+    <div class="progress-pct" id="overallPct">22% complete</div>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-item active" onclick="showTab('dashboard')">
+      <span class="nav-icon">🏠</span> Dashboard
+    </div>
+    <div class="nav-item" onclick="showTab('colleges')">
+      <span class="nav-icon">🏛️</span> College List
+    </div>
+    <div class="nav-item" onclick="showTab('clinical')">
+      <span class="nav-icon">🩺</span> Clinical Hours
+    </div>
+    <div class="nav-item" onclick="showTab('essays')">
+      <span class="nav-icon">✍️</span> Essays
+    </div>
+    <div class="nav-item" onclick="showTab('deadlines')">
+      <span class="nav-icon">📅</span> Deadlines
+    </div>
+    <div class="nav-item" onclick="showTab('sat')">
+      <span class="nav-icon">📊</span> SAT Tracker
+    </div>
+  </div>
+  <div class="sidebar-footer">
+    <div class="days-left" id="daysLeft">—</div>
+    <div style="color:#64748b; font-size:11px; margin-top:2px;">days to first BS/MD deadline</div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+<!-- ══════════ DASHBOARD ══════════ -->
+<div class="tab-section active" id="tab-dashboard">
+  <div class="page-header">
+    <h1>Good morning, Rishi 👋</h1>
+    <p>Here's where things stand. Your first BS/MD deadline is coming up fast.</p>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-value" style="color:var(--reach)">3</div>
+      <div class="stat-label">Reach Schools</div>
+      <div class="stat-sub">BU, Case Western, GWU</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" style="color:var(--match)">5</div>
+      <div class="stat-label">Match Schools</div>
+      <div class="stat-sub">RPI, NJIT, USF, Illinois, MCG</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" style="color:var(--safety)">3</div>
+      <div class="stat-label">Safety Schools</div>
+      <div class="stat-sub">UAB, VCU + 1 BS/DO</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" style="color:var(--teal)" id="dashHours">0</div>
+      <div class="stat-label">Clinical Hours</div>
+      <div class="stat-sub">Goal: 100+ hrs</div>
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+    <div class="card">
+      <div class="card-title">📅 Next 3 Deadlines</div>
+      <div style="font-size:13px;">
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--border);">
+          <span style="color:var(--text)">Inova Fall Volunteer Registration</span>
+          <span style="color:#dc2626; font-weight:600;">Jul 9</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--border);">
+          <span style="color:var(--text)">Penn State BS/MD Deadline</span>
+          <span style="color:var(--amber); font-weight:600;">Oct 13</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0;">
+          <span style="color:var(--text)">Most BS/MD Apps Due</span>
+          <span style="color:var(--muted);">Sep–Oct</span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">✅ This Week's Focus</div>
+      <div style="font-size:13px; display:flex; flex-direction:column; gap:8px;">
+        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+          <input type="checkbox" style="accent-color:var(--teal); width:15px; height:15px;">
+          <span>Call Stone Ridge Family Medicine (703-421-1700)</span>
+        </label>
+        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+          <input type="checkbox" style="accent-color:var(--teal); width:15px; height:15px;">
+          <span>Call remaining 6 practices for shadowing</span>
+        </label>
+        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+          <input type="checkbox" style="accent-color:var(--teal); width:15px; height:15px;">
+          <span>Draft Inova 250-word volunteer essay</span>
+        </label>
+        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+          <input type="checkbox" style="accent-color:var(--teal); width:15px; height:15px;">
+          <span>Begin "Why Medicine" essay outline</span>
+        </label>
+        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+          <input type="checkbox" style="accent-color:var(--teal); width:15px; height:15px;">
+          <span>Request teacher recommendation letters</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
+    <div class="card-title">📈 Essay Progress Overview</div>
+    <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:16px; font-size:13px;" id="dashEssayProgress">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ COLLEGES ══════════ -->
+<div class="tab-section" id="tab-colleges">
+  <div class="page-header">
+    <h1>College List</h1>
+    <p>11 schools · 7-year BS/MD programs · targeting Fall 2027 entry</p>
+  </div>
+  <div class="card" style="padding:0; overflow:hidden;">
+    <table class="college-table">
+      <thead>
+        <tr>
+          <th>School & Program</th>
+          <th>Tier</th>
+          <th>Min SAT</th>
+          <th>Deadline</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="school-name">Boston University</div><div class="school-program">7-yr MMEDIC Program</div></td>
+          <td><span class="tier-badge tier-reach">Reach</span></td>
+          <td class="sat-score">1500+</td>
+          <td class="deadline-cell deadline-soon">Nov 1</td>
+          <td><span class="status-badge status-not-started">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">Case Western Reserve</div><div class="school-program">Pre-Professional Scholars Program</div></td>
+          <td><span class="tier-badge tier-reach">Reach</span></td>
+          <td class="sat-score">1500+</td>
+          <td class="deadline-cell deadline-soon">Nov 1</td>
+          <td><span class="status-badge status-not-started">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">George Washington University</div><div class="school-program">7-yr BA/MD Program</div></td>
+          <td><span class="tier-badge tier-reach">Reach</span></td>
+          <td class="sat-score">1450+</td>
+          <td class="deadline-cell deadline-soon">Nov 1</td>
+          <td><span class="status-badge status-not-started">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">RPI / Albany Medical College</div><div class="school-program">7-yr Physician-Scientist Program</div></td>
+          <td><span class="tier-badge tier-match">Match</span></td>
+          <td class="sat-score">1400+</td>
+          <td class="deadline-cell">Nov 1</td>
+          <td><span class="status-badge status-not-started">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">NJIT / Rutgers NJ Medical School</div><div class="school-program">7-yr Accelerated BS/MD</div></td>
+          <td><span class="tier-badge tier-match">Match</span></td>
+          <td class="sat-score">1400+</td>
+          <td class="deadline-cell">Nov 1</td>
+          <td><span class="status-badge status-not-started">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">University of South Florida</div><div class="school-program">7-yr Morsani BS/MD</div></td>
+          <td><span class="tier-badge tier-match">Match</span></td>
+          <td class="sat-score">1360+</td>
+          <td class="deadline-cell">Oct 15</td>
+          <td><span class="status-badge status-not-started">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">University of Illinois</div><div class="school-program">7-yr College of Medicine</div></td>
+          <td><span class="tier-badge tier-match">Match</span></td>
+          <td class="sat-score">1360+</td>
+          <td class="deadline-cell">Oct 1</td>
+          <td><span class="status-badge status-not-started">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">Medical College of Georgia</div><div class="school-program">7-yr Augusta University BS/MD</div></td>
+          <td><span class="tier-badge tier-match">Match</span></td>
+          <td class="sat-score">1360+</td>
+          <td class="deadline-cell">Oct 15</td>
+          <td><span class="status-badge status-not-started">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">Penn State / Sidney Kimmel</div><div class="school-program">Accelerated Premedical-Medical</div></td>
+          <td><span class="tier-badge tier-match">Match</span></td>
+          <td class="sat-score">1510+</td>
+          <td class="deadline-cell deadline-soon">Oct 13</td>
+          <td><span class="status-badge status-not-started">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">UAB Heersink</div><div class="school-program">Early Medical School Acceptance</div></td>
+          <td><span class="tier-badge tier-safety">Safety</span></td>
+          <td class="sat-score">1360+</td>
+          <td class="deadline-cell">Dec 1</td>
+          <td><span class="status-badge status-not-started">Not Started</span></td>
+        </tr>
+        <tr>
+          <td><div class="school-name">VCU School of Medicine</div><div class="school-program">8-yr Guaranteed Admission</div></td>
+          <td><span class="tier-badge tier-safety">Safety</span></td>
+          <td class="sat-score">1360+</td>
+          <td class="deadline-cell">Nov 1</td>
+          <td><span class="status-badge status-not-started">Not Started</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:12px; color:var(--muted); margin-top:10px; padding-left:4px;">💡 Click any status badge to update it. Deadlines marked in red are within 90 days.</p>
+</div>
+
+<!-- ══════════ CLINICAL HOURS ══════════ -->
+<div class="tab-section" id="tab-clinical">
+  <div class="page-header">
+    <h1>Clinical Hours Log</h1>
+    <p>Track every shadowing, volunteering, and clinical experience. Goal: 100+ hours before applications.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Overall Progress</div>
+    <div class="hours-hero">
+      <div class="hours-circle">
+        <svg width="110" height="110" viewBox="0 0 110 110">
+          <circle cx="55" cy="55" r="46" fill="none" stroke="#e2e8f0" stroke-width="10"/>
+          <circle cx="55" cy="55" r="46" fill="none" stroke="#0d9488" stroke-width="10"
+            stroke-dasharray="289" stroke-dashoffset="289" id="hoursCircle"
+            stroke-linecap="round"/>
+        </svg>
+        <div class="hours-circle-text">
+          <div class="hours-big" id="totalHours">0</div>
+          <div class="hours-small">of 100 hrs</div>
+        </div>
+      </div>
+      <div class="hours-breakdown">
+        <div class="hours-bar-row">
+          <div class="hours-bar-label">Shadowing</div>
+          <div class="hours-bar-track"><div class="hours-bar-fill" id="shadowBar" style="width:0%; background:var(--teal)"></div></div>
+          <div class="hours-bar-count" id="shadowCount">0 hrs</div>
+        </div>
+        <div class="hours-bar-row">
+          <div class="hours-bar-label">Hospital Vol.</div>
+          <div class="hours-bar-track"><div class="hours-bar-fill" id="hospBar" style="width:0%; background:var(--blue)"></div></div>
+          <div class="hours-bar-count" id="hospCount">0 hrs</div>
+        </div>
+        <div class="hours-bar-row">
+          <div class="hours-bar-label">Research</div>
+          <div class="hours-bar-track"><div class="hours-bar-fill" id="resBar" style="width:0%; background:var(--reach)"></div></div>
+          <div class="hours-bar-count" id="resCount">0 hrs</div>
+        </div>
+        <div class="hours-bar-row">
+          <div class="hours-bar-label">Community</div>
+          <div class="hours-bar-track"><div class="hours-bar-fill" id="commBar" style="width:0%; background:var(--amber)"></div></div>
+          <div class="hours-bar-count" id="commCount">0 hrs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+      <div class="card-title" style="margin-bottom:0">Experience Log</div>
+      <button class="add-btn" onclick="openHoursModal()">+ Log Hours</button>
+    </div>
+    <table class="log-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Location / Organization</th>
+          <th>Type</th>
+          <th>Hours</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody id="hoursTableBody">
+        <tr>
+          <td colspan="5" style="text-align:center; color:var(--muted); padding:24px; font-style:italic;">
+            No hours logged yet. Click "Log Hours" to add your first entry.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════ ESSAYS ══════════ -->
+<div class="tab-section" id="tab-essays">
+  <div class="page-header">
+    <h1>Essay Tracker</h1>
+    <p>Track progress on every essay. The "Why Medicine" essay is your most important piece.</p>
+  </div>
+  <div class="essay-grid" id="essayGrid">
+    <!-- filled by JS -->
+  </div>
+</div>
+
+<!-- ══════════ DEADLINES ══════════ -->
+<div class="tab-section" id="tab-deadlines">
+  <div class="page-header">
+    <h1>Key Deadlines</h1>
+    <p>Every critical date for Rishi's BS/MD applications — sorted chronologically.</p>
+  </div>
+  <div class="card" style="padding: 8px 24px;">
+    <div class="deadline-list">
+      <div class="deadline-item deadline-urgent">
+        <div class="deadline-date-block">
+          <div class="deadline-month">Jul</div>
+          <div class="deadline-day">9</div>
+        </div>
+        <div class="deadline-content">
+          <div class="deadline-title">Inova Fall Volunteer Registration Opens</div>
+          <div class="deadline-desc">Opens 8:00 AM sharp — closes July 12. Be ready to submit immediately.</div>
+        </div>
+        <span class="deadline-tag tag-urgent">🚨 Urgent</span>
+      </div>
+      <div class="deadline-item deadline-soon-item">
+        <div class="deadline-date-block">
+          <div class="deadline-month">Jul</div>
+          <div class="deadline-day">12</div>
+        </div>
+        <div class="deadline-content">
+          <div class="deadline-title">Inova Fall Registration Closes</div>
+          <div class="deadline-desc">11:45 PM deadline. Register before this window closes.</div>
+        </div>
+        <span class="deadline-tag tag-inova">Inova</span>
+      </div>
+      <div class="deadline-item deadline-soon-item">
+        <div class="deadline-date-block">
+          <div class="deadline-month">Aug</div>
+          <div class="deadline-day">1</div>
+        </div>
+        <div class="deadline-content">
+          <div class="deadline-title">Begin BS/MD Applications</div>
+          <div class="deadline-desc">Most programs open in August. Start common app + school-specific supplements.</div>
+        </div>
+        <span class="deadline-tag tag-soon">Soon</span>
+      </div>
+      <div class="deadline-item deadline-soon-item">
+        <div class="deadline-date-block">
+          <div class="deadline-month">Aug</div>
+          <div class="deadline-day">20</div>
+        </div>
+        <div class="deadline-content">
+          <div class="deadline-title">Inova Orientation (if accepted)</div>
+          <div class="deadline-desc">9 AM – noon at Inova Fairfax Hospital. Attendance required.</div>
+        </div>
+        <span class="deadline-tag tag-inova">Inova</span>
+      </div>
+      <div class="deadline-item deadline-normal">
+        <div class="deadline-date-block">
+          <div class="deadline-month">Sep</div>
+          <div class="deadline-day">1</div>
+        </div>
+        <div class="deadline-content">
+          <div class="deadline-title">Request All Recommendation Letters</div>
+          <div class="deadline-desc">Ask teachers and counselor now — give them at least 6 weeks.</div>
+        </div>
+        <span class="deadline-tag tag-upcoming">Action</span>
+      </div>
+      <div class="deadline-item deadline-normal">
+        <div class="deadline-date-block">
+          <div class="deadline-month">Oct</div>
+          <div class="deadline-day">1</div>
+        </div>
+        <div class="deadline-content">
+          <div class="deadline-title">University of Illinois BS/MD Deadline</div>
+          <div class="deadline-desc">7-year College of Medicine program application due.</div>
+        </div>
+        <span class="deadline-tag tag-upcoming">Upcoming</span>
+      </div>
+      <div class="deadline-item deadline-normal">
+        <div class="deadline-date-block">
+          <div class="deadline-month">Oct</div>
+          <div class="deadline-day">13</div>
+        </div>
+        <div class="deadline-content">
+          <div class="deadline-title">Penn State / Sidney Kimmel Deadline</div>
+          <div class="deadline-desc">Hard deadline — requires SAT 1510+ from a single sitting. No exceptions.</div>
+        </div>
+        <span class="deadline-tag tag-upcoming">Upcoming</span>
+      </div>
+      <div class="deadline-item deadline-normal">
+        <div class="deadline-date-block">
+          <div class="deadline-month">Oct</div>
+          <div class="deadline-day">15</div>
+        </div>
+        <div class="deadline-content">
+          <div class="deadline-title">USF Morsani + MCG Augusta Deadlines</div>
+          <div class="deadline-desc">University of South Florida & Medical College of Georgia BS/MD apps due.</div>
+        </div>
+        <span class="deadline-tag tag-upcoming">Upcoming</span>
+      </div>
+      <div class="deadline-item deadline-normal">
+        <div class="deadline-date-block">
+          <div class="deadline-month">Nov</div>
+          <div class="deadline-day">1</div>
+        </div>
+        <div class="deadline-content">
+          <div class="deadline-title">Early Action — BU, Case Western, GWU, RPI, NJIT, VCU</div>
+          <div class="deadline-desc">Most reach and match BS/MD programs. This is the main application wave.</div>
+        </div>
+        <span class="deadline-tag tag-upcoming">Major</span>
+      </div>
+      <div class="deadline-item deadline-normal">
+        <div class="deadline-date-block">
+          <div class="deadline-month">Dec</div>
+          <div class="deadline-day">1</div>
+        </div>
+        <div class="deadline-content">
+          <div class="deadline-title">UAB Heersink Deadline</div>
+          <div class="deadline-desc">Early Medical School Acceptance Program. Safety school — don't skip this one.</div>
+        </div>
+        <span class="deadline-tag tag-upcoming">Upcoming</span>
+      </div>
+      <div class="deadline-item deadline-normal">
+        <div class="deadline-date-block">
+          <div class="deadline-month">Dec</div>
+          <div class="deadline-day">15</div>
+        </div>
+        <div class="deadline-content">
+          <div class="deadline-title">Interview Season Begins</div>
+          <div class="deadline-desc">BS/MD interviews typically run Nov–Feb. Prep talking points and mock interviews.</div>
+        </div>
+        <span class="deadline-tag tag-upcoming">Upcoming</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ SAT TRACKER ══════════ -->
+<div class="tab-section" id="tab-sat">
+  <div class="page-header">
+    <h1>SAT Score Tracker</h1>
+    <p>Current results pending. Target: 1500+ to unlock reach BS/MD programs.</p>
+  </div>
+
+  <div class="sat-hero">
+    <div class="sat-score-card">
+      <div class="score-num">—</div>
+      <div class="score-label">Current SAT Score</div>
+      <div class="score-status score-pending">⏳ Awaiting Results</div>
+    </div>
+    <div class="sat-score-card" style="background:linear-gradient(135deg,#0f2744,#1a3a5c); border-color:#1a3a5c;">
+      <div class="score-num" style="color:white;">1500</div>
+      <div class="score-label" style="color:#7dd3fc;">Target Score</div>
+      <div class="score-status" style="background:rgba(255,255,255,0.15); color:#7dd3fc;">🎯 BS/MD Goal</div>
+    </div>
+    <div class="sat-benchmarks">
+      <div class="card-title" style="margin-bottom:12px;">Program SAT Benchmarks</div>
+      <div class="benchmark-row">
+        <div class="benchmark-school">Boston University (MMEDIC)</div>
+        <div class="benchmark-score">1500+</div>
+        <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-reach" style="width:100%"></div></div></div>
+        <div class="benchmark-tier"><span class="tier-badge tier-reach">Reach</span></div>
+      </div>
+      <div class="benchmark-row">
+        <div class="benchmark-school">Penn State / Sidney Kimmel</div>
+        <div class="benchmark-score">1510+</div>
+        <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-reach" style="width:100%"></div></div></div>
+        <div class="benchmark-tier"><span class="tier-badge tier-reach">Reach</span></div>
+      </div>
+      <div class="benchmark-row">
+        <div class="benchmark-school">RPI / Albany Medical</div>
+        <div class="benchmark-score">1400+</div>
+        <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-match" style="width:75%"></div></div></div>
+        <div class="benchmark-tier"><span class="tier-badge tier-match">Match</span></div>
+      </div>
+      <div class="benchmark-row">
+        <div class="benchmark-school">NJIT / Rutgers NJMS</div>
+        <div class="benchmark-score">1400+</div>
+        <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-match" style="width:75%"></div></div></div>
+        <div class="benchmark-tier"><span class="tier-badge tier-match">Match</span></div>
+      </div>
+      <div class="benchmark-row">
+        <div class="benchmark-school">UAB Heersink</div>
+        <div class="benchmark-score">1360+</div>
+        <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-safety" style="width:60%"></div></div></div>
+        <div class="benchmark-tier"><span class="tier-badge tier-safety">Safety</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Score History</div>
+    <table class="history-table">
+      <thead>
+        <tr>
+          <th>Test Date</th>
+          <th>Total</th>
+          <th>Math</th>
+          <th>Reading & Writing</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color:var(--muted)">June 2026</td>
+          <td style="font-weight:600; color:var(--muted)">⏳ Pending</td>
+          <td style="color:var(--muted)">—</td>
+          <td style="color:var(--muted)">—</td>
+          <td style="color:var(--muted); font-style:italic;">Results expected soon</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="add-btn" style="background:var(--blue); margin-top:14px;" onclick="openSATModal()">+ Add Score</button>
+  </div>
+
+  <div class="card" style="background:linear-gradient(135deg,#eff6ff,#f0fdf4);">
+    <div class="card-title" style="color:var(--navy)">📋 If Rishi Scores Below 1500</div>
+    <div style="font-size:13.5px; color:var(--text); line-height:1.7;">
+      <p style="margin-bottom:8px;">A score of 1400–1499 keeps the match and safety schools fully in play. The recommended next step would be one more attempt in <strong>August or October 2026</strong>. Registration for the August SAT opens in June.</p>
+      <p style="color:var(--muted);">Programs like UAB, USF, MCG, and VCU all have minimums at or below 1400 — Rishi's applications remain strong at his current range.</p>
+    </div>
+  </div>
+</div>
+
+</main>
+</div>
+
+<!-- MODAL: Log Hours -->
+<div class="modal-backdrop" id="hoursModal">
+  <div class="modal">
+    <h3>Log Clinical Hours</h3>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" id="hDate">
+      </div>
+      <div class="form-group">
+        <label>Hours</label>
+        <input type="number" id="hHours" min="0.5" max="24" step="0.5" placeholder="e.g. 4">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Organization / Location</label>
+      <input type="text" id="hOrg" placeholder="e.g. Stone Ridge Family Medicine">
+    </div>
+    <div class="form-group">
+      <label>Type</label>
+      <select id="hType">
+        <option value="shadowing">Physician Shadowing</option>
+        <option value="hospital">Hospital Volunteering</option>
+        <option value="research">Research</option>
+        <option value="community">Community Health</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Notes (optional)</label>
+      <textarea id="hNotes" rows="2" placeholder="What did you observe or do?"></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal('hoursModal')">Cancel</button>
+      <button class="btn-save" onclick="saveHours()">Save Entry</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: SAT Score -->
+<div class="modal-backdrop" id="satModal">
+  <div class="modal">
+    <h3>Add SAT Score</h3>
+    <div class="form-group">
+      <label>Test Date</label>
+      <input type="month" id="sDate">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Math Score</label>
+        <input type="number" id="sMath" min="200" max="800" placeholder="e.g. 780">
+      </div>
+      <div class="form-group">
+        <label>Reading & Writing Score</label>
+        <input type="number" id="sRW" min="200" max="800" placeholder="e.g. 740">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Notes</label>
+      <input type="text" id="sNotes" placeholder="e.g. Strongest attempt yet">
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal('satModal')">Cancel</button>
+      <button class="btn-save" onclick="saveSAT()">Save Score</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── STATE ──
+let state = JSON.parse(localStorage.getItem('rishiPortal') || 'null') || {
+  hours: [],
+  satScores: []
+};
+
+const essays = [
+  { school: "Common App Personal Statement", prompt: "Tell us your story — why medicine, who you are, what drives you.", progress: 0, status: "not-started" },
+  { school: "Boston University MMEDIC", prompt: "Why do you want to pursue a career in medicine? (500 words)", progress: 0, status: "not-started" },
+  { school: "Case Western PPSP", prompt: "Describe an experience that confirmed your interest in medicine.", progress: 0, status: "not-started" },
+  { school: "RPI / Albany Medical", prompt: "Why do you want to be a physician-scientist? What research interests you?", progress: 0, status: "not-started" },
+  { school: "NJIT / Rutgers NJMS", prompt: "Discuss a healthcare experience that shaped your desire to pursue medicine.", progress: 0, status: "not-started" },
+  { school: "GWU BA/MD", prompt: "How have your biomedical studies influenced your career goals?", progress: 0, status: "not-started" },
+  { school: "USF Morsani", prompt: "What unique perspective will you bring to the medical profession?", progress: 0, status: "not-started" },
+  { school: "Inova Volunteer Essay", prompt: "Why do you want to volunteer and how does this connect to your healthcare career goals? (250 words)", progress: 0, status: "not-started" },
+];
+
+const statusCycles = ["not-started", "outline", "drafting", "revising", "done"];
+const statusLabels = { "not-started": "Not Started", "outline": "Outline", "drafting": "Drafting", "revising": "Revising", "done": "Done ✓" };
+const statusChips = { "not-started": "chip-not-started", "outline": "chip-outline", "drafting": "chip-drafting", "revising": "chip-revising", "done": "chip-done" };
+
+// ── NAVIGATION ──
+function showTab(id) {
+  document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.currentTarget.classList.add('active');
+  if (id === 'clinical') renderHours();
+  if (id === 'essays') renderEssays();
+  if (id === 'dashboard') renderDashboard();
+}
+
+// ── DAYS LEFT ──
+function updateDaysLeft() {
+  const deadline = new Date('2026-09-01');
+  const today = new Date();
+  const days = Math.ceil((deadline - today) / (1000*60*60*24));
+  document.getElementById('daysLeft').textContent = days > 0 ? days : '0';
+}
+
+// ── HOURS ──
+function openHoursModal() {
+  document.getElementById('hoursModal').classList.add('open');
+  document.getElementById('hDate').value = new Date().toISOString().split('T')[0];
+}
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+
+function saveHours() {
+  const date = document.getElementById('hDate').value;
+  const hours = parseFloat(document.getElementById('hHours').value);
+  const org = document.getElementById('hOrg').value.trim();
+  const type = document.getElementById('hType').value;
+  const notes = document.getElementById('hNotes').value.trim();
+  if (!date || !hours || !org) { showToast('Please fill in all required fields'); return; }
+  state.hours.push({ date, hours, org, type, notes });
+  saveState();
+  closeModal('hoursModal');
+  renderHours();
+  renderDashboard();
+  showToast('✓ Hours logged successfully');
+  document.getElementById('hHours').value = '';
+  document.getElementById('hOrg').value = '';
+  document.getElementById('hNotes').value = '';
+}
+
+function renderHours() {
+  const totals = { shadowing: 0, hospital: 0, research: 0, community: 0 };
+  state.hours.forEach(h => { if (totals[h.type] !== undefined) totals[h.type] += h.hours; });
+  const total = Object.values(totals).reduce((a,b)=>a+b,0);
+
+  document.getElementById('totalHours').textContent = total;
+  document.getElementById('dashHours').textContent = total;
+
+  const pct = Math.min(total / 100, 1);
+  const circumference = 289;
+  document.getElementById('hoursCircle').style.strokeDashoffset = circumference - (pct * circumference);
+
+  const cats = { shadowing: 'shadow', hospital: 'hosp', research: 'res', community: 'comm' };
+  Object.entries(cats).forEach(([type, id]) => {
+    const h = totals[type];
+    const max = type === 'shadowing' ? 60 : type === 'hospital' ? 80 : 40;
+    document.getElementById(id+'Bar').style.width = Math.min(h/max*100,100)+'%';
+    document.getElementById(id+'Count').textContent = h + ' hrs';
+  });
+
+  const tbody = document.getElementById('hoursTableBody');
+  if (state.hours.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:24px;font-style:italic;">No hours logged yet. Click "Log Hours" to add your first entry.</td></tr>';
+    return;
+  }
+  const typeLabels = { shadowing: '🩺 Shadowing', hospital: '🏥 Hospital Vol.', research: '🔬 Research', community: '🤝 Community' };
+  tbody.innerHTML = [...state.hours].reverse().map(h => `
+    <tr>
+      <td style="color:var(--muted)">${h.date}</td>
+      <td style="font-weight:500">${h.org}</td>
+      <td>${typeLabels[h.type] || h.type}</td>
+      <td style="font-weight:600;color:var(--teal)">${h.hours} hrs</td>
+      <td style="color:var(--muted);font-size:12px">${h.notes || '—'}</td>
+    </tr>`).join('');
+}
+
+// ── ESSAYS ──
+function renderEssays() {
+  const grid = document.getElementById('essayGrid');
+  grid.innerHTML = essays.map((e, i) => `
+    <div class="essay-card">
+      <div class="essay-school">${e.school}</div>
+      <div class="essay-prompt">${e.prompt}</div>
+      <div class="essay-progress-wrap">
+        <div class="essay-bar-track">
+          <div class="essay-bar-fill" style="width:${e.progress}%"></div>
+        </div>
+        <div class="essay-pct">${e.progress}%</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
+        <span class="essay-status-chip ${statusChips[e.status]}" 
+          onclick="cycleEssayStatus(${i})" style="cursor:pointer" title="Click to update status">
+          ${statusLabels[e.status]}
+        </span>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <span style="font-size:11px;color:var(--muted)">Progress:</span>
+          <input type="range" min="0" max="100" value="${e.progress}" 
+            style="width:70px;accent-color:var(--blue)" 
+            oninput="updateEssayProgress(${i}, this.value)">
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function cycleEssayStatus(i) {
+  const cur = statusCycles.indexOf(essays[i].status);
+  essays[i].status = statusCycles[(cur + 1) % statusCycles.length];
+  renderEssays();
+  renderDashboard();
+  showToast('Essay status updated');
+}
+
+function updateEssayProgress(i, val) {
+  essays[i].progress = parseInt(val);
+  const pctEl = document.querySelectorAll('.essay-pct')[i];
+  if (pctEl) pctEl.textContent = val + '%';
+  renderDashboard();
+}
+
+// ── SAT ──
+function openSATModal() { document.getElementById('satModal').classList.add('open'); }
+
+function saveSAT() {
+  const date = document.getElementById('sDate').value;
+  const math = parseInt(document.getElementById('sMath').value);
+  const rw = parseInt(document.getElementById('sRW').value);
+  const notes = document.getElementById('sNotes').value.trim();
+  if (!date || !math || !rw) { showToast('Please fill in all fields'); return; }
+  const total = math + rw;
+  state.satScores.push({ date, math, rw, total, notes });
+  saveState();
+  closeModal('satModal');
+  renderSAT();
+  showToast(`✓ SAT score of ${total} saved`);
+}
+
+function renderSAT() {
+  if (state.satScores.length === 0) return;
+  const best = state.satScores.reduce((a,b) => a.total > b.total ? a : b);
+  const scoreEl = document.querySelector('.score-num');
+  if (scoreEl) {
+    scoreEl.textContent = best.total;
+    const statusEl = scoreEl.parentElement.querySelector('.score-status');
+    if (statusEl) {
+      if (best.total >= 1500) {
+        statusEl.className = 'score-status score-achieved';
+        statusEl.textContent = '🎯 Target Achieved!';
+      } else {
+        statusEl.className = 'score-status score-pending';
+        statusEl.textContent = `📈 ${1500 - best.total} points to goal`;
+      }
+    }
+  }
+  const tbody = document.querySelector('.history-table tbody');
+  if (tbody) {
+    tbody.innerHTML = [...state.satScores].reverse().map(s => `
+      <tr>
+        <td>${s.date}</td>
+        <td style="font-weight:700;color:${s.total>=1500?'var(--green)':s.total>=1400?'var(--amber)':'var(--red)'}">${s.total}</td>
+        <td>${s.math}</td>
+        <td>${s.rw}</td>
+        <td style="color:var(--muted)">${s.notes || '—'}</td>
+      </tr>`).join('');
+  }
+}
+
+// ── DASHBOARD ──
+function renderDashboard() {
+  const total = state.hours.reduce((a,h)=>a+h.hours,0);
+  document.getElementById('dashHours').textContent = total;
+
+  const done = essays.filter(e=>e.status==='done').length;
+  const pct = Math.round((done / essays.length) * 100);
+  document.getElementById('overallBar').style.width = Math.max(pct, 5) + '%';
+  document.getElementById('overallPct').textContent = pct + '% complete';
+
+  const grid = document.getElementById('dashEssayProgress');
+  if (grid) {
+    const grouped = {};
+    essays.forEach(e => { grouped[e.status] = (grouped[e.status]||0)+1; });
+    grid.innerHTML = Object.entries(statusLabels).map(([s,l]) => `
+      <div style="text-align:center">
+        <div style="font-family:'DM Serif Display',serif;font-size:28px;color:var(--navy)">${grouped[s]||0}</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">${l}</div>
+      </div>`).join('');
+  }
+}
+
+// ── UTILS ──
+function saveState() { localStorage.setItem('rishiPortal', JSON.stringify(state)); }
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+document.querySelectorAll('.modal-backdrop').forEach(m => {
+  m.addEventListener('click', e => { if(e.target === m) m.classList.remove('open'); });
+});
+
+// ── INIT ──
+updateDaysLeft();
+renderDashboard();
+renderSAT();
+</script>
+</body>
+</html>
