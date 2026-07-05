@@ -1379,9 +1379,6 @@ body {
     <div class="nav-item" onclick="showTab('satprep')">
       <span class="nav-icon">🎯</span> SAT Prep Plan
     </div>
-    <div class="nav-item" onclick="showTab('calling')">
-      <span class="nav-icon">📞</span> Doctor Outreach
-    </div>
     <div class="nav-item" onclick="showTab('cna')">
       <span class="nav-icon">🏅</span> CNA Certification
     </div>
@@ -1412,78 +1409,182 @@ body {
 <div class="tab-section active" id="tab-dashboard">
   <div class="page-header">
     <h1 id="dashGreeting">Hello, Rishi 👋</h1>
-    <p>Here's where things stand. Your first BS/MD deadline is coming up fast.</p>
+    <p>Two tracks, one summer. You're executing well — here's the full picture.</p>
   </div>
 
-  <div class="stats-row" style="grid-template-columns:repeat(5,1fr)">
-    <div class="stat-card">
-      <div class="stat-value" style="color:#9d174d">5</div>
-      <div class="stat-label">Dream Reaches</div>
-      <div class="stat-sub">Brown, Drexel, Rochester, FAU, Caldwell</div>
+  <!-- Track summary cards -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;">
+
+    <!-- BS/MD Track -->
+    <div style="background:linear-gradient(135deg,#0f2744,#1a3a5c);border-radius:12px;padding:18px 22px;color:white;">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#7dd3fc;margin-bottom:8px;">Track 1</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:18px;color:white;margin-bottom:12px;">🏥 BS/MD — 7-Year Medicine</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+        <div style="text-align:center;background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;">
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#f472b6;">5</div>
+          <div style="font-size:9px;color:#7dd3fc;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">Dream</div>
+        </div>
+        <div style="text-align:center;background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;">
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#a78bfa;">3</div>
+          <div style="font-size:9px;color:#7dd3fc;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">Reach</div>
+        </div>
+        <div style="text-align:center;background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;">
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#38bdf8;">5</div>
+          <div style="font-size:9px;color:#7dd3fc;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">Match</div>
+        </div>
+        <div style="text-align:center;background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;">
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#34d399;">3</div>
+          <div style="font-size:9px;color:#7dd3fc;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">Safety</div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:11px;color:#94a3b8;">Oct 13 hard deadline · Penn State · 16 schools total</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-value" style="color:var(--reach)">3</div>
-      <div class="stat-label">Reach Schools</div>
-      <div class="stat-sub">BU, Case Western, GWU</div>
+
+    <!-- Bioinformatics Track -->
+    <div style="background:linear-gradient(135deg,#1e1b4b,#4338ca);border-radius:12px;padding:18px 22px;color:white;">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#c7d2fe;margin-bottom:8px;">Track 2</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:18px;color:white;margin-bottom:12px;">🧬 Bioinformatics — 4-Year BS</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+        <div style="text-align:center;background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;">
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#f472b6;">5</div>
+          <div style="font-size:9px;color:#c7d2fe;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">Dream</div>
+        </div>
+        <div style="text-align:center;background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;">
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#a78bfa;">3</div>
+          <div style="font-size:9px;color:#c7d2fe;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">Reach</div>
+        </div>
+        <div style="text-align:center;background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;">
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#38bdf8;">5</div>
+          <div style="font-size:9px;color:#c7d2fe;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">Match</div>
+        </div>
+        <div style="text-align:center;background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;">
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#34d399;">3</div>
+          <div style="font-size:9px;color:#c7d2fe;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;">Safety</div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:11px;color:#a5b4fc;">Nov 1 main deadline · MIT, Duke, Cornell · 16 schools total</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-value" style="color:var(--match)">5</div>
-      <div class="stat-label">Match Schools</div>
-      <div class="stat-sub">RPI, NJIT, USF, Illinois, MCG</div>
+  </div>
+
+  <!-- Status tiles row -->
+  <div class="stats-row" style="grid-template-columns:repeat(5,1fr);margin-bottom:16px;">
+    <div class="stat-card" style="border-top:3px solid var(--teal);">
+      <div style="font-size:20px;margin-bottom:4px;">🏅</div>
+      <div class="stat-label" style="font-weight:700;color:var(--teal);">CNA</div>
+      <div class="stat-sub" style="color:var(--teal);font-weight:600;">Final Clinicals</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-value" style="color:var(--safety)">3</div>
-      <div class="stat-label">Safety Schools</div>
-      <div class="stat-sub">UAB, VCU + 1 BS/DO</div>
+    <div class="stat-card" style="border-top:3px solid #6366f1;">
+      <div style="font-size:20px;margin-bottom:4px;">🏫</div>
+      <div class="stat-label" style="font-weight:700;color:#6366f1;">GMU Course</div>
+      <div class="stat-sub" style="color:#6366f1;font-weight:600;">Active · Jul 17 Conf.</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-value" style="color:var(--teal)" id="dashHours">0</div>
-      <div class="stat-label">Clinical Hours</div>
-      <div class="stat-sub">Goal: 100+ hrs</div>
+    <div class="stat-card" style="border-top:3px solid var(--amber);">
+      <div style="font-size:20px;margin-bottom:4px;">📊</div>
+      <div class="stat-label" style="font-weight:700;color:var(--amber);">SAT Retake</div>
+      <div class="stat-sub" style="color:var(--amber);font-weight:600;">Aug 22 · Target 1500+</div>
+    </div>
+    <div class="stat-card" style="border-top:3px solid var(--blue);">
+      <div style="font-size:20px;margin-bottom:4px;">🩺</div>
+      <div class="stat-label" style="font-weight:700;">Clinical Hours</div>
+      <div class="stat-sub" id="dashHoursLabel">0 hrs logged</div>
+      <div style="font-size:18px;font-weight:700;color:var(--teal)" id="dashHours"></div>
+    </div>
+    <div class="stat-card" style="border-top:3px solid var(--red);">
+      <div style="font-size:20px;margin-bottom:4px;">📅</div>
+      <div class="stat-label" style="font-weight:700;color:var(--red);">Next Deadline</div>
+      <div class="stat-sub" style="color:var(--red);font-weight:600;">Oct 13 · Penn State</div>
     </div>
   </div>
 
   <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
     <div class="card">
-      <div class="card-title">📅 Next 3 Deadlines</div>
+      <div class="card-title">📅 Key Upcoming Dates</div>
       <div style="font-size:13px;">
-        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--border);">
-          <span style="color:var(--text)">Inova Fall Volunteer Registration</span>
-          <span style="color:#dc2626; font-weight:600;">Jul 9</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
+          <span style="color:var(--text);">🏫 GMU Conference Presentation</span>
+          <span style="color:#6366f1;font-weight:700;">Jul 17</span>
         </div>
-        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--border);">
-          <span style="color:var(--text)">Penn State BS/MD Deadline</span>
-          <span style="color:var(--amber); font-weight:600;">Oct 13</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
+          <span style="color:var(--text);">🏫 GMU Research Paper Due</span>
+          <span style="color:#6366f1;font-weight:700;">Jul 24</span>
         </div>
-        <div style="display:flex; justify-content:space-between; padding:8px 0;">
-          <span style="color:var(--text)">Most BS/MD Apps Due</span>
-          <span style="color:var(--muted);">Sep–Oct</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
+          <span style="color:var(--text);">📊 SAT Retake</span>
+          <span style="color:var(--amber);font-weight:700;">Aug 22</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
+          <span style="color:var(--text);">🏛️ U of Illinois BS/MD Deadline</span>
+          <span style="color:var(--muted);font-weight:600;">Oct 1</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;">
+          <span style="color:var(--text);">🏛️ Penn State Deadline</span>
+          <span style="color:var(--red);font-weight:700;">Oct 13</span>
         </div>
       </div>
     </div>
+
     <div class="card">
-      <div class="card-title">✅ This Week's Focus</div>
-      <div style="font-size:13px; display:flex; flex-direction:column; gap:8px;">
-        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
-          <input type="checkbox" style="accent-color:var(--teal); width:15px; height:15px;">
-          <span>Call Stone Ridge Family Medicine (703-421-1700)</span>
+      <div class="card-title">✅ This Week's Priorities</div>
+      <div style="font-size:13px;display:flex;flex-direction:column;gap:7px;">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+          <input type="checkbox" style="accent-color:var(--teal);width:15px;height:15px;">
+          <span>🏅 Complete CNA final clinical hours</span>
         </label>
-        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
-          <input type="checkbox" style="accent-color:var(--teal); width:15px; height:15px;">
-          <span>Call remaining 6 practices for shadowing</span>
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+          <input type="checkbox" style="accent-color:#6366f1;width:15px;height:15px;">
+          <span>🏫 Prep GMU conference presentation (Jul 17)</span>
         </label>
-        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
-          <input type="checkbox" style="accent-color:var(--teal); width:15px; height:15px;">
-          <span>Draft Inova 250-word volunteer essay</span>
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+          <input type="checkbox" style="accent-color:var(--amber);width:15px;height:15px;">
+          <span>📊 SAT Prep — Week 1 diagnostic test (Bluebook)</span>
         </label>
-        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
-          <input type="checkbox" style="accent-color:var(--teal); width:15px; height:15px;">
-          <span>Begin "Why Medicine" essay outline</span>
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+          <input type="checkbox" style="accent-color:var(--amber);width:15px;height:15px;">
+          <span>📊 Register for October SAT as backup now</span>
         </label>
-        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
-          <input type="checkbox" style="accent-color:var(--teal); width:15px; height:15px;">
-          <span>Request teacher recommendation letters</span>
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+          <input type="checkbox" style="accent-color:var(--blue);width:15px;height:15px;">
+          <span>🩺 Log shadowing hours in Clinical Hours page</span>
         </label>
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+          <input type="checkbox" style="accent-color:#9d174d;width:15px;height:15px;">
+          <span>✍️ Start Common App essay draft (Para 1)</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pillar progress row -->
+  <div class="card" style="margin-top:16px;">
+    <div class="card-title">🏛️ The 4 Pillars — Progress to Oct 13</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:4px;">
+      <div style="text-align:center;">
+        <div style="font-size:11px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">CNA Certified</div>
+        <div style="height:8px;background:var(--border);border-radius:99px;overflow:hidden;margin-bottom:4px;">
+          <div style="height:8px;width:80%;background:var(--teal);border-radius:99px;"></div>
+        </div>
+        <div style="font-size:11px;color:var(--teal);font-weight:600;">Final Clinicals 🔥</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:11px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">SAT 1500+</div>
+        <div style="height:8px;background:var(--border);border-radius:99px;overflow:hidden;margin-bottom:4px;">
+          <div style="height:8px;width:15%;background:var(--amber);border-radius:99px;"></div>
+        </div>
+        <div style="font-size:11px;color:var(--amber);font-weight:600;">Aug 22 Retake</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">100+ Clinical Hrs</div>
+        <div style="height:8px;background:var(--border);border-radius:99px;overflow:hidden;margin-bottom:4px;">
+          <div style="height:8px;width:45%;background:var(--blue);border-radius:99px;"></div>
+        </div>
+        <div style="font-size:11px;color:var(--blue);font-weight:600;">CNA Clinicals Counting</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:11px;font-weight:600;color:#6366f1;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Research Published</div>
+        <div style="height:8px;background:var(--border);border-radius:99px;overflow:hidden;margin-bottom:4px;">
+          <div style="height:8px;width:55%;background:#6366f1;border-radius:99px;"></div>
+        </div>
+        <div style="font-size:11px;color:#6366f1;font-weight:600;">GMU Course Active 🔥</div>
       </div>
     </div>
   </div>
@@ -1904,10 +2005,60 @@ body {
 <div class="tab-section" id="tab-essays">
   <div class="page-header">
     <h1>Essay Tracker</h1>
-    <p>Track progress on every essay. The "Why Medicine" essay is your most important piece.</p>
+    <p>Two tracks, two essay sets. Toggle between them — progress saves separately for each.</p>
   </div>
-  <div class="essay-grid" id="essayGrid">
-    <!-- filled by JS -->
+
+  <!-- Track toggle -->
+  <div style="display:flex;gap:10px;margin-bottom:20px;align-items:center;flex-wrap:wrap;">
+    <button onclick="showEssayTrack('bsmd')" id="essayBtnBSMD"
+      style="padding:8px 20px;border-radius:99px;border:2px solid var(--navy);background:var(--navy);color:white;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">
+      🏥 BS/MD Essays
+    </button>
+    <button onclick="showEssayTrack('bioinfo')" id="essayBtnBioinfo"
+      style="padding:8px 20px;border-radius:99px;border:2px solid var(--border);background:white;color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">
+      🧬 Bioinformatics Essays
+    </button>
+  </div>
+
+  <!-- BS/MD Essays -->
+  <div id="essayTrackBSMD">
+    <div class="essay-grid" id="essayGrid"></div>
+  </div>
+
+  <!-- Bioinformatics Essays -->
+  <div id="essayTrackBioinfo" style="display:none;">
+
+    <!-- What to focus on banner -->
+    <div style="background:linear-gradient(135deg,#1e1b4b,#4338ca);border-radius:12px;padding:20px 24px;margin-bottom:20px;color:white;">
+      <div style="font-family:'DM Serif Display',serif;font-size:18px;margin-bottom:8px;">🧬 What to Focus on for Bioinformatics Essays</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;">
+        <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px 14px;">
+          <div style="font-size:12px;font-weight:700;color:#c7d2fe;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;">✅ Lead With</div>
+          <div style="font-size:12.5px;color:#e0e7ff;line-height:1.7;">
+            • Your MATA biomedical coursework — show you already think like a bioinformatician<br>
+            • GMU AI & Medical Informatics research — real research experience at 17 is rare<br>
+            • The intersection of biology + technology — that's the field's identity<br>
+            • Specific questions that excite you (genomics? drug discovery? AI in diagnostics?)<br>
+            • Your CNA experience — understanding patient data from both sides
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px 14px;">
+          <div style="font-size:12px;font-weight:700;color:#c7d2fe;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;">🚫 Avoid</div>
+          <div style="font-size:12.5px;color:#e0e7ff;line-height:1.7;">
+            • Saying you "always loved computers and biology" — too generic<br>
+            • Framing bioinformatics as a fallback from medicine — own the pivot<br>
+            • Vague goals like "I want to help find cures" — be specific about what problem you want to solve<br>
+            • Listing skills without showing how you've applied them<br>
+            • Ignoring the research component — 80% of admitted students have research experience
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:12px;padding:10px 14px;background:rgba(255,255,255,0.08);border-radius:8px;font-size:13px;color:#c7d2fe;">
+        💡 <strong style="color:white;">Core Essay Angle for Bioinformatics:</strong> "I started in patient care — as a lifeguard and CNA — and realized the most impactful problems in medicine live in the data. Bioinformatics is where I can work at that intersection." That pivot from caring for individual patients to working on systems-level biology is a compelling, specific story.
+      </div>
+    </div>
+
+    <div class="essay-grid" id="essayGridBI"></div>
   </div>
 </div>
 
@@ -2048,55 +2199,133 @@ body {
 <div class="tab-section" id="tab-sat">
   <div class="page-header">
     <h1>SAT Score Tracker</h1>
-    <p>Current results pending. Target: 1500+ to unlock reach BS/MD programs.</p>
+    <p>Retake: August 22 · Target: 1500+ · Both tracks benefit from a higher score</p>
   </div>
 
+  <!-- Score cards row -->
   <div class="sat-hero">
     <div class="sat-score-card">
-      <div class="score-num">—</div>
-      <div class="score-label">Current SAT Score</div>
-      <div class="score-status score-pending">⏳ Awaiting Results</div>
+      <div class="score-num" id="satCurrentScore">&lt;1300</div>
+      <div class="score-label">Last Score (Jun 2026)</div>
+      <div class="score-status score-pending">📈 Retaking Aug 22</div>
     </div>
-    <div class="sat-score-card" style="background:linear-gradient(135deg,#0f2744,#1a3a5c); border-color:#1a3a5c;">
+    <div class="sat-score-card" style="background:linear-gradient(135deg,#0f2744,#1a3a5c);border-color:#1a3a5c;">
       <div class="score-num" style="color:white;">1500</div>
-      <div class="score-label" style="color:#7dd3fc;">Target Score</div>
-      <div class="score-status" style="background:rgba(255,255,255,0.15); color:#7dd3fc;">🎯 BS/MD Goal</div>
+      <div class="score-label" style="color:#7dd3fc;">BS/MD Target</div>
+      <div class="score-status" style="background:rgba(255,255,255,0.15);color:#7dd3fc;">🏥 Unlocks all BS/MD reaches</div>
     </div>
-    <div class="sat-benchmarks">
-      <div class="card-title" style="margin-bottom:12px;">Program SAT Benchmarks</div>
-      <div class="benchmark-row">
-        <div class="benchmark-school">Boston University (MMEDIC)</div>
-        <div class="benchmark-score">1500+</div>
-        <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-reach" style="width:100%"></div></div></div>
-        <div class="benchmark-tier"><span class="tier-badge tier-reach">Reach</span></div>
-      </div>
-      <div class="benchmark-row">
-        <div class="benchmark-school">Penn State / Sidney Kimmel</div>
-        <div class="benchmark-score">1510+</div>
-        <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-reach" style="width:100%"></div></div></div>
-        <div class="benchmark-tier"><span class="tier-badge tier-reach">Reach</span></div>
-      </div>
-      <div class="benchmark-row">
-        <div class="benchmark-school">RPI / Albany Medical</div>
-        <div class="benchmark-score">1400+</div>
-        <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-match" style="width:75%"></div></div></div>
-        <div class="benchmark-tier"><span class="tier-badge tier-match">Match</span></div>
-      </div>
-      <div class="benchmark-row">
-        <div class="benchmark-school">NJIT / Rutgers NJMS</div>
-        <div class="benchmark-score">1400+</div>
-        <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-match" style="width:75%"></div></div></div>
-        <div class="benchmark-tier"><span class="tier-badge tier-match">Match</span></div>
-      </div>
-      <div class="benchmark-row">
-        <div class="benchmark-school">UAB Heersink</div>
-        <div class="benchmark-score">1360+</div>
-        <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-safety" style="width:60%"></div></div></div>
-        <div class="benchmark-tier"><span class="tier-badge tier-safety">Safety</span></div>
-      </div>
+    <div class="sat-score-card" style="background:linear-gradient(135deg,#1e1b4b,#4338ca);border-color:#4338ca;">
+      <div class="score-num" style="color:white;">1400</div>
+      <div class="score-label" style="color:#c7d2fe;">Bioinformatics Target</div>
+      <div class="score-status" style="background:rgba(255,255,255,0.15);color:#c7d2fe;">🧬 Unlocks match programs</div>
     </div>
   </div>
 
+  <!-- Track toggle for benchmarks -->
+  <div style="display:flex;gap:10px;margin-bottom:16px;align-items:center;">
+    <div style="font-size:13px;font-weight:600;color:var(--navy);">SAT Benchmarks:</div>
+    <button onclick="showSATBenchmarks('bsmd')" id="satBenchBSMD"
+      style="padding:6px 16px;border-radius:99px;border:2px solid var(--navy);background:var(--navy);color:white;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">
+      🏥 BS/MD Programs
+    </button>
+    <button onclick="showSATBenchmarks('bioinfo')" id="satBenchBI"
+      style="padding:6px 16px;border-radius:99px;border:2px solid var(--border);background:white;color:var(--muted);font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">
+      🧬 Bioinformatics Programs
+    </button>
+  </div>
+
+  <!-- BS/MD Benchmarks -->
+  <div class="card" id="satBenchBSMDCard">
+    <div class="card-title">🏥 BS/MD Program SAT Benchmarks</div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">Penn State / Sidney Kimmel</div>
+      <div class="benchmark-score">1510+</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-reach" style="width:100%"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-reach">Reach</span></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">Boston University MMEDIC</div>
+      <div class="benchmark-score">1500+</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-reach" style="width:98%"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-reach">Reach</span></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">Case Western / GWU</div>
+      <div class="benchmark-score">1450+</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-reach" style="width:88%"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-reach">Reach</span></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">RPI / NJIT / USF Morsani</div>
+      <div class="benchmark-score">1400+</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-match" style="width:75%"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-match">Match</span></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">MCG Augusta / U of Illinois</div>
+      <div class="benchmark-score">1360+</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-match" style="width:65%"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-match">Match</span></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">UAB Heersink / VCU</div>
+      <div class="benchmark-score">1360+</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-safety" style="width:60%"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-safety">Safety</span></div>
+    </div>
+  </div>
+
+  <!-- Bioinformatics Benchmarks -->
+  <div class="card" id="satBenchBICard" style="display:none;">
+    <div class="card-title">🧬 Bioinformatics Program SAT Benchmarks</div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">MIT Computational Biology</div>
+      <div class="benchmark-score">1545 avg</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill" style="width:100%;background:#9d174d"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-dream">🌟 Dream</span></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">Duke / Brown / Cornell</div>
+      <div class="benchmark-score">1500–1540</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill" style="width:97%;background:#9d174d"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-dream">🌟 Dream</span></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">Carnegie Mellon</div>
+      <div class="benchmark-score">1500–1570</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-reach" style="width:95%"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-reach">Reach</span></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">UC San Diego</div>
+      <div class="benchmark-score">1390–1530</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-reach" style="width:85%"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-reach">Reach</span></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">UNC Chapel Hill / U of Wisconsin</div>
+      <div class="benchmark-score">1310–1490</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-match" style="width:75%"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-match">Match</span></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">Virginia Tech / Rutgers</div>
+      <div class="benchmark-score">1200–1400</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-match" style="width:65%"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-match">Match</span></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="benchmark-school">GMU / VCU / JMU</div>
+      <div class="benchmark-score">1100–1300</div>
+      <div class="benchmark-bar-wrap"><div class="benchmark-bar"><div class="benchmark-bar-fill bar-safety" style="width:50%"></div></div></div>
+      <div class="benchmark-tier"><span class="tier-badge tier-safety">Safety</span></div>
+    </div>
+    <div style="margin-top:14px;padding:10px 14px;background:#f5f3ff;border-radius:8px;border-left:3px solid #6366f1;font-size:13px;color:var(--navy);">
+      💡 <strong>Good news for Bioinformatics:</strong> Rishi's current score already meets the minimum for his match and safety schools. A 1400+ on Aug 22 opens the reach tier. 1500+ puts every school in play for both tracks simultaneously.
+    </div>
+  </div>
+
+  <!-- Score history -->
   <div class="card">
     <div class="card-title">Score History</div>
     <table class="history-table">
@@ -2109,85 +2338,86 @@ body {
           <th>Notes</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="satHistoryBody">
         <tr>
           <td style="color:var(--muted)">June 2026</td>
-          <td style="font-weight:600; color:var(--muted)">⏳ Pending</td>
+          <td style="font-weight:700;color:var(--red)">&lt;1300</td>
           <td style="color:var(--muted)">—</td>
           <td style="color:var(--muted)">—</td>
-          <td style="color:var(--muted); font-style:italic;">Results expected soon</td>
+          <td style="color:var(--muted);font-style:italic;">R&W identified as primary gap. Retaking Aug 22.</td>
         </tr>
       </tbody>
     </table>
-    <button class="add-btn" style="background:var(--blue); margin-top:14px;" onclick="openSATModal()">+ Add Score</button>
+    <button class="add-btn" style="background:var(--blue);margin-top:14px;" onclick="openSATModal()">+ Add Score</button>
   </div>
 
-  <div class="card" style="background:linear-gradient(135deg,#eff6ff,#f0fdf4);">
-    <div class="card-title" style="color:var(--navy)">📋 If Rishi Scores Below 1500</div>
-    <div style="font-size:13.5px; color:var(--text); line-height:1.7;">
-      <p style="margin-bottom:8px;">A score of 1400–1499 keeps the match and safety schools fully in play. The recommended next step would be one more attempt in <strong>August or October 2026</strong>. Registration for the August SAT opens in June.</p>
-      <p style="color:var(--muted);">Programs like UAB, USF, MCG, and VCU all have minimums at or below 1400 — Rishi's applications remain strong at his current range.</p>
+  <!-- Strategy card -->
+  <div class="card" style="background:linear-gradient(135deg,#eff6ff,#f5f3ff);">
+    <div class="card-title" style="color:var(--navy)">📋 Score Impact by Track</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;font-size:13px;">
+      <div>
+        <div style="font-weight:700;color:var(--navy);margin-bottom:8px;">🏥 BS/MD Track</div>
+        <div style="color:var(--muted);line-height:1.7;">
+          <span style="color:var(--red);font-weight:600;">&lt;1300</span> — Safety schools only (UAB, VCU)<br>
+          <span style="color:var(--amber);font-weight:600;">1300–1399</span> — Match schools (RPI, NJIT, USF, MCG)<br>
+          <span style="color:var(--blue);font-weight:600;">1400–1499</span> — Strong matches + some reaches<br>
+          <span style="color:var(--green);font-weight:600;">1500+</span> — Full list including BU, GWU, Dream reaches
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#4338ca;margin-bottom:8px;">🧬 Bioinformatics Track</div>
+        <div style="color:var(--muted);line-height:1.7;">
+          <span style="color:var(--red);font-weight:600;">&lt;1300</span> — GMU, VCU, JMU (safeties)<br>
+          <span style="color:var(--amber);font-weight:600;">1300–1399</span> — VTech, Rutgers, Pitt (matches)<br>
+          <span style="color:var(--blue);font-weight:600;">1400–1499</span> — UCSD, UNC, Wisconsin (reaches)<br>
+          <span style="color:var(--green);font-weight:600;">1500+</span> — CMU, Duke, Cornell, MIT range
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:10px 14px;background:white;border-radius:8px;border:1px solid var(--border);font-size:13px;color:var(--navy);">
+      🎯 <strong>August 22 goal:</strong> Every 50 points gained opens the next tier on both tracks. A 1400+ is the key threshold — it unlocks meaningful options on both lists simultaneously.
     </div>
   </div>
 </div>
 
-<!-- ══════════ DOCTOR OUTREACH ══════════ -->
+<!-- ══════════ DOCTOR OUTREACH — Retired ══════════ -->
 <div class="tab-section" id="tab-calling">
   <div class="page-header">
-    <h1>Doctor Outreach Tracker</h1>
-    <p>7 practices · Sterling VA area · Call Tuesday–Thursday, 9–11 AM for best results</p>
+    <h1>Doctor Outreach</h1>
+    <p>This section has been retired — Rishi has CNA clinicals and GMU research keeping him fully occupied.</p>
   </div>
-
-  <!-- Summary tiles -->
-  <div class="call-summary-row" id="callSummaryRow">
-    <div class="call-summary-tile">
-      <div class="call-summary-num" id="cSum-total">7</div>
-      <div class="call-summary-label">To Contact</div>
+  <div class="card" style="background:linear-gradient(135deg,#f0fdf9,#eff6ff);border-color:#a7f3d0;text-align:center;padding:40px 32px;">
+    <div style="font-size:40px;margin-bottom:12px;">✅</div>
+    <div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--navy);margin-bottom:8px;">Clinical Hours Are Covered</div>
+    <div style="font-size:14px;color:var(--muted);line-height:1.7;max-width:480px;margin:0 auto;">
+      Rishi's CNA clinical training hours count directly toward his clinical experience total. Combined with the GMU AI research program, his summer is fully committed to high-impact work. Doctor office outreach is no longer needed.
     </div>
-    <div class="call-summary-tile">
-      <div class="call-summary-num" id="cSum-called" style="color:var(--amber)">0</div>
-      <div class="call-summary-label">Called</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:24px;max-width:480px;margin-left:auto;margin-right:auto;">
+      <div style="background:white;border-radius:10px;padding:14px;border:1px solid var(--border);">
+        <div style="font-size:22px;margin-bottom:4px;">🏅</div>
+        <div style="font-size:12px;font-weight:700;color:var(--teal);">CNA Clinicals</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px;">48 hrs supervised patient care</div>
+      </div>
+      <div style="background:white;border-radius:10px;padding:14px;border:1px solid var(--border);">
+        <div style="font-size:22px;margin-bottom:4px;">🏫</div>
+        <div style="font-size:12px;font-weight:700;color:#6366f1;">GMU Research</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px;">AI & Medical Informatics</div>
+      </div>
+      <div style="background:white;border-radius:10px;padding:14px;border:1px solid var(--border);">
+        <div style="font-size:22px;margin-bottom:4px;">📊</div>
+        <div style="font-size:12px;font-weight:700;color:var(--amber);">SAT Prep</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px;">Aug 22 retake sprint</div>
+      </div>
     </div>
-    <div class="call-summary-tile">
-      <div class="call-summary-num" id="cSum-yes" style="color:var(--green)">0</div>
-      <div class="call-summary-label">Said Yes ✓</div>
-    </div>
-    <div class="call-summary-tile">
-      <div class="call-summary-num" id="cSum-voicemail" style="color:var(--blue)">0</div>
-      <div class="call-summary-label">Voicemail</div>
-    </div>
-    <div class="call-summary-tile">
-      <div class="call-summary-num" id="cSum-followup" style="color:var(--reach)">0</div>
-      <div class="call-summary-label">Follow Up</div>
-    </div>
+    <div style="margin-top:20px;font-size:13px;color:var(--muted);">Log all clinical hours in the <strong style="color:var(--teal);">Clinical Hours</strong> page.</div>
   </div>
-
-  <!-- Master script panel -->
-  <div class="script-panel">
-    <h3>📞 Master Phone Script</h3>
-    <p class="sp-sub">Read this word-for-word until it feels natural. Keep each call under 60 seconds.</p>
-    <div class="sp-block">
-      <div class="sp-label">When someone answers</div>
-      <div class="sp-text">"Hi, my name is Rishi [Last Name]. I'm a rising senior in high school and I'm planning to apply to BS/MD pre-medical programs this fall. I'm looking to gain some clinical experience this summer through physician shadowing or volunteering. Is there someone I could speak with about whether your practice might be open to that?"</div>
-    </div>
-    <div class="sp-block">
-      <div class="sp-label">When connected to the office manager or physician</div>
-      <div class="sp-text">"Hi, I'm Rishi. I'm a high school senior applying to combined BS/MD medical programs, and I have two years of biomedical coursework from my school's health sciences academy. I'm very motivated and genuinely passionate about medicine. I was hoping to shadow a physician for a few hours a week this summer — even 4–6 hours weekly would be incredibly valuable for me. I'd be respectful of your schedule and happy to help the team in any way. Would that be something you might consider?"</div>
-    </div>
-    <div class="sp-block">
-      <div class="sp-label">If they say YES</div>
-      <div class="sp-text">"Thank you so much — I really appreciate it. Could I get your email so I can send a brief note with my background? I want to make it as easy as possible for you."</div>
-      <div class="sp-tip">→ Send follow-up email the same day. Mark this card as "Yes" below.</div>
-    </div>
-    <div class="sp-block" style="margin-bottom:0">
-      <div class="sp-label">If they say NO or are unsure</div>
-      <div class="sp-text">"I completely understand. Would it be okay if I sent a short email with my background, just in case anything opens up? I'm very flexible on timing."</div>
-      <div class="sp-tip">→ Always leave the door open. A no today can become a yes in 2 weeks.</div>
-    </div>
-  </div>
-
-  <!-- Practice cards -->
-  <div id="practiceCallCards"></div>
+  <!-- Keep these hidden elements so JS doesn't break -->
+  <div id="practiceCallCards" style="display:none;"></div>
+  <div id="cSum-total" style="display:none;"></div>
+  <div id="cSum-called" style="display:none;"></div>
+  <div id="cSum-yes" style="display:none;"></div>
+  <div id="cSum-voicemail" style="display:none;"></div>
+  <div id="cSum-followup" style="display:none;"></div>
 </div>
 
 <!-- ══════════ CNA CERTIFICATION ══════════ -->
@@ -3126,8 +3356,23 @@ body {
 <div class="tab-section" id="tab-essayfw">
   <div class="page-header">
     <h1>Essay Framework</h1>
-    <p>Common App Personal Statement · 650 words · built around Rishi's real story</p>
+    <p>Two tracks, two frameworks. Toggle between them — drafts save separately for each.</p>
   </div>
+
+  <!-- Track toggle -->
+  <div style="display:flex;gap:10px;margin-bottom:20px;align-items:center;flex-wrap:wrap;">
+    <button onclick="showEssayFWTrack('bsmd')" id="efwBtnBSMD"
+      style="padding:8px 20px;border-radius:99px;border:2px solid var(--navy);background:var(--navy);color:white;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">
+      🏥 BS/MD Framework
+    </button>
+    <button onclick="showEssayFWTrack('bioinfo')" id="efwBtnBI"
+      style="padding:8px 20px;border-radius:99px;border:2px solid var(--border);background:white;color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">
+      🧬 Bioinformatics Framework
+    </button>
+  </div>
+
+  <!-- ══ BS/MD FRAMEWORK ══ -->
+  <div id="efwTrackBSMD">
 
   <!-- Core Theme -->
   <div class="ef-theme-card">
@@ -3360,6 +3605,243 @@ body {
       </div>
     </div>
   </div>
+
+  </div><!-- end efwTrackBSMD -->
+
+  <!-- ══ BIOINFORMATICS FRAMEWORK ══ -->
+  <div id="efwTrackBI" style="display:none;">
+
+    <!-- Core Theme -->
+    <div class="ef-theme-card" style="background:linear-gradient(135deg,#1e1b4b,#4338ca);">
+      <div class="ef-theme-label" style="color:#c7d2fe;">The one sentence that holds the bioinformatics essay together</div>
+      <div class="ef-theme-sentence">"I started in patient care — and realized the most powerful problems in medicine live in the data."</div>
+      <div class="ef-theme-explain" style="color:#a5b4fc;">The pivot is the story. Rishi went from keeping individual bodies safe (lifeguard, CNA) to wanting to understand biological systems at scale (MATA, GMU AI research, bioinformatics). That's not a retreat from medicine — it's a different and equally compelling form of it. The essay's job is to make that pivot feel inevitable, not arbitrary.</div>
+    </div>
+
+    <!-- Accomplishments for Bioinfo -->
+    <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">🧬 Accomplishments — How Each One Fits the Bioinformatics Story</div>
+    <div class="ef-acc-grid">
+      <div class="ef-acc-card" style="border-left:3px solid #4338ca;">
+        <div class="ef-acc-icon">🏫</div>
+        <div>
+          <div class="ef-acc-title">GMU AI & Medical Informatics — Conference Presenter</div>
+          <div class="ef-acc-desc">Real research experience at 17. Presented at a national conference. Published in Young Scholars Journal. This is the centerpiece of the bioinformatics application.</div>
+          <span class="ef-acc-use" style="background:#ede9fe;color:#5b21b6;">→ Open with or pivot to this — it's the differentiator.</span>
+        </div>
+      </div>
+      <div class="ef-acc-card" style="border-left:3px solid #4338ca;">
+        <div class="ef-acc-icon">⚕️</div>
+        <div>
+          <div class="ef-acc-title">MATA Biomedical Program — 2 Years</div>
+          <div class="ef-acc-desc">The foundation. Two years of biomedical science is what makes the bioinformatics interest credible — he isn't just a coder, he understands the biology.</div>
+          <span class="ef-acc-use" style="background:#ede9fe;color:#5b21b6;">→ The academic backbone of the story.</span>
+        </div>
+      </div>
+      <div class="ef-acc-card" style="border-left:3px solid #4338ca;">
+        <div class="ef-acc-icon">🏅</div>
+        <div>
+          <div class="ef-acc-title">CNA Certification — Patient-Level Care</div>
+          <div class="ef-acc-desc">This is the unique angle. Most bioinformatics applicants have never touched a patient. Rishi has. That's the pivot — from individual patient care to population-level biological data.</div>
+          <span class="ef-acc-use" style="background:#ede9fe;color:#5b21b6;">→ The "Why I'm different" paragraph.</span>
+        </div>
+      </div>
+      <div class="ef-acc-card" style="border-left:3px solid #4338ca;">
+        <div class="ef-acc-icon">🤖</div>
+        <div>
+          <div class="ef-acc-title">Robotics — States (Middle School)</div>
+          <div class="ef-acc-desc">Shows the computational curiosity started early — before bioinformatics was even a word he knew. Technology + problem solving is a thread going back years.</div>
+          <span class="ef-acc-use" style="background:#ede9fe;color:#5b21b6;">→ One sentence — shows early roots of the interest.</span>
+        </div>
+      </div>
+      <div class="ef-acc-card" style="border-left:3px solid #4338ca;">
+        <div class="ef-acc-icon">🛟</div>
+        <div>
+          <div class="ef-acc-title">Lifeguard — 3 Years</div>
+          <div class="ef-acc-desc">The origin of the pivot. The moment he realized keeping one person safe wasn't enough — he wanted to understand the systems that affect thousands.</div>
+          <span class="ef-acc-use" style="background:#ede9fe;color:#5b21b6;">→ The opening hook that creates the pivot.</span>
+        </div>
+      </div>
+      <div class="ef-acc-card" style="border-left:3px solid #4338ca;">
+        <div class="ef-acc-icon">🔬</div>
+        <div>
+          <div class="ef-acc-title">Independent Research Paper</div>
+          <div class="ef-acc-desc">Submitted to JEI or JSR — even "under review" on an application is powerful. Shows he already operates at a college research level.</div>
+          <span class="ef-acc-use" style="background:#ede9fe;color:#5b21b6;">→ Weave in as proof of research commitment.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Structure -->
+    <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">📐 Bioinformatics Essay Structure</div>
+
+    <div class="ef-struct-block">
+      <div class="ef-sb-header">
+        <div class="ef-sb-num" style="background:#4338ca;">1</div>
+        <div class="ef-sb-title">The Hook — A Moment at the Bedside</div>
+        <div class="ef-sb-words">~80 words</div>
+      </div>
+      <div class="ef-sb-body">
+        <div class="ef-sb-purpose">What it does</div>
+        <div class="ef-sb-desc">Open with a specific moment from CNA training or lifeguarding — but this time the observation is different. Not "how do I help this person?" but "what is actually happening inside this person that I can't see?" The data question, sparked by the bedside moment.</div>
+        <div class="ef-sb-prompt">Was there a patient during CNA clinicals who made you think about their biology differently — a condition, a vital sign, a reaction that made you want to understand the data underneath? Or a lifeguard moment where you wished you could see inside the person you were watching?</div>
+        <div class="ef-sb-note">Sensory and specific — same opening technique as the BS/MD essay, but the question at the end of the scene is different. Not "how do I save them?" but "what does the data say?"</div>
+      </div>
+    </div>
+
+    <div class="ef-struct-block">
+      <div class="ef-sb-header">
+        <div class="ef-sb-num" style="background:#4338ca;">2</div>
+        <div class="ef-sb-title">The Computational Thread — Robotics to MATA to GMU</div>
+        <div class="ef-sb-words">~100 words</div>
+      </div>
+      <div class="ef-sb-body">
+        <div class="ef-sb-purpose">What it does</div>
+        <div class="ef-sb-desc">Show that the interest in applying computation to biological problems didn't start with bioinformatics — it started with robotics in middle school, grew through MATA's biomedical curriculum, and crystallized at GMU's AI & Medical Informatics program.</div>
+        <div class="ef-sb-prompt">How did your interest in technology + biology build over time? Robotics was about machines solving problems. MATA showed you the biology. GMU's AI program showed you they could work together. Trace that thread in 2–3 sentences without listing accomplishments.</div>
+        <div class="ef-sb-note">This paragraph earns the pivot. The reader needs to believe this interest is genuine and deep — not a course correction from medicine but a natural evolution of the same curiosity.</div>
+      </div>
+    </div>
+
+    <div class="ef-struct-block">
+      <div class="ef-sb-header">
+        <div class="ef-sb-num" style="background:#4338ca;">3</div>
+        <div class="ef-sb-title">The GMU Research — The Most Important Paragraph</div>
+        <div class="ef-sb-words">~130 words</div>
+      </div>
+      <div class="ef-sb-body">
+        <div class="ef-sb-purpose">The centerpiece — most important paragraph</div>
+        <div class="ef-sb-desc">This is where Rishi has something most 17-year-olds don't: actual research experience presented at a real conference. Don't summarize the research — describe the moment when the computational analysis revealed something about the biological data that surprised him. That's the bioinformatics "aha."</div>
+        <div class="ef-sb-prompt">What specific finding or moment from the GMU AI research genuinely surprised you or changed how you thought about something? What did the data show you that you couldn't have seen any other way? What question did the research leave unanswered — the one you want to pursue in college?</div>
+        <div class="ef-sb-note">Be specific. Name a tool, a dataset, a finding. "When our model identified a correlation between X and Y, I realized..." is powerful. "I did research on AI in medicine" is not. The July 17 conference presentation is worth mentioning explicitly.</div>
+      </div>
+    </div>
+
+    <div class="ef-struct-block">
+      <div class="ef-sb-header">
+        <div class="ef-sb-num" style="background:#4338ca;">4</div>
+        <div class="ef-sb-title">Why Bioinformatics — Not Medicine</div>
+        <div class="ef-sb-words">~110 words</div>
+      </div>
+      <div class="ef-sb-body">
+        <div class="ef-sb-purpose">Address the pivot directly — this is what every admissions reader is thinking</div>
+        <div class="ef-sb-desc">Don't avoid the question — own it. The strongest answer isn't "I changed my mind" but "I realized I can have more impact here." A bioinformatician working on genomic data touches millions of patients. A physician touches hundreds. That's not a retreat from caring — it's a different form of it at a different scale.</div>
+        <div class="ef-sb-prompt">Why bioinformatics specifically — and not medicine? What can you do in this field that you couldn't do as a physician? What problem do you want to work on — genomics, drug discovery, AI diagnostics, population health data? Be specific about the scale and type of impact you're drawn to.</div>
+        <div class="ef-sb-note">Do NOT frame this as a fallback. Do NOT say "I still might go to med school." Own the choice. Admissions readers respect clarity and conviction — hedging reads as uncertainty.</div>
+      </div>
+    </div>
+
+    <div class="ef-struct-block">
+      <div class="ef-sb-header">
+        <div class="ef-sb-num" style="background:#4338ca;">5</div>
+        <div class="ef-sb-title">The Close — The Question He's Chasing</div>
+        <div class="ef-sb-words">~80 words</div>
+      </div>
+      <div class="ef-sb-body">
+        <div class="ef-sb-purpose">What it does</div>
+        <div class="ef-sb-desc">End with forward momentum — not a summary of what he's done, but the specific question or problem he's pursuing next. Circle back to the opening patient moment if possible. Show that the bedside observation in paragraph 1 is still driving him.</div>
+        <div class="ef-sb-prompt">What specific research question or problem do you want to work on in college? What will you do in your first year — which lab, which professor, which dataset? End with the question the opening patient moment posed — and how bioinformatics is how you'll answer it.</div>
+        <div class="ef-sb-note">Forward momentum always beats backward summary. The last sentence should leave the reader believing this student is already doing the work — not planning to someday.</div>
+      </div>
+    </div>
+
+    <!-- Bioinformatics opener lines -->
+    <div class="card-title" style="margin-bottom:10px;margin-top:20px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">✨ Possible Opening Lines — Bioinformatics Track</div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Starting points only. Rewrite in your own voice.</p>
+
+    <div class="ef-opener-card" id="biOpener0" onclick="pickBIOpener(0)">
+      <div class="ef-opener-letter" style="color:#4338ca;">A</div>
+      <div>
+        <div class="ef-opener-text">"During my clinical training, I was taking a patient's vitals when I realized I had no idea what the numbers actually meant at the cellular level. I knew what to do. I didn't know why."</div>
+        <div class="ef-opener-note">Best if the essay pivots quickly from patient care to the data question. CNA-specific, immediately establishes the gap.</div>
+      </div>
+    </div>
+    <div class="ef-opener-card" id="biOpener1" onclick="pickBIOpener(1)">
+      <div class="ef-opener-letter" style="color:#4338ca;">B</div>
+      <div>
+        <div class="ef-opener-text">"I've spent three years keeping people safe at the edge of a pool. It took one semester of studying genomics to realize that the biggest threats to human health aren't in the water — they're in the data."</div>
+        <div class="ef-opener-note">Best for connecting the lifeguard past directly to the bioinformatics future. Strong pivot in a single sentence.</div>
+      </div>
+    </div>
+    <div class="ef-opener-card" id="biOpener2" onclick="pickBIOpener(2)">
+      <div class="ef-opener-letter" style="color:#4338ca;">C</div>
+      <div>
+        <div class="ef-opener-text">"When our model identified a pattern in the dataset that no one had expected, I understood for the first time why bioinformatics matters: the data sees what the human eye cannot."</div>
+        <div class="ef-opener-note">Best if leading directly with the GMU research experience. Shows active research engagement immediately.</div>
+      </div>
+    </div>
+    <div class="ef-opener-card" id="biOpener3" onclick="pickBIOpener(3)">
+      <div class="ef-opener-letter" style="color:#4338ca;">D</div>
+      <div>
+        <div class="ef-opener-text">"I became a certified nursing assistant at seventeen. I learned to read vital signs, assist with patient care, and work alongside nurses. What I couldn't learn in that room was what was happening at the molecular level — and that became the question I couldn't stop thinking about."</div>
+        <div class="ef-opener-note">Best for a longer, more narrative build. Establishes clinical credibility before introducing the computational pivot.</div>
+      </div>
+    </div>
+
+    <!-- Bioinformatics do/dont -->
+    <div class="card-title" style="margin-bottom:10px;margin-top:20px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">✅ Do's and Don'ts — Bioinformatics Track</div>
+    <div class="ef-do-dont">
+      <div class="ef-do">
+        <div class="ef-do-label">✓ Do</div>
+        <div class="ef-do-item"><span style="color:var(--teal)">→</span><span>Name the specific GMU research — tools, dataset, finding, conference date (Jul 17)</span></div>
+        <div class="ef-do-item"><span style="color:var(--teal)">→</span><span>Use your CNA experience as the pivot — it's your differentiator, own it</span></div>
+        <div class="ef-do-item"><span style="color:var(--teal)">→</span><span>Name a specific problem you want to work on — genomics, drug discovery, AI diagnostics</span></div>
+        <div class="ef-do-item"><span style="color:var(--teal)">→</span><span>Own the pivot from medicine confidently — clarity impresses admissions readers</span></div>
+        <div class="ef-do-item"><span style="color:var(--teal)">→</span><span>Show continuity — robotics → MATA → GMU → bioinformatics is a coherent arc</span></div>
+      </div>
+      <div class="ef-dont">
+        <div class="ef-dont-label">✗ Don't</div>
+        <div class="ef-dont-item"><span style="color:var(--red)">→</span><span>Say you "always loved computers and biology" — too vague and heard too often</span></div>
+        <div class="ef-dont-item"><span style="color:var(--red)">→</span><span>Frame bioinformatics as a fallback or alternative to medicine</span></div>
+        <div class="ef-dont-item"><span style="color:var(--red)">→</span><span>Hedge: "I might still go to med school" — pick a lane for this essay</span></div>
+        <div class="ef-dont-item"><span style="color:var(--red)">→</span><span>List tools or techniques without explaining what they revealed</span></div>
+        <div class="ef-dont-item"><span style="color:var(--red)">→</span><span>Forget to connect back to the patient-level opening in the close</span></div>
+      </div>
+    </div>
+
+    <!-- Bioinformatics draft workspace -->
+    <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">✍️ Bioinformatics Draft Workspace</div>
+    <div class="ef-draft-wrap">
+      <div class="ef-draft-header" style="background:#1e1b4b;">
+        <div class="ef-draft-header-title">Bioinformatics Common App Essay</div>
+        <div class="ef-wc" id="efBIWordCount">0 / 650 words</div>
+      </div>
+      <div class="ef-para-block">
+        <div class="ef-para-label">Para 1 — The Hook: A Bedside Moment (~80 words)</div>
+        <textarea id="efBI1" placeholder="Open with a specific CNA clinical or lifeguard moment where the data question hit you — what was happening inside this person that you couldn't see?" oninput="efBIUpdateCount()" rows="4"></textarea>
+      </div>
+      <div class="ef-para-block">
+        <div class="ef-para-label">Para 2 — The Computational Thread: Robotics → MATA → GMU (~100 words)</div>
+        <textarea id="efBI2" placeholder="Trace the curiosity back through time. Robotics showed you technology solves problems. MATA showed you the biology. GMU showed you they work together..." oninput="efBIUpdateCount()" rows="4"></textarea>
+      </div>
+      <div class="ef-para-block">
+        <div class="ef-para-label">Para 3 — The GMU Research: The Specific Finding (~130 words)</div>
+        <textarea id="efBI3" placeholder="What did the AI research reveal that surprised you? Name a specific finding, tool, or moment at the July 17 conference. What question did it leave unanswered?" oninput="efBIUpdateCount()" rows="5"></textarea>
+      </div>
+      <div class="ef-para-block">
+        <div class="ef-para-label">Para 4 — Why Bioinformatics, Not Medicine (~110 words)</div>
+        <textarea id="efBI4" placeholder="Own the pivot. A bioinformatician affects millions. Name the specific problem — genomics, drug discovery, AI diagnostics — that you want to work on. Don't hedge." oninput="efBIUpdateCount()" rows="5"></textarea>
+      </div>
+      <div class="ef-para-block">
+        <div class="ef-para-label">Para 5 — The Close: The Question He's Chasing (~80 words)</div>
+        <textarea id="efBI5" placeholder="What specific question are you chasing in college? Which lab, which problem? Circle back to the patient in paragraph 1 — bioinformatics is how you'll answer what you saw." oninput="efBIUpdateCount()" rows="4"></textarea>
+      </div>
+      <div class="ef-save-row">
+        <span id="efBISaveStatus">Start writing — auto-saves as you type</span>
+        <button class="ef-save-btn" style="background:#4338ca;" onclick="efBISaveDraft()">💾 Save Draft</button>
+      </div>
+    </div>
+
+    <div class="card" style="background:#1e1b4b;border:none;">
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="font-size:22px;flex-shrink:0;">💡</div>
+        <div style="font-size:13px;color:#a5b4fc;line-height:1.7;">
+          <strong style="color:white;">The bioinformatics advantage:</strong> Most applicants to bioinformatics programs are either strong biologists who learned to code, or strong coders who learned some biology. Rishi is a trained CNA and patient care provider who also has two years of biomedical science and real AI research experience. That combination is genuinely rare. The essay's job is to make that clear without sounding like a list.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end efwTrackBI -->
+
 </div>
 
 <!-- ══════════ RESOURCES: ESSAY READING LIST ══════════ -->
@@ -4140,14 +4622,23 @@ let state = JSON.parse(localStorage.getItem('rishiPortal') || 'null') || {
 };
 
 const essays = [
-  { school: "Common App Personal Statement", prompt: "Tell us your story — why medicine, who you are, what drives you.", progress: 0, status: "not-started" },
-  { school: "Boston University MMEDIC", prompt: "Why do you want to pursue a career in medicine? (500 words)", progress: 0, status: "not-started" },
-  { school: "Case Western PPSP", prompt: "Describe an experience that confirmed your interest in medicine.", progress: 0, status: "not-started" },
-  { school: "RPI / Albany Medical", prompt: "Why do you want to be a physician-scientist? What research interests you?", progress: 0, status: "not-started" },
-  { school: "NJIT / Rutgers NJMS", prompt: "Discuss a healthcare experience that shaped your desire to pursue medicine.", progress: 0, status: "not-started" },
-  { school: "GWU BA/MD", prompt: "How have your biomedical studies influenced your career goals?", progress: 0, status: "not-started" },
-  { school: "USF Morsani", prompt: "What unique perspective will you bring to the medical profession?", progress: 0, status: "not-started" },
-  { school: "Inova Volunteer Essay", prompt: "Why do you want to volunteer and how does this connect to your healthcare career goals? (250 words)", progress: 0, status: "not-started" },
+  { school: "Common App Personal Statement", prompt: "Tell us your story — the lifeguard who wants to understand what's happening inside the patient, not just how to keep them safe.", progress: 0, status: "not-started", track: "bsmd" },
+  { school: "Boston University MMEDIC", prompt: "Why do you want to pursue a career in medicine? (500 words)", progress: 0, status: "not-started", track: "bsmd" },
+  { school: "Case Western PPSP", prompt: "Describe an experience that confirmed your interest in medicine.", progress: 0, status: "not-started", track: "bsmd" },
+  { school: "RPI / Albany Medical", prompt: "Why do you want to be a physician-scientist? What research interests you?", progress: 0, status: "not-started", track: "bsmd" },
+  { school: "NJIT / Rutgers NJMS", prompt: "Discuss a healthcare experience that shaped your desire to pursue medicine.", progress: 0, status: "not-started", track: "bsmd" },
+  { school: "GWU BA/MD", prompt: "How have your biomedical studies influenced your career goals?", progress: 0, status: "not-started", track: "bsmd" },
+  { school: "USF Morsani", prompt: "What unique perspective will you bring to the medical profession?", progress: 0, status: "not-started", track: "bsmd" },
+  { school: "Inova Volunteer Essay", prompt: "Why do you want to volunteer and how does this connect to your healthcare career goals? (250 words)", progress: 0, status: "not-started", track: "bsmd" },
+  // Bioinformatics track
+  { school: "Common App — Bioinformatics Angle", prompt: "Same personal statement but framed around the pivot: from patient care (lifeguard, CNA) to understanding biological data. The question that changed — from 'how do I keep this person safe?' to 'what is happening at the molecular level?'", progress: 0, status: "not-started", track: "bioinfo" },
+  { school: "MIT / Duke / Cornell — Why This Field?", prompt: "Why bioinformatics specifically? What problem at the intersection of biology and computation drives you? Tie to your GMU AI research and MATA biomedical background.", progress: 0, status: "not-started", track: "bioinfo" },
+  { school: "UC San Diego — Research Statement", prompt: "UCSD's bioinformatics program is the largest in the US. Describe your research experience and the computational/biological questions you want to pursue. Reference your GMU AI & Medical Informatics project directly.", progress: 0, status: "not-started", track: "bioinfo" },
+  { school: "Carnegie Mellon — Why CMU?", prompt: "Why Carnegie Mellon for computational biology? What specific labs, professors, or research threads at CMU connect to your interests? Show you've done the research.", progress: 0, status: "not-started", track: "bioinfo" },
+  { school: "Virginia Tech — In-State Supplement", prompt: "How will you contribute to VT's bioinformatics community? As an in-state student with CNA certification and hands-on research, what perspective do you bring?", progress: 0, status: "not-started", track: "bioinfo" },
+  { school: "GMU — Why GMU? (Safety)", prompt: "You already have a relationship with GMU's Schar School through the AI program. Reference your experience directly — this essay writes itself. Show continuity of interest.", progress: 0, status: "not-started", track: "bioinfo" },
+  { school: "Why Bioinformatics — Not Medicine?", prompt: "Several programs will ask why you chose bioinformatics over direct medicine. Own the pivot honestly: 'I realized I want to work on the systems that affect thousands of patients, not one patient at a time.' Do not frame it as a retreat from medicine.", progress: 0, status: "not-started", track: "bioinfo" },
+  { school: "Activities / Research Description", prompt: "The 150-word Common App activity description for your GMU AI research. Make it specific: tools used, findings, output (conference presentation, paper submitted to journal). This is not a summary — it's a highlight reel.", progress: 0, status: "not-started", track: "bioinfo" },
 ];
 
 const statusCycles = ["not-started", "outline", "drafting", "revising", "done"];
@@ -4242,31 +4733,64 @@ function renderHours() {
 }
 
 // ── ESSAYS ──
+let currentEssayTrack = 'bsmd';
+
+function showEssayTrack(track) {
+  currentEssayTrack = track;
+  const bsmdDiv = document.getElementById('essayTrackBSMD');
+  const bioinfoDiv = document.getElementById('essayTrackBioinfo');
+  const btnBSMD = document.getElementById('essayBtnBSMD');
+  const btnBI = document.getElementById('essayBtnBioinfo');
+  if (track === 'bsmd') {
+    if (bsmdDiv) bsmdDiv.style.display = '';
+    if (bioinfoDiv) bioinfoDiv.style.display = 'none';
+    if (btnBSMD) { btnBSMD.style.background = 'var(--navy)'; btnBSMD.style.color = 'white'; btnBSMD.style.borderColor = 'var(--navy)'; }
+    if (btnBI) { btnBI.style.background = 'white'; btnBI.style.color = 'var(--muted)'; btnBI.style.borderColor = 'var(--border)'; }
+  } else {
+    if (bsmdDiv) bsmdDiv.style.display = 'none';
+    if (bioinfoDiv) bioinfoDiv.style.display = 'block';
+    if (btnBI) { btnBI.style.background = '#4338ca'; btnBI.style.color = 'white'; btnBI.style.borderColor = '#4338ca'; }
+    if (btnBSMD) { btnBSMD.style.background = 'white'; btnBSMD.style.color = 'var(--muted)'; btnBSMD.style.borderColor = 'var(--border)'; }
+  }
+}
+
 function renderEssays() {
-  const grid = document.getElementById('essayGrid');
-  grid.innerHTML = essays.map((e, i) => `
-    <div class="essay-card">
-      <div class="essay-school">${e.school}</div>
-      <div class="essay-prompt">${e.prompt}</div>
-      <div class="essay-progress-wrap">
-        <div class="essay-bar-track">
-          <div class="essay-bar-fill" style="width:${e.progress}%"></div>
+  const bsmdEssays = essays.filter(e => e.track === 'bsmd');
+  const biEssays = essays.filter(e => e.track === 'bioinfo');
+
+  const renderGrid = (list, gridId, offset) => {
+    const grid = document.getElementById(gridId);
+    if (!grid) return;
+    grid.innerHTML = list.map((e, i) => {
+      const idx = offset + i;
+      return `
+      <div class="essay-card">
+        <div class="essay-school">${e.school}</div>
+        <div class="essay-prompt">${e.prompt}</div>
+        <div class="essay-progress-wrap">
+          <div class="essay-bar-track">
+            <div class="essay-bar-fill" style="width:${e.progress}%;background:${e.track === 'bioinfo' ? '#4338ca' : 'var(--blue)'}"></div>
+          </div>
+          <div class="essay-pct">${e.progress}%</div>
         </div>
-        <div class="essay-pct">${e.progress}%</div>
-      </div>
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
-        <span class="essay-status-chip ${statusChips[e.status]}" 
-          onclick="cycleEssayStatus(${i})" style="cursor:pointer" title="Click to update status">
-          ${statusLabels[e.status]}
-        </span>
-        <div style="display:flex;align-items:center;gap:6px;">
-          <span style="font-size:11px;color:var(--muted)">Progress:</span>
-          <input type="range" min="0" max="100" value="${e.progress}" 
-            style="width:70px;accent-color:var(--blue)" 
-            oninput="updateEssayProgress(${i}, this.value)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
+          <span class="essay-status-chip ${statusChips[e.status]}"
+            onclick="cycleEssayStatus(${idx})" style="cursor:pointer" title="Click to update">
+            ${statusLabels[e.status]}
+          </span>
+          <div style="display:flex;align-items:center;gap:6px;">
+            <span style="font-size:11px;color:var(--muted)">Progress:</span>
+            <input type="range" min="0" max="100" value="${e.progress}"
+              style="width:70px;accent-color:${e.track === 'bioinfo' ? '#4338ca' : 'var(--blue)'}"
+              oninput="updateEssayProgress(${idx}, this.value)">
+          </div>
         </div>
-      </div>
-    </div>`).join('');
+      </div>`;
+    }).join('');
+  };
+
+  renderGrid(bsmdEssays, 'essayGrid', 0);
+  renderGrid(biEssays, 'essayGridBI', bsmdEssays.length);
 }
 
 function cycleEssayStatus(i) {
@@ -4282,6 +4806,25 @@ function updateEssayProgress(i, val) {
   const pctEl = document.querySelectorAll('.essay-pct')[i];
   if (pctEl) pctEl.textContent = val + '%';
   renderDashboard();
+}
+
+// ── SAT BENCHMARK TOGGLE ──
+function showSATBenchmarks(track) {
+  const bsmdCard = document.getElementById('satBenchBSMDCard');
+  const biCard = document.getElementById('satBenchBICard');
+  const btnBSMD = document.getElementById('satBenchBSMD');
+  const btnBI = document.getElementById('satBenchBI');
+  if (track === 'bsmd') {
+    if (bsmdCard) bsmdCard.style.display = '';
+    if (biCard) biCard.style.display = 'none';
+    if (btnBSMD) { btnBSMD.style.background = 'var(--navy)'; btnBSMD.style.color = 'white'; btnBSMD.style.borderColor = 'var(--navy)'; }
+    if (btnBI) { btnBI.style.background = 'white'; btnBI.style.color = 'var(--muted)'; btnBI.style.borderColor = 'var(--border)'; }
+  } else {
+    if (bsmdCard) bsmdCard.style.display = 'none';
+    if (biCard) biCard.style.display = '';
+    if (btnBI) { btnBI.style.background = '#4338ca'; btnBI.style.color = 'white'; btnBI.style.borderColor = '#4338ca'; }
+    if (btnBSMD) { btnBSMD.style.background = 'white'; btnBSMD.style.color = 'var(--muted)'; btnBSMD.style.borderColor = 'var(--border)'; }
+  }
 }
 
 // ── SAT ──
@@ -4334,7 +4877,10 @@ function renderSAT() {
 // ── DASHBOARD ──
 function renderDashboard() {
   const total = state.hours.reduce((a,h)=>a+h.hours,0);
-  document.getElementById('dashHours').textContent = total;
+  const dashHours = document.getElementById('dashHours');
+  const dashHoursLabel = document.getElementById('dashHoursLabel');
+  if (dashHours) dashHours.textContent = total;
+  if (dashHoursLabel) dashHoursLabel.textContent = total + ' hrs logged · Goal: 100+';
 
   const done = essays.filter(e=>e.status==='done').length;
   const pct = Math.round((done / essays.length) * 100);
@@ -4710,23 +5256,101 @@ function toggleTask(el) {
   showToast(isChecked ? '✓ Task complete!' : 'Task marked incomplete');
 }
 
+// ── ESSAY FRAMEWORK TRACK TOGGLE ──
+function showEssayFWTrack(track) {
+  const bsmd = document.getElementById('efwTrackBSMD');
+  const bi = document.getElementById('efwTrackBI');
+  const btnBSMD = document.getElementById('efwBtnBSMD');
+  const btnBI = document.getElementById('efwBtnBI');
+  if (track === 'bsmd') {
+    if (bsmd) bsmd.style.display = '';
+    if (bi) bi.style.display = 'none';
+    if (btnBSMD) { btnBSMD.style.background = 'var(--navy)'; btnBSMD.style.color = 'white'; btnBSMD.style.borderColor = 'var(--navy)'; }
+    if (btnBI) { btnBI.style.background = 'white'; btnBI.style.color = 'var(--muted)'; btnBI.style.borderColor = 'var(--border)'; }
+  } else {
+    if (bsmd) bsmd.style.display = 'none';
+    if (bi) bi.style.display = 'block';
+    if (btnBI) { btnBI.style.background = '#4338ca'; btnBI.style.color = 'white'; btnBI.style.borderColor = '#4338ca'; }
+    if (btnBSMD) { btnBSMD.style.background = 'white'; btnBSMD.style.color = 'var(--muted)'; btnBSMD.style.borderColor = 'var(--border)'; }
+  }
+}
+
+// Bioinformatics opener picker
+let biOpenerPicked = localStorage.getItem('rishiBIOpener') || null;
+function pickBIOpener(i) {
+  document.querySelectorAll('[id^="biOpener"]').forEach(c => c.classList.remove('ef-picked'));
+  const card = document.getElementById('biOpener' + i);
+  if (card) card.classList.add('ef-picked');
+  biOpenerPicked = i;
+  localStorage.setItem('rishiBIOpener', i);
+  showToast('Bioinformatics opening line selected');
+}
+
+// Bioinformatics draft
+let efBIAutoSaveTimer;
+function efBIUpdateCount() {
+  const text = ['efBI1','efBI2','efBI3','efBI4','efBI5']
+    .map(id => document.getElementById(id)?.value || '').join(' ');
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const el = document.getElementById('efBIWordCount');
+  if (el) {
+    el.textContent = words + ' / 650 words';
+    el.style.color = words > 650 ? '#f87171' : '#c7d2fe';
+  }
+  ['efBI1','efBI2','efBI3','efBI4','efBI5'].forEach(id => {
+    const ta = document.getElementById(id);
+    if (ta) autoResize(ta);
+  });
+  clearTimeout(efBIAutoSaveTimer);
+  efBIAutoSaveTimer = setTimeout(() => efBISaveDraft(true), 1500);
+}
+
+function efBISaveDraft(auto = false) {
+  const data = {};
+  ['efBI1','efBI2','efBI3','efBI4','efBI5'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) data[id] = el.value;
+  });
+  localStorage.setItem('rishiEfBIDraft', JSON.stringify(data));
+  const status = document.getElementById('efBISaveStatus');
+  if (status) {
+    const now = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit' });
+    status.textContent = (auto ? 'Auto-saved' : 'Saved') + ' at ' + now + ' ET';
+  }
+  if (!auto) showToast('✓ Bioinformatics draft saved');
+}
+
 // ── ESSAY FRAMEWORK ──
 let efOpenerPicked = localStorage.getItem('rishiEfOpener') || null;
 let efAutoSaveTimer;
 
 function initEssayFW() {
-  // restore drafts
+  // restore BS/MD drafts
   const saved = JSON.parse(localStorage.getItem('rishiEfDraft') || '{}');
   ['efP1','efP2','efP3','efP4','efP5'].forEach(id => {
     const el = document.getElementById(id);
     if (el && saved[id]) { el.value = saved[id]; autoResize(el); }
   });
-  // restore opener pick
+  // restore BS/MD opener pick
   if (efOpenerPicked !== null) {
     const card = document.getElementById('efOpener' + efOpenerPicked);
     if (card) card.classList.add('ef-picked');
   }
   efUpdateCount();
+
+  // restore Bioinformatics drafts
+  const biSaved = JSON.parse(localStorage.getItem('rishiEfBIDraft') || '{}');
+  ['efBI1','efBI2','efBI3','efBI4','efBI5'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && biSaved[id]) { el.value = biSaved[id]; autoResize(el); }
+  });
+  // restore BI opener pick
+  const biOpener = localStorage.getItem('rishiBIOpener');
+  if (biOpener !== null) {
+    const card = document.getElementById('biOpener' + biOpener);
+    if (card) card.classList.add('ef-picked');
+  }
+  efBIUpdateCount();
 }
 
 function autoResize(el) {
