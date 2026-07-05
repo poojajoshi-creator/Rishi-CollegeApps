@@ -1215,6 +1215,109 @@ body {
 .res-prog-fill { height: 6px; border-radius: 99px; background: var(--blue); transition: width 0.4s ease; }
 .res-prog-count { font-size: 11px; color: var(--muted); width: 40px; text-align: right; }
 
+/* ── SAT PREP ── */
+.sp-hero {
+  background: linear-gradient(135deg, #7c2d12 0%, #c2410c 60%, #ea580c 100%);
+  border-radius: 14px; padding: 28px 32px; color: white; margin-bottom: 20px;
+}
+.sp-hero h2 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 6px; }
+.sp-hero p { font-size: 14px; color: #fed7aa; line-height: 1.6; margin-bottom: 16px; }
+.sp-score-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.sp-score-tile {
+  background: rgba(255,255,255,0.12); border-radius: 10px;
+  padding: 14px 20px; text-align: center; min-width: 100px;
+}
+.sp-score-num { font-family: 'DM Serif Display', serif; font-size: 28px; color: white; line-height: 1; }
+.sp-score-label { font-size: 10px; color: #fed7aa; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.5px; }
+.sp-score-gap { font-size: 11px; color: #fbbf24; margin-top: 2px; font-weight: 600; }
+
+.sp-week-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 20px; }
+.sp-week {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; overflow: hidden;
+}
+.sp-week-header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 16px; background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.sp-week-num {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--navy); color: white;
+  font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.sp-week-num.current { background: #c2410c; }
+.sp-week-dates { font-size: 12px; font-weight: 700; color: var(--navy); width: 100px; flex-shrink: 0; }
+.sp-week-focus { font-size: 13px; font-weight: 600; color: var(--navy); flex: 1; }
+.sp-week-target {
+  font-size: 11px; font-weight: 700; padding: 3px 10px;
+  border-radius: 99px; background: #fff7ed; color: #c2410c;
+}
+.sp-week-body { padding: 12px 16px; }
+.sp-day-block { margin-bottom: 10px; }
+.sp-day-block:last-child { margin-bottom: 0; }
+.sp-day-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--muted); margin-bottom: 6px;
+}
+.sp-task-row {
+  display: flex; align-items: flex-start; gap: 9px;
+  padding: 5px 0; border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.sp-task-row:last-child { border-bottom: none; }
+.sp-task-check {
+  width: 15px; height: 15px; border-radius: 3px;
+  border: 2px solid var(--border); flex-shrink: 0; margin-top: 1px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  font-size: 9px; transition: all 0.15s; background: white;
+}
+.sp-task-check.checked { background: #c2410c; border-color: #c2410c; color: white; }
+.sp-task-label { flex: 1; color: var(--text); line-height: 1.5; }
+.sp-task-label.done { text-decoration: line-through; color: var(--muted); }
+.sp-cat {
+  font-size: 10px; font-weight: 600; padding: 2px 7px;
+  border-radius: 99px; flex-shrink: 0;
+}
+.sp-cat-rw   { background: #fce7f3; color: #9d174d; }
+.sp-cat-math { background: #dbeafe; color: #1d4ed8; }
+.sp-cat-test { background: #fef3c7; color: #92400e; }
+.sp-cat-review { background: #dcfce7; color: #166534; }
+.sp-cat-rest { background: #f5f3ff; color: #5b21b6; }
+
+.sp-strategy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+.sp-strategy-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px 18px;
+}
+.sp-strategy-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.sp-strategy-item {
+  display: flex; gap: 8px; font-size: 13px; color: var(--text);
+  margin-bottom: 6px; line-height: 1.5;
+}
+.sp-strategy-item:last-child { margin-bottom: 0; }
+.sp-dot { color: #c2410c; flex-shrink: 0; font-weight: 700; }
+
+.sp-progress-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 18px 20px; margin-bottom: 20px;
+}
+.sp-score-input-row {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 12px;
+}
+.sp-score-input-block label {
+  display: block; font-size: 11px; font-weight: 600; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 5px;
+}
+.sp-score-input-block input {
+  width: 100%; padding: 8px 12px; font-size: 15px; font-weight: 700;
+  border: 2px solid var(--border); border-radius: 8px; color: var(--navy);
+  font-family: 'DM Sans', sans-serif; outline: none;
+  transition: border-color 0.15s; text-align: center;
+}
+.sp-score-input-block input:focus { border-color: #c2410c; }
+
 @media (max-width: 768px) {
   .sidebar { width: 0; overflow: hidden; }
   .main { margin-left: 0; padding: 20px 16px; }
@@ -1272,6 +1375,9 @@ body {
     </div>
     <div class="nav-item" onclick="showTab('sat')">
       <span class="nav-icon">📊</span> SAT Tracker
+    </div>
+    <div class="nav-item" onclick="showTab('satprep')">
+      <span class="nav-icon">🎯</span> SAT Prep Plan
     </div>
     <div class="nav-item" onclick="showTab('calling')">
       <span class="nav-icon">📞</span> Doctor Outreach
@@ -1538,6 +1644,184 @@ body {
     </table>
   </div>
   <p style="font-size:12px; color:var(--muted); margin-top:10px; padding-left:4px;">💡 Click any status badge to update it. Deadlines in red are within 90 days. 🌟 Dream Reach schools require CNA + research + 100+ clinical hrs + SAT 1500+ to be competitive.</p>
+
+  <!-- TRACK TOGGLE -->
+  <div style="display:flex;gap:10px;margin-top:24px;margin-bottom:16px;align-items:center;">
+    <div style="font-size:13px;font-weight:600;color:var(--navy);">View Track:</div>
+    <button onclick="showCollegeTrack('bsmd')" id="trackBtnBSMD"
+      style="padding:7px 18px;border-radius:99px;border:2px solid var(--navy);background:var(--navy);color:white;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">
+      🏥 BS/MD Track
+    </button>
+    <button onclick="showCollegeTrack('bioinfo')" id="trackBtnBioinfo"
+      style="padding:7px 18px;border-radius:99px;border:2px solid var(--border);background:white;color:var(--muted);font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">
+      🧬 Bioinformatics Track
+    </button>
+    <span style="font-size:12px;color:var(--muted);margin-left:4px;">Both lists are active — apply to both tracks in parallel</span>
+  </div>
+
+  <!-- BIOINFORMATICS COLLEGE LIST -->
+  <div id="bioInfoTrack" style="display:none;">
+    <div style="background:linear-gradient(135deg,#1e1b4b,#4338ca);border-radius:12px;padding:20px 24px;margin-bottom:16px;color:white;">
+      <div style="font-size:18px;font-family:'DM Serif Display',serif;margin-bottom:6px;">🧬 Track 2 — Bioinformatics (4-Year BS)</div>
+      <div style="font-size:13px;color:#c7d2fe;line-height:1.6;">A parallel path applying Rishi's MATA biomedical background, GMU AI research, and CNA clinical experience toward a career in biotech, pharma, or research. His 3.7 GPA is genuinely competitive here — most programs require 3.0–3.5 minimum. Apply both tracks simultaneously.</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px;">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-family:'DM Serif Display',serif;font-size:26px;color:#9d174d">5</div>
+        <div style="font-size:11px;color:var(--muted);">Dream Reaches</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-family:'DM Serif Display',serif;font-size:26px;color:var(--reach)">3</div>
+        <div style="font-size:11px;color:var(--muted);">Reaches</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-family:'DM Serif Display',serif;font-size:26px;color:var(--match)">5</div>
+        <div style="font-size:11px;color:var(--muted);">Matches</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-family:'DM Serif Display',serif;font-size:26px;color:var(--safety)">3</div>
+        <div style="font-size:11px;color:var(--muted);">Safeties</div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden;">
+      <table class="college-table">
+        <thead>
+          <tr>
+            <th>School & Program</th>
+            <th>Tier</th>
+            <th>Avg Graduate Salary</th>
+            <th>Acceptance Rate</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dream Reaches -->
+          <tr><td colspan="5"><div style="background:linear-gradient(135deg,#fdf2f8,#fce7f3);padding:8px 14px;font-size:11px;font-weight:700;color:#9d174d;text-transform:uppercase;letter-spacing:0.5px;border-top:2px solid #fbcfe8;border-bottom:2px solid #fbcfe8;">🌟 Dream Reaches — Top Bioinformatics Programs Nationally</div></td></tr>
+          <tr>
+            <td><div class="school-name">MIT</div><div class="school-program">BS Computational Biology / Bioinformatics</div></td>
+            <td><span class="tier-badge tier-dream">🌟 Dream</span></td>
+            <td class="sat-score">$94,408 avg</td>
+            <td class="deadline-cell">4% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(0)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">Duke University</div><div class="school-program">BS Bioinformatics & Computational Biology</div></td>
+            <td><span class="tier-badge tier-dream">🌟 Dream</span></td>
+            <td class="sat-score">Strong outcomes</td>
+            <td class="deadline-cell">6% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(1)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">Brown University</div><div class="school-program">BS Computational Biology</div></td>
+            <td><span class="tier-badge tier-dream">🌟 Dream</span></td>
+            <td class="sat-score">Strong outcomes</td>
+            <td class="deadline-cell">5% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(2)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">Cornell University</div><div class="school-program">BS Bioinformatics</div></td>
+            <td><span class="tier-badge tier-dream">🌟 Dream</span></td>
+            <td class="sat-score">$70,680 avg</td>
+            <td class="deadline-cell">11% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(3)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">Washington Univ. St. Louis</div><div class="school-program">BS Bioinformatics & Computational Biology</div></td>
+            <td><span class="tier-badge tier-dream">🌟 Dream</span></td>
+            <td class="sat-score">Strong outcomes</td>
+            <td class="deadline-cell">15% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(4)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <!-- Reaches -->
+          <tr><td colspan="5"><div style="background:#f5f3ff;padding:8px 14px;font-size:11px;font-weight:700;color:var(--reach);text-transform:uppercase;letter-spacing:0.5px;border-top:2px solid #ddd6fe;border-bottom:2px solid #ddd6fe;">Reaches — Excellent Programs, Competitive but Realistic</div></td></tr>
+          <tr>
+            <td><div class="school-name">Carnegie Mellon University</div><div class="school-program">BS Computational Biology</div></td>
+            <td><span class="tier-badge tier-reach">Reach</span></td>
+            <td class="sat-score">Strong outcomes</td>
+            <td class="deadline-cell">12% accept · SAT 1500–1570</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(5)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">UC San Diego</div><div class="school-program">BS Bioinformatics — largest program nationally (137 students)</div></td>
+            <td><span class="tier-badge tier-reach">Reach</span></td>
+            <td class="sat-score">$71,015 avg</td>
+            <td class="deadline-cell">24% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(6)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">UNC Chapel Hill</div><div class="school-program">BS Bioinformatics & Computational Biology</div></td>
+            <td><span class="tier-badge tier-reach">Reach</span></td>
+            <td class="sat-score">Strong outcomes</td>
+            <td class="deadline-cell">24% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(7)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <!-- Matches -->
+          <tr><td colspan="5"><div style="background:#e0f2fe;padding:8px 14px;font-size:11px;font-weight:700;color:var(--match);text-transform:uppercase;letter-spacing:0.5px;border-top:2px solid #bae6fd;border-bottom:2px solid #bae6fd;">Matches — Rishi's Profile Fits Comfortably</div></td></tr>
+          <tr>
+            <td><div class="school-name">Virginia Tech</div><div class="school-program">BS Bioinformatics — in-state advantage from Lynchburg</div></td>
+            <td><span class="tier-badge tier-match">Match</span></td>
+            <td class="sat-score">Strong outcomes</td>
+            <td class="deadline-cell">58% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(8)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">University of Pittsburgh</div><div class="school-program">BS Bioinformatics — holistic review, research-focused</div></td>
+            <td><span class="tier-badge tier-match">Match</span></td>
+            <td class="sat-score">Strong outcomes</td>
+            <td class="deadline-cell">49% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(9)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">University of Wisconsin-Madison</div><div class="school-program">BS Bioinformatics — strong research culture</div></td>
+            <td><span class="tier-badge tier-match">Match</span></td>
+            <td class="sat-score">Strong outcomes</td>
+            <td class="deadline-cell">49% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(10)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">NC State University</div><div class="school-program">BS Bioinformatics — strong computational biology</div></td>
+            <td><span class="tier-badge tier-match">Match</span></td>
+            <td class="sat-score">Strong outcomes</td>
+            <td class="deadline-cell">45% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(11)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">Rutgers University</div><div class="school-program">BS Bioinformatics — NJ, close to home</div></td>
+            <td><span class="tier-badge tier-match">Match</span></td>
+            <td class="sat-score">Strong outcomes</td>
+            <td class="deadline-cell">58% accept · SAT 1310–1500</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(12)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <!-- Safeties -->
+          <tr><td colspan="5"><div style="background:#dcfce7;padding:8px 14px;font-size:11px;font-weight:700;color:var(--safety);text-transform:uppercase;letter-spacing:0.5px;border-top:2px solid #bbf7d0;border-bottom:2px solid #bbf7d0;">Safeties — Comfortable Admits with Good Outcomes</div></td></tr>
+          <tr>
+            <td><div class="school-name">George Mason University</div><div class="school-program">BS Bioinformatics — Rishi has existing GMU relationship ⭐</div></td>
+            <td><span class="tier-badge tier-safety">Safety</span></td>
+            <td class="sat-score">Strong outcomes</td>
+            <td class="deadline-cell">~83% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(13)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">VCU</div><div class="school-program">BS Bioinformatics — Virginia in-state, 38 students</div></td>
+            <td><span class="tier-badge tier-safety">Safety</span></td>
+            <td class="sat-score">$37,208 avg</td>
+            <td class="deadline-cell">~85% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(14)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+          <tr>
+            <td><div class="school-name">James Madison University</div><div class="school-program">BS Health Sciences / Bioinformatics — in-state Virginia</div></td>
+            <td><span class="tier-badge tier-safety">Safety</span></td>
+            <td class="sat-score">Solid outcomes</td>
+            <td class="deadline-cell">~75% accept</td>
+            <td><span class="status-badge status-not-started" onclick="cycleCollegeStatusBI(15)" style="cursor:pointer">Not Started</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:10px;padding-left:4px;">💡 GMU is the standout safety — Rishi already has a relationship with the department through the AI program. That connection matters. Click status badges to update progress.</p>
+  </div>
 </div>
 
 <!-- ══════════ CLINICAL HOURS ══════════ -->
@@ -2493,8 +2777,8 @@ body {
 
   <!-- Hero countdown -->
   <div class="gp-hero">
-    <h2>🎯 121 Days to October 13</h2>
-    <p>Rishi has already applied to CNA and the GMU AI program — the hardest step (starting) is done. Now it's execution. This plan maps every week between now and October 13 so nothing falls through the cracks.</p>
+    <h2>🎯 Executing Strong — October 13 in Sight</h2>
+    <p>Rishi is in the final phase of CNA clinical training and actively completing the GMU AI research course. Two of the four pillars are well underway — now the focus shifts to SAT results, clinical hours, and essays. Stay the course.</p>
     <div class="gp-countdown-row">
       <div class="gp-count-tile">
         <div class="gp-count-num" id="gpDays">—</div>
@@ -2518,11 +2802,11 @@ body {
   <!-- 4 Pillars -->
   <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">🏛️ The 4 Pillars — By October 13</div>
   <div class="gp-pillars" id="gpPillars">
-    <div class="gp-pillar">
+    <div class="gp-pillar" style="border-color:var(--teal);background:#f0fdf9;">
       <div class="gp-pillar-icon">🏅</div>
       <div class="gp-pillar-title">CNA Certified</div>
-      <div class="gp-pillar-status" id="pillar0status">Applied ✓ — In Progress</div>
-      <div class="gp-pillar-bar-wrap"><div class="gp-pillar-bar" id="pillar0bar" style="width:20%;background:var(--teal)"></div></div>
+      <div class="gp-pillar-status" id="pillar0status" style="color:var(--teal);font-weight:600;">Final Clinicals ✓ Almost There!</div>
+      <div class="gp-pillar-bar-wrap"><div class="gp-pillar-bar" id="pillar0bar" style="width:80%;background:var(--teal)"></div></div>
     </div>
     <div class="gp-pillar">
       <div class="gp-pillar-icon">📊</div>
@@ -2530,17 +2814,17 @@ body {
       <div class="gp-pillar-status" id="pillar1status">Results Pending</div>
       <div class="gp-pillar-bar-wrap"><div class="gp-pillar-bar" id="pillar1bar" style="width:10%;background:var(--amber)"></div></div>
     </div>
-    <div class="gp-pillar">
+    <div class="gp-pillar" style="border-color:var(--blue);background:#eff6ff;">
       <div class="gp-pillar-icon">🩺</div>
       <div class="gp-pillar-title">100+ Clinical Hours</div>
-      <div class="gp-pillar-status" id="pillar2status">Building Now</div>
-      <div class="gp-pillar-bar-wrap"><div class="gp-pillar-bar" id="pillar2bar" style="width:5%;background:var(--blue)"></div></div>
+      <div class="gp-pillar-status" id="pillar2status" style="color:var(--blue);font-weight:600;">CNA Clinicals Counting ✓</div>
+      <div class="gp-pillar-bar-wrap"><div class="gp-pillar-bar" id="pillar2bar" style="width:45%;background:var(--blue)"></div></div>
     </div>
-    <div class="gp-pillar">
+    <div class="gp-pillar" style="border-color:#6366f1;background:#f5f3ff;">
       <div class="gp-pillar-icon">🔬</div>
       <div class="gp-pillar-title">Research Published</div>
-      <div class="gp-pillar-status" id="pillar3status">GMU Applied ✓</div>
-      <div class="gp-pillar-bar-wrap"><div class="gp-pillar-bar" id="pillar3bar" style="width:15%;background:var(--reach))"></div></div>
+      <div class="gp-pillar-status" id="pillar3status" style="color:#6366f1;font-weight:600;">GMU Course Active ✓</div>
+      <div class="gp-pillar-bar-wrap"><div class="gp-pillar-bar" id="pillar3bar" style="width:55%;background:#6366f1"></div></div>
     </div>
   </div>
 
@@ -2553,23 +2837,23 @@ body {
     </div>
     <div class="acc-check-row">
       <div class="acc-check-icon">🏅</div>
-      <div class="acc-check-text" id="acc0text">CNA Program — Applied</div>
-      <span class="acc-check-status st-applied">Applied ✓</span>
+      <div class="acc-check-text" id="acc0text">CNA Program — Enrolled & Active</div>
+      <span class="acc-check-status st-done">Done ✓</span>
     </div>
     <div class="acc-check-row">
       <div class="acc-check-icon">🏅</div>
-      <div class="acc-check-text" id="acc1text">CNA Certification — Exam Passed</div>
-      <span class="acc-check-status st-inprogress" id="acc1status">In Progress</span>
+      <div class="acc-check-text" id="acc1text">CNA Certification — Final Clinical Phase</div>
+      <span class="acc-check-status st-inprogress" id="acc1status">🔥 Final Phase</span>
     </div>
     <div class="acc-check-row">
       <div class="acc-check-icon">🏫</div>
-      <div class="acc-check-text" id="acc2text">GMU AI & Medical Informatics — Applied</div>
-      <span class="acc-check-status st-applied">Applied ✓</span>
+      <div class="acc-check-text" id="acc2text">GMU AI & Medical Informatics — Enrolled & Active</div>
+      <span class="acc-check-status st-done">Done ✓</span>
     </div>
     <div class="acc-check-row">
       <div class="acc-check-icon">🏫</div>
       <div class="acc-check-text" id="acc3text">GMU Conference Presentation — July 17</div>
-      <span class="acc-check-status st-pending" id="acc3status">Upcoming</span>
+      <span class="acc-check-status st-inprogress" id="acc3status">🔥 Upcoming</span>
     </div>
     <div class="acc-check-row">
       <div class="acc-check-icon">🏫</div>
@@ -3460,6 +3744,319 @@ body {
   </div>
 </div>
 
+<!-- ══════════ SAT PREP PLAN ══════════ -->
+<div class="tab-section" id="tab-satprep">
+  <div class="page-header">
+    <h1>SAT Prep Plan</h1>
+    <p>August 22 retake · 7-week sprint · Target: 1500+ · Focus: Reading & Writing</p>
+  </div>
+
+  <!-- Hero -->
+  <div class="sp-hero">
+    <h2>📈 7-Week Sprint to 1500+</h2>
+    <p>A 200+ point gain in 7 weeks is ambitious but very achievable with focused daily practice. Reading & Writing is the most trainable section — consistent exposure to question patterns and targeted vocabulary work compounds fast. Every day counts from here.</p>
+    <div class="sp-score-row">
+      <div class="sp-score-tile">
+        <div class="sp-score-num">&lt;1300</div>
+        <div class="sp-score-label">Current Score</div>
+      </div>
+      <div class="sp-score-tile">
+        <div class="sp-score-num">1500</div>
+        <div class="sp-score-label">Target Score</div>
+        <div class="sp-score-gap">+200 needed</div>
+      </div>
+      <div class="sp-score-tile">
+        <div class="sp-score-num">Aug 22</div>
+        <div class="sp-score-label">Test Date</div>
+      </div>
+      <div class="sp-score-tile">
+        <div class="sp-score-num" id="spDaysLeft">—</div>
+        <div class="sp-score-label">Days to Test</div>
+      </div>
+      <div class="sp-score-tile">
+        <div class="sp-score-num" id="spTasksDone">0</div>
+        <div class="sp-score-label">Tasks Done</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Score tracker -->
+  <div class="sp-progress-card">
+    <div class="card-title" style="margin-bottom:0">📊 Practice Score Tracker — Log After Every Full Test</div>
+    <div class="sp-score-input-row">
+      <div class="sp-score-input-block">
+        <label>Math Score</label>
+        <input type="number" id="spMath" min="200" max="800" placeholder="e.g. 680" oninput="updateSPTotal()">
+      </div>
+      <div class="sp-score-input-block">
+        <label>Reading & Writing Score</label>
+        <input type="number" id="spRW" min="200" max="800" placeholder="e.g. 620" oninput="updateSPTotal()">
+      </div>
+      <div class="sp-score-input-block">
+        <label>Total (auto)</label>
+        <input type="number" id="spTotal" placeholder="—" readonly
+          style="background:var(--surface);cursor:default;">
+      </div>
+    </div>
+    <div style="margin-top:10px;display:flex;gap:10px;align-items:center;">
+      <button onclick="logSPScore()" style="padding:7px 16px;background:#c2410c;color:white;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">Log Score</button>
+      <span id="spScoreHistory" style="font-size:12px;color:var(--muted);"></span>
+    </div>
+  </div>
+
+  <!-- Strategies -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">🧠 Core Strategies — Reading & Writing Focus</div>
+  <div class="sp-strategy-grid">
+    <div class="sp-strategy-card">
+      <div class="sp-strategy-title">📖 Reading & Writing — What to Fix</div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Vocabulary in context</strong> — practice picking the right word for the sentence's tone, not just meaning</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Transitions</strong> — however, therefore, furthermore questions. Learn the 6 types cold</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Central idea & purpose</strong> — always ask "what is the author trying to do in this paragraph?"</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Evidence & data questions</strong> — practice reading graphs and matching claims to data correctly</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Grammar rules</strong> — subject-verb agreement, comma splices, apostrophes. 10 rules, drill them daily</span></div>
+    </div>
+    <div class="sp-strategy-card">
+      <div class="sp-strategy-title">📐 Math — Hold & Improve</div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Linear equations & systems</strong> — highest frequency topic, must be automatic</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Quadratics</strong> — factoring, vertex form, discriminant. 3–4 questions per test</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Ratios & proportions</strong> — word problems are predictable, learn the setups</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Never leave a math question blank</strong> — no penalty for guessing, eliminate and pick</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Calculator section discipline</strong> — don't over-rely on calculator, it slows you down</span></div>
+    </div>
+    <div class="sp-strategy-card">
+      <div class="sp-strategy-title">🛠️ Daily Habits That Move the Score</div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Read quality nonfiction daily</strong> — 20 min of dense reading (NYT, Atlantic, science articles) trains the RW section faster than drills alone</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Review every wrong answer</strong> — don't just mark it wrong. Understand exactly why the right answer is right</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Timed practice only</strong> — untimed practice builds false confidence. Always use a timer</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Khan Academy daily</strong> — linked to College Board, adapts to his weaknesses automatically</span></div>
+    </div>
+    <div class="sp-strategy-card">
+      <div class="sp-strategy-title">📅 Test Day Strategy</div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>August 22 is the date</strong> — treat every full practice test as a dress rehearsal</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Sleep Aug 20–21</strong> — the two nights before matter more than the night of. No cramming</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>Flag and move</strong> — never spend more than 90 seconds on one question. Flag, move, return</span></div>
+      <div class="sp-strategy-item"><span class="sp-dot">→</span><span><strong>October backup</strong> — if Aug 22 comes in below 1500, October SAT still covers Nov 1 deadlines. The pressure is real but not final</span></div>
+    </div>
+  </div>
+
+  <!-- Week-by-week plan -->
+  <div class="card-title" style="margin-bottom:10px;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">📅 7-Week Daily Plan — Jul 5 to Aug 22</div>
+
+  <div class="sp-week-grid">
+
+    <!-- WEEK 1 -->
+    <div class="sp-week">
+      <div class="sp-week-header">
+        <div class="sp-week-num current">1</div>
+        <div class="sp-week-dates">Jul 5–11</div>
+        <div class="sp-week-focus">🔍 Diagnose — Find Every Weak Spot</div>
+        <div class="sp-week-target">Target: Baseline mapped</div>
+      </div>
+      <div class="sp-week-body">
+        <div class="sp-day-block">
+          <div class="sp-day-label">Mon–Tue</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Take full timed SAT practice test #1 (College Board Bluebook — free official test)</div><span class="sp-cat sp-cat-test">Full Test</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Score it — log Math and R&W scores separately in the tracker above</div><span class="sp-cat sp-cat-review">Review</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Wed–Thu</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Go through every wrong answer — write down WHY each one was wrong, not just what was right</div><span class="sp-cat sp-cat-review">Review</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Create two lists: R&W mistake types (vocabulary? grammar? evidence?) and Math mistake types</div><span class="sp-cat sp-cat-review">Review</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Fri–Sat</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Khan Academy: link College Board account, complete skills diagnostic, get personalized plan</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Read 1 long-form article (NYT, Atlantic, science topic) — 20 min, no skimming</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Sun</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Rest — light reading only. Review week 1 mistake list. Plan week 2 focus areas</div><span class="sp-cat sp-cat-rest">Rest</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEEK 2 -->
+    <div class="sp-week">
+      <div class="sp-week-header">
+        <div class="sp-week-num">2</div>
+        <div class="sp-week-dates">Jul 12–18</div>
+        <div class="sp-week-focus">📖 R&W Deep Dive — Grammar Rules & Vocabulary</div>
+        <div class="sp-week-target">Target: +30 R&W pts</div>
+      </div>
+      <div class="sp-week-body">
+        <div class="sp-day-block">
+          <div class="sp-day-label">Daily (30 min R&W)</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Khan Academy: complete all "Expression of Ideas" and "Standard English Conventions" modules</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Drill the 10 core grammar rules: subject-verb agreement, pronoun case, comma splices, apostrophes, parallel structure, modifiers</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Read 1 article daily (science or current events) — underline the main argument of each paragraph</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Daily (20 min Math)</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Khan Academy: linear equations and systems — drill until automatic. 20 problems per day</div><span class="sp-cat sp-cat-math">Math</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Weekend</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Take one timed R&W section only (not full test) — score and review same day</div><span class="sp-cat sp-cat-test">Section Test</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEEK 3 -->
+    <div class="sp-week">
+      <div class="sp-week-header">
+        <div class="sp-week-num">3</div>
+        <div class="sp-week-dates">Jul 19–25</div>
+        <div class="sp-week-focus">🔗 Transitions, Evidence & Data Questions</div>
+        <div class="sp-week-target">Target: +20 R&W pts</div>
+      </div>
+      <div class="sp-week-body">
+        <div class="sp-day-block">
+          <div class="sp-day-label">Daily R&W (35 min)</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Master the 6 transition types: contrast (however/but), cause (therefore/thus), addition (furthermore), sequence (first/then), example (for instance), concession (although/while)</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Practice evidence & data questions — charts, graphs, tables. Strategy: read the claim first, THEN look at the data</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">20-minute daily reading: choose articles with charts/graphs (Economist, FiveThirtyEight, science journals)</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Daily Math (20 min)</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Quadratics focus — factoring, vertex, discriminant. Khan Academy quadratics module</div><span class="sp-cat sp-cat-math">Math</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Weekend</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Full timed practice test #2 — log score, compare to test #1, celebrate any gain</div><span class="sp-cat sp-cat-test">Full Test</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEEK 4 -->
+    <div class="sp-week">
+      <div class="sp-week-header">
+        <div class="sp-week-num">4</div>
+        <div class="sp-week-dates">Jul 26 – Aug 1</div>
+        <div class="sp-week-focus">⚡ Speed & Accuracy — Beat the Clock</div>
+        <div class="sp-week-target">Target: +20 pts both sections</div>
+      </div>
+      <div class="sp-week-body">
+        <div class="sp-day-block">
+          <div class="sp-day-label">Mon–Wed</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Timed mini-sections: 17 R&W questions in 20 minutes. Practice flagging and moving on</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Focus on the "hardest" question type you still miss most. Dedicate 15 min daily to just that type</div><span class="sp-cat sp-cat-review">Review</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Thu–Fri</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Timed Math sections: 22 questions in 35 min. Identify any remaining weak topics</div><span class="sp-cat sp-cat-math">Math</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Khan Academy: statistics & data analysis module (high frequency on Digital SAT)</div><span class="sp-cat sp-cat-math">Math</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Weekend</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Full timed practice test #3 — strict test conditions (quiet room, phone away, real timer)</div><span class="sp-cat sp-cat-test">Full Test</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEEK 5 -->
+    <div class="sp-week">
+      <div class="sp-week-header">
+        <div class="sp-week-num">5</div>
+        <div class="sp-week-dates">Aug 2–8</div>
+        <div class="sp-week-focus">🎯 Weak Spots Only — Targeted Elimination</div>
+        <div class="sp-week-target">Target: Eliminate top 3 error types</div>
+      </div>
+      <div class="sp-week-body">
+        <div class="sp-day-block">
+          <div class="sp-day-label">Mon–Wed</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Look at mistake logs from tests 1–3. Identify the 3 question types that cost the most points. Spend 30 min/day on each one this week</div><span class="sp-cat sp-cat-review">Review</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Vocabulary in context: 20 practice questions per day — focus on tone words (critical, ambivalent, pragmatic, sardonic)</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Thu–Fri</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Khan Academy: complete any remaining recommended skills. Check overall progress score</div><span class="sp-cat sp-cat-review">Review</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Math: functions, exponents, and geometry — the three topics most students leave points on the table</div><span class="sp-cat sp-cat-math">Math</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Weekend</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Full timed practice test #4 — this is the most important practice test. Aim for realistic test conditions</div><span class="sp-cat sp-cat-test">Full Test</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEEK 6 -->
+    <div class="sp-week">
+      <div class="sp-week-header">
+        <div class="sp-week-num">6</div>
+        <div class="sp-week-dates">Aug 9–15</div>
+        <div class="sp-week-focus">🔄 Full Test Simulation — Race Ready</div>
+        <div class="sp-week-target">Target: Score 1450+ on practice</div>
+      </div>
+      <div class="sp-week-body">
+        <div class="sp-day-block">
+          <div class="sp-day-label">Mon–Tue</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Review all previous mistake logs — look for patterns. Are the same types of errors recurring?</div><span class="sp-cat sp-cat-review">Review</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">R&W: purpose and function questions — "the primary purpose of this paragraph is..." — drill 20</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Wed–Thu</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Math: word problem translation — translating sentences to equations is the highest-leverage skill</div><span class="sp-cat sp-cat-math">Math</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">30 min light reading. No heavy drilling — brain needs quality input, not exhaustion</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Fri</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Full timed practice test #5 — simulate exact test day conditions (8 AM start, same location each time)</div><span class="sp-cat sp-cat-test">Full Test</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Sat–Sun</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Review test #5 errors only. Light reading. Rest and recharge. No full sections this weekend</div><span class="sp-cat sp-cat-rest">Rest</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEEK 7 -->
+    <div class="sp-week">
+      <div class="sp-week-header">
+        <div class="sp-week-num">7</div>
+        <div class="sp-week-dates">Aug 16–22</div>
+        <div class="sp-week-focus">🏁 Final Week — Sharpen, Don't Cram</div>
+        <div class="sp-week-target">🎯 August 22 — Test Day</div>
+      </div>
+      <div class="sp-week-body">
+        <div class="sp-day-block">
+          <div class="sp-day-label">Mon–Tue Aug 16–17</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Light review only — go through your best mistake notes, not full drills. 30 min max per day</div><span class="sp-cat sp-cat-review">Review</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">One timed section (R&W only) to stay sharp — review answers, then stop</div><span class="sp-cat sp-cat-rw">R&W</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Wed Aug 18</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Re-read your personal mistake patterns one more time. Visualize getting those question types right</div><span class="sp-cat sp-cat-review">Review</span></div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Confirm test center location and arrival time. Pack ID, pencils, calculator, snacks. Set two alarms</div><span class="sp-cat sp-cat-test">Logistics</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Thu Aug 19</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">20 min light review only. Exercise, eat well, get outside. No screens after 9 PM</div><span class="sp-cat sp-cat-rest">Rest</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">Fri–Sat Aug 20–21</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">🛑 NO studying. These two nights of sleep matter more than any cramming. Early to bed both nights</div><span class="sp-cat sp-cat-rest">Critical Rest</span></div>
+        </div>
+        <div class="sp-day-block">
+          <div class="sp-day-label">☀️ Fri Aug 22 — Test Day</div>
+          <div class="sp-task-row"><div class="sp-task-check" onclick="toggleSPTask(this)"></div><div class="sp-task-label">Arrive 30 min early. Flag hard questions and move on — never spend more than 90 sec on one. You've got this.</div><span class="sp-cat sp-cat-test">🎯 Test Day</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- October backup -->
+  <div class="card" style="background:linear-gradient(135deg,#f0fdf9,#eff6ff);border-color:#a7f3d0;">
+    <div style="display:flex;gap:14px;align-items:flex-start;">
+      <div style="font-size:22px;flex-shrink:0;">🛟</div>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">October SAT — The Safety Net</div>
+        <div style="font-size:13px;color:var(--text);line-height:1.7;">If August 22 comes in below 1500, October SAT scores are released in time for November 1 deadlines. Register for October now as a backup — it costs nothing to have the registration in place, and having it removes pressure from August. The October test date is typically the first or second Saturday of October. Register at collegeboard.org immediately.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </main>
 </div>
 
@@ -3569,6 +4166,7 @@ function showTab(id) {
   if (id === 'gameplan') initGamePlan();
   if (id === 'essayfw') initEssayFW();
   if (id === 'res-essay') initResEssay();
+  if (id === 'satprep') initSATPrep();
 }
 
 // ── DAYS LEFT ──
@@ -3750,6 +4348,41 @@ function renderDashboard() {
         <div style="font-size:12px;color:var(--muted);margin-top:2px">${l}</div>
       </div>`).join('');
   }
+}
+
+// ── COLLEGE TRACK TOGGLE ──
+function showCollegeTrack(track) {
+  const bsmd = document.querySelector('#tab-colleges .card');
+  const bioInfo = document.getElementById('bioInfoTrack');
+  const btnBSMD = document.getElementById('trackBtnBSMD');
+  const btnBioinfo = document.getElementById('trackBtnBioinfo');
+  if (track === 'bsmd') {
+    if (bsmd) bsmd.style.display = '';
+    if (bioInfo) bioInfo.style.display = 'none';
+    if (btnBSMD) { btnBSMD.style.background = 'var(--navy)'; btnBSMD.style.color = 'white'; btnBSMD.style.borderColor = 'var(--navy)'; }
+    if (btnBioinfo) { btnBioinfo.style.background = 'white'; btnBioinfo.style.color = 'var(--muted)'; btnBioinfo.style.borderColor = 'var(--border)'; }
+  } else {
+    if (bsmd) bsmd.style.display = 'none';
+    if (bioInfo) bioInfo.style.display = 'block';
+    if (btnBioinfo) { btnBioinfo.style.background = '#4338ca'; btnBioinfo.style.color = 'white'; btnBioinfo.style.borderColor = '#4338ca'; }
+    if (btnBSMD) { btnBSMD.style.background = 'white'; btnBSMD.style.color = 'var(--muted)'; btnBSMD.style.borderColor = 'var(--border)'; }
+  }
+}
+
+// ── BIOINFORMATICS COLLEGE STATUS ──
+let biCollegeStatuses = JSON.parse(localStorage.getItem('rishiBICollegeStatuses') || 'null') || Array(16).fill('not-started');
+
+function cycleCollegeStatusBI(idx) {
+  const cur = collegeStatusCycles.indexOf(biCollegeStatuses[idx]);
+  biCollegeStatuses[idx] = collegeStatusCycles[(cur + 1) % collegeStatusCycles.length];
+  localStorage.setItem('rishiBICollegeStatuses', JSON.stringify(biCollegeStatuses));
+  const badges = document.querySelectorAll('#bioInfoTrack .status-badge');
+  if (badges[idx]) {
+    const s = biCollegeStatuses[idx];
+    badges[idx].className = 'status-badge ' + collegeStatusClasses[s];
+    badges[idx].textContent = collegeStatusLabels[s];
+  }
+  showToast('Bioinformatics status: ' + collegeStatusLabels[biCollegeStatuses[idx]]);
 }
 
 // ── COLLEGE STATUS ──
@@ -4179,6 +4812,83 @@ function updateResProgress() {
     if (bar) bar.style.width = pct + '%';
     if (count) count.textContent = done + '/' + cat.total;
   });
+}
+
+// ── SAT PREP ──
+let spTasks = JSON.parse(localStorage.getItem('rishiSPTasks') || '{}');
+let spScores = JSON.parse(localStorage.getItem('rishiSPScores') || '[]');
+
+function initSATPrep() {
+  // countdown to Aug 22
+  const testDate = new Date('2026-08-22T08:00:00-04:00');
+  const now = new Date();
+  const days = Math.max(0, Math.ceil((testDate - now) / (1000*60*60*24)));
+  const el = document.getElementById('spDaysLeft');
+  if (el) el.textContent = days;
+
+  // restore task checks
+  const checks = document.querySelectorAll('#tab-satprep .sp-task-check');
+  let done = 0;
+  checks.forEach((ch, i) => {
+    if (spTasks['sp' + i]) {
+      ch.classList.add('checked'); ch.textContent = '✓';
+      ch.nextElementSibling.classList.add('done');
+      done++;
+    }
+  });
+  const td = document.getElementById('spTasksDone');
+  if (td) td.textContent = done;
+
+  // score history
+  updateSPHistory();
+}
+
+function toggleSPTask(el) {
+  const isChecked = el.classList.toggle('checked');
+  el.textContent = isChecked ? '✓' : '';
+  el.nextElementSibling.classList.toggle('done', isChecked);
+  const checks = document.querySelectorAll('#tab-satprep .sp-task-check');
+  checks.forEach((ch, i) => { spTasks['sp' + i] = ch.classList.contains('checked'); });
+  localStorage.setItem('rishiSPTasks', JSON.stringify(spTasks));
+  const done = Object.values(spTasks).filter(Boolean).length;
+  const td = document.getElementById('spTasksDone');
+  if (td) td.textContent = done;
+  showToast(isChecked ? '✓ Prep task complete!' : 'Task marked incomplete');
+}
+
+function updateSPTotal() {
+  const math = parseInt(document.getElementById('spMath')?.value) || 0;
+  const rw = parseInt(document.getElementById('spRW')?.value) || 0;
+  const total = document.getElementById('spTotal');
+  if (total && math && rw) {
+    total.value = math + rw;
+    total.style.color = (math + rw) >= 1500 ? 'var(--green)' : (math + rw) >= 1400 ? 'var(--amber)' : 'var(--red)';
+  }
+}
+
+function logSPScore() {
+  const math = parseInt(document.getElementById('spMath')?.value);
+  const rw = parseInt(document.getElementById('spRW')?.value);
+  if (!math || !rw) { showToast('Enter both Math and R&W scores'); return; }
+  const now = new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric' });
+  spScores.push({ date: now, math, rw, total: math + rw });
+  localStorage.setItem('rishiSPScores', JSON.stringify(spScores));
+  updateSPHistory();
+  showToast('✓ Practice score logged: ' + (math + rw));
+  document.getElementById('spMath').value = '';
+  document.getElementById('spRW').value = '';
+  document.getElementById('spTotal').value = '';
+}
+
+function updateSPHistory() {
+  const el = document.getElementById('spScoreHistory');
+  if (!el) return;
+  if (spScores.length === 0) { el.textContent = 'No scores logged yet — take practice test #1 this week'; return; }
+  const latest = spScores[spScores.length - 1];
+  const best = spScores.reduce((a, b) => a.total > b.total ? a : b);
+  el.innerHTML = spScores.map((s, i) =>
+    `<span style="margin-right:12px;font-weight:${s.total === best.total ? '700' : '400'};color:${s.total >= 1500 ? 'var(--green)' : s.total >= 1400 ? 'var(--amber)' : 'var(--muted)'}">Test ${i+1}: ${s.total} (${s.date})</span>`
+  ).join('') + `<span style="color:var(--teal);font-weight:600;">Best: ${best.total}</span>`;
 }
 
 // ── UTILS ──
