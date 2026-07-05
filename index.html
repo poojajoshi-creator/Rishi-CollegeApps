@@ -2336,6 +2336,7 @@ body {
           <th>Math</th>
           <th>Reading & Writing</th>
           <th>Notes</th>
+          <th style="text-align:center;width:80px;">Action</th>
         </tr>
       </thead>
       <tbody id="satHistoryBody">
@@ -2345,6 +2346,7 @@ body {
           <td style="color:var(--muted)">—</td>
           <td style="color:var(--muted)">—</td>
           <td style="color:var(--muted);font-style:italic;">R&W identified as primary gap. Retaking Aug 22.</td>
+          <td></td>
         </tr>
       </tbody>
     </table>
@@ -4845,33 +4847,55 @@ function saveSAT() {
 }
 
 function renderSAT() {
-  if (state.satScores.length === 0) return;
-  const best = state.satScores.reduce((a,b) => a.total > b.total ? a : b);
-  const scoreEl = document.querySelector('.score-num');
-  if (scoreEl) {
-    scoreEl.textContent = best.total;
-    const statusEl = scoreEl.parentElement.querySelector('.score-status');
-    if (statusEl) {
-      if (best.total >= 1500) {
-        statusEl.className = 'score-status score-achieved';
-        statusEl.textContent = '🎯 Target Achieved!';
-      } else {
-        statusEl.className = 'score-status score-pending';
-        statusEl.textContent = `📈 ${1500 - best.total} points to goal`;
-      }
-    }
-  }
-  const tbody = document.querySelector('.history-table tbody');
-  if (tbody) {
-    tbody.innerHTML = [...state.satScores].reverse().map(s => `
+  const tbody = document.getElementById('satHistoryBody');
+  if (!tbody) return;
+
+  if (state.satScores.length === 0) {
+    tbody.innerHTML = `
       <tr>
-        <td>${s.date}</td>
-        <td style="font-weight:700;color:${s.total>=1500?'var(--green)':s.total>=1400?'var(--amber)':'var(--red)'}">${s.total}</td>
-        <td>${s.math}</td>
-        <td>${s.rw}</td>
-        <td style="color:var(--muted)">${s.notes || '—'}</td>
-      </tr>`).join('');
+        <td style="color:var(--muted)">June 2026</td>
+        <td style="font-weight:700;color:var(--red)">&lt;1300</td>
+        <td style="color:var(--muted)">—</td>
+        <td style="color:var(--muted)">—</td>
+        <td style="color:var(--muted);font-style:italic;">R&W identified as primary gap. Retaking Aug 22.</td>
+        <td></td>
+      </tr>`;
+    return;
   }
+
+  const best = state.satScores.reduce((a,b) => a.total > b.total ? a : b);
+
+  // update current score card
+  const scoreEl = document.getElementById('satCurrentScore');
+  if (scoreEl) scoreEl.textContent = best.total;
+
+  tbody.innerHTML = [...state.satScores].map((s, i) => {
+    const realIdx = state.satScores.length - 1 - i; // index in original array (reversed display)
+    const isBest = s.total === best.total;
+    return `
+    <tr style="${isBest ? 'background:#f0fdf9;' : ''}">
+      <td style="color:var(--muted)">${s.date}</td>
+      <td style="font-weight:700;color:${s.total>=1500?'var(--green)':s.total>=1400?'var(--amber)':'var(--red)'}">${s.total}${isBest ? ' ⭐' : ''}</td>
+      <td>${s.math}</td>
+      <td>${s.rw}</td>
+      <td style="color:var(--muted);font-size:12px">${s.notes || '—'}</td>
+      <td style="text-align:center;">
+        <button onclick="deleteSATScore(${realIdx})"
+          style="background:none;border:1px solid #fca5a5;color:var(--red);border-radius:6px;padding:3px 9px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.15s;"
+          onmouseover="this.style.background='#fee2e2'" onmouseout="this.style.background='none'">
+          🗑 Delete
+        </button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function deleteSATScore(idx) {
+  if (!confirm('Delete this SAT score entry?')) return;
+  state.satScores.splice(idx, 1);
+  saveState();
+  renderSAT();
+  showToast('Score entry deleted');
 }
 
 // ── DASHBOARD ──
