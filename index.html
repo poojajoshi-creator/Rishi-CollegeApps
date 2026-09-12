@@ -1318,6 +1318,61 @@ body {
 }
 .sp-score-input-block input:focus { border-color: #c2410c; }
 
+/* ── PS INTERVIEW ── */
+.psi-section {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden; margin-bottom: 16px;
+}
+.psi-section-header {
+  padding: 14px 20px; display: flex; align-items: center; gap: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.psi-section-icon { font-size: 22px; flex-shrink: 0; }
+.psi-section-title { font-size: 15px; font-weight: 700; color: var(--navy); flex: 1; }
+.psi-section-count { font-size: 11px; color: var(--muted); background: var(--surface); padding: 2px 8px; border-radius: 99px; }
+.psi-q-block { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+.psi-q-block:last-child { border-bottom: none; }
+.psi-q-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--muted); margin-bottom: 5px;
+  display: flex; align-items: center; gap: 6px;
+}
+.psi-q-num {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--navy); color: white;
+  font-size: 9px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.psi-q-text { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 8px; line-height: 1.5; }
+.psi-q-hint { font-size: 12px; color: var(--muted); font-style: italic; margin-bottom: 10px; line-height: 1.5; }
+.psi-q-block textarea {
+  width: 100%; padding: 10px 14px;
+  font-size: 13.5px; font-family: 'DM Sans', sans-serif;
+  border: 1.5px solid var(--border); border-radius: 8px;
+  color: var(--text); line-height: 1.75; min-height: 90px;
+  resize: none; outline: none; background: var(--surface);
+  transition: border-color 0.15s;
+}
+.psi-q-block textarea:focus { border-color: #4338ca; background: white; }
+.psi-q-block textarea::placeholder { color: #d1d5db; }
+.psi-progress-row {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 18px; margin-bottom: 16px;
+}
+.psi-progress-bar-wrap { flex: 1; height: 8px; background: var(--border); border-radius: 99px; overflow: hidden; }
+.psi-progress-bar { height: 8px; background: linear-gradient(90deg, #4338ca, #6366f1); border-radius: 99px; transition: width 0.4s ease; }
+.psi-save-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 20px; background: var(--surface);
+  border-top: 1px solid var(--border); font-size: 12px; color: var(--muted);
+}
+.psi-save-btn {
+  font-size: 12px; font-weight: 600; padding: 7px 16px;
+  border-radius: 8px; border: none; background: #4338ca;
+  color: white; cursor: pointer; font-family: 'DM Sans', sans-serif;
+}
+
 @media (max-width: 768px) {
   .sidebar { width: 0; overflow: hidden; }
   .main { margin-left: 0; padding: 20px 16px; }
@@ -1372,6 +1427,9 @@ body {
       <span class="nav-icon">📅</span> Deadlines
     </div>
     <div class="nav-section-label">Essays</div>
+    <div class="nav-item" onclick="showTab('ps-interview')">
+      <span class="nav-icon">🎙️</span> PS Interview
+    </div>
     <div class="nav-item" onclick="showTab('essays')">
       <span class="nav-icon">✍️</span> Essay Tracker
     </div>
@@ -1543,7 +1601,7 @@ body {
 <div class="tab-section" id="tab-bioinfo-colleges">
   <div class="page-header">
     <h1>🧬 Bioinformatics College List</h1>
-    <p>12 schools · Biology/Biochemistry entry strategy · SAT 1380 · GPA 3.75 · Published researcher · CNA certified</p>
+    <p>14 schools · Biology/Biochemistry entry strategy · SAT 1380 · GPA 3.75 · Published researcher · CNA certified</p>
   </div>
 
   <!-- Sub-tab toggle -->
@@ -1572,7 +1630,7 @@ body {
       </div>
       <div style="display:flex;gap:10px;flex-shrink:0;">
         <div style="background:rgba(255,255,255,0.12);border-radius:8px;padding:10px 14px;text-align:center;">
-          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:white;">12</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:white;">14</div>
           <div style="font-size:10px;color:#c7d2fe;text-transform:uppercase;letter-spacing:0.5px;">Schools</div>
         </div>
         <div style="background:rgba(255,255,255,0.12);border-radius:8px;padding:10px 14px;text-align:center;">
@@ -1617,13 +1675,21 @@ body {
             <td style="padding:11px 14px;font-size:12px;color:var(--muted);">CNA + research makes co-op profile unique · 20% accept</td>
             <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(1)" style="cursor:pointer;font-size:11px;" id="gs1">Not Started</span></td>
           </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">Cornell University — CALS</div><div style="font-size:11px;color:var(--muted);">College of Agriculture &amp; Life Sciences · lower bar than main Cornell</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Biology (CALS)</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--amber);">1430–1560 · CALS ~15–18%</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--navy);">Nov 1 RD / Jan 2 RD</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">CALS accepts higher than main Cornell · published paper + CNA unusual here</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(12)" style="cursor:pointer;font-size:11px;" id="gs12">Not Started</span></td>
+          </tr>
           <tr>
-            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">UC San Diego</div><div style="font-size:11px;color:var(--muted);">Largest bioinformatics program nationally (137 students)</div></td>
-            <td style="padding:11px 14px;font-size:12px;">Biology</td>
-            <td style="padding:11px 14px;font-weight:600;color:var(--amber);">1390–1530</td>
-            <td style="padding:11px 14px;font-weight:600;color:var(--muted);">Nov 30</td>
-            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">24% accept · holistic · published paper stands out</td>
-            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(2)" style="cursor:pointer;font-size:11px;" id="gs2">Not Started</span></td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">Carnegie Mellon University</div><div style="font-size:11px;color:var(--muted);">Biological Sciences · CS + math + bio baked into core curriculum</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Biological Sciences</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--amber);">1500–1570 — hard reach</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--navy);">Nov 1 EA</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">12% accept · CS in bio core · one application worth it · lead with research paper</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(13)" style="cursor:pointer;font-size:11px;" id="gs13">Not Started</span></td>
           </tr>
         </tbody>
       </table>
@@ -1965,6 +2031,8 @@ body {
           <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">10</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">U Delaware Honors</td><td style="padding:9px 14px;"><span style="background:#dcfce7;color:#166534;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Strong Safety+</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biology Honors</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--muted);">Dec 1</td></tr>
           <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">11</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">UNC Chapel Hill</td><td style="padding:9px 14px;"><span style="background:#fdf2f8;color:#9d174d;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Reach</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biology</td><td style="padding:9px 14px;font-size:12px;font-weight:700;color:#c2410c;">Oct 15 EA ⚡</td></tr>
           <tr><td style="padding:9px 14px;color:var(--muted);font-weight:600;">12</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">UC San Diego</td><td style="padding:9px 14px;"><span style="background:#fdf2f8;color:#9d174d;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Reach</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biology</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--muted);">Nov 30</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">13</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">Cornell University — CALS</td><td style="padding:9px 14px;"><span style="background:#fdf2f8;color:#9d174d;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Dream Reach</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biology (CALS)</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--navy);">Jan 2 RD</td></tr>
+          <tr><td style="padding:9px 14px;color:var(--muted);font-weight:600;">14</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">Carnegie Mellon University</td><td style="padding:9px 14px;"><span style="background:#fdf2f8;color:#9d174d;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Dream Reach</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biological Sciences</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--navy);">Nov 1 EA</td></tr>
         </tbody>
       </table>
     </div>
@@ -4920,6 +4988,236 @@ body {
   </div>
 </div>
 
+<!-- ══════════ PERSONAL STATEMENT INTERVIEW ══════════ -->
+<div class="tab-section" id="tab-ps-interview">
+  <div class="page-header">
+    <h1>🎙️ Personal Statement Interview</h1>
+    <p>Answer these in your own words — no pressure to be polished. Raw and honest beats perfect every time.</p>
+  </div>
+
+  <!-- Intro card -->
+  <div style="background:linear-gradient(135deg,#1e1b4b,#4338ca);border-radius:12px;padding:20px 24px;margin-bottom:20px;color:white;">
+    <div style="font-family:'DM Serif Display',serif;font-size:18px;margin-bottom:8px;">How This Works</div>
+    <div style="font-size:13px;color:#c7d2fe;line-height:1.7;margin-bottom:12px;">These 20 questions are the raw material for your personal statement. Don't write what sounds good — write what's true. A specific detail (a patient's name, a moment on the pool deck, a sentence from your research findings) is worth more than a paragraph of general statements. Your answers autosave as you type. When you're done, share this page with your essay coach or parent and use it to build your first draft.</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <div style="background:rgba(255,255,255,0.12);border-radius:8px;padding:8px 14px;font-size:12px;color:#c7d2fe;">⏱️ Takes 30–45 minutes</div>
+      <div style="background:rgba(255,255,255,0.12);border-radius:8px;padding:8px 14px;font-size:12px;color:#c7d2fe;">💾 Autosaves every answer</div>
+      <div style="background:rgba(255,255,255,0.12);border-radius:8px;padding:8px 14px;font-size:12px;color:#c7d2fe;">✍️ No wrong answers</div>
+    </div>
+  </div>
+
+  <!-- Progress -->
+  <div class="psi-progress-row">
+    <div style="font-size:13px;font-weight:600;color:var(--navy);white-space:nowrap;">Answers filled in:</div>
+    <div class="psi-progress-bar-wrap">
+      <div class="psi-progress-bar" id="psiProgressBar" style="width:0%"></div>
+    </div>
+    <div style="font-size:13px;font-weight:700;color:#4338ca;white-space:nowrap;" id="psiProgressLabel">0 / 20</div>
+    <button class="psi-save-btn" onclick="psiSaveAll()">💾 Save All</button>
+  </div>
+
+  <!-- SECTION 1: The Lifeguard -->
+  <div class="psi-section">
+    <div class="psi-section-header" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);">
+      <div class="psi-section-icon">🛟</div>
+      <div class="psi-section-title">Part 1 — The Lifeguard</div>
+      <div class="psi-section-count">4 questions</div>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">1</div>The Scene</div>
+      <div class="psi-q-text">Describe a specific moment on the pool deck — one shift, one hour, one scan of the water. What do you see, hear, smell? Put us there.</div>
+      <div class="psi-q-hint">Don't describe lifeguarding in general. Pick one real moment. The more specific the better — "A Tuesday afternoon in July, the shallow end full of kids from a birthday party" beats "I scan the water every few seconds."</div>
+      <textarea id="psi1" placeholder="It was a Tuesday afternoon in July..." oninput="psiAutoSave('psi1')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">2</div>The Emergency</div>
+      <div class="psi-q-text">Has there ever been a real emergency or close call on your watch? Even small — a child who went under, someone who needed help, a moment where you had to act. What happened?</div>
+      <div class="psi-q-hint">If there was no dramatic rescue, that's fine — describe the moment you realized the responsibility was real. The weight of watching over someone else's life.</div>
+      <textarea id="psi2" placeholder="The closest thing I had to an emergency was..." oninput="psiAutoSave('psi2')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">3</div>The Question</div>
+      <div class="psi-q-text">Was there ever a moment on the pool deck where you wished you knew more — not just what to do on the outside, but what was actually happening inside someone's body?</div>
+      <div class="psi-q-hint">This is the pivot moment for your essay. The transition from "I know how to keep people safe" to "I want to understand why bodies fail." Did you ever feel that gap?</div>
+      <textarea id="psi3" placeholder="I remember thinking..." oninput="psiAutoSave('psi3')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">4</div>What Lifeguarding Taught You</div>
+      <div class="psi-q-text">After 3 years, what did lifeguarding actually teach you that you couldn't have learned anywhere else?</div>
+      <div class="psi-q-hint">Don't say "responsibility" or "teamwork." What's the specific thing — the habit of mind, the way of seeing a crowd, the feeling of being the only one watching — that shaped you?</div>
+      <textarea id="psi4" placeholder="The thing lifeguarding taught me that nothing else could is..." oninput="psiAutoSave('psi4')" rows="4"></textarea>
+    </div>
+  </div>
+
+  <!-- SECTION 2: The CNA -->
+  <div class="psi-section">
+    <div class="psi-section-header" style="background:linear-gradient(135deg,#f0fdf9,#dcfce7);">
+      <div class="psi-section-icon">🏅</div>
+      <div class="psi-section-title">Part 2 — The CNA</div>
+      <div class="psi-section-count">4 questions</div>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">5</div>The Patient</div>
+      <div class="psi-q-text">During your CNA clinical hours, was there a specific patient who stuck with you? Tell us about them — age, condition, one thing they said or did.</div>
+      <div class="psi-q-hint">You don't need to use their real name. But make them specific and human — "an elderly man who insisted on telling me about his garden" is more powerful than "a patient with a chronic condition."</div>
+      <textarea id="psi5" placeholder="There was one patient I keep thinking about..." oninput="psiAutoSave('psi5')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">6</div>The Hardest Moment</div>
+      <div class="psi-q-text">What was the hardest moment of your CNA training — emotionally, physically, or mentally? What did it take to get through it?</div>
+      <div class="psi-q-hint">Admissions readers respect honesty about difficulty. A student who says "it was harder than I expected and here's exactly how" is more compelling than one who makes everything sound easy.</div>
+      <textarea id="psi6" placeholder="The hardest part was..." oninput="psiAutoSave('psi6')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">7</div>The Data Gap</div>
+      <div class="psi-q-text">Was there a clinical moment where you were recording or reading patient data — vitals, charts, readings — and you realized you didn't understand what the numbers actually meant at a deeper level?</div>
+      <div class="psi-q-hint">This is the bioinformatics pivot. The moment hands-on care made you want to understand the data underneath. If you have a specific memory of looking at a chart or a reading and thinking "what does this actually mean?" — describe it.</div>
+      <textarea id="psi7" placeholder="I was taking a patient's vitals when I noticed..." oninput="psiAutoSave('psi7')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">8</div>What Changed</div>
+      <div class="psi-q-text">How did the CNA experience change how you think about medicine, biology, or what you want to do?</div>
+      <div class="psi-q-hint">Be honest — it doesn't have to have made you more certain. Maybe it made you more curious, or changed the question you're asking. What's different about how you see things now?</div>
+      <textarea id="psi8" placeholder="Before the CNA I thought... After, I realized..." oninput="psiAutoSave('psi8')" rows="4"></textarea>
+    </div>
+  </div>
+
+  <!-- SECTION 3: The Research -->
+  <div class="psi-section">
+    <div class="psi-section-header" style="background:linear-gradient(135deg,#f5f3ff,#ede9fe);">
+      <div class="psi-section-icon">🔬</div>
+      <div class="psi-section-title">Part 3 — The GMU Research</div>
+      <div class="psi-section-count">4 questions</div>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">9</div>The Question</div>
+      <div class="psi-q-text">In plain English — not academic language — what was your paper about? What problem were you trying to understand?</div>
+      <div class="psi-q-hint">Imagine explaining it to a smart friend who doesn't know biology. "I was trying to understand why some liver transplant patients reject their medication, and whether we could predict which ones would" is better than "I studied immunosuppressant efficacy in hepatic transplantation."</div>
+      <textarea id="psi9" placeholder="In plain English, my paper was about..." oninput="psiAutoSave('psi9')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">10</div>The Surprise</div>
+      <div class="psi-q-text">Was there a finding, a result, or a moment in the research where something surprised you — where the data showed you something you didn't expect?</div>
+      <div class="psi-q-hint">This is the most powerful part of a research essay. "When I ran the analysis, I found that..." followed by something specific and real is gold. What made you stop and think?</div>
+      <textarea id="psi10" placeholder="The result that surprised me most was..." oninput="psiAutoSave('psi10')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">11</div>The Conference</div>
+      <div class="psi-q-text">Describe the moment you presented at the GMU conference on July 17. Who was in the room? What did you say? How did it feel to stand up and present original research?</div>
+      <div class="psi-q-hint">Most 17-year-olds have never done this. Don't undersell it. What was the first thing you said? What question did someone ask that made you think?</div>
+      <textarea id="psi11" placeholder="When I stood up to present, the room was..." oninput="psiAutoSave('psi11')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">12</div>The Unanswered Question</div>
+      <div class="psi-q-text">What question did your research leave unanswered — the one you're still thinking about? What do you want to understand next?</div>
+      <div class="psi-q-hint">Great essays end with forward motion, not backward summary. The question your research couldn't answer is the bridge to what you want to study in college.</div>
+      <textarea id="psi12" placeholder="The question I couldn't answer — and that I keep thinking about — is..." oninput="psiAutoSave('psi12')" rows="4"></textarea>
+    </div>
+  </div>
+
+  <!-- SECTION 4: The Pivot -->
+  <div class="psi-section">
+    <div class="psi-section-header" style="background:linear-gradient(135deg,#fef9ee,#fef3c7);">
+      <div class="psi-section-icon">🧬</div>
+      <div class="psi-section-title">Part 4 — The Pivot to Bioinformatics</div>
+      <div class="psi-section-count">4 questions</div>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">13</div>The Moment</div>
+      <div class="psi-q-text">When did you first start thinking about bioinformatics instead of medicine? Was there a specific moment, conversation, article, or thing you learned that clicked?</div>
+      <div class="psi-q-hint">If you can't identify a single moment, describe the gradual shift. "It wasn't one moment — it was a slow realization over three things that happened in the same year" is a perfectly honest and compelling answer.</div>
+      <textarea id="psi13" placeholder="The moment I started thinking about bioinformatics was..." oninput="psiAutoSave('psi13')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">14</div>In Your Own Words</div>
+      <div class="psi-q-text">How would you explain what bioinformatics is to someone who's never heard of it — in two or three sentences, in your own language?</div>
+      <div class="psi-q-hint">Don't use the Wikipedia definition. How do you actually think about it? What's your version of what this field does?</div>
+      <textarea id="psi14" placeholder="The way I think about bioinformatics is..." oninput="psiAutoSave('psi14')" rows="3"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">15</div>The Problem You Want to Solve</div>
+      <div class="psi-q-text">Is there a specific problem in biology, medicine, or health that you want to work on using computation? Something specific — a disease, a gap, a question — not just "help people."</div>
+      <div class="psi-q-hint">Your published paper on immunosuppressants and liver transplants might point toward something here. Or it might be something completely different. What problem makes you think "I want to be the person who figures this out"?</div>
+      <textarea id="psi15" placeholder="The specific problem I want to work on is..." oninput="psiAutoSave('psi15')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">16</div>What Draws You to the Intersection</div>
+      <div class="psi-q-text">What excites you specifically about the place where biology and computation meet? What can you see or understand or do there that you couldn't do in either field alone?</div>
+      <div class="psi-q-hint">Think about your GMU research — the AI tools you used revealed something about biological data that a purely clinical approach couldn't have shown. What was that? That feeling is the answer to this question.</div>
+      <textarea id="psi16" placeholder="What excites me about where biology and computation meet is..." oninput="psiAutoSave('psi16')" rows="4"></textarea>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Your Voice -->
+  <div class="psi-section">
+    <div class="psi-section-header" style="background:linear-gradient(135deg,#fff1f2,#ffe4e6);">
+      <div class="psi-section-icon">🗣️</div>
+      <div class="psi-section-title">Part 5 — Your Voice</div>
+      <div class="psi-section-count">4 questions</div>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">17</div>The Thread</div>
+      <div class="psi-q-text">Looking back at everything — lifeguarding, Boy Scouts, swimming, robotics, MATA, CNA, GMU research — what's the one thing that connects all of it? What's the thread running through everything you've done?</div>
+      <div class="psi-q-hint">Don't say "helping people" — that's too broad. Think more specifically. Is it a need to understand how things work? A discomfort with uncertainty? A pull toward problems where the stakes are high? What's the real thread?</div>
+      <textarea id="psi17" placeholder="When I look at everything I've done, the thread I see is..." oninput="psiAutoSave('psi17')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">18</div>What Your Friends Would Say</div>
+      <div class="psi-q-text">What would your closest friend say is your most defining quality — the thing that makes you unmistakably you? Not your best quality. Your most defining one.</div>
+      <div class="psi-q-hint">This one often reveals something the applicant wouldn't say about themselves. The answer doesn't have to be flattering — "relentlessly stubborn about understanding things I don't understand yet" is more interesting than "hard-working."</div>
+      <textarea id="psi18" placeholder="My closest friend would say I am..." oninput="psiAutoSave('psi18')" rows="3"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">19</div>The Thing Nobody Asks</div>
+      <div class="psi-q-text">Is there something about you — a passion, a quirk, a habit of mind, a way you see things — that never shows up on a college application but is genuinely part of who you are?</div>
+      <div class="psi-q-hint">This is often the best essay material. The thing that doesn't fit neatly into any category. What's the thing nobody thinks to ask Rishi about?</div>
+      <textarea id="psi19" placeholder="Something about me that never shows up anywhere is..." oninput="psiAutoSave('psi19')" rows="4"></textarea>
+    </div>
+
+    <div class="psi-q-block">
+      <div class="psi-q-label"><div class="psi-q-num">20</div>The Last Line</div>
+      <div class="psi-q-text">If your personal statement could end with one sentence — one thing you want the admissions reader to remember about you after they close the folder — what would it be?</div>
+      <div class="psi-q-hint">Don't overthink this. Write the first honest sentence that comes to mind. You can always change it. But the instinctive answer is often the truest one.</div>
+      <textarea id="psi20" placeholder="The one thing I want them to remember is..." oninput="psiAutoSave('psi20')" rows="3"></textarea>
+    </div>
+
+    <div class="psi-save-row">
+      <span id="psiSaveStatus">Answers autosave as you type</span>
+      <button class="psi-save-btn" onclick="psiSaveAll()">💾 Save All Answers</button>
+    </div>
+  </div>
+
+  <!-- What happens next -->
+  <div class="card" style="background:var(--navy);border:none;">
+    <div style="display:flex;gap:14px;align-items:flex-start;">
+      <div style="font-size:22px;flex-shrink:0;">➡️</div>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:white;margin-bottom:6px;">What Happens After You Fill This Out</div>
+        <div style="font-size:13px;color:#94a3b8;line-height:1.7;">Once you've answered these 20 questions, share this page with your parent or essay coach. Your answers become the raw material for your first draft — specific moments, real language, honest observations. The Essay Framework page already has the structure. These answers fill it with your actual story. The goal isn't a perfect answer to every question. It's enough real material to start writing.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </main>
 </div>
 
@@ -5037,6 +5335,7 @@ function showTab(id) {
   if (id === 'research') initResearchPage();
   if (id === 'gameplan') initGamePlan();
   if (id === 'essayfw') initEssayFW();
+  if (id === 'ps-interview') initPSInterview();
   if (id === 'res-essay') initResEssay();
   if (id === 'satprep') initSATPrep();
   if (id === 'bioinfo-colleges') initBI10();
@@ -5919,6 +6218,80 @@ function updateSPHistory() {
   ).join('') + `<span style="color:var(--teal);font-weight:600;">Best: ${best.total}</span>`;
 }
 
+// ── PS INTERVIEW ──
+let psiAnswers = JSON.parse(localStorage.getItem('rishiPSInterview') || '{}');
+let psiAutoSaveTimer;
+
+function initPSInterview() {
+  // restore answers
+  for (let i = 1; i <= 20; i++) {
+    const el = document.getElementById('psi' + i);
+    if (el && psiAnswers['psi' + i]) {
+      el.value = psiAnswers['psi' + i];
+      autoResizePSI(el);
+    }
+  }
+  updatePSIProgress();
+
+  // restore opener picks
+  const biOpener = localStorage.getItem('rishiBIOpener');
+  if (biOpener !== null) {
+    const card = document.getElementById('biOpener' + biOpener);
+    if (card) card.classList.add('ef-picked');
+  }
+}
+
+function autoResizePSI(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.max(90, el.scrollHeight) + 'px';
+}
+
+function psiAutoSave(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    autoResizePSI(el);
+    psiAnswers[id] = el.value;
+  }
+  clearTimeout(psiAutoSaveTimer);
+  psiAutoSaveTimer = setTimeout(() => {
+    localStorage.setItem('rishiPSInterview', JSON.stringify(psiAnswers));
+    updatePSIProgress();
+    const status = document.getElementById('psiSaveStatus');
+    if (status) {
+      const now = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit' });
+      status.textContent = 'Auto-saved at ' + now + ' ET';
+    }
+  }, 1200);
+}
+
+function psiSaveAll() {
+  for (let i = 1; i <= 20; i++) {
+    const el = document.getElementById('psi' + i);
+    if (el) psiAnswers['psi' + i] = el.value;
+  }
+  localStorage.setItem('rishiPSInterview', JSON.stringify(psiAnswers));
+  updatePSIProgress();
+  const status = document.getElementById('psiSaveStatus');
+  if (status) {
+    const now = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit' });
+    status.textContent = 'All answers saved at ' + now + ' ET';
+  }
+  showToast('✓ All answers saved');
+}
+
+function updatePSIProgress() {
+  let filled = 0;
+  for (let i = 1; i <= 20; i++) {
+    const val = psiAnswers['psi' + i] || '';
+    if (val.trim().length > 10) filled++;
+  }
+  const pct = Math.round((filled / 20) * 100);
+  const bar = document.getElementById('psiProgressBar');
+  const label = document.getElementById('psiProgressLabel');
+  if (bar) bar.style.width = pct + '%';
+  if (label) label.textContent = filled + ' / 20';
+}
+
 // ── UTILS ──
 function saveState() { localStorage.setItem('rishiPortal', JSON.stringify(state)); }
 function showToast(msg) {
@@ -5949,7 +6322,7 @@ function showBITab(tab) {
 }
 
 // ── GROUPED STATUS BADGES ──
-let groupedStatuses = JSON.parse(localStorage.getItem('rishiGroupedStatuses') || 'null') || Array(12).fill('not-started');
+let groupedStatuses = JSON.parse(localStorage.getItem('rishiGroupedStatuses') || 'null') || Array(14).fill('not-started');
 
 function cycleGroupedStatus(idx) {
   const cur = collegeStatusCycles.indexOf(groupedStatuses[idx]);
