@@ -1539,221 +1539,439 @@ body {
   </div>
 </div>
 
-<!-- ══════════ BIOINFORMATICS TOP 10 ══════════ -->
+<!-- ══════════ BIOINFORMATICS TOP 12 ══════════ -->
 <div class="tab-section" id="tab-bioinfo-colleges">
   <div class="page-header">
-    <h1>🧬 Bioinformatics — Top 10 Schools</h1>
-    <p>Biology/Biochemistry entry strategy · SAT 1380 · GPA 3.75 · Published researcher · CNA certified</p>
+    <h1>🧬 Bioinformatics College List</h1>
+    <p>12 schools · Biology/Biochemistry entry strategy · SAT 1380 · GPA 3.75 · Published researcher · CNA certified</p>
   </div>
 
-  <!-- Hero strategy card -->
-  <div style="background:linear-gradient(135deg,#1e1b4b,#4338ca);border-radius:14px;padding:22px 28px;margin-bottom:20px;color:white;">
-    <div style="font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:8px;">The Entry Strategy</div>
-    <div style="font-size:13.5px;color:#c7d2fe;line-height:1.7;margin-bottom:14px;">Apply as <strong style="color:white;">Biology or Biochemistry</strong> at each school. Complete Year 1 prerequisites (bio, chem, math, stats) with strong grades, connect with bioinformatics faculty, and formally switch in Year 2. Virginia Tech is the exception — it has a built-in Bioinformatics Option within Biological Sciences, no transfer needed.</div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;font-size:12px;">
-      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;">
-        <div style="font-weight:700;color:white;margin-bottom:3px;">🔬 Lead With</div>
-        <div style="color:#c7d2fe;">Published paper on Immunosuppressants & Liver Transplants — name it first in every activities description</div>
+  <!-- Sub-tab toggle -->
+  <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;">
+    <button onclick="showBITab('grouped')" id="biTab-grouped"
+      style="padding:8px 18px;border-radius:8px;border:2px solid #4338ca;background:#4338ca;color:white;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">
+      📋 Grouped View
+    </button>
+    <button onclick="showBITab('numbered')" id="biTab-numbered"
+      style="padding:8px 18px;border-radius:8px;border:2px solid var(--border);background:white;color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">
+      🔢 Top 12 Detail
+    </button>
+    <button onclick="showBITab('reference')" id="biTab-reference"
+      style="padding:8px 18px;border-radius:8px;border:2px solid var(--border);background:white;color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">
+      📁 Reference List
+    </button>
+  </div>
+
+  <!-- ══ TAB 1: GROUPED VIEW ══ -->
+  <div id="biTabGrouped">
+
+    <div style="background:linear-gradient(135deg,#1e1b4b,#4338ca);border-radius:12px;padding:18px 24px;margin-bottom:20px;color:white;display:flex;gap:20px;align-items:flex-start;">
+      <div style="flex:1;">
+        <div style="font-family:'DM Serif Display',serif;font-size:18px;margin-bottom:6px;">Entry Strategy — Biology / Biochemistry First</div>
+        <div style="font-size:13px;color:#c7d2fe;line-height:1.6;">Apply as Biology or Biochemistry. Excel in Year 1. Switch to Bioinformatics in Year 2. Virginia Tech exception — Bioinformatics Option is built in, no transfer needed.</div>
       </div>
-      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;">
-        <div style="font-weight:700;color:white;margin-bottom:3px;">🏅 Differentiate With</div>
-        <div style="color:#c7d2fe;">CNA certification — most bioinformatics applicants have never touched a patient. You have.</div>
+      <div style="display:flex;gap:10px;flex-shrink:0;">
+        <div style="background:rgba(255,255,255,0.12);border-radius:8px;padding:10px 14px;text-align:center;">
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:white;">12</div>
+          <div style="font-size:10px;color:#c7d2fe;text-transform:uppercase;letter-spacing:0.5px;">Schools</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.12);border-radius:8px;padding:10px 14px;text-align:center;">
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#fbbf24;" id="biGroupedDone">0</div>
+          <div style="font-size:10px;color:#c7d2fe;text-transform:uppercase;letter-spacing:0.5px;">Applied</div>
+        </div>
       </div>
-      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;">
-        <div style="font-weight:700;color:white;margin-bottom:3px;">⭐ Apply ED To</div>
-        <div style="color:#c7d2fe;">GWU Nov 1 — your stats are exactly average there. ED gives you a real edge over identical applicants.</div>
+    </div>
+
+    <!-- REACH -->
+    <div style="background:linear-gradient(135deg,#fdf2f8,#fce7f3);border:1px solid #fbcfe8;border-radius:8px;padding:8px 16px;margin-bottom:8px;display:flex;align-items:center;gap:8px;">
+      <span style="font-size:16px;">🎯</span>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:#9d174d;text-transform:uppercase;letter-spacing:0.5px;">Reach — Apply With Ambition</div>
+        <div style="font-size:11px;color:#be185d;">Below average SAT · holistic review · published paper is the differentiator · one strong application each</div>
       </div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:16px;">
+      <table style="width:100%;border-collapse:collapse;font-size:13px;">
+        <thead><tr style="background:var(--surface);">
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">School</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Apply As</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">SAT Avg</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Deadline</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Key Note</th>
+          <th style="padding:9px 14px;text-align:center;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Status</th>
+        </tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">UNC Chapel Hill</div><div style="font-size:11px;color:var(--muted);">Bioinformatics &amp; Computational Bio</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Biology or Biochemistry</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--amber);">1505 avg</td>
+            <td style="padding:11px 14px;font-weight:700;color:#c2410c;">Oct 15 EA ⚡</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">8% OOS accept · EA +13pts · research paper differentiates</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(0)" style="cursor:pointer;font-size:11px;" id="gs0">Not Started</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">Northeastern University</div><div style="font-size:11px;color:var(--muted);">Biology → Bioinformatics via co-op</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Biology</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--amber);">1440–1540</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--navy);">Nov 1 EA</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">CNA + research makes co-op profile unique · 20% accept</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(1)" style="cursor:pointer;font-size:11px;" id="gs1">Not Started</span></td>
+          </tr>
+          <tr>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">UC San Diego</div><div style="font-size:11px;color:var(--muted);">Largest bioinformatics program nationally (137 students)</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Biology</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--amber);">1390–1530</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--muted);">Nov 30</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">24% accept · holistic · published paper stands out</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(2)" style="cursor:pointer;font-size:11px;" id="gs2">Not Started</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MATCH -->
+    <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #bfdbfe;border-radius:8px;padding:8px 16px;margin-bottom:8px;display:flex;align-items:center;gap:8px;">
+      <span style="font-size:16px;">🎯</span>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:#1d4ed8;text-transform:uppercase;letter-spacing:0.5px;">Match — Core of the List · Apply to All</div>
+        <div style="font-size:11px;color:#2563eb;">SAT fits the range · essays are the differentiator · these are the realistic admits</div>
+      </div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:16px;">
+      <table style="width:100%;border-collapse:collapse;font-size:13px;">
+        <thead><tr style="background:var(--surface);">
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">School</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Apply As</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">SAT Fit</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Deadline</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Key Note</th>
+          <th style="padding:9px 14px;text-align:center;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Status</th>
+        </tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);background:#f0fdf9;">
+            <td style="padding:11px 14px;"><div style="font-weight:700;color:var(--navy);">⭐ GWU <span style="font-size:10px;background:#fee2e2;color:#991b1b;padding:2px 6px;border-radius:4px;margin-left:4px;">ED — Binding</span></div><div style="font-size:11px;color:var(--muted);">Biology/Biochem → Bioinformatics Year 2</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Biology or Biochemistry</td>
+            <td style="padding:11px 14px;font-weight:700;color:var(--teal);">1380 avg = you ✓</td>
+            <td style="padding:11px 14px;font-weight:700;color:#c2410c;">Nov 1 ED ⭐</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">NIH · FDA · DC biotech · ED boosts significantly</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(3)" style="cursor:pointer;font-size:11px;" id="gs3">Not Started</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">NC State University</div><div style="font-size:11px;color:var(--muted);">Research Triangle · established bioinformatics</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Biological Sciences</td>
+            <td style="padding:11px 14px;font-weight:700;color:var(--teal);">1290–1450 ✓</td>
+            <td style="padding:11px 14px;font-weight:700;color:#c2410c;">Oct 15 EA ⚡</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">Most urgent deadline · 48% accept</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(4)" style="cursor:pointer;font-size:11px;" id="gs4">Not Started</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">University of Maryland</div><div style="font-size:11px;color:var(--muted);">UMIACS bioinformatics center · 8mi from NIH</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Biology <span style="color:var(--amber);font-size:11px;">(test-optional ↗)</span></td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--amber);">1465 avg — apply test-optional</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--navy);">Nov 1 EA</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">45% accept · skip the SAT here</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(5)" style="cursor:pointer;font-size:11px;" id="gs5">Not Started</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">University of Pittsburgh</div><div style="font-size:11px;color:var(--muted);">Research culture · UPMC access</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Biological Sciences</td>
+            <td style="padding:11px 14px;font-weight:700;color:var(--teal);">1370 avg — above ✓</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--navy);">Nov 1 EA</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">58% accept · strong research infrastructure</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(6)" style="cursor:pointer;font-size:11px;" id="gs6">Not Started</span></td>
+          </tr>
+          <tr>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">Rutgers University</div><div style="font-size:11px;color:var(--muted);">NJ pharma corridor — J&amp;J · Merck · BMS</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Bio Sciences or Molecular Bio</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--teal);">1405 avg — close ✓</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--muted);">Dec 1</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">58% accept · Dec deadline = breathing room</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(7)" style="cursor:pointer;font-size:11px;" id="gs7">Not Started</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SAFETY -->
+    <div style="background:linear-gradient(135deg,#f0fdf9,#dcfce7);border:1px solid #a7f3d0;border-radius:8px;padding:8px 16px;margin-bottom:8px;display:flex;align-items:center;gap:8px;">
+      <span style="font-size:16px;">🛡️</span>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:#166534;text-transform:uppercase;letter-spacing:0.5px;">Safety — Comfortable Admits · Apply All Four</div>
+        <div style="font-size:11px;color:var(--teal);">Rishi's stats are above average here · strong bioinformatics pathways · these are the floor</div>
+      </div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:16px;">
+      <table style="width:100%;border-collapse:collapse;font-size:13px;">
+        <thead><tr style="background:var(--surface);">
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">School</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Apply As</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">SAT Fit</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Deadline</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Key Note</th>
+          <th style="padding:9px 14px;text-align:center;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Status</th>
+        </tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);background:#f0fdf9;">
+            <td style="padding:11px 14px;"><div style="font-weight:700;color:var(--navy);">Virginia Tech 🏠 In-State</div><div style="font-size:11px;color:var(--teal);font-weight:600;">Bioinformatics Option built in — no transfer needed ✓</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Bio Sciences — Bioinformatics Option</td>
+            <td style="padding:11px 14px;font-weight:700;color:var(--teal);">1280–1420 ✓</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--navy);">Nov 1 EA</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">57% accept · in-state tuition · lowest-risk path</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(8)" style="cursor:pointer;font-size:11px;" id="gs8">Not Started</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">University of Delaware</div><div style="font-size:11px;color:var(--muted);">Philly / DC pharma corridor</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Biology or Biochemistry</td>
+            <td style="padding:11px 14px;font-weight:700;color:var(--teal);">Above 75th pct ✓</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--navy);">Nov 1 EA</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">69% accept · Rishi's SAT above average</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(9)" style="cursor:pointer;font-size:11px;" id="gs9">Not Started</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">University of Connecticut</div><div style="font-size:11px;color:var(--muted);">Hartford / New Haven biotech</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Molecular &amp; Cell Biology</td>
+            <td style="padding:11px 14px;font-weight:700;color:var(--teal);">1260–1420 ✓</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--muted);">Dec 1</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">54% accept · comfortable admit</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(10)" style="cursor:pointer;font-size:11px;" id="gs10">Not Started</span></td>
+          </tr>
+          <tr>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--navy);">U Delaware — Honors College</div><div style="font-size:11px;color:var(--muted);">Research stipend · priority lab placement · smaller classes</div></td>
+            <td style="padding:11px 14px;font-size:12px;">Biology Honors (separate app)</td>
+            <td style="padding:11px 14px;font-weight:700;color:var(--teal);">Above 75th pct ✓</td>
+            <td style="padding:11px 14px;font-weight:600;color:var(--muted);">Dec 1</td>
+            <td style="padding:11px 14px;font-size:12px;color:var(--muted);">Best research experience within UD · worth the extra essay</td>
+            <td style="padding:11px 14px;text-align:center;"><span class="status-badge status-not-started" onclick="cycleGroupedStatus(11)" style="cursor:pointer;font-size:11px;" id="gs11">Not Started</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--muted);padding-left:4px;">💡 Click any status badge to update. All statuses save to browser automatically.</p>
+  </div>
+
+  <!-- ══ TAB 2: TOP 12 DETAIL ══ -->
+  <div id="biTabNumbered" style="display:none;">
+    <div style="display:flex;flex-direction:column;gap:10px;" id="bioinfoTop10">
+
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
+          <div style="width:30px;height:30px;border-radius:50%;background:#c2410c;color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">1</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">University of Pittsburgh</div><div style="font-size:12px;color:var(--muted);">Biological Sciences · Pittsburgh, PA</div></div>
+          <div style="padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">STRONG MATCH</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(0)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Avg</div><div style="font-weight:600;color:var(--teal);">1370 — you're above</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">58%</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:var(--navy);">Nov 1 EA</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Research culture · UPMC access · strong bioinformatics research funding</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:2px solid var(--navy);border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:#f0f4ff;border-bottom:1px solid var(--border);">
+          <div style="width:30px;height:30px;border-radius:50%;background:var(--navy);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">2</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">George Washington University ⭐ ED</div><div style="font-size:12px;color:var(--muted);">Biology or Biochemistry · Washington, DC</div></div>
+          <div style="padding:4px 10px;background:#dbeafe;border-radius:6px;font-size:11px;font-weight:700;color:#1d4ed8;">MATCH</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(1)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Avg</div><div style="font-weight:600;color:var(--teal);">1380 — exactly you ✓</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">47% (ED boosts this)</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:#c2410c;">Nov 1 ED ⭐ Binding</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">NIH · FDA · DC biotech · SMHS bioinformatics program on campus</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
+          <div style="width:30px;height:30px;border-radius:50%;background:#7c3aed;color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">Northeastern University</div><div style="font-size:12px;color:var(--muted);">Biology · Boston, MA</div></div>
+          <div style="padding:4px 10px;background:#ede9fe;border-radius:6px;font-size:11px;font-weight:700;color:#5b21b6;">REACH</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(2)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Avg</div><div style="font-weight:600;color:var(--amber);">1440–1540 — below avg</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">~20% holistic</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:var(--navy);">Nov 1 EA</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Co-op in pharma/biotech · CNA background unique here · 6-mo industry rotations</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid #a7f3d0;border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:#f0fdf9;border-bottom:1px solid #a7f3d0;">
+          <div style="width:30px;height:30px;border-radius:50%;background:var(--teal);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">4</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">Virginia Tech 🏠 In-State</div><div style="font-size:12px;color:var(--muted);">Biological Sciences — Bioinformatics Option · Blacksburg, VA</div></div>
+          <div style="padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">STRONG MATCH</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(3)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Range</div><div style="font-weight:600;color:var(--teal);">1280–1420 ✓ in-state</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">57% in-state advantage</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:var(--navy);">Nov 1 EA</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;color:var(--teal);">No internal transfer — Bioinformatics Option built into the major from Day 1 ✓</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
+          <div style="width:30px;height:30px;border-radius:50%;background:var(--navy);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">5</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">Rutgers — New Brunswick</div><div style="font-size:12px;color:var(--muted);">Bio Sciences or Molecular Biology &amp; Biochemistry · NJ</div></div>
+          <div style="padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">STRONG MATCH</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(4)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Avg</div><div style="font-weight:600;color:var(--teal);">1405 avg — close ✓</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">58%</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;">Dec 1</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">NJ pharma corridor · J&amp;J · Merck · BMS all nearby · Dec deadline = breathing room</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
+          <div style="width:30px;height:30px;border-radius:50%;background:#7c3aed;color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">6</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">University of Maryland</div><div style="font-size:12px;color:var(--muted);">Biology · College Park, MD — apply test-optional</div></div>
+          <div style="padding:4px 10px;background:#ede9fe;border-radius:6px;font-size:11px;font-weight:700;color:#5b21b6;">REACH</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(5)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Avg</div><div style="font-weight:600;color:var(--amber);">1465 avg — skip the score</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">45%</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:var(--navy);">Nov 1 EA</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">UMIACS bioinformatics center · NIH 8 miles away · test-optional strengthens application</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
+          <div style="width:30px;height:30px;border-radius:50%;background:var(--teal);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">7</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">University of Delaware</div><div style="font-size:12px;color:var(--muted);">Biology or Biochemistry · Newark, DE</div></div>
+          <div style="padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">STRONG SAFETY</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(6)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Range</div><div style="font-weight:600;color:var(--teal);">Above 75th pct ✓</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">69%</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:var(--navy);">Nov 1 EA</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Rishi is above avg here · Philly/DC pharma corridor · UD bioinformatics pathway well-established</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid #c2410c;border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:#fff7ed;border-bottom:1px solid #fed7aa;">
+          <div style="width:30px;height:30px;border-radius:50%;background:#c2410c;color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">8</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">NC State University 🔴 Most Urgent</div><div style="font-size:12px;color:var(--muted);">Biological Sciences · Raleigh, NC</div></div>
+          <div style="padding:4px 10px;background:#dbeafe;border-radius:6px;font-size:11px;font-weight:700;color:#1d4ed8;">MATCH</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(7)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Range</div><div style="font-weight:600;color:var(--teal);">1290–1450 ✓</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">48%</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:#c2410c;">⚡ OCT 15 — MOST URGENT</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Research Triangle · Glaxo · Burroughs Wellcome Fund · decades-old bioinformatics program</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
+          <div style="width:30px;height:30px;border-radius:50%;background:var(--navy);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">9</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">University of Connecticut</div><div style="font-size:12px;color:var(--muted);">Molecular &amp; Cell Biology · Storrs, CT</div></div>
+          <div style="padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">SAFE MATCH</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(8)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Range</div><div style="font-weight:600;color:var(--teal);">1260–1420 ✓</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">54%</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;">Dec 1</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Comfortable admit · Hartford/New Haven biotech · strong NIH-funded research</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid #a7f3d0;border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:#f0fdf9;border-bottom:1px solid #a7f3d0;">
+          <div style="width:30px;height:30px;border-radius:50%;background:var(--teal);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">10</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">U Delaware — Honors College</div><div style="font-size:12px;color:var(--muted);">Biology Honors · separate application required</div></div>
+          <div style="padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">STRONG SAFETY+</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(9)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Range</div><div style="font-weight:600;color:var(--teal);">Above 75th pct ✓</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">Selective within UD</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;">Dec 1</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Research stipend · priority lab placement · mentored research from Day 1</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid #fbcfe8;border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:#fdf2f8;border-bottom:1px solid #fbcfe8;">
+          <div style="width:30px;height:30px;border-radius:50%;background:#9d174d;color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">11</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">UNC Chapel Hill</div><div style="font-size:12px;color:var(--muted);">Biology · Chapel Hill, NC</div></div>
+          <div style="padding:4px 10px;background:#fdf2f8;border-radius:6px;font-size:11px;font-weight:700;color:#9d174d;">REACH</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(10)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Avg</div><div style="font-weight:600;color:var(--amber);">1505 avg — below</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">8% OOS · 43% in-state</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:#c2410c;">Oct 15 EA ⚡</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">EA boosts +13% · dedicated Bioinformatics &amp; Computational Bio program · research paper differentiates</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid #fbcfe8;border-radius:12px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:#fdf2f8;border-bottom:1px solid #fbcfe8;">
+          <div style="width:30px;height:30px;border-radius:50%;background:#9d174d;color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">12</div>
+          <div><div style="font-size:15px;font-weight:700;color:var(--navy);">UC San Diego</div><div style="font-size:12px;color:var(--muted);">Biology · San Diego, CA — largest bioinformatics program nationally (137 students)</div></div>
+          <div style="padding:4px 10px;background:#fdf2f8;border-radius:6px;font-size:11px;font-weight:700;color:#9d174d;">REACH</div>
+          <span class="status-badge status-not-started" onclick="cycleBI10Status(11)" style="cursor:pointer;font-size:11px;">Not Started</span>
+        </div>
+        <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
+          <div><div style="color:var(--muted);margin-bottom:2px;">SAT Range</div><div style="font-weight:600;color:var(--amber);">1390–1530</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">24% holistic</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;">Nov 30</div></div>
+          <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Largest bioinformatics program in US · Scripps Research nearby · 24% accept = real shot with research</div></div>
+        </div>
+      </div>
+
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:12px;padding-left:4px;">💡 Click any status badge to update. Saves to browser.</p>
+  </div>
+
+  <!-- ══ TAB 3: REFERENCE LIST ══ -->
+  <div id="biTabReference" style="display:none;">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:16px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:18px;">📁</span>
+      <div style="font-size:13px;color:var(--muted);">Earlier bioinformatics and BS/MD reference lists are preserved in <strong style="color:var(--navy);">College List (Full)</strong> in the nav. Switch there to see all historical tracks.</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+      <table style="width:100%;border-collapse:collapse;font-size:13px;">
+        <thead><tr style="background:var(--surface);">
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">#</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">School</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Tier</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Entry Major</th>
+          <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);border-bottom:1px solid var(--border);">Deadline</th>
+        </tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">1</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">University of Pittsburgh</td><td style="padding:9px 14px;"><span style="background:#dcfce7;color:#166534;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Strong Match</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biological Sciences</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--navy);">Nov 1 EA</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:#f0f4ff;"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">2</td><td style="padding:9px 14px;font-weight:700;color:var(--navy);">GWU ⭐ ED</td><td style="padding:9px 14px;"><span style="background:#dbeafe;color:#1d4ed8;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Match</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biology or Biochemistry</td><td style="padding:9px 14px;font-size:12px;font-weight:700;color:#c2410c;">Nov 1 ED</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">3</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">Northeastern University</td><td style="padding:9px 14px;"><span style="background:#ede9fe;color:#5b21b6;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Reach</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biology</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--navy);">Nov 1 EA</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:#f0fdf9;"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">4</td><td style="padding:9px 14px;font-weight:700;color:var(--navy);">Virginia Tech 🏠</td><td style="padding:9px 14px;"><span style="background:#dcfce7;color:#166534;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Strong Match</span></td><td style="padding:9px 14px;font-size:12px;color:var(--teal);font-weight:600;">Bio Sciences — Bioinformatics Option</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--navy);">Nov 1 EA</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">5</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">Rutgers University</td><td style="padding:9px 14px;"><span style="background:#dcfce7;color:#166534;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Strong Match</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Bio Sciences or Molecular Bio</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--muted);">Dec 1</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">6</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">University of Maryland</td><td style="padding:9px 14px;"><span style="background:#ede9fe;color:#5b21b6;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Reach</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biology (test-optional)</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--navy);">Nov 1 EA</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">7</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">University of Delaware</td><td style="padding:9px 14px;"><span style="background:#dcfce7;color:#166534;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Strong Safety</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biology or Biochemistry</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--navy);">Nov 1 EA</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:#fff7ed;"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">8</td><td style="padding:9px 14px;font-weight:700;color:var(--navy);">NC State 🔴</td><td style="padding:9px 14px;"><span style="background:#dbeafe;color:#1d4ed8;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Match</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biological Sciences</td><td style="padding:9px 14px;font-size:12px;font-weight:700;color:#c2410c;">Oct 15 EA ⚡</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">9</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">University of Connecticut</td><td style="padding:9px 14px;"><span style="background:#dcfce7;color:#166534;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Safe Match</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Molecular &amp; Cell Biology</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--muted);">Dec 1</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">10</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">U Delaware Honors</td><td style="padding:9px 14px;"><span style="background:#dcfce7;color:#166534;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Strong Safety+</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biology Honors</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--muted);">Dec 1</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:9px 14px;color:var(--muted);font-weight:600;">11</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">UNC Chapel Hill</td><td style="padding:9px 14px;"><span style="background:#fdf2f8;color:#9d174d;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Reach</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biology</td><td style="padding:9px 14px;font-size:12px;font-weight:700;color:#c2410c;">Oct 15 EA ⚡</td></tr>
+          <tr><td style="padding:9px 14px;color:var(--muted);font-weight:600;">12</td><td style="padding:9px 14px;font-weight:600;color:var(--navy);">UC San Diego</td><td style="padding:9px 14px;"><span style="background:#fdf2f8;color:#9d174d;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;">Reach</span></td><td style="padding:9px 14px;font-size:12px;color:var(--muted);">Biology</td><td style="padding:9px 14px;font-size:12px;font-weight:600;color:var(--muted);">Nov 30</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
-  <!-- The 10 schools -->
-  <div style="display:flex;flex-direction:column;gap:10px;" id="bioinfoTop10">
-
-    <!-- School cards -->
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-      <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
-        <div style="width:30px;height:30px;border-radius:50%;background:#c2410c;color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">1</div>
-        <div>
-          <div style="font-size:15px;font-weight:700;color:var(--navy);">University of Pittsburgh</div>
-          <div style="font-size:12px;color:var(--muted);">Apply as: Biological Sciences · Pittsburgh, PA</div>
-        </div>
-        <div style="text-align:center;padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">STRONG MATCH</div>
-        <span class="status-badge status-not-started" onclick="cycleBI10Status(0)" style="cursor:pointer;font-size:11px;">Not Started</span>
-      </div>
-      <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
-        <div><div style="color:var(--muted);margin-bottom:2px;">SAT Avg</div><div style="font-weight:600;color:var(--teal);">1370 avg — you're above</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">58%</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:var(--navy);">Nov 1 EA</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Research culture · UPMC access</div></div>
-      </div>
-    </div>
-
-    <div style="background:var(--card);border:2px solid var(--navy);border-radius:12px;overflow:hidden;">
-      <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:#f0f4ff;border-bottom:1px solid var(--border);">
-        <div style="width:30px;height:30px;border-radius:50%;background:var(--navy);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">2</div>
-        <div>
-          <div style="font-size:15px;font-weight:700;color:var(--navy);">George Washington University ⭐ ED</div>
-          <div style="font-size:12px;color:var(--muted);">Apply as: Biology or Biochemistry · Washington, DC</div>
-        </div>
-        <div style="text-align:center;padding:4px 10px;background:#dbeafe;border-radius:6px;font-size:11px;font-weight:700;color:#1d4ed8;">MATCH</div>
-        <span class="status-badge status-not-started" onclick="cycleBI10Status(1)" style="cursor:pointer;font-size:11px;">Not Started</span>
-      </div>
-      <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
-        <div><div style="color:var(--muted);margin-bottom:2px;">SAT Avg</div><div style="font-weight:600;color:var(--teal);">1380 avg — exactly you</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">47% (ED boosts odds)</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:#c2410c;">Nov 1 ED ⭐ Binding</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">NIH · FDA · DC biotech access</div></div>
-      </div>
-    </div>
-
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-      <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
-        <div style="width:30px;height:30px;border-radius:50%;background:#7c3aed;color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</div>
-        <div>
-          <div style="font-size:15px;font-weight:700;color:var(--navy);">Northeastern University</div>
-          <div style="font-size:12px;color:var(--muted);">Apply as: Biology · Boston, MA</div>
-        </div>
-        <div style="text-align:center;padding:4px 10px;background:#ede9fe;border-radius:6px;font-size:11px;font-weight:700;color:#5b21b6;">REACH</div>
-        <span class="status-badge status-not-started" onclick="cycleBI10Status(2)" style="cursor:pointer;font-size:11px;">Not Started</span>
-      </div>
-      <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
-        <div><div style="color:var(--muted);margin-bottom:2px;">SAT Avg</div><div style="font-weight:600;color:var(--amber);">1440–1540 — below avg</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">~20% (holistic)</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:var(--navy);">Nov 1 EA</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Co-op placements in pharma · CNA differentiates</div></div>
-      </div>
-    </div>
-
-    <div style="background:var(--card);border:1px solid #a7f3d0;border-radius:12px;overflow:hidden;">
-      <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:#f0fdf9;border-bottom:1px solid #a7f3d0;">
-        <div style="width:30px;height:30px;border-radius:50%;background:var(--teal);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">4</div>
-        <div>
-          <div style="font-size:15px;font-weight:700;color:var(--navy);">Virginia Tech 🏠 In-State</div>
-          <div style="font-size:12px;color:var(--muted);">Apply as: Biological Sciences — Bioinformatics Option · Blacksburg, VA</div>
-        </div>
-        <div style="text-align:center;padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">STRONG MATCH</div>
-        <span class="status-badge status-not-started" onclick="cycleBI10Status(3)" style="cursor:pointer;font-size:11px;">Not Started</span>
-      </div>
-      <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
-        <div><div style="color:var(--muted);margin-bottom:2px;">SAT Range</div><div style="font-weight:600;color:var(--teal);">1280–1420 — fits perfectly</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">57% · in-state advantage</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:var(--navy);">Nov 1 EA</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;color:var(--teal);">No transfer needed — Bioinformatics Option built in ✓</div></div>
-      </div>
-    </div>
-
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-      <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
-        <div style="width:30px;height:30px;border-radius:50%;background:var(--navy);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">5</div>
-        <div>
-          <div style="font-size:15px;font-weight:700;color:var(--navy);">Rutgers University — New Brunswick</div>
-          <div style="font-size:12px;color:var(--muted);">Apply as: Biological Sciences or Molecular Biology & Biochemistry · NJ</div>
-        </div>
-        <div style="text-align:center;padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">STRONG MATCH</div>
-        <span class="status-badge status-not-started" onclick="cycleBI10Status(4)" style="cursor:pointer;font-size:11px;">Not Started</span>
-      </div>
-      <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
-        <div><div style="color:var(--muted);margin-bottom:2px;">SAT Avg</div><div style="font-weight:600;color:var(--teal);">1405 avg — close</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">58%</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;">Dec 1</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">NJ pharma corridor — J&J, Merck, BMS nearby</div></div>
-      </div>
-    </div>
-
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-      <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
-        <div style="width:30px;height:30px;border-radius:50%;background:#7c3aed;color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">6</div>
-        <div>
-          <div style="font-size:15px;font-weight:700;color:var(--navy);">University of Maryland — College Park</div>
-          <div style="font-size:12px;color:var(--muted);">Apply as: Biology · College Park, MD (test-optional recommended)</div>
-        </div>
-        <div style="text-align:center;padding:4px 10px;background:#ede9fe;border-radius:6px;font-size:11px;font-weight:700;color:#5b21b6;">REACH</div>
-        <span class="status-badge status-not-started" onclick="cycleBI10Status(5)" style="cursor:pointer;font-size:11px;">Not Started</span>
-      </div>
-      <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
-        <div><div style="color:var(--muted);margin-bottom:2px;">SAT Avg</div><div style="font-weight:600;color:var(--amber);">1465 avg — consider test-optional</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">45%</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:var(--navy);">Nov 1 EA</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">UMIACS bioinformatics center · NIH 8 miles away</div></div>
-      </div>
-    </div>
-
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-      <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
-        <div style="width:30px;height:30px;border-radius:50%;background:var(--teal);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">7</div>
-        <div>
-          <div style="font-size:15px;font-weight:700;color:var(--navy);">University of Delaware</div>
-          <div style="font-size:12px;color:var(--muted);">Apply as: Biology or Biochemistry · Newark, DE</div>
-        </div>
-        <div style="text-align:center;padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">STRONG SAFETY</div>
-        <span class="status-badge status-not-started" onclick="cycleBI10Status(6)" style="cursor:pointer;font-size:11px;">Not Started</span>
-      </div>
-      <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
-        <div><div style="color:var(--muted);margin-bottom:2px;">SAT Range</div><div style="font-weight:600;color:var(--teal);">1220–1370 — above 75th pct</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">69%</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:var(--navy);">Nov 1 EA</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Above avg here · Philly/DC pharma corridor</div></div>
-      </div>
-    </div>
-
-    <div style="background:var(--card);border:1px solid #c2410c;border-radius:12px;overflow:hidden;">
-      <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:#fff7ed;border-bottom:1px solid #fed7aa;">
-        <div style="width:30px;height:30px;border-radius:50%;background:#c2410c;color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">8</div>
-        <div>
-          <div style="font-size:15px;font-weight:700;color:var(--navy);">NC State University 🔴 Most Urgent</div>
-          <div style="font-size:12px;color:var(--muted);">Apply as: Biological Sciences · Raleigh, NC</div>
-        </div>
-        <div style="text-align:center;padding:4px 10px;background:#dbeafe;border-radius:6px;font-size:11px;font-weight:700;color:#1d4ed8;">MATCH</div>
-        <span class="status-badge status-not-started" onclick="cycleBI10Status(7)" style="cursor:pointer;font-size:11px;">Not Started</span>
-      </div>
-      <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
-        <div><div style="color:var(--muted);margin-bottom:2px;">SAT Range</div><div style="font-weight:600;color:var(--teal);">1290–1450 — inside range</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">48%</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;color:#c2410c;">⚡ OCT 15 — MOST URGENT</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Research Triangle · established bioinformatics program</div></div>
-      </div>
-    </div>
-
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-      <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:var(--surface);border-bottom:1px solid var(--border);">
-        <div style="width:30px;height:30px;border-radius:50%;background:var(--navy);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">9</div>
-        <div>
-          <div style="font-size:15px;font-weight:700;color:var(--navy);">University of Connecticut</div>
-          <div style="font-size:12px;color:var(--muted);">Apply as: Molecular & Cell Biology · Storrs, CT</div>
-        </div>
-        <div style="text-align:center;padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">SAFE MATCH</div>
-        <span class="status-badge status-not-started" onclick="cycleBI10Status(8)" style="cursor:pointer;font-size:11px;">Not Started</span>
-      </div>
-      <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
-        <div><div style="color:var(--muted);margin-bottom:2px;">SAT Range</div><div style="font-weight:600;color:var(--teal);">1260–1420 — fits well</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">54%</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;">Dec 1</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Comfortable admit · Hartford/New Haven biotech</div></div>
-      </div>
-    </div>
-
-    <div style="background:var(--card);border:1px solid #a7f3d0;border-radius:12px;overflow:hidden;">
-      <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 18px;background:#f0fdf9;border-bottom:1px solid #a7f3d0;">
-        <div style="width:30px;height:30px;border-radius:50%;background:var(--teal);color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">10</div>
-        <div>
-          <div style="font-size:15px;font-weight:700;color:var(--navy);">University of Delaware — Honors College</div>
-          <div style="font-size:12px;color:var(--muted);">Apply as: Biology Honors · Newark, DE (separate Honors application)</div>
-        </div>
-        <div style="text-align:center;padding:4px 10px;background:#dcfce7;border-radius:6px;font-size:11px;font-weight:700;color:#166534;">STRONG SAFETY+</div>
-        <span class="status-badge status-not-started" onclick="cycleBI10Status(9)" style="cursor:pointer;font-size:11px;">Not Started</span>
-      </div>
-      <div style="padding:12px 18px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:12px;">
-        <div><div style="color:var(--muted);margin-bottom:2px;">SAT Range</div><div style="font-weight:600;color:var(--teal);">Above their 75th pct</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Accept Rate</div><div style="font-weight:600;">Selective within UD</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Deadline</div><div style="font-weight:600;">Dec 1</div></div>
-        <div><div style="color:var(--muted);margin-bottom:2px;">Key Advantage</div><div style="font-weight:600;">Research stipend · priority lab placement · smaller classes</div></div>
-      </div>
-    </div>
-
-  </div>
-
-  <p style="font-size:12px;color:var(--muted);margin-top:12px;padding-left:4px;">💡 Click any status badge to cycle through: Not Started → In Progress → Submitted → Interview. Saves to browser.</p>
 </div>
+
 
 <!-- ══════════ COLLEGES ══════════ -->
 <div class="tab-section" id="tab-colleges">
@@ -5714,23 +5932,76 @@ document.querySelectorAll('.modal-backdrop').forEach(m => {
   m.addEventListener('click', e => { if(e.target === m) m.classList.remove('open'); });
 });
 
-// ── BIOINFORMATICS TOP 10 STATUS ──
-let bi10Statuses = JSON.parse(localStorage.getItem('rishiBI10Statuses') || 'null') || Array(10).fill('not-started');
-
-function initBI10() {
-  const badges = document.querySelectorAll('#bioinfoTop10 .status-badge');
-  badges.forEach((badge, idx) => {
-    const s = bi10Statuses[idx] || 'not-started';
-    badge.className = 'status-badge ' + collegeStatusClasses[s];
-    badge.textContent = collegeStatusLabels[s];
+// ── BIOINFORMATICS SUB-TAB TOGGLE ──
+function showBITab(tab) {
+  ['grouped','numbered','reference'].forEach(t => {
+    const el = document.getElementById('biTab' + t.charAt(0).toUpperCase() + t.slice(1));
+    const btn = document.getElementById('biTab-' + t);
+    if (el) el.style.display = t === tab ? '' : 'none';
+    if (btn) {
+      if (t === tab) {
+        btn.style.background = '#4338ca'; btn.style.color = 'white'; btn.style.borderColor = '#4338ca';
+      } else {
+        btn.style.background = 'white'; btn.style.color = 'var(--muted)'; btn.style.borderColor = 'var(--border)';
+      }
+    }
   });
 }
+
+// ── GROUPED STATUS BADGES ──
+let groupedStatuses = JSON.parse(localStorage.getItem('rishiGroupedStatuses') || 'null') || Array(12).fill('not-started');
+
+function cycleGroupedStatus(idx) {
+  const cur = collegeStatusCycles.indexOf(groupedStatuses[idx]);
+  groupedStatuses[idx] = collegeStatusCycles[(cur + 1) % collegeStatusCycles.length];
+  localStorage.setItem('rishiGroupedStatuses', JSON.stringify(groupedStatuses));
+  const el = document.getElementById('gs' + idx);
+  if (el) {
+    el.className = 'status-badge ' + collegeStatusClasses[groupedStatuses[idx]];
+    el.textContent = collegeStatusLabels[groupedStatuses[idx]];
+  }
+  // update applied count
+  const applied = groupedStatuses.filter(s => s === 'submitted' || s === 'interview' || s === 'done').length;
+  const el2 = document.getElementById('biGroupedDone');
+  if (el2) el2.textContent = applied;
+  showToast('Status: ' + collegeStatusLabels[groupedStatuses[idx]]);
+}
+
+function initBI10() {
+  // restore grouped statuses
+  groupedStatuses.forEach((s, i) => {
+    const el = document.getElementById('gs' + i);
+    if (el) {
+      el.className = 'status-badge ' + (collegeStatusClasses[s] || 'status-not-started');
+      el.textContent = collegeStatusLabels[s] || 'Not Started';
+    }
+  });
+  const applied = groupedStatuses.filter(s => s === 'submitted' || s === 'interview' || s === 'done').length;
+  const el2 = document.getElementById('biGroupedDone');
+  if (el2) el2.textContent = applied;
+
+  // restore numbered list statuses
+  bi10Statuses.forEach((s, i) => {
+    const badges = document.querySelectorAll('#bioinfoTop10 .status-badge');
+    if (badges[i]) {
+      badges[i].className = 'status-badge ' + (collegeStatusClasses[s] || 'status-not-started');
+      badges[i].textContent = collegeStatusLabels[s] || 'Not Started';
+    }
+  });
+}
+
+// ── BIOINFORMATICS TOP 12 STATUS ──
+let bi10Statuses = JSON.parse(localStorage.getItem('rishiBI10Statuses') || 'null') || Array(12).fill('not-started');
 
 function cycleBI10Status(idx) {
   const cur = collegeStatusCycles.indexOf(bi10Statuses[idx]);
   bi10Statuses[idx] = collegeStatusCycles[(cur + 1) % collegeStatusCycles.length];
   localStorage.setItem('rishiBI10Statuses', JSON.stringify(bi10Statuses));
-  initBI10();
+  const badges = document.querySelectorAll('#bioinfoTop10 .status-badge');
+  if (badges[idx]) {
+    badges[idx].className = 'status-badge ' + collegeStatusClasses[bi10Statuses[idx]];
+    badges[idx].textContent = collegeStatusLabels[bi10Statuses[idx]];
+  }
   showToast('Status: ' + collegeStatusLabels[bi10Statuses[idx]]);
 }
 
