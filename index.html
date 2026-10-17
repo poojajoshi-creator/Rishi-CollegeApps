@@ -209,32 +209,26 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
     <div class="nav-item active" onclick="showTab('dashboard', this)">
       <span class="nav-icon">🏠</span> Dashboard
     </div>
-
-    <div class="nav-section-label">Applications</div>
     <div class="nav-item" onclick="showTab('colleges', this)">
       <span class="nav-icon">🎓</span> Colleges
+    </div>
+    <div class="nav-item" onclick="showTab('essays', this)">
+      <span class="nav-icon">✍️</span> Essays
     </div>
     <div class="nav-item" onclick="showTab('deadlines', this)">
       <span class="nav-icon">📅</span> Deadlines
     </div>
-    <div class="nav-item" onclick="showTab('action', this)">
-      <span class="nav-icon">✅</span> Action Plan
-    </div>
-
-    <div class="nav-section-label">Essays</div>
-    <div class="nav-item" onclick="showTab('essays', this)">
-      <span class="nav-icon">✍️</span> Essay Tracker
-    </div>
-    <div class="nav-item" onclick="showTab('activities', this)">
-      <span class="nav-icon">📋</span> Activities List
-    </div>
-
-    <div class="nav-section-label">Strategy</div>
-    <div class="nav-item" onclick="showTab('gwu', this)">
-      <span class="nav-icon">🏛️</span> GWU — Path to BS/MS
-    </div>
 
     <div class="nav-section-label">Archive</div>
+    <div class="nav-item archived" onclick="showTab('action', this)">
+      <span class="nav-icon">✅</span> Action Plan
+    </div>
+    <div class="nav-item archived" onclick="showTab('activities', this)">
+      <span class="nav-icon">📋</span> Activities List
+    </div>
+    <div class="nav-item archived" onclick="showTab('gwu', this)">
+      <span class="nav-icon">🏛️</span> GWU — Path to BS/MS
+    </div>
     <div class="nav-item archived" onclick="showTab('arch-ps', this)">
       <span class="nav-icon">🎙️</span> PS Interview
     </div>
@@ -269,7 +263,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 <div class="tab-section active" id="tab-dashboard">
   <div class="page-header">
     <h1>Hello, Rishi 👋</h1>
-    <p>13 schools · GWU Early Decision · Pitt &amp; VCU submitted · Common App done ✓</p>
+    <p>15 schools · GWU Early Decision · Pitt submitted · Common App done ✓ · Nov 1 is the big wave</p>
   </div>
 
   <!-- Accomplishments -->
@@ -302,33 +296,34 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
     </div>
   </div>
 
-  <!-- Priority tiles -->
-  <div class="stats-row" style="grid-template-columns:repeat(5,1fr);margin-bottom:18px;">
-    <div class="stat-card" style="border-top:3px solid var(--blue);">
-      <div style="font-size:18px;margin-bottom:6px;">🎓</div>
-      <div class="stat-label" style="font-weight:700;color:var(--blue);font-size:13px;">Nov 1 EA</div>
-      <div class="stat-sub">NC State EA</div>
+  <!-- Stats row -->
+  <div class="stats-row" style="grid-template-columns:repeat(4,1fr);margin-bottom:18px;">
+    <div class="stat-card" style="border-top:3px solid var(--navy);">
+      <div style="font-size:26px;font-weight:700;color:var(--navy);font-family:'DM Serif Display',serif;">15</div>
+      <div class="stat-label" style="font-weight:700;font-size:13px;">Total Colleges</div>
+      <div class="stat-sub">4 reach · 5 match · 4 safety + 2 Ivy</div>
     </div>
-    <div class="stat-card" style="border-top:3px solid #003b6f;">
-      <div style="font-size:18px;margin-bottom:6px;">⭐</div>
-      <div class="stat-label" style="font-weight:700;font-size:13px;">Nov 1 ED</div>
-      <div class="stat-sub">GWU — binding</div>
+    <div class="stat-card" style="border-top:3px solid var(--green);">
+      <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">1</div>
+      <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--green);">Submitted ✓</div>
+      <div class="stat-sub">Pitt — EA done</div>
     </div>
-    <div class="stat-card" style="border-top:3px solid var(--blue);">
-      <div style="font-size:18px;margin-bottom:6px;">🏛️</div>
-      <div class="stat-label" style="font-weight:700;font-size:13px;">Nov 1 EA</div>
-      <div class="stat-sub">VT · NEU · UMD · Pitt</div>
+    <div class="stat-card" style="border-top:3px solid var(--amber);">
+      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">14</div>
+      <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--amber);">Remaining</div>
+      <div class="stat-sub">9 due Nov 1 · 1 Nov 30 · 4 Jan</div>
     </div>
-    <div class="stat-card" style="border-top:3px solid var(--teal);">
-      <div style="font-size:18px;margin-bottom:6px;">💰</div>
-      <div class="stat-label" style="font-weight:700;font-size:13px;">FAFSA + CSS</div>
-      <div class="stat-sub">Due Nov 1 — not filed</div>
+    <div class="stat-card" style="border-top:3px solid var(--red);">
+      <div style="font-size:26px;font-weight:700;color:var(--red);font-family:'DM Serif Display',serif;" id="daysLeftDash">—</div>
+      <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--red);">Days to Nov 1</div>
+      <div class="stat-sub">GWU ED + 8 EA schools</div>
     </div>
-    <div class="stat-card" style="border-top:3px solid var(--muted);">
-      <div style="font-size:18px;margin-bottom:6px;">✍️</div>
-      <div class="stat-label" style="font-weight:700;font-size:13px;" id="dashEssayCount">9 essays</div>
-      <div class="stat-sub">to write</div>
-    </div>
+  </div>
+
+  <!-- Next 4 to apply -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-title">🎯 Next Up — Apply in This Order</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:4px;" id="nextFourGrid"></div>
   </div>
 
   <!-- Two column: deadlines + tonight priorities -->
@@ -336,26 +331,29 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
     <div class="card">
       <div class="card-title">⚡ Deadline Snapshot</div>
       <div style="font-size:13px;display:flex;flex-direction:column;gap:0;">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
-          <span>🎓 NC State EA</span><span style="color:var(--blue);font-weight:700;">Nov 1</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
+          <span>⭐ GWU <span style="font-size:10px;background:#003b6f;color:white;padding:1px 6px;border-radius:99px;margin-left:4px;">ED — Binding</span></span><span style="color:#dc2626;font-weight:700;">Nov 1</span>
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
-          <span>⭐ GWU Early Decision I</span><span style="color:#003b6f;font-weight:700;">Nov 1</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
+          <span>🟢 Ohio State · UConn · Rutgers · VT <span style="font-size:10px;background:#dcfce7;color:#166534;padding:1px 6px;border-radius:99px;margin-left:4px;">EA — Safeties</span></span><span style="color:#dc2626;font-weight:700;">Nov 1</span>
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
-          <span>🏛️ VT · NEU · UMD · UConn · Rutgers · UVA · Ohio State</span><span style="color:var(--navy);font-weight:700;">Nov 1 EA</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
+          <span>🔵 UVA · UMD · NC State · NEU <span style="font-size:10px;background:#dbeafe;color:#1d4ed8;padding:1px 6px;border-radius:99px;margin-left:4px;">EA — Matches</span></span><span style="color:#dc2626;font-weight:700;">Nov 1</span>
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
-          <span>💰 FAFSA + CSS Profile</span><span style="color:var(--amber);font-weight:700;">Nov 1</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
+          <span>✅ Pitt <span style="font-size:10px;background:#dcfce7;color:#166534;padding:1px 6px;border-radius:99px;margin-left:4px;">Submitted</span></span><span style="color:var(--green);font-weight:700;">Done</span>
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
-          <span>🌊 UC San Diego PIQs <span style="font-size:10px;background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:99px;margin-left:4px;">UC App — separate</span></span><span style="color:var(--muted);font-weight:600;">Nov 30</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
+          <span>💰 FAFSA + CSS Profile (GWU)</span><span style="color:var(--amber);font-weight:700;">Nov 1</span>
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
-          <span>🎓 UPenn <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:1px 6px;border-radius:99px;margin-left:4px;">Common App</span></span><span style="color:var(--muted);font-weight:600;">Jan 5</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
+          <span>🌊 UC San Diego <span style="font-size:10px;background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:99px;margin-left:4px;">UC App — separate</span></span><span style="color:var(--muted);font-weight:600;">Nov 30</span>
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;">
-          <span>🌿 Cornell CALS <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:1px 6px;border-radius:99px;margin-left:4px;">Common App · RD only</span></span><span style="color:var(--muted);font-weight:600;">Jan 2</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
+          <span>🌿 Cornell CALS <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:1px 6px;border-radius:99px;margin-left:4px;">RD only</span></span><span style="color:var(--muted);font-weight:600;">Jan 2</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;">
+          <span>🏛️ UPenn · Columbia · Dartmouth <span style="font-size:10px;background:#f5f3ff;color:#7c3aed;padding:1px 6px;border-radius:99px;margin-left:4px;">⚠️ Retake SAT first</span></span><span style="color:var(--muted);font-weight:600;">Jan 1</span>
         </div>
       </div>
     </div>
@@ -945,10 +943,9 @@ function showTab(id, el) {
 // ── DAYS LEFT ──
 function updateDaysLeft() {
   const deadlines = [
-    { date: new Date('2026-10-15'), label: 'NC State EA' },
-    { date: new Date('2026-11-01'), label: 'GWU ED · Nov 1 apps' },
-    { date: new Date('2026-11-30'), label: 'UCSD RD' },
-    { date: new Date('2026-12-01'), label: 'UConn · Rutgers' },
+    { date: new Date('2026-11-01'), label: 'GWU ED + 8 EA schools' },
+    { date: new Date('2026-11-30'), label: 'UCSD UC App' },
+    { date: new Date('2027-01-01'), label: 'UPenn · Columbia · Dartmouth' },
     { date: new Date('2027-01-02'), label: 'Cornell CALS' },
   ];
   const today = new Date();
@@ -958,7 +955,30 @@ function updateDaysLeft() {
     const days = Math.ceil((next.date - today) / (1000*60*60*24));
     document.getElementById('daysLeft').textContent = days;
     document.getElementById('daysTo').textContent = next.label;
+    const el = document.getElementById('daysLeftDash');
+    if (el) el.textContent = days;
   }
+}
+
+// ── NEXT FOUR ──
+function renderNextFour() {
+  const grid = document.getElementById('nextFourGrid');
+  if (!grid) return;
+  const sorted = [...colleges].sort((a,b) => a.applyOrder - b.applyOrder);
+  const notDone = sorted.filter(c => {
+    const st = state.collegeStatus[c.num] || c.status;
+    return st !== 'submitted';
+  });
+  const next4 = notDone.slice(0, 4);
+  const tierColor = t => t === 'safety' ? '#059669' : t === 'match' ? '#0284c7' : '#7c3aed';
+  grid.innerHTML = next4.map(c => `
+    <div style="border:1px solid var(--border);border-radius:10px;padding:14px;border-top:3px solid ${tierColor(c.tier)};">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:${tierColor(c.tier)};margin-bottom:4px;">#${c.applyOrder} · ${c.tier}</div>
+      <div style="font-size:13px;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:4px;">${c.name}</div>
+      <div style="font-size:11px;color:var(--muted);">${c.prog}</div>
+      <div style="margin-top:8px;font-size:11px;font-weight:600;color:#dc2626;">${c.type} · ${c.deadline}</div>
+    </div>
+  `).join('');
 }
 
 // ── COLLEGE TABLE ──
@@ -1080,6 +1100,7 @@ updateDaysLeft();
 renderColleges();
 renderEssays();
 renderActivities();
+renderNextFour();
 // restore PS status
 if (state.psStatus && state.psStatus !== 'pending') {
   const labels = { "pending":"⏳ Pending Rishi's OK", "in-progress":"✍️ Rishi Reviewing", "submitted":"✅ Confirmed & Uploaded" };
