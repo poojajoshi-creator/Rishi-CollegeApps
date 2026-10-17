@@ -215,9 +215,6 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
     <div class="nav-item" onclick="showTab('essays', this)">
       <span class="nav-icon">✍️</span> Essays
     </div>
-    <div class="nav-item" onclick="showTab('deadlines', this)">
-      <span class="nav-icon">📅</span> Deadlines
-    </div>
 
     <div class="nav-section-label">Archive</div>
     <div class="nav-item archived" onclick="showTab('action', this)">
@@ -299,19 +296,19 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
   <!-- Stats row -->
   <div class="stats-row" style="grid-template-columns:repeat(4,1fr);margin-bottom:18px;">
     <div class="stat-card" style="border-top:3px solid var(--navy);">
-      <div style="font-size:26px;font-weight:700;color:var(--navy);font-family:'DM Serif Display',serif;">15</div>
+      <div style="font-size:26px;font-weight:700;color:var(--navy);font-family:'DM Serif Display',serif;">16</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;">Total Colleges</div>
-      <div class="stat-sub">4 reach · 5 match · 4 safety + 2 Ivy</div>
+      <div class="stat-sub">5 reach · 5 match · 4 safety + 2 Ivy</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--green);">
-      <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">1</div>
+      <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">2</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--green);">Submitted ✓</div>
-      <div class="stat-sub">Pitt — EA done</div>
+      <div class="stat-sub">Pitt + VCU done</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--amber);">
       <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">14</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--amber);">Remaining</div>
-      <div class="stat-sub">9 due Nov 1 · 1 Nov 30 · 4 Jan</div>
+      <div class="stat-sub">8 due Nov 1 · 1 Nov 30 · 4 Jan</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--red);">
       <div style="font-size:26px;font-weight:700;color:var(--red);font-family:'DM Serif Display',serif;" id="daysLeftDash">—</div>
@@ -326,8 +323,8 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:4px;" id="nextFourGrid"></div>
   </div>
 
-  <!-- Two column: deadlines + tonight priorities -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+  <!-- Deadline snapshot -->
+  <div style="margin-bottom:16px;">
     <div class="card">
       <div class="card-title">⚡ Deadline Snapshot</div>
       <div style="font-size:13px;display:flex;flex-direction:column;gap:0;">
@@ -355,36 +352,6 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;">
           <span>🏛️ UPenn · Columbia · Dartmouth <span style="font-size:10px;background:#f5f3ff;color:#7c3aed;padding:1px 6px;border-radius:99px;margin-left:4px;">⚠️ Retake SAT first</span></span><span style="color:var(--muted);font-weight:600;">Jan 1</span>
         </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">🌙 Tonight — Review With Rishi</div>
-      <div style="font-size:13px;display:flex;flex-direction:column;gap:8px;">
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
-          <input type="checkbox" style="accent-color:#dc2626;width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span><strong style="color:var(--blue);">NC State essay</strong> — due Nov 1. Write "Why NC State?" supplement this week.</span>
-        </label>
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;opacity:0.5;">
-          <input type="checkbox" checked disabled style="width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span style="text-decoration:line-through;"><strong>Personal Statement</strong> — finalized and uploaded ✓</span>
-        </label>
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;opacity:0.5;">
-          <input type="checkbox" checked disabled style="width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span style="text-decoration:line-through;"><strong>Common App</strong> — complete ✓</span>
-        </label>
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;opacity:0.5;">
-          <input type="checkbox" checked disabled style="width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span style="text-decoration:line-through;"><strong>Activities list</strong> — all 10 entered ✓</span>
-        </label>
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;opacity:0.5;">
-          <input type="checkbox" checked disabled style="width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span style="text-decoration:line-through;"><strong>Ms. Gardner</strong> — rec letter input received ✓</span>
-        </label>
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
-          <input type="checkbox" style="accent-color:var(--amber);width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span><strong>FAFSA</strong> — start the process this week. Due Nov 1 same day as GWU ED.</span>
-        </label>
       </div>
     </div>
   </div>
@@ -452,135 +419,6 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
   </div>
 </div>
 
-<!-- ══════════ DEADLINES ══════════ -->
-<div class="tab-section" id="tab-deadlines">
-  <div class="page-header">
-    <h1>📅 Deadlines</h1>
-    <p>Every date across all 10 schools in one view</p>
-  </div>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-    <div class="card">
-      <div class="card-title" style="color:#dc2626;">🔴 October 15 — URGENT</div>
-      <div class="dl-item dl-urgent">
-        <div class="dl-date"><div class="dl-month">OCT</div><div class="dl-day">15</div></div>
-        <div class="dl-content">
-          <div class="dl-title">NC State Early Action</div>
-          <div class="dl-desc">Biology · "Why NC State?" supplement · Essay not started → write this week</div>
-        </div>
-        <span class="badge badge-urgent">4 days</span>
-      </div>
-      <div class="dl-item dl-urgent">
-        <div class="dl-date"><div class="dl-month">OCT</div><div class="dl-day">15</div></div>
-        <div class="dl-content">
-          <div class="dl-title">Ms. Gardner — Rec Letter Deadline</div>
-          <div class="dl-desc">Follow up now · She needs NC State deadline on radar</div>
-        </div>
-        <span class="badge badge-urgent">⚡</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title" style="color:var(--amber);">🟡 November 1 — Main Wave</div>
-      <div class="dl-item dl-soon">
-        <div class="dl-date"><div class="dl-month">NOV</div><div class="dl-day">1</div></div>
-        <div class="dl-content">
-          <div class="dl-title">⭐ GWU Early Decision I — Binding</div>
-          <div class="dl-desc">Personal Statement + "Why GWU?" supplement + FAFSA + CSS Profile all due same day</div>
-        </div>
-        <span class="badge badge-ed">ED</span>
-      </div>
-      <div class="dl-item dl-soon">
-        <div class="dl-date"><div class="dl-month">NOV</div><div class="dl-day">1</div></div>
-        <div class="dl-content">
-          <div class="dl-title">Virginia Tech Early Action</div>
-          <div class="dl-desc">Biological Sciences — Bioinformatics Option · "Why VT?" supplement</div>
-        </div>
-        <span class="badge badge-ea">EA</span>
-      </div>
-      <div class="dl-item dl-soon">
-        <div class="dl-date"><div class="dl-month">NOV</div><div class="dl-day">1</div></div>
-        <div class="dl-content">
-          <div class="dl-title">Northeastern University Early Action</div>
-          <div class="dl-desc">Biology · "Why Northeastern?" 200 words</div>
-        </div>
-        <span class="badge badge-ea">EA</span>
-      </div>
-      <div class="dl-item dl-soon">
-        <div class="dl-date"><div class="dl-month">NOV</div><div class="dl-day">1</div></div>
-        <div class="dl-content">
-          <div class="dl-title">University of Maryland Early Action</div>
-          <div class="dl-desc">Biology · Apply test-optional (skip SAT — their avg 1465)</div>
-        </div>
-        <span class="badge badge-ea">EA</span>
-      </div>
-      <div class="dl-item dl-soon">
-        <div class="dl-date"><div class="dl-month">NOV</div><div class="dl-day">1</div></div>
-        <div class="dl-content">
-          <div class="dl-title">University of Pittsburgh Early Action</div>
-          <div class="dl-desc">Biological Sciences · "Why Pitt?" 250 words</div>
-        </div>
-        <span class="badge badge-ea">EA</span>
-      </div>
-      <div class="dl-item dl-soon">
-        <div class="dl-date"><div class="dl-month">NOV</div><div class="dl-day">1</div></div>
-        <div class="dl-content">
-          <div class="dl-title">💰 FAFSA Filing</div>
-          <div class="dl-desc">Required for GWU ED financial aid consideration · Start now</div>
-        </div>
-        <span class="badge badge-urgent">⚡ Not filed</span>
-      </div>
-      <div class="dl-item dl-soon">
-        <div class="dl-date"><div class="dl-month">NOV</div><div class="dl-day">1</div></div>
-        <div class="dl-content">
-          <div class="dl-title">💰 CSS Profile (GWU)</div>
-          <div class="dl-desc">GWU requires CSS Profile for institutional aid · File same time as FAFSA</div>
-        </div>
-        <span class="badge badge-urgent">⚡ Not filed</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">November 30</div>
-      <div class="dl-item dl-normal">
-        <div class="dl-date"><div class="dl-month">NOV</div><div class="dl-day">30</div></div>
-        <div class="dl-content">
-          <div class="dl-title">UC San Diego Regular Decision</div>
-          <div class="dl-desc">Biology · 4 Personal Insight Questions (4 of 8, 350 words each)</div>
-        </div>
-        <span class="badge badge-rd">RD</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">December 1 + January 2</div>
-      <div class="dl-item dl-normal">
-        <div class="dl-date"><div class="dl-month">DEC</div><div class="dl-day">1</div></div>
-        <div class="dl-content">
-          <div class="dl-title">University of Connecticut Regular Decision</div>
-          <div class="dl-desc">Molecular & Cell Biology · Short "Why UConn?" supplement</div>
-        </div>
-        <span class="badge badge-rd">RD</span>
-      </div>
-      <div class="dl-item dl-normal">
-        <div class="dl-date"><div class="dl-month">DEC</div><div class="dl-day">1</div></div>
-        <div class="dl-content">
-          <div class="dl-title">Rutgers University Regular Decision</div>
-          <div class="dl-desc">Biological Sciences / Molecular Biology · Short supplement</div>
-        </div>
-        <span class="badge badge-rd">RD</span>
-      </div>
-      <div class="dl-item dl-normal">
-        <div class="dl-date"><div class="dl-month">JAN</div><div class="dl-day">2</div></div>
-        <div class="dl-content">
-          <div class="dl-title">Cornell University CALS Regular Decision</div>
-          <div class="dl-desc">Biology · "Why CALS?" + "Why this major?" combined 650 words</div>
-        </div>
-        <span class="badge badge-rd">RD</span>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ══════════ ACTION PLAN ══════════ -->
 <div class="tab-section" id="tab-action">
@@ -887,6 +725,7 @@ const colleges = [
   { num:13, name:"University of Pennsylvania", prog:"Biology (School of Arts & Sciences)", note:"Ivy League reach · No dedicated undergrad bioinformatics", type:"RD", tier:"reach", deadline:"Jan 1", sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:12 },
   { num:14, name:"Columbia University", prog:"Biology (Columbia College)", note:"Ivy League · NYC hospital ecosystem · Strong biomedical research · ⚠️ Retake Dec 6 SAT before applying", type:"RD", tier:"reach", deadline:"Jan 1", sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:13 },
   { num:15, name:"Dartmouth College", prog:"Biology", note:"Ivy League · Strong undergrad research · Smaller class size · ⚠️ Retake Dec 6 SAT before applying", type:"RD", tier:"reach", deadline:"Jan 1", sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:14 },
+  { num:16, name:"Virginia Commonwealth University", prog:"Biology / Bioinformatics", note:"✅ Application submitted · Strong health sciences focus", type:"RD", tier:"safety", deadline:"Done", sat:"Submitted", status:"submitted", applyOrder:0 },
 ];
 
 const essays = [
