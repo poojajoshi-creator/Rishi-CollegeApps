@@ -212,7 +212,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 
     <div class="nav-section-label">Applications</div>
     <div class="nav-item" onclick="showTab('colleges', this)">
-      <span class="nav-icon">🎓</span> 10 Colleges
+      <span class="nav-icon">🎓</span> Colleges
     </div>
     <div class="nav-item" onclick="showTab('deadlines', this)">
       <span class="nav-icon">📅</span> Deadlines
@@ -269,7 +269,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 <div class="tab-section active" id="tab-dashboard">
   <div class="page-header">
     <h1>Hello, Rishi 👋</h1>
-    <p>10 schools · GWU Early Decision · First deadline October 15 — let's finish strong.</p>
+    <p>13 schools · GWU Early Decision · Pitt &amp; VCU submitted · Common App done ✓</p>
   </div>
 
   <!-- Accomplishments -->
@@ -304,10 +304,10 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 
   <!-- Priority tiles -->
   <div class="stats-row" style="grid-template-columns:repeat(5,1fr);margin-bottom:18px;">
-    <div class="stat-card" style="border-top:3px solid #dc2626;">
-      <div style="font-size:18px;margin-bottom:6px;">⚡</div>
-      <div class="stat-label" style="font-weight:700;color:#dc2626;font-size:13px;">Oct 15</div>
-      <div class="stat-sub" style="color:#dc2626;">NC State EA</div>
+    <div class="stat-card" style="border-top:3px solid var(--blue);">
+      <div style="font-size:18px;margin-bottom:6px;">🎓</div>
+      <div class="stat-label" style="font-weight:700;color:var(--blue);font-size:13px;">Nov 1 EA</div>
+      <div class="stat-sub">NC State EA</div>
     </div>
     <div class="stat-card" style="border-top:3px solid #003b6f;">
       <div style="font-size:18px;margin-bottom:6px;">⭐</div>
@@ -337,25 +337,25 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
       <div class="card-title">⚡ Deadline Snapshot</div>
       <div style="font-size:13px;display:flex;flex-direction:column;gap:0;">
         <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
-          <span>🔴 NC State EA</span><span style="color:#dc2626;font-weight:700;">Oct 15</span>
+          <span>🎓 NC State EA</span><span style="color:var(--blue);font-weight:700;">Nov 1</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
           <span>⭐ GWU Early Decision I</span><span style="color:#003b6f;font-weight:700;">Nov 1</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
-          <span>🏛️ VT · NEU · UMD · Pitt</span><span style="color:var(--navy);font-weight:700;">Nov 1</span>
+          <span>🏛️ VT · NEU · UMD · UConn · Rutgers · UVA · Ohio State</span><span style="color:var(--navy);font-weight:700;">Nov 1 EA</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
           <span>💰 FAFSA + CSS Profile</span><span style="color:var(--amber);font-weight:700;">Nov 1</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
-          <span>🌊 UC San Diego PIQs</span><span style="color:var(--muted);font-weight:600;">Nov 30</span>
+          <span>🌊 UC San Diego PIQs <span style="font-size:10px;background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:99px;margin-left:4px;">UC App — separate</span></span><span style="color:var(--muted);font-weight:600;">Nov 30</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);">
-          <span>🏛️ UConn · Rutgers</span><span style="color:var(--muted);font-weight:600;">Dec 1</span>
+          <span>🎓 UPenn <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:1px 6px;border-radius:99px;margin-left:4px;">Common App</span></span><span style="color:var(--muted);font-weight:600;">Jan 5</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;">
-          <span>🌿 Cornell CALS</span><span style="color:var(--muted);font-weight:600;">Jan 2</span>
+          <span>🌿 Cornell CALS <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:1px 6px;border-radius:99px;margin-left:4px;">Common App · RD only</span></span><span style="color:var(--muted);font-weight:600;">Jan 2</span>
         </div>
       </div>
     </div>
@@ -365,31 +365,27 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
       <div style="font-size:13px;display:flex;flex-direction:column;gap:8px;">
         <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
           <input type="checkbox" style="accent-color:#dc2626;width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span><strong style="color:#dc2626;">NC State essay</strong> — due Oct 15, 4 days away. Write tonight or tomorrow.</span>
+          <span><strong style="color:var(--blue);">NC State essay</strong> — due Nov 1. Write "Why NC State?" supplement this week.</span>
         </label>
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
-          <input type="checkbox" style="accent-color:var(--navy);width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span><strong>Personal Statement</strong> — confirm Magnus Chase draft is final or request changes.</span>
+        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;opacity:0.5;">
+          <input type="checkbox" checked disabled style="width:15px;height:15px;margin-top:2px;flex-shrink:0;">
+          <span style="text-decoration:line-through;"><strong>Personal Statement</strong> — finalized and uploaded ✓</span>
         </label>
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
-          <input type="checkbox" style="accent-color:var(--blue);width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span><strong>Common App account</strong> — create if not done, fill profile basics.</span>
+        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;opacity:0.5;">
+          <input type="checkbox" checked disabled style="width:15px;height:15px;margin-top:2px;flex-shrink:0;">
+          <span style="text-decoration:line-through;"><strong>Common App</strong> — complete ✓</span>
         </label>
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
-          <input type="checkbox" style="accent-color:var(--blue);width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span><strong>Activities list</strong> — review the 10 drafted descriptions, confirm or edit each.</span>
+        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;opacity:0.5;">
+          <input type="checkbox" checked disabled style="width:15px;height:15px;margin-top:2px;flex-shrink:0;">
+          <span style="text-decoration:line-through;"><strong>Activities list</strong> — all 10 entered ✓</span>
         </label>
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
-          <input type="checkbox" style="accent-color:var(--teal);width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span><strong>Ms. Gardner</strong> — follow up, confirm she knows Oct 15 is NC State's deadline.</span>
+        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;opacity:0.5;">
+          <input type="checkbox" checked disabled style="width:15px;height:15px;margin-top:2px;flex-shrink:0;">
+          <span style="text-decoration:line-through;"><strong>Ms. Gardner</strong> — rec letter input received ✓</span>
         </label>
         <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
           <input type="checkbox" style="accent-color:var(--amber);width:15px;height:15px;margin-top:2px;flex-shrink:0;">
           <span><strong>FAFSA</strong> — start the process this week. Due Nov 1 same day as GWU ED.</span>
-        </label>
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
-          <input type="checkbox" style="accent-color:var(--teal);width:15px;height:15px;margin-top:2px;flex-shrink:0;">
-          <span><strong>FIRST Robotics</strong> — was Rishi's team FIRST registered? $15K/year at GWU if yes.</span>
         </label>
       </div>
     </div>
@@ -404,8 +400,8 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
         <div style="font-size:12px;color:#15803d;">Submitted to Common App portal</div>
       </div>
       <div style="padding:14px;border-radius:10px;background:#fef3c7;border:1px solid #fde68a;">
-        <div style="font-weight:600;font-size:13px;color:#92400e;margin-bottom:4px;">⏳ Ms. Gardner — Pending</div>
-        <div style="font-size:12px;color:#92400e;">Sent 2 weeks ago · Follow up re: Oct 15 deadline</div>
+        <div style="font-weight:600;font-size:13px;color:#166534;margin-bottom:4px;">✅ Ms. Gardner — Input Received</div>
+        <div style="font-size:12px;color:#15803d;">Rec letter submitted ✓</div>
       </div>
       <div style="padding:14px;border-radius:10px;background:#f0fdf4;border:1px solid #86efac;">
         <div style="font-weight:600;font-size:13px;color:#166534;margin-bottom:4px;">✅ Counselor Brag Sheet</div>
@@ -418,7 +414,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 <!-- ══════════ 10 COLLEGES ══════════ -->
 <div class="tab-section" id="tab-colleges">
   <div class="page-header">
-    <h1>🎓 10 Colleges — Final List</h1>
+    <h1>🎓 Colleges — Final List</h1>
     <p>Apply as Biology/Biochemistry everywhere · Switch to Bioinformatics internally Year 2 · GWU is the exception — BS/MS dual degree pathway</p>
   </div>
 
@@ -440,9 +436,8 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
   <table class="ctable">
     <thead>
       <tr>
-        <th>#</th>
+        <th>Apply Order</th>
         <th>School</th>
-        <th>Major</th>
         <th>Type</th>
         <th>Tier</th>
         <th>Deadline</th>
@@ -605,13 +600,12 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
       <span class="week-urgency wurg-fire">🔴 Critical</span>
     </div>
     <div class="week-body" id="w1">
-      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Write NC State supplement</strong> — "Why NC State?" ~250 words. Reference Biological Sciences program + bioinformatics research pipeline. Due Oct 15.</span><span class="action-tag atag-essay">Essay</span></div>
-      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Follow up with Ms. Gardner</strong> — one email or text. Make sure she knows Oct 15 is the NC State deadline.</span><span class="action-tag atag-rec">Rec</span></div>
-      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Confirm Personal Statement</strong> — Rishi reads the Magnus Chase draft and gives a thumbs up or requests changes. This needs to be finalized before any application is submitted.</span><span class="action-tag atag-essay">Essay</span></div>
-      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Create Common App account</strong> — fill in all basic profile fields (name, address, demographics, testing, high school info).</span><span class="action-tag atag-app">App</span></div>
-      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Review Activities List</strong> — 10 activity descriptions are drafted in this portal. Rishi reviews and edits each 150-character description to sound like him.</span><span class="action-tag atag-app">App</span></div>
+      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Write NC State supplement</strong> — "Why NC State?" ~250 words. Reference Biological Sciences program + bioinformatics research pipeline. Due Nov 1.</span><span class="action-tag atag-essay">Essay</span></div>
+      <div class="action-item" style="opacity:0.5;"><input type="checkbox" checked disabled><span class="action-label" style="text-decoration:line-through;"><strong>Ms. Gardner rec letter</strong> — input received ✓</span><span class="action-tag atag-rec">Rec</span></div>
+      <div class="action-item" style="opacity:0.5;"><input type="checkbox" checked disabled><span class="action-label" style="text-decoration:line-through;"><strong>Personal Statement</strong> — finalized and uploaded to Common App ✓</span><span class="action-tag atag-essay">Essay</span></div>
+      <div class="action-item" style="opacity:0.5;"><input type="checkbox" checked disabled><span class="action-label" style="text-decoration:line-through;"><strong>Common App</strong> — profile complete, all sections done ✓</span><span class="action-tag atag-app">App</span></div>
+      <div class="action-item" style="opacity:0.5;"><input type="checkbox" checked disabled><span class="action-label" style="text-decoration:line-through;"><strong>Activities List</strong> — all 10 activities entered into Common App ✓</span><span class="action-tag atag-app">App</span></div>
       <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Start FAFSA</strong> — create FSA ID at studentaid.gov. Gather tax returns and financial documents. Due Nov 1.</span><span class="action-tag atag-fin">Financial</span></div>
-      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Check FIRST Robotics</strong> — was Rishi's middle school robotics team FIRST registered? This unlocks a $15,000/year renewable scholarship at GWU.</span><span class="action-tag atag-misc">GWU</span></div>
     </div>
   </div>
 
@@ -660,10 +654,12 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
       <span class="week-urgency wurg-normal">Normal</span>
     </div>
     <div class="week-body" id="w4" style="display:none;">
-      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Choose 4 of 8 UCSD Personal Insight Questions</strong> — pick the 4 that best showcase: published research, clinical experience (CNA), swimming/persistence, bioinformatics interest. 350 words each.</span><span class="action-tag atag-essay">Essay</span></div>
-      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Write UCSD PIQ #1</strong> — recommended: "Describe the most significant challenge you have faced and the steps you took to overcome it." Use AP Calculus retake story.</span><span class="action-tag atag-essay">Essay</span></div>
-      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Write UCSD PIQ #2</strong> — recommended: "What have you done to make your school or community a better place?" Use lifeguarding / water safety / CNA angle.</span><span class="action-tag atag-essay">Essay</span></div>
-      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Write UCSD PIQ #3 + #4</strong> — research experience + creative/intellectual interest (bioinformatics). Submit by Nov 30.</span><span class="action-tag atag-essay">Essay</span></div>
+      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>⚠️ UCSD uses UC Application — NOT Common App</strong> — create a separate account at apply.universityofcalifornia.edu. Can apply to multiple UC campuses in one application.</span><span class="action-tag atag-app">App</span></div>
+      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Create UC Application account</strong> — go to apply.universityofcalifornia.edu and set up profile. Fill in academics, activities, and test scores separately from Common App.</span><span class="action-tag atag-app">App</span></div>
+      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Choose 4 of 8 Personal Insight Questions</strong> — pick the 4 that best showcase: published research, clinical experience (CNA), swimming/persistence, bioinformatics interest. 350 words each.</span><span class="action-tag atag-essay">Essay</span></div>
+      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Write PIQ #1</strong> — recommended: "Describe the most significant challenge you have faced." Use research or CNA experience.</span><span class="action-tag atag-essay">Essay</span></div>
+      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Write PIQ #2</strong> — recommended: "What have you done to make your school or community a better place?" Use lifeguarding / CNA angle.</span><span class="action-tag atag-essay">Essay</span></div>
+      <div class="action-item"><input type="checkbox"><span class="action-label"><strong>Write PIQ #3 + #4</strong> — research experience + bioinformatics interest. Submit UC Application by Nov 30.</span><span class="action-tag atag-essay">Essay</span></div>
     </div>
   </div>
 
@@ -705,9 +701,9 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
     <p>Every supplement for every school · Click status to cycle through · 9 essays total</p>
   </div>
 
-  <div style="margin-bottom:20px;padding:14px 18px;background:#fef3c7;border:1px solid #fde68a;border-radius:10px;font-size:13px;color:#92400e;">
-    <strong>Personal Statement (Magnus Chase draft)</strong> — Pending Rishi's final confirmation. Once approved, upload to Common App. This anchors every application.
-    <button onclick="cyclePS()" style="margin-left:12px;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;border:1px solid #92400e;background:white;color:#92400e;cursor:pointer;" id="psBtn">⏳ Pending Rishi's OK</button>
+  <div style="margin-bottom:20px;padding:14px 18px;background:#f0fdf4;border:1px solid #86efac;border-radius:10px;font-size:13px;color:#166534;">
+    <strong>Personal Statement (Magnus Chase draft)</strong> — Confirmed by Rishi and uploaded to Common App ✓
+    <span style="margin-left:12px;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;border:1px solid #166534;background:white;color:#166534;">✅ Confirmed & Uploaded</span>
   </div>
 
   <div class="essay-grid" id="essayGrid"></div>
@@ -878,28 +874,38 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 <script>
 // ── DATA ──
 const colleges = [
-  { num:1, name:"George Washington University", prog:"Biology / Biochemistry (CCAS)", note:"→ BS/MS Bioinformatics dual degree Year 2", type:"ED", tier:"reach", deadline:"Nov 1", sat:"Submit (above avg)", status:"not-started" },
-  { num:2, name:"NC State University", prog:"Biological Sciences", note:"Strong bioinformatics graduate pipeline", type:"EA", tier:"match", deadline:"Oct 15 ⚡", sat:"Submit", status:"not-started" },
-  { num:3, name:"Virginia Tech", prog:"Biological Sciences — Bioinformatics Option", note:"No internal switch needed — built into major", type:"EA", tier:"safety", deadline:"Nov 1", sat:"Submit", status:"not-started" },
-  { num:4, name:"Northeastern University", prog:"Biology", note:"Co-op = clinical informatics placement opportunity", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"not-started" },
-  { num:5, name:"University of Maryland", prog:"Biology", note:"In-state flagship · Apply test-optional", type:"EA", tier:"match", deadline:"Nov 1", sat:"Skip (avg 1465)", status:"not-started" },
-  { num:6, name:"University of Pittsburgh", prog:"Biological Sciences", note:"Medical center ecosystem · Transplant research angle", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"not-started" },
-  { num:7, name:"UC San Diego", prog:"Biology", note:"Largest bioinformatics program nationally (137 students)", type:"RD", tier:"reach", deadline:"Nov 30", sat:"Submit", status:"not-started" },
-  { num:8, name:"UConn", prog:"Molecular & Cell Biology", note:"Strong bioinformatics track within biology", type:"RD", tier:"safety", deadline:"Dec 1", sat:"Test-optional safe", status:"not-started" },
-  { num:9, name:"Rutgers University", prog:"Biological Sciences / Molecular Biology", note:"Large research university, strong biomedical pipeline", type:"RD", tier:"safety", deadline:"Dec 1", sat:"Test-optional safe", status:"not-started" },
-  { num:10, name:"Cornell University — CALS", prog:"Biology", note:"Published research is the ticket for CALS", type:"RD", tier:"reach", deadline:"Jan 2", sat:"Submit", status:"not-started" },
+  { num:1, name:"George Washington University", prog:"Biology / Biochemistry (CCAS)", note:"→ BS/MS Bioinformatics dual degree Year 2 · ED Nov 1", type:"ED", tier:"reach", deadline:"Nov 1", sat:"Submit (above avg)", status:"not-started", applyOrder:9 },
+  { num:2, name:"NC State University", prog:"Biological Sciences", note:"Strong bioinformatics graduate pipeline", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"not-started", applyOrder:7 },
+  { num:3, name:"Virginia Tech", prog:"Biological Sciences — Bioinformatics Option", note:"No internal switch needed — built into major · In-state", type:"EA", tier:"safety", deadline:"Nov 1", sat:"Submit", status:"not-started", applyOrder:4 },
+  { num:4, name:"Northeastern University", prog:"Biology", note:"Co-op = clinical informatics placement opportunity", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"not-started", applyOrder:8 },
+  { num:5, name:"University of Maryland", prog:"Biology", note:"In-state flagship · Apply test-optional", type:"EA", tier:"match", deadline:"Nov 1", sat:"Skip (avg 1465)", status:"not-started", applyOrder:6 },
+  { num:6, name:"University of Pittsburgh", prog:"Biological Sciences", note:"Medical center ecosystem · Transplant research angle · ✅ Submitted", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"submitted", applyOrder:5 },
+  { num:7, name:"UC San Diego", prog:"Biology / Bioinformatics", note:"Top-ranked bioinformatics program nationally · UC Application (not Common App)", type:"RD", tier:"reach", deadline:"Nov 30", sat:"Submit", status:"not-started", applyOrder:10 },
+  { num:8, name:"UConn", prog:"Molecular & Cell Biology", note:"Strong bioinformatics track within biology", type:"EA", tier:"safety", deadline:"Nov 1", sat:"Test-optional safe", status:"not-started", applyOrder:2 },
+  { num:9, name:"Rutgers University", prog:"Molecular Biology & Biochemistry / Computational Bio (Camden)", note:"Large research university, strong biomedical pipeline · EA decisions by Jan 31", type:"EA", tier:"safety", deadline:"Nov 1", sat:"Test-optional safe", status:"not-started", applyOrder:3 },
+  { num:10, name:"Cornell University — CALS", prog:"Biology", note:"Published research is the ticket for CALS · RD only, no EA", type:"RD", tier:"reach", deadline:"Jan 2", sat:"Submit", status:"not-started", applyOrder:11 },
+  { num:11, name:"University of Virginia", prog:"Biology", note:"In-state · Non-binding EA · Strong public university", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"not-started", applyOrder:6 },
+  { num:12, name:"Ohio State University", prog:"Biology / Biomedical Sciences", note:"Non-binding EA · Large research university · Good safety option", type:"EA", tier:"safety", deadline:"Nov 1", sat:"Submit", status:"not-started", applyOrder:1 },
+  { num:13, name:"University of Pennsylvania", prog:"Biology (School of Arts & Sciences)", note:"Ivy League reach · No dedicated undergrad bioinformatics", type:"RD", tier:"reach", deadline:"Jan 1", sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:12 },
+  { num:14, name:"Columbia University", prog:"Biology (Columbia College)", note:"Ivy League · NYC hospital ecosystem · Strong biomedical research · ⚠️ Retake Dec 6 SAT before applying", type:"RD", tier:"reach", deadline:"Jan 1", sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:13 },
+  { num:15, name:"Dartmouth College", prog:"Biology", note:"Ivy League · Strong undergrad research · Smaller class size · ⚠️ Retake Dec 6 SAT before applying", type:"RD", tier:"reach", deadline:"Jan 1", sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:14 },
 ];
 
 const essays = [
-  { school:"NC State", supplement:"Why NC State?", words:"~250 words", deadline:"Oct 15 ⚡", urgency:"urgent", status:"not-started" },
+  { school:"Common App", supplement:"Personal Statement", words:"650 words", deadline:"Done", urgency:"normal", status:"submitted" },
+  { school:"Common App", supplement:"Activities List (10 activities)", words:"150 chars each", deadline:"Done", urgency:"normal", status:"submitted" },
+  { school:"NC State", supplement:"Why NC State?", words:"~250 words", deadline:"Nov 1", urgency:"high", status:"not-started" },
+  { school:"VCU", supplement:"VCU Personal Essay", words:"250–650 words", deadline:"Done", urgency:"normal", status:"submitted" },
+  { school:"VCU Honors", supplement:"Honors Essays (motivation, unique quality, honors essay)", words:"varies", deadline:"Done", urgency:"normal", status:"submitted" },
+  { school:"Pitt", supplement:"Why Pitt? (Starzl Institute)", words:"~250 words", deadline:"Done", urgency:"normal", status:"submitted" },
   { school:"GWU (ED)", supplement:"Why GWU?", words:"~650 words", deadline:"Nov 1", urgency:"high", status:"not-started" },
   { school:"Virginia Tech", supplement:"Why Virginia Tech?", words:"~250 words", deadline:"Nov 1", urgency:"high", status:"not-started" },
   { school:"Northeastern", supplement:"Why Northeastern?", words:"200 words", deadline:"Nov 1", urgency:"high", status:"not-started" },
   { school:"UMD", supplement:"Why UMD?", words:"optional — write it", deadline:"Nov 1", urgency:"high", status:"not-started" },
-  { school:"Pitt", supplement:"Why Pitt?", words:"250 words", deadline:"Nov 1", urgency:"high", status:"not-started" },
+  { school:"Rutgers", supplement:"Honors Essay — Embrace New Experiences", words:"100–250 words", deadline:"Dec 1", urgency:"normal", status:"drafted" },
   { school:"UCSD", supplement:"4 Personal Insight Questions", words:"350 words each (4 of 8)", deadline:"Nov 30", urgency:"normal", status:"not-started" },
   { school:"UConn", supplement:"Why UConn?", words:"short", deadline:"Dec 1", urgency:"normal", status:"not-started" },
-  { school:"Rutgers", supplement:"Why Rutgers?", words:"short", deadline:"Dec 1", urgency:"normal", status:"not-started" },
+  { school:"UVA", supplement:"Why UVA?", words:"~250 words", deadline:"Jan 1", urgency:"normal", status:"not-started" },
   { school:"Cornell CALS", supplement:"Why CALS? + Why this major?", words:"650 words combined", deadline:"Jan 2", urgency:"normal", status:"not-started" },
 ];
 
@@ -924,7 +930,7 @@ const activities = [
 let state = JSON.parse(localStorage.getItem('rishiPortalV2') || 'null') || {
   collegeStatus: {},
   essayStatus: {},
-  psStatus: "pending"
+  psStatus: "submitted"
 };
 function saveState() { localStorage.setItem('rishiPortalV2', JSON.stringify(state)); }
 
@@ -958,15 +964,16 @@ function updateDaysLeft() {
 // ── COLLEGE TABLE ──
 function renderColleges() {
   const tbody = document.getElementById('collegeTableBody');
-  tbody.innerHTML = colleges.map(c => {
+  const sorted = [...colleges].sort((a,b) => a.applyOrder - b.applyOrder);
+  tbody.innerHTML = sorted.map(c => {
     const st = state.collegeStatus[c.num] || c.status;
     const tierClass = c.tier === 'reach' ? 'badge-reach' : c.tier === 'match' ? 'badge-match' : 'badge-safety';
     const typeClass = c.type === 'ED' ? 'badge-ed' : c.type === 'EA' ? 'badge-ea' : 'badge-rd';
     const dlClass = c.deadline.includes('⚡') ? 'deadline-soon' : '';
+    const orderColor = c.tier === 'safety' ? '#059669' : c.tier === 'match' ? '#0284c7' : '#7c3aed';
     return `<tr>
-      <td style="color:var(--muted);font-size:13px;font-weight:600;">${c.num}</td>
+      <td><div style="width:28px;height:28px;border-radius:50%;background:${orderColor};color:white;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">${c.applyOrder}</div></td>
       <td><div class="school-name">${c.name}</div><div class="school-prog">${c.prog}</div><div class="school-note">${c.note}</div></td>
-      <td><div style="font-size:13px;color:var(--muted);">${c.prog.split(' ')[0]}</div></td>
       <td><span class="badge ${typeClass}">${c.type}</span></td>
       <td><span class="badge ${tierClass}">${c.tier}</span></td>
       <td class="deadline-cell ${dlClass}" style="font-size:13px;font-weight:${c.deadline.includes('⚡')?'700':'400'};color:${c.deadline.includes('⚡')?'#dc2626':'var(--muted)'};">${c.deadline}</td>
