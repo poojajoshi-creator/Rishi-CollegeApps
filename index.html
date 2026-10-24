@@ -117,9 +117,10 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 .pill-submitted { background: #dcfce7; color: #15803d; }
 
 /* COLLEGE TABLE */
-.ctable { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-.ctable th { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); padding: 8px 12px; border-bottom: 2px solid var(--border); text-align: left; }
-.ctable td { padding: 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.ctable-wrap { width: 100%; overflow-x: auto; }
+.ctable { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 900px; }
+.ctable th { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); padding: 8px 10px; border-bottom: 2px solid var(--border); text-align: left; white-space: nowrap; }
+.ctable td { padding: 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
 .ctable tr:last-child td { border-bottom: none; }
 .ctable tr:hover td { background: #f8fafc; }
 .school-name { font-weight: 600; color: var(--navy); font-size: 14px; }
@@ -308,7 +309,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
     <div class="stat-card" style="border-top:3px solid var(--amber);">
       <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">17</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--amber);">Remaining</div>
-      <div class="stat-sub">4 due Nov 1 · 2 Nov 30 · 6 Jan · 2 Rolling · 3 Feb</div>
+      <div class="stat-sub">6 due Nov 1 · 2 Nov 30 · 6 Jan · 3 Feb</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--red);">
       <div style="font-size:26px;font-weight:700;color:var(--red);font-family:'DM Serif Display',serif;" id="daysLeftDash">—</div>
@@ -395,21 +396,23 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
     </div>
   </div>
 
+  <div class="ctable-wrap">
   <table class="ctable">
     <thead>
       <tr>
-        <th>Apply Order</th>
+        <th>#</th>
         <th>School</th>
         <th>Type</th>
         <th>Tier</th>
         <th>Deadline</th>
-        <th>SAT Note</th>
-        <th>Supplement</th>
+        <th>SAT</th>
+        <th>Supplement Needed?</th>
         <th>Status</th>
       </tr>
     </thead>
     <tbody id="collegeTableBody"></tbody>
   </table>
+  </div>
 
   <div style="margin-top:16px;font-size:12px;color:var(--muted);line-height:1.7;">
     <strong>Entry Strategy:</strong> Apply as Biology or Biochemistry at all schools. Excel Year 1. Switch to Bioinformatics internally Year 2 at all schools except Virginia Tech (Bioinformatics Option is built directly into Biological Sciences — no switch needed) and GWU (BS/MS dual degree pathway).<br>
@@ -822,7 +825,19 @@ function updateDaysLeft() {
 function renderNextFour() {
   const grid = document.getElementById('nextFourGrid');
   if (!grid) return;
-  const sorted = [...colleges].sort((a,b) => a.applyOrder - b.applyOrder);
+  const deadlineOrder = d => {
+    if (d === 'Done') return 99;
+    if (d === 'Nov 1') return 1;
+    if (d === 'Nov 30') return 2;
+    if (d === 'Dec 1') return 3;
+    if (d === 'Jan 1') return 4;
+    if (d === 'Jan 2') return 5;
+    if (d === 'Jan 15') return 6;
+    if (d === 'Feb 1') return 7;
+    if (d === 'Rolling') return 8;
+    return 9;
+  };
+  const sorted = [...colleges].sort((a,b) => deadlineOrder(a.deadline) - deadlineOrder(b.deadline));
   const notDone = sorted.filter(c => {
     const st = state.collegeStatus[c.num] || c.status;
     return st !== 'submitted';
@@ -875,6 +890,7 @@ function renderColleges() {
       <td><span class="badge ${tierClass}">${c.tier}</span></td>
       <td class="deadline-cell ${dlClass}" style="font-size:13px;font-weight:${c.deadline.includes('⚡')?'700':'400'};color:${c.deadline.includes('⚡')?'#dc2626':'var(--muted)'};">${c.deadline}</td>
       <td style="font-size:12px;color:var(--muted);">${c.sat}</td>
+      <td style="font-size:11px;color:${c.supplement&&c.supplement.startsWith('✅')?'#16a34a':c.supplement&&c.supplement.startsWith('None')?'#94a3b8':'#d97706'};">${c.supplement||'—'}</td>
       <td><button class="status-pill ${statusClasses[st]}" onclick="cycleCollegeStatus(${c.num})">${statusLabels[st]}</button></td>
     </tr>`;
   }).join('');
