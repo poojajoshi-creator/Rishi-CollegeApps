@@ -404,6 +404,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
         <th>Tier</th>
         <th>Deadline</th>
         <th>SAT Note</th>
+        <th>Supplement</th>
         <th>Status</th>
       </tr>
     </thead>
@@ -707,31 +708,31 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 <script>
 // ── DATA ──
 const colleges = [
-  { num:1, name:"George Washington University", prog:"Biology / Biochemistry (CCAS)", note:"→ BS/MS Bioinformatics dual degree Year 2 · ED Nov 1", type:"ED", tier:"reach", deadline:"Nov 1", sat:"Submit (above avg)", status:"not-started", applyOrder:9 },
-  { num:2, name:"NC State University", prog:"Biological Sciences", note:"Strong bioinformatics graduate pipeline · ✅ Submitted", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"submitted", applyOrder:7 },
-  { num:3, name:"Virginia Tech", prog:"Biological Sciences — Bioinformatics Option", note:"No internal switch needed — built into major · In-state · ✅ Submitted", type:"EA", tier:"safety", deadline:"Nov 1", sat:"Submit", status:"submitted", applyOrder:4 },
-  { num:4, name:"Northeastern University", prog:"Biology", note:"Co-op = clinical informatics placement opportunity", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"not-started", applyOrder:8 },
-  { num:5, name:"University of Maryland", prog:"Biology", note:"In-state flagship · Apply test-optional · ✅ Submitted", type:"EA", tier:"match", deadline:"Nov 1", sat:"Skip (avg 1465)", status:"submitted", applyOrder:6 },
-  { num:6, name:"University of Pittsburgh", prog:"Biological Sciences", note:"Medical center ecosystem · Transplant research angle · ✅ Submitted", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"submitted", applyOrder:5 },
-  { num:7, name:"UC San Diego", prog:"Biology / Bioinformatics", note:"Top-ranked bioinformatics program nationally · UC Application (not Common App)", type:"RD", tier:"reach", deadline:"Nov 30", sat:"Submit", status:"not-started", applyOrder:10 },
-  { num:8, name:"UConn", prog:"Molecular & Cell Biology", note:"Strong bioinformatics track within biology · ✅ Submitted", type:"EA", tier:"safety", deadline:"Nov 1", sat:"Test-optional safe", status:"submitted", applyOrder:2 },
-  { num:9, name:"Rutgers University", prog:"Molecular Biology & Biochemistry / Computational Bio (Camden)", note:"Large research university, strong biomedical pipeline · EA decisions by Jan 31 · ✅ Submitted", type:"EA", tier:"safety", deadline:"Nov 1", sat:"Test-optional safe", status:"submitted", applyOrder:3 },
-  { num:10, name:"Cornell University — CALS", prog:"Biology", note:"Published research is the ticket for CALS · RD only, no EA", type:"RD", tier:"reach", deadline:"Jan 2", sat:"Submit", status:"not-started", applyOrder:11 },
-  { num:11, name:"University of Virginia", prog:"Biology", note:"In-state · Non-binding EA · Strong public university", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"not-started", applyOrder:6 },
-  { num:12, name:"Ohio State University", prog:"Biology / Biomedical Sciences", note:"Non-binding EA · Large research university · Good safety option · ✅ Submitted", type:"EA", tier:"safety", deadline:"Nov 1", sat:"Submit", status:"submitted", applyOrder:1 },
-  { num:13, name:"University of Pennsylvania", prog:"Biology (School of Arts & Sciences)", note:"Ivy League reach · No dedicated undergrad bioinformatics", type:"RD", tier:"reach", deadline:"Jan 1", sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:12 },
-  { num:14, name:"Columbia University", prog:"Biology (Columbia College)", note:"Ivy League · NYC hospital ecosystem · Strong biomedical research · ⚠️ Retake Dec 6 SAT before applying", type:"RD", tier:"reach", deadline:"Jan 1", sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:13 },
-  { num:15, name:"Dartmouth College", prog:"Biology", note:"Ivy League · Strong undergrad research · Smaller class size · ⚠️ Retake Dec 6 SAT before applying", type:"RD", tier:"reach", deadline:"Jan 1", sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:14 },
-  { num:16, name:"Virginia Commonwealth University", prog:"Biology / Bioinformatics", note:"✅ Application submitted · Strong health sciences focus", type:"RD", tier:"safety", deadline:"Done", sat:"Submitted", status:"submitted", applyOrder:0 },
-  { num:17, name:"Purdue University", prog:"Biological Sciences — Bioinformatics Track", note:"West Lafayette · Strong STEM research · EA Nov 1", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"not-started", applyOrder:15 },
-  { num:18, name:"George Mason University", prog:"Biology / Bioinformatics", note:"Rishi presented research at GMU conference · In-state · Rolling admissions", type:"RD", tier:"safety", deadline:"Rolling", sat:"Test-optional safe", status:"not-started", applyOrder:16 },
-  { num:19, name:"University of Florida", prog:"Biological Sciences", note:"Top public university · Strong research · EA Nov 1", type:"EA", tier:"match", deadline:"Nov 1", sat:"Submit", status:"not-started", applyOrder:17 },
-  { num:20, name:"Drexel University", prog:"Biological Sciences (Co-op)", note:"Philadelphia · Co-op with GSK, AstraZeneca, J&J · Up to 18 mo paid experience · RD Jan 15", type:"RD", tier:"safety", deadline:"Jan 15", sat:"Test-optional", status:"not-started", applyOrder:18 },
-  { num:21, name:"RIT", prog:"Bioinformatics & Computational Biology BS", note:"One of few dedicated undergrad Bioinformatics BS programs · Co-op available · RD Feb 1", type:"RD", tier:"safety", deadline:"Feb 1", sat:"Test-optional", status:"not-started", applyOrder:19 },
-  { num:22, name:"University of Delaware", prog:"Biological Sciences", note:"Strong biology + merit aid · Close to home · No supplement · RD Jan 15", type:"RD", tier:"safety", deadline:"Jan 15", sat:"Test-optional", status:"not-started", applyOrder:20 },
-  { num:23, name:"University of Michigan", prog:"Biological Sciences", note:"Top 5 bio research · Ann Arbor · Strong bioinformatics · RD Feb 1", type:"RD", tier:"match", deadline:"Feb 1", sat:"Submit", status:"not-started", applyOrder:21 },
-  { num:24, name:"Penn State University Park", prog:"Biology", note:"Huge alumni network · Strong research · No supplement · RD Nov 30", type:"RD", tier:"match", deadline:"Nov 30", sat:"Test-optional", status:"not-started", applyOrder:22 },
-  { num:25, name:"James Madison University", prog:"Biology", note:"Virginia in-state · Rolling admissions · No supplement · Easy safety", type:"RD", tier:"safety", deadline:"Rolling", sat:"Test-optional", status:"not-started", applyOrder:23 },
+  { num:1,  name:"George Washington University",   prog:"Biology / Biochemistry (CCAS)",                              note:"Washington, DC · BS/MS Bioinformatics dual degree · ED Nov 1",                        type:"ED", tier:"reach",  deadline:"Nov 1",  sat:"Submit (above avg)",          status:"not-started", applyOrder:9,  supplement:"✍️ Why GWU? (~650 words) — ED essay required" },
+  { num:2,  name:"NC State University",             prog:"Biological Sciences",                                        note:"Raleigh, NC · Strong bioinformatics graduate pipeline · ✅ Submitted",               type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Submit",                      status:"submitted",   applyOrder:7,  supplement:"✅ Done" },
+  { num:3,  name:"Virginia Tech",                   prog:"Biological Sciences — Bioinformatics Option",               note:"Blacksburg, VA · In-state · Built-in bioinformatics track · ✅ Submitted",           type:"EA", tier:"safety", deadline:"Nov 1",  sat:"Submit",                      status:"submitted",   applyOrder:4,  supplement:"✅ Done" },
+  { num:4,  name:"Northeastern University",         prog:"Biology",                                                    note:"Boston, MA · Co-op = clinical informatics placement opportunity",                     type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Submit",                      status:"not-started", applyOrder:8,  supplement:"✍️ Why Northeastern? (200 words)" },
+  { num:5,  name:"University of Maryland",          prog:"Biology",                                                    note:"College Park, MD · In-state flagship · Near NIH/FDA · ✅ Submitted",                 type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Skip (avg 1465)",             status:"submitted",   applyOrder:6,  supplement:"✅ Done" },
+  { num:6,  name:"University of Pittsburgh",        prog:"Biological Sciences",                                        note:"Pittsburgh, PA · Medical center ecosystem · Transplant research angle · ✅ Submitted", type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Submit",                      status:"submitted",   applyOrder:5,  supplement:"✅ Done" },
+  { num:7,  name:"UC San Diego",                    prog:"Biology / Bioinformatics",                                   note:"La Jolla, CA · Top-ranked bioinformatics program nationally · UC App (not Common App)", type:"RD", tier:"reach",  deadline:"Nov 30", sat:"Submit",                      status:"not-started", applyOrder:10, supplement:"✍️ 4 Personal Insight Questions (350 words each) — UC App" },
+  { num:8,  name:"UConn",                           prog:"Molecular & Cell Biology",                                   note:"Storrs, CT · Strong bioinformatics track within biology · ✅ Submitted",              type:"EA", tier:"safety", deadline:"Nov 1",  sat:"Test-optional safe",          status:"submitted",   applyOrder:2,  supplement:"✅ Done" },
+  { num:9,  name:"Rutgers University",              prog:"Molecular Biology & Biochemistry / Computational Bio",       note:"New Brunswick, NJ · Large research university · NJ pharma corridor · ✅ Submitted",    type:"EA", tier:"safety", deadline:"Nov 1",  sat:"Test-optional safe",          status:"submitted",   applyOrder:3,  supplement:"✅ Done" },
+  { num:10, name:"Cornell University — CALS",       prog:"Biology",                                                    note:"Ithaca, NY · Published research is the ticket for CALS · RD only, no EA",            type:"RD", tier:"reach",  deadline:"Jan 2",  sat:"Submit",                      status:"not-started", applyOrder:11, supplement:"✍️ Why CALS? + Why this major? (650 words combined)" },
+  { num:11, name:"University of Virginia",          prog:"Biology",                                                    note:"Charlottesville, VA · In-state · Non-binding EA · Strong public university",          type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Submit",                      status:"not-started", applyOrder:6,  supplement:"✍️ Art/challenge essay (250w) + Why UVA school essay (250w)" },
+  { num:12, name:"Ohio State University",           prog:"Biology / Biomedical Sciences",                             note:"Columbus, OH · Non-binding EA · Large research university · ✅ Submitted",             type:"EA", tier:"safety", deadline:"Nov 1",  sat:"Submit",                      status:"submitted",   applyOrder:1,  supplement:"✅ Done" },
+  { num:13, name:"University of Pennsylvania",      prog:"Biology (School of Arts & Sciences)",                       note:"Philadelphia, PA · Ivy League · Penn Medicine ecosystem · ⚠️ Retake Dec 6 SAT first", type:"RD", tier:"reach",  deadline:"Jan 1",  sat:"⚠️ Retake Dec 6 SAT first",  status:"not-started", applyOrder:12, supplement:"✍️ Why Penn? (250w) + Why major? (250w) + 3 short answers" },
+  { num:14, name:"Columbia University",             prog:"Biology (Columbia College)",                                 note:"New York, NY · Ivy League · NYC hospital ecosystem · ⚠️ Retake Dec 6 SAT first",    type:"RD", tier:"reach",  deadline:"Jan 1",  sat:"⚠️ Retake Dec 6 SAT first",  status:"not-started", applyOrder:13, supplement:"✍️ Why Columbia? (200w) + List + 3 short answer prompts" },
+  { num:15, name:"Dartmouth College",               prog:"Biology",                                                    note:"Hanover, NH · Ivy League · Strong undergrad research · ⚠️ Retake Dec 6 SAT first",   type:"RD", tier:"reach",  deadline:"Jan 1",  sat:"⚠️ Retake Dec 6 SAT first",  status:"not-started", applyOrder:14, supplement:"✍️ Why Dartmouth? (100w) + 3 short essays (250w each)" },
+  { num:16, name:"Virginia Commonwealth University",prog:"Biology / Bioinformatics",                                   note:"Richmond, VA · Strong health sciences focus · ✅ Submitted",                          type:"RD", tier:"safety", deadline:"Done",   sat:"Submitted",                   status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
+  { num:17, name:"Purdue University",               prog:"Biological Sciences — Bioinformatics Track",                note:"West Lafayette, IN · Strong STEM research · EA Nov 1",                               type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Submit",                      status:"not-started", applyOrder:15, supplement:"None — Common App only" },
+  { num:18, name:"George Mason University",         prog:"Biology / Bioinformatics",                                   note:"Fairfax, VA · In-state · Rishi presented research here · Apply now",                 type:"RD", tier:"safety", deadline:"Nov 1",  sat:"Test-optional safe",          status:"not-started", applyOrder:16, supplement:"None — Common App only" },
+  { num:19, name:"University of Florida",           prog:"Biological Sciences",                                        note:"Gainesville, FL · Top public university · Strong research · EA Nov 1",               type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Submit",                      status:"not-started", applyOrder:17, supplement:"None — Common App only" },
+  { num:20, name:"Drexel University",               prog:"Biological Sciences (Co-op)",                               note:"Philadelphia, PA · Co-op with GSK, AstraZeneca, J&J · Up to 18 mo paid experience",  type:"RD", tier:"safety", deadline:"Jan 15", sat:"Test-optional",               status:"not-started", applyOrder:18, supplement:"None — Common App only" },
+  { num:21, name:"RIT",                             prog:"Bioinformatics & Computational Biology BS",                 note:"Rochester, NY · Dedicated undergrad Bioinformatics BS · Co-op available",             type:"RD", tier:"safety", deadline:"Feb 1",  sat:"Test-optional",               status:"not-started", applyOrder:19, supplement:"✍️ Why RIT? (650 words)" },
+  { num:22, name:"University of Delaware",          prog:"Biological Sciences",                                        note:"Newark, DE · Strong biology + merit aid · Close to home",                           type:"RD", tier:"safety", deadline:"Jan 15", sat:"Test-optional",               status:"not-started", applyOrder:20, supplement:"None — Common App only" },
+  { num:23, name:"University of Michigan",          prog:"Biological Sciences",                                        note:"Ann Arbor, MI · Top 5 bio research · Strong bioinformatics pipeline",                type:"RD", tier:"match",  deadline:"Feb 1",  sat:"Submit",                      status:"not-started", applyOrder:21, supplement:"✍️ Why Michigan? (100w) + Community essay (300w)" },
+  { num:24, name:"Penn State University Park",      prog:"Biology",                                                    note:"State College, PA · Huge alumni network · Strong research",                          type:"RD", tier:"match",  deadline:"Nov 30", sat:"Test-optional",               status:"not-started", applyOrder:22, supplement:"None — Common App only" },
+  { num:25, name:"James Madison University",        prog:"Biology",                                                    note:"Harrisonburg, VA · Virginia in-state · Apply now — rolling",                        type:"RD", tier:"safety", deadline:"Nov 1",  sat:"Test-optional",               status:"not-started", applyOrder:23, supplement:"None — Common App only" },
 ];
 
 const essays = [
@@ -770,11 +771,23 @@ const activities = [
 ];
 
 // ── STATE ──
+const PORTAL_VERSION = 3; // bump this when colleges are added
 let state = JSON.parse(localStorage.getItem('rishiPortalV2') || 'null') || {
   collegeStatus: {},
   essayStatus: {},
-  psStatus: "submitted"
+  psStatus: "submitted",
+  version: PORTAL_VERSION
 };
+// If version mismatch, preserve submitted statuses but reload clean
+if (!state.version || state.version < PORTAL_VERSION) {
+  const kept = {};
+  colleges.forEach(c => {
+    if (state.collegeStatus && state.collegeStatus[c.num] === 'submitted') kept[c.num] = 'submitted';
+    else if (c.status === 'submitted') kept[c.num] = 'submitted';
+  });
+  state = { collegeStatus: kept, essayStatus: state.essayStatus || {}, psStatus: state.psStatus || "submitted", version: PORTAL_VERSION };
+  localStorage.setItem('rishiPortalV2', JSON.stringify(state));
+}
 function saveState() { localStorage.setItem('rishiPortalV2', JSON.stringify(state)); }
 
 // ── NAV ──
