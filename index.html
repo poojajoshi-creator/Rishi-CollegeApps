@@ -260,7 +260,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 <div class="tab-section active" id="tab-dashboard">
   <div class="page-header">
     <h1>Hello, Rishi 👋</h1>
-    <p>22 schools · GWU Early Decision · 8 submitted · Common App done ✓ · Nov 1 is the big wave</p>
+    <p>25 schools · GWU Early Decision · 8 submitted · Common App done ✓ · Nov 1 is the big wave</p>
   </div>
 
   <!-- Accomplishments -->
@@ -296,9 +296,9 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
   <!-- Stats row -->
   <div class="stats-row" style="grid-template-columns:repeat(4,1fr);margin-bottom:18px;">
     <div class="stat-card" style="border-top:3px solid var(--navy);">
-      <div style="font-size:26px;font-weight:700;color:var(--navy);font-family:'DM Serif Display',serif;">22</div>
+      <div style="font-size:26px;font-weight:700;color:var(--navy);font-family:'DM Serif Display',serif;">25</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;">Total Colleges</div>
-      <div class="stat-sub">5 reach · 7 match · 8 safety + 2 Ivy</div>
+      <div class="stat-sub">5 reach · 9 match · 9 safety + 2 Ivy</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--green);">
       <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">8</div>
@@ -306,9 +306,9 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
       <div class="stat-sub">Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--amber);">
-      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">14</div>
+      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">17</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--amber);">Remaining</div>
-      <div class="stat-sub">4 due Nov 1 · 1 Nov 30 · 6 Jan · 1 Rolling · 2 Feb</div>
+      <div class="stat-sub">4 due Nov 1 · 2 Nov 30 · 6 Jan · 2 Rolling · 3 Feb</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--red);">
       <div style="font-size:26px;font-weight:700;color:var(--red);font-family:'DM Serif Display',serif;" id="daysLeftDash">—</div>
@@ -729,6 +729,9 @@ const colleges = [
   { num:20, name:"Drexel University", prog:"Biological Sciences (Co-op)", note:"Philadelphia · Co-op with GSK, AstraZeneca, J&J · Up to 18 mo paid experience · RD Jan 15", type:"RD", tier:"safety", deadline:"Jan 15", sat:"Test-optional", status:"not-started", applyOrder:18 },
   { num:21, name:"RIT", prog:"Bioinformatics & Computational Biology BS", note:"One of few dedicated undergrad Bioinformatics BS programs · Co-op available · RD Feb 1", type:"RD", tier:"safety", deadline:"Feb 1", sat:"Test-optional", status:"not-started", applyOrder:19 },
   { num:22, name:"University of Delaware", prog:"Biological Sciences", note:"Strong biology + merit aid · Close to home · No supplement · RD Jan 15", type:"RD", tier:"safety", deadline:"Jan 15", sat:"Test-optional", status:"not-started", applyOrder:20 },
+  { num:23, name:"University of Michigan", prog:"Biological Sciences", note:"Top 5 bio research · Ann Arbor · Strong bioinformatics · RD Feb 1", type:"RD", tier:"match", deadline:"Feb 1", sat:"Submit", status:"not-started", applyOrder:21 },
+  { num:24, name:"Penn State University Park", prog:"Biology", note:"Huge alumni network · Strong research · No supplement · RD Nov 30", type:"RD", tier:"match", deadline:"Nov 30", sat:"Test-optional", status:"not-started", applyOrder:22 },
+  { num:25, name:"James Madison University", prog:"Biology", note:"Virginia in-state · Rolling admissions · No supplement · Easy safety", type:"RD", tier:"safety", deadline:"Rolling", sat:"Test-optional", status:"not-started", applyOrder:23 },
 ];
 
 const essays = [
@@ -826,7 +829,26 @@ function renderNextFour() {
 // ── COLLEGE TABLE ──
 function renderColleges() {
   const tbody = document.getElementById('collegeTableBody');
-  const sorted = [...colleges].sort((a,b) => a.applyOrder - b.applyOrder);
+  const deadlineOrder = d => {
+    if (d === 'Done') return 0;
+    if (d === 'Nov 1') return 1;
+    if (d === 'Nov 30') return 2;
+    if (d === 'Dec 1') return 3;
+    if (d === 'Jan 1') return 4;
+    if (d === 'Jan 2') return 5;
+    if (d === 'Jan 15') return 6;
+    if (d === 'Feb 1') return 7;
+    if (d === 'Rolling') return 8;
+    return 9;
+  };
+  const sorted = [...colleges].sort((a,b) => {
+    const stA = state.collegeStatus[a.num] || a.status;
+    const stB = state.collegeStatus[b.num] || b.status;
+    const aSub = stA === 'submitted' ? 0 : 1;
+    const bSub = stB === 'submitted' ? 0 : 1;
+    if (aSub !== bSub) return aSub - bSub;
+    return deadlineOrder(a.deadline) - deadlineOrder(b.deadline);
+  });
   tbody.innerHTML = sorted.map(c => {
     const st = state.collegeStatus[c.num] || c.status;
     const tierClass = c.tier === 'reach' ? 'badge-reach' : c.tier === 'match' ? 'badge-match' : 'badge-safety';
