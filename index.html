@@ -571,7 +571,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 <div class="tab-section" id="tab-essays">
   <div class="page-header">
     <h1>✍️ Essay Tracker</h1>
-    <p>Every supplement for every school · Click status to cycle through · 9 essays total</p>
+    <p>Every supplement for every school · Click status to cycle through · 17 essays total</p>
   </div>
 
   <div style="margin-bottom:20px;padding:14px 18px;background:#f0fdf4;border:1px solid #86efac;border-radius:10px;font-size:13px;color:#166534;">
@@ -777,18 +777,22 @@ const colleges = [
 const essays = [
   { school:"Common App", supplement:"Personal Statement", words:"650 words", deadline:"Done", urgency:"normal", status:"submitted" },
   { school:"Common App", supplement:"Activities List (10 activities)", words:"150 chars each", deadline:"Done", urgency:"normal", status:"submitted" },
-  { school:"NC State", supplement:"Why NC State?", words:"~250 words", deadline:"Nov 1", urgency:"high", status:"not-started" },
+  { school:"NC State", supplement:"Why NC State?", words:"~250 words", deadline:"Done", urgency:"normal", status:"submitted" },
   { school:"VCU", supplement:"VCU Personal Essay", words:"250–650 words", deadline:"Done", urgency:"normal", status:"submitted" },
   { school:"VCU Honors", supplement:"Honors Essays (motivation, unique quality, honors essay)", words:"varies", deadline:"Done", urgency:"normal", status:"submitted" },
   { school:"Pitt", supplement:"Why Pitt? (Starzl Institute)", words:"~250 words", deadline:"Done", urgency:"normal", status:"submitted" },
-  { school:"GWU (ED)", supplement:"Why GWU?", words:"~650 words", deadline:"Nov 1", urgency:"high", status:"not-started" },
-  { school:"Virginia Tech", supplement:"Why Virginia Tech?", words:"~250 words", deadline:"Nov 1", urgency:"high", status:"not-started" },
-  { school:"Northeastern", supplement:"Why Northeastern?", words:"200 words", deadline:"Nov 1", urgency:"high", status:"not-started" },
-  { school:"UMD", supplement:"Why UMD?", words:"optional — write it", deadline:"Nov 1", urgency:"high", status:"not-started" },
-  { school:"Rutgers", supplement:"Honors Essay — Embrace New Experiences", words:"100–250 words", deadline:"Dec 1", urgency:"normal", status:"drafted" },
+  { school:"Virginia Tech", supplement:"Why Virginia Tech?", words:"~250 words", deadline:"Done", urgency:"normal", status:"submitted" },
+  { school:"UMD", supplement:"Why UMD?", words:"optional — write it", deadline:"Done", urgency:"normal", status:"submitted" },
+  { school:"GMU", supplement:"GMU Honors Essays", words:"varies", deadline:"Done", urgency:"normal", status:"submitted" },
+  { school:"JMU", supplement:"JMU Supplement", words:"varies", deadline:"Done", urgency:"normal", status:"submitted" },
+  { school:"GWU (ED)", supplement:"Why GWU?", words:"~650 words", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
+  { school:"Northeastern", supplement:"Why Northeastern?", words:"200 words", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
+  { school:"UVA", supplement:"Why UVA? + Additional essay", words:"250 words each", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
+  { school:"Purdue", supplement:"3 additional questions", words:"varies", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
+  { school:"Michigan", supplement:"Why Michigan? (100w) + Community essay (300w)", words:"400 words total", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
+  { school:"Rutgers", supplement:"Honors Essay — Embrace New Experiences", words:"100–250 words", deadline:"Done", urgency:"normal", status:"submitted" },
+  { school:"UConn", supplement:"Why UConn?", words:"short", deadline:"Done", urgency:"normal", status:"submitted" },
   { school:"UCSD", supplement:"4 Personal Insight Questions", words:"350 words each (4 of 8)", deadline:"Nov 30", urgency:"normal", status:"not-started" },
-  { school:"UConn", supplement:"Why UConn?", words:"short", deadline:"Dec 1", urgency:"normal", status:"not-started" },
-  { school:"UVA", supplement:"Why UVA?", words:"~250 words", deadline:"Jan 1", urgency:"normal", status:"not-started" },
   { school:"Cornell CALS", supplement:"Why CALS? + Why this major?", words:"650 words combined", deadline:"Jan 2", urgency:"normal", status:"not-started" },
 ];
 
@@ -810,7 +814,7 @@ const activities = [
 ];
 
 // ── STATE ──
-const PORTAL_VERSION = 4; // bump this when colleges are added
+const PORTAL_VERSION = 6; // bump this when colleges are added
 let state = JSON.parse(localStorage.getItem('rishiPortalV2') || 'null') || {
   collegeStatus: {},
   essayStatus: {},
@@ -897,14 +901,15 @@ function renderColleges() {
   const deadlineOrder = d => {
     if (d === 'Done') return 0;
     if (d === 'Nov 1') return 1;
-    if (d === 'Nov 30') return 2;
-    if (d === 'Dec 1') return 3;
-    if (d === 'Jan 1') return 4;
-    if (d === 'Jan 2') return 5;
-    if (d === 'Jan 15') return 6;
-    if (d === 'Feb 1') return 7;
-    if (d === 'Rolling') return 8;
-    return 9;
+    if (d === 'Nov 15') return 2;
+    if (d === 'Nov 30') return 3;
+    if (d === 'Dec 1') return 4;
+    if (d === 'Jan 1') return 5;
+    if (d === 'Jan 2') return 6;
+    if (d === 'Jan 15') return 7;
+    if (d === 'Feb 1') return 8;
+    if (d === 'Rolling') return 9;
+    return 10;
   };
   const sorted = [...colleges].sort((a,b) => {
     const stA = state.collegeStatus[a.num] || a.status;
