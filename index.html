@@ -264,7 +264,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 <div class="tab-section active" id="tab-dashboard">
   <div class="page-header">
     <h1>Hello, Rishi 👋</h1>
-    <p>25 schools · GWU Early Decision · 8 submitted · Common App done ✓ · Nov 1 is the big wave</p>
+    <p>25 schools · GWU Early Decision · 10 submitted · Common App done ✓ · Nov 1 is the big wave</p>
   </div>
 
   <!-- Accomplishments -->
@@ -305,19 +305,19 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
       <div class="stat-sub">5 reach · 9 match · 9 safety + 2 Ivy</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--green);">
-      <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">8</div>
+      <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">10</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--green);">Submitted ✓</div>
-      <div class="stat-sub">Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State</div>
+      <div class="stat-sub">Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State · GMU · JMU</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--amber);">
-      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">17</div>
+      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">15</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--amber);">Remaining</div>
       <div class="stat-sub">6 due Nov 1 · 2 Nov 30 · 6 Jan · 3 Feb</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--red);">
-      <div style="font-size:26px;font-weight:700;color:var(--red);font-family:'DM Serif Display',serif;" id="daysLeftDash">—</div>
-      <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--red);">Days to Nov 1</div>
-      <div class="stat-sub">GWU ED + 8 EA schools</div>
+      <div style="font-size:26px;font-weight:700;color:var(--red);font-family:'DM Serif Display',serif;">5</div>
+      <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:6px;">Pending — Nov 1</div>
+      <div style="font-size:11.5px;color:var(--text);line-height:1.9;">GWU (ED) · NEU · UVA<br>Purdue · Florida</div>
     </div>
   </div>
 
@@ -837,7 +837,7 @@ function showTab(id, el) {
 // ── DAYS LEFT ──
 function updateDaysLeft() {
   const deadlines = [
-    { date: new Date('2026-11-01'), label: 'GWU ED + 8 EA schools' },
+    { date: new Date('2026-11-01'), label: 'GWU ED · NEU · UVA · Purdue · Florida' },
     { date: new Date('2026-11-30'), label: 'UCSD UC App' },
     { date: new Date('2027-01-01'), label: 'UPenn · Columbia · Dartmouth' },
     { date: new Date('2027-01-02'), label: 'Cornell CALS' },
@@ -1075,7 +1075,7 @@ function renderLoginTracker() {
         ${row.postTasks.map(t => `<div style="margin-bottom:2px;">• ${t}</div>`).join('')}
       </td>
       <td style="padding:10px 16px;">
-        ${row.accountCreated ? '<span style="font-size:11px;background:#dcfce7;color:#15803d;padding:3px 8px;border-radius:99px;font-weight:600;">Submitted</span>' : '<span style="font-size:11px;background:#fef3c7;color:#92400e;padding:3px 8px;border-radius:99px;font-weight:600;">Pending</span>'}
+        ${created ? '<span style="font-size:11px;background:#dcfce7;color:#15803d;padding:3px 8px;border-radius:99px;font-weight:600;">✅ Done</span>' : '<span style="font-size:11px;background:#fef3c7;color:#92400e;padding:3px 8px;border-radius:99px;font-weight:600;">⏳ To Do</span>'}
       </td>
     </tr>`;
   }).join('');
