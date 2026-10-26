@@ -305,14 +305,14 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
       <div class="stat-sub">5 reach · 9 match · 9 safety + 2 Ivy</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--green);">
-      <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">10</div>
+      <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">11</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--green);">Submitted ✓</div>
-      <div class="stat-sub">Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State · GMU · JMU</div>
+      <div class="stat-sub">Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State · GMU · JMU · Drexel</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--amber);">
-      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">15</div>
+      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">14</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--amber);">Remaining</div>
-      <div class="stat-sub">7 due Nov 1 · 1 Nov 15 · 2 Nov 30 · 5 Jan · 2 Feb</div>
+      <div class="stat-sub">6 due Nov 1 · 2 Nov 30 · 5 Jan · 1 Jan 2 · 2 Feb</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--red);">
       <div style="font-size:26px;font-weight:700;color:var(--red);font-family:'DM Serif Display',serif;">6</div>
@@ -336,7 +336,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
           <span>⭐ GWU <span style="font-size:10px;background:#003b6f;color:white;padding:1px 6px;border-radius:99px;margin-left:4px;">ED — Binding</span></span><span style="color:#dc2626;font-weight:700;">Nov 1</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
-          <span>✅ Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State · GMU · JMU <span style="font-size:10px;background:#dcfce7;color:#166534;padding:1px 6px;border-radius:99px;margin-left:4px;">Submitted</span></span><span style="color:var(--green);font-weight:700;">Done</span>
+          <span>✅ Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State · GMU · JMU · Drexel <span style="font-size:10px;background:#dcfce7;color:#166534;padding:1px 6px;border-radius:99px;margin-left:4px;">Submitted</span></span><span style="color:var(--green);font-weight:700;">Done</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
           <span>🔵 UVA · NEU · Purdue · UF · Michigan <span style="font-size:10px;background:#dbeafe;color:#1d4ed8;padding:1px 6px;border-radius:99px;margin-left:4px;">EA — Still Needed</span></span><span style="color:#dc2626;font-weight:700;">Nov 1</span>
@@ -345,7 +345,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
           <span>💰 FAFSA + CSS Profile (GWU)</span><span style="color:var(--amber);font-weight:700;">Nov 1</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
-          <span>🟠 Drexel <span style="font-size:10px;background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:99px;margin-left:4px;">EA</span></span><span style="color:var(--amber);font-weight:700;">Nov 15</span>
+          <span>🟠 Drexel <span style="font-size:10px;background:#dcfce7;color:#166534;padding:1px 6px;border-radius:99px;margin-left:4px;">Submitted ✅</span></span><span style="color:var(--green);font-weight:700;">Done</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
           <span>🌊 UC San Diego <span style="font-size:10px;background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:99px;margin-left:4px;">UC App — separate</span></span><span style="color:var(--muted);font-weight:600;">Nov 30</span>
@@ -766,7 +766,7 @@ const colleges = [
   { num:17, name:"Purdue University",               prog:"Biology",                                    note:"West Lafayette, IN · College of Science · Select: Biology (primary) · Alt: Cell, Molecular &amp; Developmental Biology · Common App · EA Nov 1",                          type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Submit",                     status:"not-started", applyOrder:15, supplement:"✍️ 3 additional questions to be answered in Purdue portal" },
   { num:18, name:"George Mason University",         prog:"Biology / Bioinformatics",        note:"Fairfax, VA · College of Science · Select: Biology - B.S. · Alt: Bioengineering B.S. · In-state · Rishi presented research here · Apply for Honors College · Common App · ✅ Submitted",          type:"RD", tier:"safety", deadline:"Done",  sat:"Test-optional safe",         status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
   { num:19, name:"University of Florida",           prog:"Biological Sciences",             note:"Gainesville, FL · College of Liberal Arts & Sciences · Top public research university · Alt: Microbiology & Cell Science · Common App · EA Nov 1",                                          type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Submit",                     status:"not-started", applyOrder:17, supplement:"None — Common App only" },
-  { num:20, name:"Drexel University",               prog:"Biological Sciences (Co-op)",     note:"Philadelphia, PA · College of Arts & Sciences · Co-op employers: GSK, AstraZeneca, J&J, CHOP · Up to 18 mo paid experience · Alt: Biomedical Engineering · Common App · EA Nov 15",      type:"EA", tier:"safety", deadline:"Nov 15", sat:"Test-optional",              status:"not-started", applyOrder:18, supplement:"None — Common App only" },
+  { num:20, name:"Drexel University",               prog:"Biological Sciences (Co-op)",     note:"Philadelphia, PA · College of Arts & Sciences · Co-op employers: GSK, AstraZeneca, J&J, CHOP · Up to 18 mo paid experience · Alt: Biomedical Engineering · Common App · ✅ Submitted", type:"EA", tier:"safety", deadline:"Done",   sat:"Test-optional",              status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
   { num:21, name:"RIT",                             prog:"Bioinformatics & Computational Biology BS", note:"Rochester, NY · College of Science · One of few dedicated undergrad Bioinformatics BS programs · Co-op available · Alt: Biology BS · Common App · RD Feb 1",                    type:"RD", tier:"safety", deadline:"Feb 1",  sat:"Test-optional",              status:"not-started", applyOrder:19, supplement:"✍️ Why RIT? (650 words)" },
   { num:22, name:"University of Delaware",          prog:"Biological Sciences",             note:"Newark, DE · College of Arts & Sciences · Strong merit aid · Alt: Biochemistry · Close to home · Common App · RD Jan 15",                                                                   type:"RD", tier:"safety", deadline:"Jan 15", sat:"Test-optional",              status:"not-started", applyOrder:20, supplement:"None — Common App only" },
   { num:23, name:"University of Michigan",          prog:"Biological Sciences",             note:"Ann Arbor, MI · College of Literature, Science & the Arts (LSA) · Top 5 bio research · Bioinformatics minor available · Alt: Cellular & Molecular Biomedical Science · Common App · EA Nov 1", type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Submit",                     status:"not-started", applyOrder:21, supplement:"✍️ Why Michigan? (100w) + Community essay (300w)" },
@@ -790,6 +790,7 @@ const essays = [
   { school:"UVA", supplement:"Why UVA? + Additional essay", words:"250 words each", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
   { school:"Purdue", supplement:"3 additional questions", words:"varies", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
   { school:"Michigan", supplement:"Why Michigan? (100w) + Community essay (300w)", words:"400 words total", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
+  { school:"University of Florida", supplement:"No supplement — Common App only", words:"—", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
   { school:"Rutgers", supplement:"Honors Essay — Embrace New Experiences", words:"100–250 words", deadline:"Done", urgency:"normal", status:"submitted" },
   { school:"UConn", supplement:"Why UConn?", words:"short", deadline:"Done", urgency:"normal", status:"submitted" },
   { school:"UCSD", supplement:"4 Personal Insight Questions", words:"350 words each (4 of 8)", deadline:"Nov 30", urgency:"normal", status:"not-started" },
@@ -814,7 +815,7 @@ const activities = [
 ];
 
 // ── STATE ──
-const PORTAL_VERSION = 6; // bump this when colleges are added
+const PORTAL_VERSION = 7; // bump this when colleges are added
 let state = JSON.parse(localStorage.getItem('rishiPortalV2') || 'null') || {
   collegeStatus: {},
   essayStatus: {},
@@ -1031,32 +1032,38 @@ function showToast(msg) {
 }
 
 // ── LOGIN TRACKER DATA ──
+// Submitted first (in order), then pending by deadline
 const loginTracker = [
-  { school:"Virginia Tech",               portal:"Hokie SPA",              portalUrl:"https://hokiespa.vt.edu",         accountCreated:false, postTasks:["Check application portal for missing docs","Watch for decision in Hokie SPA"] },
-  { school:"VCU",                         portal:"MyVCU / Application Portal", portalUrl:"https://my.vcu.edu",           accountCreated:false, postTasks:["Verify all materials received","Monitor decision portal"] },
-  { school:"NC State",                    portal:"MyPackPortal",            portalUrl:"https://mypack.ncsu.edu",          accountCreated:false, postTasks:["Check for scholarship nomination","Monitor decision"] },
-  { school:"Rutgers",                     portal:"myRutgers",              portalUrl:"https://my.rutgers.edu",            accountCreated:false, postTasks:["Check Honors College status","Monitor decision"] },
-  { school:"Ohio State",                  portal:"Buckeye Link",           portalUrl:"https://buckeyelink.osu.edu",       accountCreated:false, postTasks:["Check Morrill Scholar status","Monitor decision"] },
-  { school:"Pitt",                        portal:"my.pitt.edu",            portalUrl:"https://my.pitt.edu",               accountCreated:false, postTasks:["Verify application complete","Monitor decision"] },
-  { school:"UMD",                         portal:"Testudo / Apply Portal", portalUrl:"https://umd.edu",                   accountCreated:false, postTasks:["Check supplement Q completeness","Monitor decision"] },
-  { school:"George Mason University",     portal:"Mason Gateway",          portalUrl:"https://gateway.gmu.edu",           accountCreated:false, postTasks:["Verify Honors College application included","Check for scholarship info"] },
-  { school:"James Madison University",    portal:"MyMadison",              portalUrl:"https://mymadison.jmu.edu",         accountCreated:false, postTasks:["Verify Honors College application included","Note: Honors scholarship deadline Nov 15"] },
-  // PENDING
-  { school:"GWU (ED)",                    portal:"GW Apply / Colonials Portal", portalUrl:"https://apply.gwu.edu",       accountCreated:false, postTasks:["Create portal account","Submit by Nov 1","After submit: verify ED agreement signed"] },
-  { school:"Northeastern (EA)",           portal:"myNortheastern",         portalUrl:"https://my.northeastern.edu",       accountCreated:false, postTasks:["Create portal account","Submit by Nov 1"] },
-  { school:"UVA (EA)",                    portal:"SIS / UVA Apply",        portalUrl:"https://www.virginia.edu/admissions", accountCreated:false, postTasks:["Create portal account","Submit by Nov 1"] },
-  { school:"Purdue (EA)",                 portal:"myPurdue",               portalUrl:"https://mypurdue.purdue.edu",        accountCreated:false, postTasks:["Create portal account","Complete 5 additional questions in portal","Submit by Nov 1"] },
-  { school:"Florida (EA)",                portal:"myUFL",                  portalUrl:"https://my.ufl.edu",                accountCreated:false, postTasks:["Create portal account","Submit by Nov 1"] },
-  { school:"Columbia",                    portal:"Columbia Student Services", portalUrl:"https://students.columbia.edu", accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 1"] },
-  { school:"UPenn",                       portal:"Penn Portal",            portalUrl:"https://portal.upenn.edu",          accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 1"] },
-  { school:"Cornell CALS",               portal:"Cornell Student Center",  portalUrl:"https://studentcenter.cornell.edu", accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 2"] },
-  { school:"Dartmouth",                   portal:"DartHub",                portalUrl:"https://darthub.dartmouth.edu",     accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 1"] },
-  { school:"UC San Diego",                portal:"MyTritonLink",           portalUrl:"https://mytritonlink.ucsd.edu",     accountCreated:false, postTasks:["Create portal account","Submit UC App by Nov 30"] },
-  { school:"University of Michigan",      portal:"Wolverine Access",       portalUrl:"https://wolverineaccess.umich.edu", accountCreated:false, postTasks:["Create portal account","Submit by Feb 1"] },
-  { school:"Penn State",                  portal:"LionPATH",               portalUrl:"https://lionpath.psu.edu",          accountCreated:false, postTasks:["Create portal account","Submit by Nov 30"] },
-  { school:"Drexel",                      portal:"DrexelOne",              portalUrl:"https://one.drexel.edu",            accountCreated:false, postTasks:["Create portal account","Submit by Jan 15"] },
-  { school:"RIT",                         portal:"myRIT / SIS",            portalUrl:"https://myrit.rit.edu",             accountCreated:false, postTasks:["Create portal account","Submit by Feb 1"] },
-  { school:"University of Delaware",      portal:"UDSIS",                  portalUrl:"https://udsis.udel.edu",            accountCreated:false, postTasks:["Create portal account","Submit by Jan 15"] },
+  // ── SUBMITTED (11) ──
+  { school:"Pitt",                        submitted:true,  portal:"my.pitt.edu",                portalUrl:"https://my.pitt.edu",               accountCreated:false, postTasks:["Verify application complete","Monitor decision"] },
+  { school:"VCU",                         submitted:true,  portal:"MyVCU / Application Portal", portalUrl:"https://my.vcu.edu",               accountCreated:false, postTasks:["Verify all materials received","Monitor decision portal"] },
+  { school:"UConn",                       submitted:true,  portal:"UConn Application Portal",   portalUrl:"https://apply.uconn.edu",           accountCreated:false, postTasks:["Verify application complete","Monitor decision"] },
+  { school:"Rutgers",                     submitted:true,  portal:"myRutgers",                  portalUrl:"https://my.rutgers.edu",            accountCreated:false, postTasks:["Check Honors College status","Monitor decision"] },
+  { school:"Ohio State",                  submitted:true,  portal:"Buckeye Link",               portalUrl:"https://buckeyelink.osu.edu",       accountCreated:false, postTasks:["Check Morrill Scholar status","Monitor decision"] },
+  { school:"Virginia Tech",               submitted:true,  portal:"Hokie SPA",                  portalUrl:"https://hokiespa.vt.edu",           accountCreated:false, postTasks:["Check application portal for missing docs","Watch for decision in Hokie SPA"] },
+  { school:"UMD",                         submitted:true,  portal:"Testudo / Apply Portal",      portalUrl:"https://umd.edu",                   accountCreated:false, postTasks:["Check supplement Q completeness","Monitor decision"] },
+  { school:"NC State",                    submitted:true,  portal:"MyPackPortal",               portalUrl:"https://mypack.ncsu.edu",           accountCreated:false, postTasks:["Check for scholarship nomination","Monitor decision"] },
+  { school:"George Mason University",     submitted:true,  portal:"Mason Gateway",              portalUrl:"https://gateway.gmu.edu",           accountCreated:false, postTasks:["Verify Honors College application included","Check for scholarship info"] },
+  { school:"James Madison University",    submitted:true,  portal:"MyMadison",                  portalUrl:"https://mymadison.jmu.edu",         accountCreated:false, postTasks:["Verify Honors College application included","Note: Honors scholarship deadline Nov 15"] },
+  { school:"Drexel",                      submitted:true,  portal:"DrexelOne",                  portalUrl:"https://one.drexel.edu",            accountCreated:false, postTasks:["Verify application complete","Monitor decision"] },
+  // ── PENDING — NOV 1 ──
+  { school:"GWU (ED)",                    submitted:false, portal:"GW Apply / Colonials Portal", portalUrl:"https://apply.gwu.edu",            accountCreated:false, postTasks:["Create portal account","Submit by Nov 1","After submit: verify ED agreement signed"] },
+  { school:"Northeastern (EA)",           submitted:false, portal:"myNortheastern",              portalUrl:"https://my.northeastern.edu",       accountCreated:false, postTasks:["Create portal account","Submit by Nov 1"] },
+  { school:"UVA (EA)",                    submitted:false, portal:"SIS / UVA Apply",             portalUrl:"https://www.virginia.edu/admissions", accountCreated:false, postTasks:["Create portal account","Submit by Nov 1"] },
+  { school:"Purdue (EA)",                 submitted:false, portal:"myPurdue",                    portalUrl:"https://mypurdue.purdue.edu",       accountCreated:false, postTasks:["Create portal account","Complete 5 additional questions in portal","Submit by Nov 1"] },
+  { school:"Florida (EA)",                submitted:false, portal:"myUFL",                       portalUrl:"https://my.ufl.edu",                accountCreated:false, postTasks:["Create portal account","Submit by Nov 1"] },
+  { school:"University of Michigan (EA)", submitted:false, portal:"Wolverine Access",            portalUrl:"https://wolverineaccess.umich.edu", accountCreated:false, postTasks:["Create portal account","Submit by Nov 1"] },
+  // ── PENDING — NOV 30 ──
+  { school:"UC San Diego",                submitted:false, portal:"MyTritonLink",                portalUrl:"https://mytritonlink.ucsd.edu",     accountCreated:false, postTasks:["Create portal account","Submit UC App by Nov 30 (UC App — separate from Common App)"] },
+  { school:"Penn State",                  submitted:false, portal:"LionPATH",                    portalUrl:"https://lionpath.psu.edu",          accountCreated:false, postTasks:["Create portal account","Submit by Nov 30"] },
+  // ── PENDING — JAN 1–2 ──
+  { school:"UPenn",                       submitted:false, portal:"Penn Portal",                 portalUrl:"https://portal.upenn.edu",          accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 1"] },
+  { school:"Columbia",                    submitted:false, portal:"Columbia Student Services",   portalUrl:"https://students.columbia.edu",     accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 1"] },
+  { school:"Dartmouth",                   submitted:false, portal:"DartHub",                     portalUrl:"https://darthub.dartmouth.edu",     accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 1"] },
+  { school:"Cornell CALS",               submitted:false, portal:"Cornell Student Center",       portalUrl:"https://studentcenter.cornell.edu", accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 2"] },
+  // ── PENDING — JAN 15 / FEB ──
+  { school:"University of Delaware",      submitted:false, portal:"UDSIS",                       portalUrl:"https://udsis.udel.edu",            accountCreated:false, postTasks:["Create portal account","Submit by Jan 15"] },
+  { school:"RIT",                         submitted:false, portal:"myRIT / SIS",                 portalUrl:"https://myrit.rit.edu",             accountCreated:false, postTasks:["Create portal account","Submit by Feb 1"] },
 ];
 
 // ── LOGIN TRACKER RENDER ──
