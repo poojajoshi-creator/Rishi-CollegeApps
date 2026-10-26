@@ -552,8 +552,8 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
             <th style="padding:12px 16px;text-align:left;font-weight:600;">School</th>
             <th style="padding:12px 16px;text-align:left;font-weight:600;">Portal / Login</th>
             <th style="padding:12px 16px;text-align:left;font-weight:600;">Account Created?</th>
+            <th style="padding:12px 16px;text-align:left;font-weight:600;">SAT Score Submitted?</th>
             <th style="padding:12px 16px;text-align:left;font-weight:600;">Post-Submit Tasks</th>
-            <th style="padding:12px 16px;text-align:left;font-weight:600;">Status</th>
           </tr>
         </thead>
         <tbody id="login-table-body">
@@ -815,7 +815,7 @@ const activities = [
 ];
 
 // ── STATE ──
-const PORTAL_VERSION = 9; // bump this when colleges are added
+const PORTAL_VERSION = 10; // bump this when colleges are added
 let state = JSON.parse(localStorage.getItem('rishiPortalV2') || 'null') || {
   collegeStatus: {},
   essayStatus: {},
@@ -1078,13 +1078,16 @@ function renderLoginTracker() {
   loginTracker.forEach((row, i) => {
     if (!row.submitted && !inPending) {
       inPending = true;
-      html += `<tr><td colspan="6" style="padding:8px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#dc2626;background:#fff5f5;border-top:2px solid #fca5a5;">⏳ Pending Submission</td></tr>`;
+      html += `<tr><td colspan="5" style="padding:8px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#dc2626;background:#fff5f5;border-top:2px solid #fca5a5;">⏳ Pending Submission</td></tr>`;
     }
     const created = saved[i] !== undefined ? saved[i] : row.accountCreated;
     const rowBg = row.submitted ? '#f0fdf4' : '';
     const statusColor = created ? '#16a34a' : '#dc2626';
     const statusLabel = created ? '✅ Yes' : '❌ Not yet';
     const submittedBadge = row.submitted ? '<span style="font-size:10px;background:#dcfce7;color:#166534;padding:2px 7px;border-radius:99px;font-weight:600;margin-left:6px;">✅ Submitted</span>' : '';
+    const satDone = saved['sat_'+i] !== undefined ? saved['sat_'+i] : false;
+    const satColor = satDone ? '#16a34a' : '#dc2626';
+    const satLabel = satDone ? '✅ Yes' : '❌ Not Yet';
     html += `<tr style="border-top:1px solid var(--border);background:${rowBg}">
       <td style="padding:10px 16px;font-weight:600;font-size:13px;">${row.school}${submittedBadge}</td>
       <td style="padding:10px 16px;font-size:12px;color:var(--muted);">
@@ -1093,11 +1096,11 @@ function renderLoginTracker() {
       <td style="padding:10px 16px;">
         <button onclick="toggleLogin(${i})" style="font-size:12px;font-weight:600;color:${statusColor};background:${created?'#dcfce7':'#fee2e2'};border:none;border-radius:6px;padding:4px 10px;cursor:pointer;">${statusLabel}</button>
       </td>
+      <td style="padding:10px 16px;">
+        <button onclick="toggleSat(${i})" style="font-size:12px;font-weight:600;color:${satColor};background:${satDone?'#dcfce7':'#fee2e2'};border:none;border-radius:6px;padding:4px 10px;cursor:pointer;">${satLabel}</button>
+      </td>
       <td style="padding:10px 16px;font-size:12px;color:var(--text);">
         ${row.postTasks.map(t => `<div style="margin-bottom:2px;">• ${t}</div>`).join('')}
-      </td>
-      <td style="padding:10px 16px;">
-        ${created ? '<span style="font-size:11px;background:#dcfce7;color:#15803d;padding:3px 8px;border-radius:99px;font-weight:600;">✅ Done</span>' : '<span style="font-size:11px;background:#fef3c7;color:#92400e;padding:3px 8px;border-radius:99px;font-weight:600;">⏳ To Do</span>'}
       </td>
     </tr>`;
   });
