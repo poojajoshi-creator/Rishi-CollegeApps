@@ -305,19 +305,19 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
       <div class="stat-sub">5 reach · 9 match · 9 safety + 2 Ivy</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--green);">
-      <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">11</div>
+      <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">12</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--green);">Submitted ✓</div>
-      <div class="stat-sub">Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State · GMU · JMU · Drexel</div>
+      <div class="stat-sub">Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State · GMU · JMU · Drexel · Purdue</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--amber);">
-      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">14</div>
+      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">13</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--amber);">Remaining</div>
-      <div class="stat-sub">6 due Nov 1 · 2 Nov 30 · 5 Jan · 1 Jan 2 · 2 Feb</div>
+      <div class="stat-sub">5 due Nov 1 · 2 Nov 30 · 5 Jan · 1 Jan 2 · 2 Feb</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--red);">
-      <div style="font-size:26px;font-weight:700;color:var(--red);font-family:'DM Serif Display',serif;">6</div>
+      <div style="font-size:26px;font-weight:700;color:var(--red);font-family:'DM Serif Display',serif;">5</div>
       <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:6px;">Pending — Nov 1</div>
-      <div style="font-size:11.5px;color:var(--text);line-height:1.9;">GWU (ED) · NEU · UVA<br>Purdue · Florida · Michigan</div>
+      <div style="font-size:11.5px;color:var(--text);line-height:1.9;">GWU (ED) · NEU · UVA<br>Florida · Michigan</div>
     </div>
   </div>
 
@@ -763,7 +763,7 @@ const colleges = [
   { num:14, name:"Columbia University",             prog:"Biology",                         note:"New York, NY · Columbia College · Ivy League · NYC hospital ecosystem · Alt: Biochemistry · ⚠️ Retake Dec 6 SAT first · Common App",                                                      type:"RD", tier:"reach",  deadline:"Jan 1",  sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:13, supplement:"✍️ Why Columbia? (200w) + List + 3 short answer prompts" },
   { num:15, name:"Dartmouth College",               prog:"Biology",                         note:"Hanover, NH · Arts & Sciences · Ivy League · Strong undergrad research culture · Alt: Biochemistry · ⚠️ Retake Dec 6 SAT first · Common App",                                             type:"RD", tier:"reach",  deadline:"Jan 1",  sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:14, supplement:"✍️ Why Dartmouth? (100w) + 3 short essays (250w each)" },
   { num:16, name:"Virginia Commonwealth University",prog:"Biology / Bioinformatics",        note:"Richmond, VA · College of Humanities & Sciences · Strong health sciences · Alt: Bioinformatics BS · Common App · ✅ Submitted",                                                            type:"RD", tier:"safety", deadline:"Done",   sat:"Submitted",                  status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
-  { num:17, name:"Purdue University",               prog:"Biology",                                    note:"West Lafayette, IN · College of Science · Select: Biology (primary) · Alt: Cell, Molecular &amp; Developmental Biology · Common App · EA Nov 1",                          type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Submit",                     status:"not-started", applyOrder:15, supplement:"✍️ 3 additional questions to be answered in Purdue portal" },
+  { num:17, name:"Purdue University",               prog:"Biology",                                    note:"West Lafayette, IN · College of Science · Select: Biology (primary) · Alt: Cell, Molecular &amp; Developmental Biology · Common App · EA Nov 1 ✅ Submitted",                type:"EA", tier:"match",  deadline:"Done",   sat:"Submit",                     status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
   { num:18, name:"George Mason University",         prog:"Biology / Bioinformatics",        note:"Fairfax, VA · College of Science · Select: Biology - B.S. · Alt: Bioengineering B.S. · In-state · Rishi presented research here · Apply for Honors College · Common App · ✅ Submitted",          type:"RD", tier:"safety", deadline:"Done",  sat:"Test-optional safe",         status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
   { num:19, name:"University of Florida",           prog:"Biological Sciences",             note:"Gainesville, FL · College of Liberal Arts & Sciences · Top public research university · Alt: Microbiology & Cell Science · Common App · EA Nov 1",                                          type:"EA", tier:"match",  deadline:"Nov 1",  sat:"Submit",                     status:"not-started", applyOrder:17, supplement:"None — Common App only" },
   { num:20, name:"Drexel University",               prog:"Biological Sciences (Co-op)",     note:"Philadelphia, PA · College of Arts & Sciences · Co-op employers: GSK, AstraZeneca, J&J, CHOP · Up to 18 mo paid experience · Alt: Biomedical Engineering · Common App · ✅ Submitted", type:"EA", tier:"safety", deadline:"Done",   sat:"Test-optional",              status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
@@ -788,7 +788,7 @@ const essays = [
   { school:"GWU (ED)", supplement:"Why GWU?", words:"~650 words", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
   { school:"Northeastern", supplement:"Why Northeastern?", words:"200 words", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
   { school:"UVA", supplement:"Why UVA? + Additional essay", words:"250 words each", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
-  { school:"Purdue", supplement:"3 additional questions", words:"varies", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
+  { school:"Purdue", supplement:"3 additional questions", words:"varies", deadline:"Nov 1", urgency:"done", status:"submitted" },
   { school:"Michigan", supplement:"Why Michigan? (100w) + Community essay (300w)", words:"400 words total", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
   { school:"University of Florida", supplement:"No supplement — Common App only", words:"—", deadline:"Nov 1", urgency:"urgent", status:"not-started" },
   { school:"Rutgers", supplement:"Honors Essay — Embrace New Experiences", words:"100–250 words", deadline:"Done", urgency:"normal", status:"submitted" },
@@ -815,7 +815,7 @@ const activities = [
 ];
 
 // ── STATE ──
-const PORTAL_VERSION = 10; // bump this when colleges are added
+const PORTAL_VERSION = 11; // bump this when colleges are added
 let state = JSON.parse(localStorage.getItem('rishiPortalV2') || 'null') || {
   collegeStatus: {},
   essayStatus: {},
@@ -1050,7 +1050,7 @@ const loginTracker = [
   { school:"GWU (ED)",                    submitted:false, sat:"Submit 1390",           portal:"GW Apply / Colonials Portal", portalUrl:"https://apply.gwu.edu",            accountCreated:false, postTasks:["Create portal account","Submit by Nov 1","After submit: verify ED agreement signed"] },
   { school:"Northeastern (EA)",           submitted:false, sat:"Submit 1390",           portal:"myNortheastern",              portalUrl:"https://my.northeastern.edu",       accountCreated:false, postTasks:["Create portal account","Submit by Nov 1"] },
   { school:"UVA (EA)",                    submitted:false, sat:"Submit 1390",           portal:"SIS / UVA Apply",             portalUrl:"https://www.virginia.edu/admissions", accountCreated:false, postTasks:["Create portal account","Submit by Nov 1"] },
-  { school:"Purdue (EA)",                 submitted:false, sat:"Submit 1390",           portal:"myPurdue",                    portalUrl:"https://mypurdue.purdue.edu",       accountCreated:false, postTasks:["Create portal account","Complete 5 additional questions in portal","Submit by Nov 1"] },
+  { school:"Purdue (EA)",                 submitted:true,  sat:"Submit 1390",           portal:"myPurdue",                    portalUrl:"https://mypurdue.purdue.edu",       accountCreated:false, postTasks:["Verify application complete","Monitor decision"] },
   { school:"Florida (EA)",                submitted:false, sat:"Submit 1390",           portal:"myUFL",                       portalUrl:"https://my.ufl.edu",                accountCreated:false, postTasks:["Create portal account","Submit by Nov 1"] },
   { school:"University of Michigan (EA)", submitted:false, sat:"Submit 1390",           portal:"Wolverine Access",            portalUrl:"https://wolverineaccess.umich.edu", accountCreated:false, postTasks:["Create portal account","Submit by Nov 1"] },
   // ── PENDING — NOV 30 ──
@@ -1114,6 +1114,15 @@ function toggleLogin(i) {
   localStorage.setItem(lsKey, JSON.stringify(saved));
   renderLoginTracker();
   showToast('Login status updated');
+}
+
+function toggleSat(i) {
+  const lsKey = 'rishiLoginTracker';
+  const saved = JSON.parse(localStorage.getItem(lsKey) || '{}');
+  saved['sat_'+i] = !( saved['sat_'+i] !== undefined ? saved['sat_'+i] : false );
+  localStorage.setItem(lsKey, JSON.stringify(saved));
+  renderLoginTracker();
+  showToast('SAT status updated');
 }
 
 // ── INIT ──
