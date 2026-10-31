@@ -333,28 +333,16 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
       <div class="card-title">⚡ Deadline Snapshot</div>
       <div style="font-size:13px;display:flex;flex-direction:column;gap:0;">
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
-          <span>⭐ GWU <span style="font-size:10px;background:#003b6f;color:white;padding:1px 6px;border-radius:99px;margin-left:4px;">ED — Binding</span></span><span style="color:#dc2626;font-weight:700;">Nov 1</span>
+          <span>✅ 17 schools submitted — Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State · GMU · JMU · Drexel · Purdue · NEU · UVA (ED) · Florida · Michigan · Penn State</span><span style="color:var(--green);font-weight:700;">Done</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
-          <span>✅ Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State · GMU · JMU · Drexel <span style="font-size:10px;background:#dcfce7;color:#166534;padding:1px 6px;border-radius:99px;margin-left:4px;">Submitted</span></span><span style="color:var(--green);font-weight:700;">Done</span>
+          <span>🌊 UC San Diego <span style="font-size:10px;background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:99px;margin-left:4px;">UC App — separate login</span></span><span style="color:var(--amber);font-weight:700;">Nov 30</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
-          <span>🔵 UVA · NEU · UF · Michigan <span style="font-size:10px;background:#dbeafe;color:#1d4ed8;padding:1px 6px;border-radius:99px;margin-left:4px;">EA — Still Needed</span></span><span style="color:#dc2626;font-weight:700;">Nov 1</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
-          <span>💰 FAFSA + CSS Profile (GWU)</span><span style="color:var(--amber);font-weight:700;">Nov 1</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
-          <span>🟠 Drexel <span style="font-size:10px;background:#dcfce7;color:#166534;padding:1px 6px;border-radius:99px;margin-left:4px;">Submitted ✅</span></span><span style="color:var(--green);font-weight:700;">Done</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
-          <span>🌊 UC San Diego <span style="font-size:10px;background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:99px;margin-left:4px;">UC App — separate</span></span><span style="color:var(--muted);font-weight:600;">Nov 30</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
-          <span>🌿 Cornell CALS <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:1px 6px;border-radius:99px;margin-left:4px;">RD only</span></span><span style="color:var(--muted);font-weight:600;">Jan 2</span>
+          <span>🏛️ UPenn · Columbia · Dartmouth · GWU <span style="font-size:10px;background:#f5f3ff;color:#7c3aed;padding:1px 6px;border-radius:99px;margin-left:4px;">⚠️ Dec 6 SAT retake first</span></span><span style="color:var(--muted);font-weight:600;">Jan 1</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;">
-          <span>🏛️ UPenn · Columbia · Dartmouth <span style="font-size:10px;background:#f5f3ff;color:#7c3aed;padding:1px 6px;border-radius:99px;margin-left:4px;">⚠️ Retake SAT first</span></span><span style="color:var(--muted);font-weight:600;">Jan 1</span>
+          <span>🌿 Cornell CALS</span><span style="color:var(--muted);font-weight:600;">Jan 2</span>
         </div>
       </div>
     </div>
@@ -816,7 +804,7 @@ const activities = [
 ];
 
 // ── STATE ──
-const PORTAL_VERSION = 19; // bump this when colleges are added
+const PORTAL_VERSION = 20; // bump this when colleges are added
 let state = JSON.parse(localStorage.getItem('rishiPortalV2') || 'null') || {
   collegeStatus: {},
   essayStatus: {},
