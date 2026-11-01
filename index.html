@@ -264,7 +264,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
 <div class="tab-section active" id="tab-dashboard">
   <div class="page-header">
     <h1>Hello, Rishi 👋</h1>
-    <p>25 schools · GWU Early Decision · 10 submitted · Common App done ✓ · Nov 1: 7 schools pending</p>
+    <p>21 schools · UVA Early Decision · 17 submitted · Common App done ✓ · Next: UCSD Nov 30</p>
   </div>
 
   <!-- Accomplishments -->
@@ -300,9 +300,9 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
   <!-- Stats row -->
   <div class="stats-row" style="grid-template-columns:repeat(4,1fr);margin-bottom:18px;">
     <div class="stat-card" style="border-top:3px solid var(--navy);">
-      <div style="font-size:26px;font-weight:700;color:var(--navy);font-family:'DM Serif Display',serif;">25</div>
+      <div style="font-size:26px;font-weight:700;color:var(--navy);font-family:'DM Serif Display',serif;">21</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;">Total Colleges</div>
-      <div class="stat-sub">5 reach · 9 match · 9 safety + 2 Ivy</div>
+      <div class="stat-sub">2 reach · 9 match · 10 safety</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--green);">
       <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">17</div>
@@ -310,9 +310,9 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
       <div class="stat-sub">Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State · GMU · JMU · Drexel · Purdue · NEU · UVA · Florida · Michigan · Penn State</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--amber);">
-      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">8</div>
+      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">4</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--amber);">Remaining</div>
-      <div class="stat-sub">1 Nov 30 · 5 Jan · 1 Jan 2 · 1 Feb</div>
+      <div class="stat-sub">1 Nov 30 · 1 Jan 1 · 1 Jan 15 · 1 Feb 1</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--green);">
       <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">✓</div>
@@ -338,11 +338,8 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
           <span>🌊 UC San Diego <span style="font-size:10px;background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:99px;margin-left:4px;">UC App — separate login</span></span><span style="color:var(--amber);font-weight:700;">Nov 30</span>
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);">
-          <span>🏛️ UPenn · Columbia · Dartmouth · GWU <span style="font-size:10px;background:#f5f3ff;color:#7c3aed;padding:1px 6px;border-radius:99px;margin-left:4px;">⚠️ Dec 6 SAT retake first</span></span><span style="color:var(--muted);font-weight:600;">Jan 1</span>
-        </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;">
-          <span>🌿 Cornell CALS</span><span style="color:var(--muted);font-weight:600;">Jan 2</span>
+          <span>⭐ GWU · RIT · University of Delaware</span><span style="color:var(--muted);font-weight:600;">Jan 1 / Jan 15 / Feb 1</span>
         </div>
       </div>
     </div>
@@ -744,12 +741,8 @@ const colleges = [
   { num:7,  name:"UC San Diego",                    prog:"Biology / Bioinformatics",        note:"La Jolla, CA · Division of Biological Sciences · Bioinformatics BS or Biology BS · ⚠️ UC Application (not Common App) — separate login at apply.universityofcalifornia.edu",               type:"RD", tier:"reach",  deadline:"Nov 30", sat:"Submit",                     status:"not-started", applyOrder:10, supplement:"✍️ 4 Personal Insight Questions (350 words each) — UC App" },
   { num:8,  name:"UConn",                           prog:"Molecular & Cell Biology",        note:"Storrs, CT (main campus) · College of Liberal Arts & Sciences · Bioinformatics track within MCB · Alt: Physiology & Neurobiology · Common App · ✅ Submitted",                             type:"EA", tier:"safety", deadline:"Nov 1",  sat:"Test-optional safe",         status:"submitted",   applyOrder:2,  supplement:"✅ Done" },
   { num:9,  name:"Rutgers University",              prog:"Molecular Biology & Biochemistry",note:"New Brunswick, NJ · School of Arts & Sciences · Alt: Computational & Integrative Biology (Camden) · NJ pharma corridor · Common App · ✅ Submitted",                                       type:"EA", tier:"safety", deadline:"Nov 1",  sat:"Test-optional safe",         status:"submitted",   applyOrder:3,  supplement:"✅ Done" },
-  { num:10, name:"Cornell University — CALS",       prog:"Biology",                         note:"Ithaca, NY · College of Agriculture & Life Sciences (CALS) · Computational Biology concentration · Alt: Biological Sciences (A&S) · Common App · RD only, no EA",                         type:"RD", tier:"reach",  deadline:"Jan 2",  sat:"Submit",                     status:"not-started", applyOrder:11, supplement:"✍️ Why CALS? + Why this major? (650 words combined)" },
   { num:11, name:"University of Virginia",          prog:"Biology",                         note:"Charlottesville, VA · College of Arts & Sciences · In-state · Early Decision (Binding) · Alt: Biochemistry · Data Science minor available · Common App · ✅ Submitted",               type:"ED", tier:"match",  deadline:"Done",   sat:"Submit",                     status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
   { num:12, name:"Ohio State University",           prog:"Biology / Biomedical Sciences",   note:"Columbus, OH · College of Arts & Sciences · Non-binding EA · Alt: Biochemistry · Common App · ✅ Submitted",                                                                               type:"EA", tier:"safety", deadline:"Nov 1",  sat:"Submit",                     status:"submitted",   applyOrder:1,  supplement:"✅ Done" },
-  { num:13, name:"University of Pennsylvania",      prog:"Biology",                         note:"Philadelphia, PA · School of Arts & Sciences (SAS) · Ivy League · Penn Medicine ecosystem · Alt: Biochemistry & Biophysics · ⚠️ Retake Dec 6 SAT first · Common App",                    type:"RD", tier:"reach",  deadline:"Jan 1",  sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:12, supplement:"✍️ Why Penn? (250w) + Why major? (250w) + 3 short answers" },
-  { num:14, name:"Columbia University",             prog:"Biology",                         note:"New York, NY · Columbia College · Ivy League · NYC hospital ecosystem · Alt: Biochemistry · ⚠️ Retake Dec 6 SAT first · Common App",                                                      type:"RD", tier:"reach",  deadline:"Jan 1",  sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:13, supplement:"✍️ Why Columbia? (200w) + List + 3 short answer prompts" },
-  { num:15, name:"Dartmouth College",               prog:"Biology",                         note:"Hanover, NH · Arts & Sciences · Ivy League · Strong undergrad research culture · Alt: Biochemistry · ⚠️ Retake Dec 6 SAT first · Common App",                                             type:"RD", tier:"reach",  deadline:"Jan 1",  sat:"⚠️ Retake Dec 6 SAT first", status:"not-started", applyOrder:14, supplement:"✍️ Why Dartmouth? (100w) + 3 short essays (250w each)" },
   { num:16, name:"Virginia Commonwealth University",prog:"Biology / Bioinformatics",        note:"Richmond, VA · College of Humanities & Sciences · Strong health sciences · Alt: Bioinformatics BS · Common App · ✅ Submitted",                                                            type:"RD", tier:"safety", deadline:"Done",   sat:"Submitted",                  status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
   { num:17, name:"Purdue University",               prog:"Biology",                                    note:"West Lafayette, IN · College of Science · Select: Biology (primary) · Alt: Cell, Molecular &amp; Developmental Biology · Common App · EA Nov 1 ✅ Submitted",                type:"EA", tier:"match",  deadline:"Done",   sat:"Submit",                     status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
   { num:18, name:"George Mason University",         prog:"Biology / Bioinformatics",        note:"Fairfax, VA · College of Science · Select: Biology - B.S. · Alt: Bioengineering B.S. · In-state · Rishi presented research here · Apply for Honors College · Common App · ✅ Submitted",          type:"RD", tier:"safety", deadline:"Done",  sat:"Test-optional safe",         status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
@@ -783,7 +776,6 @@ const essays = [
   { school:"UConn", supplement:"Why UConn?", words:"short", deadline:"Done", urgency:"normal", status:"submitted" },
   { school:"Penn State", supplement:"No supplement — Common App only", words:"—", deadline:"Done", urgency:"done", status:"submitted" },
   { school:"UCSD", supplement:"4 Personal Insight Questions", words:"350 words each (4 of 8)", deadline:"Nov 30", urgency:"normal", status:"not-started" },
-  { school:"Cornell CALS", supplement:"Why CALS? + Why this major?", words:"650 words combined", deadline:"Jan 2", urgency:"normal", status:"not-started" },
 ];
 
 const statusCycle = ["not-started","in-progress","drafted","submitted"];
@@ -804,7 +796,7 @@ const activities = [
 ];
 
 // ── STATE ──
-const PORTAL_VERSION = 20; // bump this when colleges are added
+const PORTAL_VERSION = 22; // bump this when colleges are added
 let state = JSON.parse(localStorage.getItem('rishiPortalV2') || 'null') || {
   collegeStatus: {},
   essayStatus: {},
@@ -835,9 +827,9 @@ function showTab(id, el) {
 function updateDaysLeft() {
   const deadlines = [
     { date: new Date('2026-11-30'), label: 'UCSD UC App' },
-    { date: new Date('2026-11-30'), label: 'UCSD UC App' },
-    { date: new Date('2027-01-01'), label: 'UPenn · Columbia · Dartmouth' },
-    { date: new Date('2027-01-02'), label: 'Cornell CALS' },
+    { date: new Date('2027-01-01'), label: 'GWU' },
+    { date: new Date('2027-01-15'), label: 'University of Delaware' },
+    { date: new Date('2027-02-01'), label: 'RIT' },
   ];
   const today = new Date();
   today.setHours(0,0,0,0);
@@ -1046,10 +1038,6 @@ const loginTracker = [
   { school:"UC San Diego",                submitted:false, sat:"Submit 1390",           portal:"MyTritonLink",                portalUrl:"https://mytritonlink.ucsd.edu",     accountCreated:false, postTasks:["Create portal account","Submit UC App by Nov 30 (UC App — separate from Common App)"] },
   // ── PENDING — JAN 1–2 ──
   { school:"GWU (RD)",                    submitted:false, sat:"Submit 1390",           portal:"GW Apply / Colonials Portal", portalUrl:"https://apply.gwu.edu",            accountCreated:false, postTasks:["Create portal account","Submit by Jan 1"] },
-  { school:"UPenn",                       submitted:false, sat:"⚠️ Retake Dec 6 first", portal:"Penn Portal",                 portalUrl:"https://portal.upenn.edu",          accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 1"] },
-  { school:"Columbia",                    submitted:false, sat:"⚠️ Retake Dec 6 first", portal:"Columbia Student Services",   portalUrl:"https://students.columbia.edu",     accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 1"] },
-  { school:"Dartmouth",                   submitted:false, sat:"⚠️ Retake Dec 6 first", portal:"DartHub",                     portalUrl:"https://darthub.dartmouth.edu",     accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 1"] },
-  { school:"Cornell CALS",               submitted:false,  sat:"⚠️ Retake Dec 6 first", portal:"Cornell Student Center",       portalUrl:"https://studentcenter.cornell.edu", accountCreated:false, postTasks:["Create portal account","⚠️ Retake Dec 6 SAT first","Submit by Jan 2"] },
   // ── PENDING — JAN 15 / FEB ──
   { school:"University of Delaware",      submitted:false, sat:"Test-optional",         portal:"UDSIS",                       portalUrl:"https://udsis.udel.edu",            accountCreated:false, postTasks:["Create portal account","Submit by Jan 15"] },
   { school:"RIT",                         submitted:false, sat:"Test-optional",         portal:"myRIT / SIS",                 portalUrl:"https://myrit.rit.edu",             accountCreated:false, postTasks:["Create portal account","Submit by Feb 1"] },
