@@ -300,9 +300,9 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
   <!-- Stats row -->
   <div class="stats-row" style="grid-template-columns:repeat(4,1fr);margin-bottom:18px;">
     <div class="stat-card" style="border-top:3px solid var(--navy);">
-      <div style="font-size:26px;font-weight:700;color:var(--navy);font-family:'DM Serif Display',serif;">21</div>
+      <div style="font-size:26px;font-weight:700;color:var(--navy);font-family:'DM Serif Display',serif;">19</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;">Total Colleges</div>
-      <div class="stat-sub">2 reach · 9 match · 10 safety</div>
+      <div class="stat-sub">2 reach · 9 match · 8 safety</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--green);">
       <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">17</div>
@@ -310,9 +310,9 @@ body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: va
       <div class="stat-sub">Pitt · VCU · UConn · Rutgers · OSU · VT · UMD · NC State · GMU · JMU · Drexel · Purdue · NEU · UVA · Florida · Michigan · Penn State</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--amber);">
-      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">4</div>
+      <div style="font-size:26px;font-weight:700;color:var(--amber);font-family:'DM Serif Display',serif;">2</div>
       <div class="stat-label" style="font-weight:700;font-size:13px;color:var(--amber);">Remaining</div>
-      <div class="stat-sub">1 Nov 30 · 1 Jan 1 · 1 Jan 15 · 1 Feb 1</div>
+      <div class="stat-sub">UCSD Nov 30 · GWU Jan 1</div>
     </div>
     <div class="stat-card" style="border-top:3px solid var(--green);">
       <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'DM Serif Display',serif;">✓</div>
@@ -748,8 +748,6 @@ const colleges = [
   { num:18, name:"George Mason University",         prog:"Biology / Bioinformatics",        note:"Fairfax, VA · College of Science · Select: Biology - B.S. · Alt: Bioengineering B.S. · In-state · Rishi presented research here · Apply for Honors College · Common App · ✅ Submitted",          type:"RD", tier:"safety", deadline:"Done",  sat:"Test-optional safe",         status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
   { num:19, name:"University of Florida",           prog:"Biological Sciences",             note:"Gainesville, FL · College of Liberal Arts & Sciences · Top public research university · Alt: Microbiology & Cell Science · Common App · ✅ Submitted",                                     type:"EA", tier:"match",  deadline:"Done",   sat:"Submit",                     status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
   { num:20, name:"Drexel University",               prog:"Biological Sciences (Co-op)",     note:"Philadelphia, PA · College of Arts & Sciences · Co-op employers: GSK, AstraZeneca, J&J, CHOP · Up to 18 mo paid experience · Alt: Biomedical Engineering · Common App · ✅ Submitted", type:"EA", tier:"safety", deadline:"Done",   sat:"Test-optional",              status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
-  { num:21, name:"RIT",                             prog:"Bioinformatics & Computational Biology BS", note:"Rochester, NY · College of Science · One of few dedicated undergrad Bioinformatics BS programs · Co-op available · Alt: Biology BS · Common App · RD Feb 1",                    type:"RD", tier:"safety", deadline:"Feb 1",  sat:"Test-optional",              status:"not-started", applyOrder:19, supplement:"✍️ Why RIT? (650 words)" },
-  { num:22, name:"University of Delaware",          prog:"Biological Sciences",             note:"Newark, DE · College of Arts & Sciences · Strong merit aid · Alt: Biochemistry · Close to home · Common App · RD Jan 15",                                                                   type:"RD", tier:"safety", deadline:"Jan 15", sat:"Test-optional",              status:"not-started", applyOrder:20, supplement:"None — Common App only" },
   { num:23, name:"University of Michigan",          prog:"Biological Sciences",             note:"Ann Arbor, MI · College of Literature, Science & the Arts (LSA) · Top 5 bio research · Bioinformatics minor available · Alt: Cellular & Molecular Biomedical Science · Common App · ✅ Submitted", type:"EA", tier:"match",  deadline:"Done",   sat:"Submit",                     status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
   { num:24, name:"Penn State University Park",      prog:"Biology",                         note:"State College, PA · Eberly College of Science · Huge alumni network · Alt: Biochemistry & Molecular Biology · No supplement · Common App · ✅ Submitted",                                  type:"EA", tier:"match",  deadline:"Done",   sat:"Test-optional",              status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
   { num:25, name:"James Madison University",        prog:"Biotechnology",                   note:"Harrisonburg, VA · College of Integrated Science & Engineering · In-state Virginia · Alt: Biology · Apply for Honors College · Honors scholarship deadline Nov 15 · Common App · ✅ Submitted", type:"RD", tier:"safety", deadline:"Done",  sat:"Test-optional",              status:"submitted",   applyOrder:0,  supplement:"✅ Done" },
@@ -1038,9 +1036,6 @@ const loginTracker = [
   { school:"UC San Diego",                submitted:false, sat:"Submit 1390",           portal:"MyTritonLink",                portalUrl:"https://mytritonlink.ucsd.edu",     accountCreated:false, postTasks:["Create portal account","Submit UC App by Nov 30 (UC App — separate from Common App)"] },
   // ── PENDING — JAN 1–2 ──
   { school:"GWU (RD)",                    submitted:false, sat:"Submit 1390",           portal:"GW Apply / Colonials Portal", portalUrl:"https://apply.gwu.edu",            accountCreated:false, postTasks:["Create portal account","Submit by Jan 1"] },
-  // ── PENDING — JAN 15 / FEB ──
-  { school:"University of Delaware",      submitted:false, sat:"Test-optional",         portal:"UDSIS",                       portalUrl:"https://udsis.udel.edu",            accountCreated:false, postTasks:["Create portal account","Submit by Jan 15"] },
-  { school:"RIT",                         submitted:false, sat:"Test-optional",         portal:"myRIT / SIS",                 portalUrl:"https://myrit.rit.edu",             accountCreated:false, postTasks:["Create portal account","Submit by Feb 1"] },
 ];
 
 // ── LOGIN TRACKER RENDER ──
